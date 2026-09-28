@@ -136,7 +136,12 @@ def _gemini(prompt: str, cfg: dict) -> str:
         if isinstance(data, list):  # observed variant: top-level JSON array
             dicts = [d for d in data if isinstance(d, dict)]
             data = dicts[-1] if dicts else {}
-        return _extract_interaction_text(data)
+        text = _extract_interaction_text(data)
+        if _resolved_model["name"] != model:
+            # remember the model that actually works on this key (quota is precious)
+            log(f"Gemini: '{model}' works on this key — remembering for subsequent calls")
+            _resolved_model["name"] = model
+        return text
     raise last_err or RuntimeError("GEMINI: all models exhausted")
 
 

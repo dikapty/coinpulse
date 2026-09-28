@@ -46,15 +46,19 @@ DRAFT_PROMPT = """{rules}
 SOURCE MATERIAL (JSON):
 {sources}
 
-ARTICLE PLAN (JSON):
-{plan}
+TASK: Write one complete news article in markdown from the material above.
+Pick the single strongest story; if two items are clearly about the same event, merge them.
 
-TASK: Write the full article in markdown following the plan.
-Frontmatter is added later by the system — start directly with the title as "# Title".
-Also produce: a meta description (max 155 chars, factual, no clickbait) and 3-5 tags.
-End the article with a "## Sources" section listing every source as a markdown link.
-Reply with JSON only: {{"markdown": "...", "meta_description": "...", "tags": ["..."],
-"title": "chosen final title"}}"""
+HARD LENGTH REQUIREMENT: the article body MUST contain 700-1200 words. Count before
+answering; a draft under 700 words is REJECTED by the automated quality gate. Reach the
+length with substance only: background context, what led to this event, why it matters,
+related developments from the material, market/industry implications — never repetition
+or filler.
+
+Start directly with the title as "# Title" (no frontmatter). Use ## H2 subheadings every
+150-250 words. End with a "## Sources" section listing every source used as a markdown link.
+Reply with JSON only: {{"markdown": "...", "meta_description": "max 155 chars, factual",
+"tags": ["3-5 tags"], "title": "final title", "used_item_ids": ["ids used"]}}"""
 
 EDIT_PROMPT = """{rules}
 
@@ -63,8 +67,10 @@ DRAFT ARTICLE:
 
 TASK: Self-edit this draft. Fix factual drift (remove anything not supported by the source
 material), tighten sentences, verify every claim traces to a source, ensure the ## Sources
-section is complete. Reply with JSON only: {{"markdown": "...", "meta_description": "...",
-"tags": ["..."], "title": "..."}}"""
+section is complete. IMPORTANT: keep the body at 700-1200 words — expand thin sections with
+context from the source material if needed; never pad with repetition. Keep used_item_ids.
+Reply with JSON only: {{"markdown": "...", "meta_description": "...", "tags": ["..."],
+"title": "...", "used_item_ids": ["..."]}}"""
 
 
 def load_inbox_items(limit: int = 40):
@@ -100,20 +106,20 @@ def write_one(items: list, cfg: dict) -> dict | None:
     rules = SYSTEM_RULES
     sources_json = json.dumps([compact(i) for i in items], ensure_ascii=False, indent=1)
 
-    log("  Planning article...")
-    plan = extract_json(complete(PLAN_PROMPT.format(rules=rules, sources=sources_json)))
-    used_ids = plan.get("used_item_ids") or [items[0]["id"]]
-
+    # 2 LLM calls per article (draft + self-edit). Planning was folded into the draft
+    # prompt to conserve the free-tier quota (20 requests/day).
     log("  Drafting article...")
-    draft = extract_json(complete(DRAFT_PROMPT.format(rules=rules, sources=sources_json, plan=json.dumps(plan))))
+    draft = extract_json(complete(DRAFT_PROMPT.format(rules=rules, sources=sources_json)))
     log("  Self-editing...")
     final = extract_json(complete(EDIT_PROMPT.format(rules=rules, draft=draft.get("markdown", ""))))
 
     markdown = strip_code_fence(final.get("markdown", ""))
-    title = final.get("title") or plan["title_ideas"][0]
+    title = final.get("title") or draft.get("title") or items[0]["title"]
     if not markdown or len(markdown.split()) < 150:
         log("  ! Draft too short/empty — skipping")
         return None
+    used_ids = final.get("used_item_ids") or draft.get("used_item_ids") or [i["id"] for i in items]
+    used_ids = [u for u in used_ids if u in {i["id"] for i in items}] or [items[0]["id"]]
 
     now = datetime.now(timezone.utc)
     slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:70]
