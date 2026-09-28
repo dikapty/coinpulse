@@ -46,5 +46,17 @@
     "inbox_backlog": 50,
     "total_posts": 0,
     "site_online": true
+  },
+  {
+    "date": "2026-09-28",
+    "collected": 55,
+    "written": 2,
+    "approved": 0,
+    "published": 0,
+    "pending_review": 4,
+    "rejected": 0,
+    "inbox_backlog": 53,
+    "total_posts": 0,
+    "site_online": true
   }
 ]

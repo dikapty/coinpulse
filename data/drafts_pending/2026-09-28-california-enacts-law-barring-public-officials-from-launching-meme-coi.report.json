@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-28-california-enacts-law-barring-public-officials-from-launching-meme-coi.md",
+  "title": "California Enacts Law Barring Public Officials From Launching Meme Coins",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "288 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "100% unique"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "While neutral and clearly written, the piece relies entirely on a single secondary source and lacks deeper context regarding enforcement mechanisms, specific penalties, or broader legislative history.",
+    "overall": 7.5
+  },
+  "word_count": 288,
+  "decision": "pending"
+}

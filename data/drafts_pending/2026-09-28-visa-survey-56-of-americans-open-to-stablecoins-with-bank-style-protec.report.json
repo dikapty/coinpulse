@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec.md",
+  "title": "Visa Survey: 56% of Americans Open to Stablecoins with Bank-Style Protections",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "444 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "100% unique"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "A well-balanced, objective summary of the Visa survey that provides good industry context, though it relies on a secondary crypto-outlet report rather than primary survey data.",
+    "overall": 8.8
+  },
+  "word_count": 444,
+  "decision": "pending"
+}
