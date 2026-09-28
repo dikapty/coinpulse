@@ -15,7 +15,10 @@ def _require_key(env_var: str) -> str:
         raise RuntimeError(f"MISSING_KEY: {env_var} is empty (set it in .env or GitHub Secrets)")
     return val
 
-GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+# Interactions API (GA June 2026) — the current endpoint for new Gemini models.
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/interactions"
+# Legacy generateContent — kept as fallback for older model names.
+GEMINI_LEGACY_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 
@@ -44,27 +47,45 @@ def _discover_gemini_model(key: str, cfg: dict) -> str:
         return configured
 
 
+def _extract_interaction_text(data: dict) -> str:
+    """Extract reply text from an Interactions API response (tolerant to shape variants)."""
+    if isinstance(data.get("output_text"), str) and data["output_text"].strip():
+        return data["output_text"].strip()
+    # walk execution steps for the final model output
+    texts = []
+    for step in data.get("steps") or []:
+        mo = step.get("model_output") or step.get("content") or {}
+        parts = (mo.get("content") or {}).get("parts") or mo.get("parts") or []
+        if isinstance(parts, list):
+            texts.append("".join(p.get("text", "") for p in parts if isinstance(p, dict)))
+        elif isinstance(mo, str):
+            texts.append(mo)
+    out = "\n".join(t for t in texts if t).strip()
+    if out:
+        return out
+    # last resort: legacy generateContent shape
+    parts = data.get("candidates", [{}])[0].get("content", {}).get("parts", [])
+    out = "".join(p.get("text", "") for p in parts).strip()
+    if out:
+        return out
+    import json as _json
+    raise RuntimeError(f"GEMINI_PARSE: could not extract text; response keys={list(data.keys())}; head={_json.dumps(data)[:400]}")
+
+
 def _gemini(prompt: str, cfg: dict) -> str:
     key = _require_key(cfg["gemini"]["api_key_env"])
     model = _resolved_model["name"] or cfg["gemini"]["model"]
-    url = GEMINI_URL.format(model=model)
-    body = {
-        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": cfg.get("temperature", 0.4),
-            "maxOutputTokens": cfg.get("max_tokens", 3000),
-        },
-    }
-    r = requests.post(url, params={"key": key}, json=body, timeout=120)
+    # Primary: Interactions API (stateless)
+    body = {"model": model, "input": prompt, "store": False}
+    r = requests.post(GEMINI_URL, headers={"x-goog-api-key": key, "Content-Type": "application/json"},
+                      json=body, timeout=180)
     if r.status_code == 429:
         raise RuntimeError("GEMINI_QUOTA: free daily limit reached")
     if r.status_code == 404 and _resolved_model["name"] is None:
         _resolved_model["name"] = _discover_gemini_model(key, cfg)
         return _gemini(prompt, cfg)  # retry once with the discovered model
     r.raise_for_status()
-    data = r.json()
-    parts = data.get("candidates", [{}])[0].get("content", {}).get("parts", [])
-    return "".join(p.get("text", "") for p in parts).strip()
+    return _extract_interaction_text(r.json())
 
 
 def _groq(prompt: str, cfg: dict) -> str:
