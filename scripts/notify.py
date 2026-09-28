@@ -25,7 +25,16 @@ def send(text: str) -> bool:
             json={"chat_id": chat_id, "text": text[:4000], "disable_web_page_preview": True},
             timeout=20,
         )
-        r.raise_for_status()
+        if r.status_code != 200:
+            detail = r.text[:300]
+            if "chat not found" in detail.lower():
+                log("Telegram: chat not found — open the bot in Telegram and press /start first "
+                    "(bots cannot message users who never started the chat), then re-run.")
+            elif "unauthorized" in detail.lower() or "Not Found" in detail:
+                log("Telegram: bot token invalid or revoked — create a new one via @BotFather.")
+            else:
+                log(f"Telegram send failed: HTTP {r.status_code} {detail}")
+            return False
         return True
     except Exception as e:
         log(f"Telegram send failed: {e}")
