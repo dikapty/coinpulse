@@ -28,8 +28,16 @@ def send(text: str) -> bool:
         if r.status_code != 200:
             detail = r.text[:300]
             if "chat not found" in detail.lower():
-                log("Telegram: chat not found — open the bot in Telegram and press /start first "
-                    "(bots cannot message users who never started the chat), then re-run.")
+                who = ""
+                try:
+                    me = requests.get(f"https://api.telegram.org/bot{token}/getMe", timeout=15)
+                    who = me.json().get("result", {}).get("username", "")
+                except Exception:
+                    pass
+                link = f"https://t.me/{who}" if who else "your bot chat"
+                log(f"Telegram: chat not found. ACTION REQUIRED: open {link} "
+                    f"(bot @{who or '?'}) in Telegram and press START — bots cannot message "
+                    "users who never started the chat. Digests resume automatically afterwards.")
             elif "unauthorized" in detail.lower() or "Not Found" in detail:
                 log("Telegram: bot token invalid or revoked — create a new one via @BotFather.")
             else:
