@@ -42,7 +42,12 @@ jobs:
           git add content/ data/ config.yaml || true
           if ! git diff --cached --quiet; then
             git commit -m "content: auto-publish $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git push
+            # another run may have pushed meanwhile: rebase and retry
+            for i in 1 2 3; do
+              if git push; then break; fi
+              echo "push rejected, rebasing (attempt $i)..."
+              git pull --rebase origin main || git rebase --abort
+            done
           else
             echo "Nothing to commit."
           fi
