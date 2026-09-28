@@ -1,0 +1,11 @@
+{
+  "id": "f1d3b45329189b2e",
+  "title": "Core Lightning patches flaw that could let revoked channel state escape penalty",
+  "summary": "The flaw was fixed in v26.06.7, but older builds and some early Docker images still call for an upgrade check. The post Core Lightning patches flaw that could let revoked channel state escape penalty appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/core-lightning-revoked-channel-penalty-flaw/",
+  "category": "crypto",
+  "published": "2026-09-27T23:15:38+00:00",
+  "collected_at": "2026-09-28T10:02:50.806353+00:00",
+  "batch": "20260928-100249"
+}
