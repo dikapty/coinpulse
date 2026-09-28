@@ -10,12 +10,18 @@
 <meta property="og:description" content="{{DESCRIPTION}}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
 <link rel="stylesheet" href="{{BASE}}style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"NewsArticle","headline":"{{TITLE}}","datePublished":"{{DATE}}","author":{"@type":"Organization","name":"{{AUTHOR}}"},"publisher":{"@type":"Organization","name":"{{SITE_NAME}}"}}
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"{{TITLE}}","description":"{{DESCRIPTION}}","image":"{{OG_IMAGE}}","datePublished":"{{DATE}}","author":{"@type":"Organization","name":"{{AUTHOR}}"},"publisher":{"@type":"Organization","name":"{{SITE_NAME}}","logo":{"@type":"ImageObject","url":"{{OG_IMAGE}}"}}}
 </script>
 </head>
 <body>
+<div id="progress"></div>
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="{{BASE}}">{{SITE_NAME}}</a>
@@ -24,11 +30,18 @@
 </header>
 <main class="wrap article-page">
   <article>
-    <p class="meta"><time>{{DATE}}</time> · {{AUTHOR}} <span class="tags">{{TAGS}}</span></p>
+    <h1 class="post-title">{{TITLE}}</h1>
+    <p class="meta"><time datetime="{{DATE}}">{{DATE}}</time> · {{AUTHOR}} · {{READING_TIME}} <span class="tags">{{TAGS}}</span></p>
+    {{HERO}}
     {{AD_TOP}}
+    {{TOC}}
+    <div class="post-body">
     {{BODY}}
+    </div>
+    {{SHARE}}
     {{AD_BOTTOM}}
   </article>
+  {{RELATED}}
   {{DISCLOSURE}}
 </main>
 <footer class="site-footer">
@@ -37,5 +50,6 @@
     <p><a href="{{BASE}}privacy.html">Privacy</a> · <a href="{{BASE}}about.html">About</a> · <a href="{{BASE}}feed.xml">RSS</a></p>
   </div>
 </footer>
+<script src="{{BASE}}site.js" defer></script>
 </body>
 </html>

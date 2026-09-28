@@ -7,8 +7,8 @@ An automated content pipeline: collects news from RSS → AI writes sourced arti
 **Live:** https://dikapty.github.io/coinpulse/ · **Repo:** https://github.com/dikapty/coinpulse · **Runs:** 4×/day via GitHub Actions cron (`0 1,7,13,19 * * *` UTC) + daily monitor digest at 20:30 UTC.
 
 ```
-RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate ──┬─> content/posts ──> site/ ──> Pages
-  (4x/day)     filter+dedupe    plan→draft→edit      score ≥ 7: auto │
+RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate ──┬─> content/posts ──> images ──> site/ ──> Pages
+  (4x/day)     filter+dedupe    plan→draft→edit      score ≥ 7: auto │      (AI hero + SVG fallback)
                                                    score < 7:  ─────┴─> data/drafts_pending/ (you review)
 ```
 
@@ -21,6 +21,8 @@ RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate �
 | LLM | **Google AI Studio (Gemini)** free tier | **20 requests/day per model** on fresh keys — the pipeline chains ~5 models as a quota pool (~100 req/day total), each article costs ~3 calls, so ~5–8 articles/day is the free ceiling |
 | LLM backup | **Groq** free tier | generous rate limits |
 | Alerts | **Telegram bot** | free |
+| Article images | **Pollinations.ai** (flux) | free, no key; rate-limited → local SVG covers as automatic fallback |
+| Price ticker | **CoinGecko public API** | free, 10-min client cache |
 
 ---
 
@@ -107,6 +109,7 @@ scripts/
   writer.py              # plan → draft → self-edit via LLM → data/drafts/
   quality_gate.py        # deterministic checks + LLM scoring → publish/pending/reject
   publisher.py           # quota, posts, static site builder → site/
+  images.py              # AI hero images (Pollinations) + SVG fallback covers
   affiliate.py           # labelled affiliate boxes
   monitor.py             # daily health digest + adaptive throttle
   llm.py / notify.py / common.py

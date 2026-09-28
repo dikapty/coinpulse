@@ -20,10 +20,10 @@
   "used_item_ids": [
     "f1d3b45329189b2e"
   ],
-  "draft_of_batch": "20260928-100249"
+  "draft_of_batch": "20260928-100249",
+  "image": "img/2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.svg"
 }
 ---
-
 
 # Bitget Resumes Bitcoin Withdrawals Following $388 Million Security Breach
 

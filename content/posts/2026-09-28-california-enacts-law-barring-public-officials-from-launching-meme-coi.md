@@ -20,10 +20,10 @@
   "used_item_ids": [
     "87b00022dce87d39"
   ],
-  "draft_of_batch": "20260928-110654"
+  "draft_of_batch": "20260928-110654",
+  "image": "img/2026-09-28-california-enacts-law-barring-public-officials-from-launching-meme-coi.svg"
 }
 ---
-
 
 # California Enacts Law Barring Public Officials From Launching Meme Coins
 

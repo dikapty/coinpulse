@@ -67,6 +67,11 @@ def stage_affiliate():
     aff_run()
 
 
+def stage_images():
+    from images import run as img_run
+    img_run([])
+
+
 def stage_build():
     from publisher import build_site
     build_site(load_config())
@@ -128,6 +133,8 @@ def main(argv):
             stage_publish(cfg)
         if full or "affiliate" in stages:
             stage_affiliate()
+        if full or "images" in stages:
+            stage_images()
         if full or "build" in stages:
             stage_build()
         if full or "monitor" in stages:

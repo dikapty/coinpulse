@@ -20,10 +20,10 @@
   "used_item_ids": [
     "fd9836f2f2e5b19b"
   ],
-  "draft_of_batch": "20260928-110654"
+  "draft_of_batch": "20260928-110654",
+  "image": "img/2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec.svg"
 }
 ---
-
 
 # Visa Survey: 56% of Americans Open to Stablecoins with Bank-Style Protections
 

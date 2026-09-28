@@ -20,7 +20,8 @@
   "used_item_ids": [
     "4702ad59244ed87b"
   ],
-  "draft_of_batch": "20260928-113743"
+  "draft_of_batch": "20260928-113743",
+  "image": "img/2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto.jpg"
 }
 ---
 

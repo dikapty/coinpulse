@@ -1,5 +1,8 @@
-<article class="card">
-  <h2><a href="{{BASE}}posts/{{STEM}}.html">{{TITLE}}</a></h2>
-  <time>{{DATE}}</time>
-  <p>{{DESCRIPTION}}</p>
-</article>
+<a class="card" href="{{BASE}}posts/{{STEM}}.html">
+  <div class="thumb">{{IMAGE}}<span class="card-tag">{{TAG}}</span></div>
+  <div class="card-body">
+    <h2>{{TITLE}}</h2>
+    <p>{{DESCRIPTION}}</p>
+    <p class="card-meta"><time datetime="{{DATE}}">{{DATE}}</time> · {{READING_TIME}}</p>
+  </div>
+</a>

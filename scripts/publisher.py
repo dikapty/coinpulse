@@ -115,6 +115,61 @@ def ad_html(cfg: dict, slot: str) -> str:
             f'data-ad-slot="{mon[slot]}"></ins></div>')
 
 
+def reading_time(body_md: str) -> int:
+    words = len(re.findall(r"\w+", body_md))
+    return max(1, round(words / 220))
+
+
+def build_toc(html_body: str) -> str:
+    """Table of contents from rendered H2s (markdown 'toc' ext already set ids)."""
+    heads = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', html_body, re.DOTALL)
+    heads = [(hid, re.sub(r"<[^>]+>", "", txt).strip()) for hid, txt in heads]
+    heads = [(hid, txt) for hid, txt in heads if txt.lower() != "sources"]
+    if len(heads) < 2:
+        return ""
+    items = "".join(f'<li><a href="#{hid}">{escape(txt)}</a></li>' for hid, txt in heads)
+    return f'<nav class="toc"><strong>In this article</strong><ol>{items}</ol></nav>'
+
+
+def related_posts(post: dict, all_posts: list, base: str, limit: int = 3) -> str:
+    """Tag-overlap ranking, freshest first as tiebreak."""
+    my_tags = {t.lower() for t in post.get("tags", [])}
+    scored = []
+    for p in all_posts:
+        if p["_stem"] == post["_stem"]:
+            continue
+        overlap = len(my_tags & {t.lower() for t in p.get("tags", [])})
+        scored.append((overlap, p.get("date", ""), p))
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    cards = []
+    for _, _, p in scored[:limit]:
+        img = p.get("image")
+        thumb = (f'<img src="{base}{img}" alt="" loading="lazy">'
+                 if img else '<div class="thumb-fallback"></div>')
+        cards.append(
+            f'<a class="related-card" href="{base}posts/{p["_stem"]}.html">{thumb}'
+            f'<span>{escape(p.get("title", ""))}</span></a>')
+    if not cards:
+        return ""
+    return f'<aside class="related"><h3>Keep reading</h3><div class="related-grid">{"".join(cards)}</div></aside>'
+
+
+def share_buttons(post: dict, base: str, stem: str) -> str:
+    from urllib.parse import quote
+    url = f"{base}posts/{stem}.html"
+    title = quote(post.get("title", ""))
+    u = quote(url, safe="")
+    return (
+        '<div class="share">'
+        '<span>Share:</span>'
+        f'<a class="x" href="https://twitter.com/intent/tweet?text={title}&url={u}" target="_blank" rel="noopener" title="Share on X">𝕏</a>'
+        f'<a class="tg" href="https://t.me/share/url?url={u}&text={title}" target="_blank" rel="noopener" title="Share on Telegram">✈</a>'
+        f'<a class="rd" href="https://www.reddit.com/submit?url={u}&title={title}" target="_blank" rel="noopener" title="Share on Reddit">R</a>'
+        f'<a class="wa" href="https://api.whatsapp.com/send?text={title}%20{u}" target="_blank" rel="noopener" title="Share on WhatsApp">W</a>'
+        f'<a class="cp" href="#" data-copy="{escape(url)}" title="Copy link">⧉</a>'
+        "</div>")
+
+
 def build_site(cfg: dict) -> None:
     site_cfg = cfg["site"]
     base = site_cfg["url"].rstrip("/") + "/"
@@ -125,6 +180,14 @@ def build_site(cfg: dict) -> None:
     (SITE / "posts").mkdir(parents=True)
     shutil.copytree(ROOT / "static", SITE, dirs_exist_ok=True)
 
+    # copy article images into site/img/
+    src_images = CONTENT / "images"
+    if src_images.exists():
+        shutil.copytree(src_images, SITE / "img", dirs_exist_ok=True)
+    # ensure a default OG image always exists (branding for social shares)
+    if not (SITE / "og-default.jpg").exists():
+        shutil.copy(ROOT / "static" / "og-default.jpg", SITE / "og-default.jpg")
+
     disclosure = ""
     if cfg.get("seo", {}).get("ai_disclosure", True):
         disclosure = ("<p class=\"disclosure\">Articles on this site are AI-assisted from public "
@@ -133,8 +196,16 @@ def build_site(cfg: dict) -> None:
 
     # --- individual posts ---
     for post in posts:
-        html_body = md_lib.markdown(post["_body"], extensions=["tables", "toc"])
-        tags = "".join(f'<span class="tag">{escape(t)}</span>' for t in post.get("tags", []))
+        body_md = re.sub(r"^\s*#\s+.*\n+", "", post["_body"], count=1)  # title rendered by template
+        html_body = md_lib.markdown(body_md, extensions=["tables", "toc"])
+        tags = "".join(
+            f'<a class="tag" href="{base}archive.html">{escape(t)}</a>'
+            for t in post.get("tags", []))
+        image = post.get("image", "")
+        og_image = f'{base}{image}' if image else f'{base}og-default.jpg'
+        hero = (f'<figure class="hero"><img src="{base}{image}" alt="{escape(post.get("title",""))}">'
+                f'<figcaption>AI-generated illustration</figcaption></figure>') if image else ""
+        rtime = reading_time(post["_body"])
         page = render_template(
             "post.html",
             SITE_NAME=site_cfg["name"], BASE=base,
@@ -142,24 +213,46 @@ def build_site(cfg: dict) -> None:
             DESCRIPTION=escape(post.get("description", "")),
             TAGS=tags, DATE=post.get("date", "")[:10],
             AUTHOR=escape(site_cfg.get("author", "")),
+            READING_TIME=f"{rtime} min read",
+            HERO=hero,
+            TOC=build_toc(html_body),
             BODY=html_body,
+            RELATED=related_posts(post, posts, base),
+            SHARE=share_buttons(post, base, post["_stem"]),
             AD_TOP=ad_html(cfg, "ad_slot_top"), AD_BOTTOM=ad_html(cfg, "ad_slot_bottom"),
             DISCLOSURE=disclosure,
             CANONICAL=f'{base}posts/{post["_stem"]}.html',
+            OG_IMAGE=og_image,
         )
         (SITE / "posts" / f"{post['_stem']}.html").write_text(page, encoding="utf-8")
 
     # --- index with pagination ---
-    per_page = 12
+    per_page = 11  # 1 featured + 10 grid
     pages = max(1, (len(posts) + per_page - 1) // per_page)
     for page_no in range(pages):
         chunk = posts[page_no * per_page:(page_no + 1) * per_page]
+        featured_html = ""
+        grid = chunk
+        if page_no == 0 and chunk:
+            f = chunk[0]
+            grid = chunk[1:]
+            fimg = (f'<img src="{base}{f["image"]}" alt="{escape(f.get("title",""))}">'
+                    if f.get("image") else '<div class="thumb-fallback"></div>')
+            featured_html = render_template(
+                "featured.html", BASE=base, STEM=f["_stem"],
+                TITLE=escape(f.get("title", "")), DATE=f.get("date", "")[:10],
+                READING_TIME=f"{reading_time(f['_body'])} min",
+                DESCRIPTION=escape(f.get("description", "")), IMAGE=fimg)
         cards = "".join(
             render_template("card.html",
                             BASE=base, STEM=p["_stem"], TITLE=escape(p.get("title", "")),
                             DATE=p.get("date", "")[:10],
+                            READING_TIME=f"{reading_time(p['_body'])} min",
+                            TAG=escape((p.get("tags") or ["news"])[0]),
+                            IMAGE=(f'<img src="{base}{p["image"]}" alt="" loading="lazy">'
+                                   if p.get("image") else '<div class="thumb-fallback"></div>'),
                             DESCRIPTION=escape(p.get("description", "")))
-            for p in chunk
+            for p in grid
         )
         older = f'<a href="index{page_no + 1}.html">&larr; Older</a>' if page_no < pages - 1 else ""
         if page_no > 0:
@@ -170,8 +263,10 @@ def build_site(cfg: dict) -> None:
         fname = "index.html" if page_no == 0 else f"index{page_no}.html"
         (SITE / fname).write_text(render_template(
             "index.html", SITE_NAME=site_cfg["name"], BASE=base,
-            TAGLINE=escape(site_cfg.get("tagline", "")), CARDS=cards,
+            TAGLINE=escape(site_cfg.get("tagline", "")),
+            FEATURED=featured_html, CARDS=cards,
             PAGINATION=f'<div class="pagination">{older}{newer}</div>',
+            TICKER='<div class="ticker" id="ticker" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>',
             DISCLOSURE=disclosure), encoding="utf-8")
 
     # --- archive ---
@@ -198,7 +293,9 @@ def build_site(cfg: dict) -> None:
         f"<link>{base}posts/{p['_stem']}.html</link>"
         f"<guid>{base}posts/{p['_stem']}.html</guid>"
         f"<pubDate>{p.get('date','')}</pubDate>"
-        f"<description>{escape(p.get('description',''))}</description></item>"
+        f"<description>{escape(p.get('description',''))}</description>"
+        + (f"<enclosure url=\"{base}{p['image']}\" type=\"image/jpeg\"/>" if p.get('image') else "")
+        + "</item>"
         for p in posts[:50])
     (SITE / "feed.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'
