@@ -106,7 +106,9 @@ forbidden_topics:
 - sanctions evasion
 - pump and dump
 affiliates:
-  enabled: true
+  # DISABLED until you join a real program and put your own links here —
+  # the placeholder must never appear on the live site.
+  enabled: false
   programs:
   - name: Example Exchange
     match:
