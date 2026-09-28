@@ -95,32 +95,48 @@ def _model_chain(cfg: dict) -> list:
 
 def _gemini(prompt: str, cfg: dict) -> str:
     key = _require_key(cfg["gemini"]["api_key_env"])
+    headers = {"x-goog-api-key": key, "Content-Type": "application/json"}
     last_err = None
     for model in _model_chain(cfg):
-        body = {"model": model, "input": prompt, "store": False}
-        for _ in range(2):  # per-minute rate limits: wait once and retry
-            r = requests.post(GEMINI_URL, headers={"x-goog-api-key": key, "Content-Type": "application/json"},
-                              json=body, timeout=180)
+        body = {
+            "model": model,
+            "input": prompt,
+            "store": False,
+            # Reasoning models think long by default; news writing needs speed/quota economy.
+            "generation_config": {"thinking_level": "minimal"},
+        }
+        r = requests.post(GEMINI_URL, headers=headers, json=body, timeout=180)
+        if r.status_code == 429:
+            # Rate limits are per-project, not per-model: wait once (honor Retry-After
+            # if present), retry SAME model, then fail fast — no chain walk on quota.
+            try:
+                wait = min(int(float(r.headers.get("Retry-After", "70"))), 120)
+            except ValueError:
+                wait = 70
+            wait = max(wait, 5)
+            log(f"Gemini {model}: 429 rate-limited ({r.text[:150]!r}) — waiting {wait}s, one retry")
+            time.sleep(wait)
+            r = requests.post(GEMINI_URL, headers=headers, json=body, timeout=180)
             if r.status_code == 429:
-                detail = r.text[:250]
-                low = detail.lower()
-                if "minute" in low or "retry" in low:
-                    log(f"Gemini {model}: per-minute limit — waiting 65s...")
-                    time.sleep(65)
-                    continue
-                last_err = RuntimeError(f"GEMINI_QUOTA on {model}: {detail}")
-                log(f"Gemini {model}: quota error -> next model. {detail[:120]}")
-                break  # next model in chain
-            if r.status_code in (400, 403, 404):
-                last_err = RuntimeError(f"GEMINI_MODEL {model} -> {r.status_code}: {r.text[:200]}")
-                log(f"Gemini model {model} refused ({r.status_code}) -> next model")
-                break  # next model in chain
+                raise RuntimeError(f"GEMINI_QUOTA: {model} still 429 after wait: {r.text[:200]}")
+        if r.status_code in (400, 403, 404):
+            last_err = RuntimeError(f"GEMINI_MODEL {model} -> {r.status_code}: {r.text[:200]}")
+            log(f"Gemini model {model} refused ({r.status_code}) -> next model")
+            continue
+        if r.status_code >= 500:
+            last_err = RuntimeError(f"GEMINI_5XX {model}: {r.status_code} {r.text[:150]}")
+            log(f"Gemini {model}: server error {r.status_code} — retry once after 15s")
+            time.sleep(15)
+            r = requests.post(GEMINI_URL, headers=headers, json=body, timeout=180)
             if r.status_code >= 500:
-                last_err = RuntimeError(f"GEMINI_5XX {model}: {r.status_code}")
-                time.sleep(10)
+                log(f"Gemini {model}: still {r.status_code} -> next model")
                 continue
-            r.raise_for_status()
-            return _extract_interaction_text(r.json())
+        r.raise_for_status()
+        data = r.json()
+        if isinstance(data, list):  # observed variant: top-level JSON array
+            dicts = [d for d in data if isinstance(d, dict)]
+            data = dicts[-1] if dicts else {}
+        return _extract_interaction_text(data)
     raise last_err or RuntimeError("GEMINI: all models exhausted")
 
 
