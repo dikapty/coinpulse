@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SITE_NAME}} — {{TAGLINE}}</title>
+<meta name="description" content="{{TAGLINE}} Fresh crypto and finance news, decoded daily.">
+<link rel="canonical" href="{{BASE}}">
+<link rel="alternate" type="application/rss+xml" title="{{SITE_NAME}}" href="{{BASE}}feed.xml">
+<link rel="stylesheet" href="{{BASE}}style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="{{BASE}}">{{SITE_NAME}}</a>
+    <nav><a href="{{BASE}}">Home</a><a href="{{BASE}}archive.html">Archive</a><a href="{{BASE}}about.html">About</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="cards">
+    {{CARDS}}
+  </section>
+  {{PAGINATION}}
+  {{DISCLOSURE}}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; {{SITE_NAME}} — news aggregation and AI-assisted analysis. Not financial advice.</p>
+    <p><a href="{{BASE}}privacy.html">Privacy</a> · <a href="{{BASE}}about.html">About</a> · <a href="{{BASE}}feed.xml">RSS</a></p>
+  </div>
+</footer>
+</body>
+</html>

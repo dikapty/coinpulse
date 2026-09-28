@@ -1,0 +1,121 @@
+# CoinPulse — full configuration. Copy secrets into .env (local) or GitHub Secrets (24/7).
+site:
+  name: "CoinPulse"
+  tagline: "Daily crypto & finance news, decoded."
+  language: "en"
+  # CHANGE THIS to your Cloudflare Pages / GitHub Pages URL (with trailing slash),
+  # e.g. https://coinpulse.pages.dev/ — used for sitemap, RSS, canonical links.
+  url: "https://dikapty.github.io/coinpulse/"
+  author: "CoinPulse Editorial"
+  timezone: "UTC"
+
+# Publishing mode:
+#   auto   — everything scoring >= min_score publishes automatically
+#   hybrid — strong articles (>= min_score) publish, weak ones (< min_score) go to drafts/
+#            for your manual review (RECOMMENDED for finance/crypto = YMYL niche)
+#   manual — every article lands in drafts/, you publish by hand
+publishing:
+  mode: "hybrid"
+  min_score: 7.0
+  # Ramp-up protects the site from Google's scaled-content-abuse filter:
+  # week 1-2: max 2/day, week 3-4: max 4/day, then full speed.
+  rampup:
+    enabled: true
+    launch_date: ""            # set on first run, format YYYY-MM-DD
+    week_limits: [2, 2, 4, 4, 8, 8, 8]
+
+llm:
+  provider: "gemini"           # gemini | groq (switch if one runs out of free quota)
+  gemini:
+    model: "gemini-3.8-flash"
+    # free key: https://aistudio.google.com/apikey
+    api_key_env: "GEMINI_API_KEY"
+  groq:
+    model: "llama-3.3-70b-versatile"
+    # free key: https://console.groq.com/keys
+    api_key_env: "GROQ_API_KEY"
+  temperature: 0.4
+  max_tokens: 3000
+
+sources:
+  # Crypto (RSS, free, reliable)
+  - { name: "CoinDesk",        url: "https://www.coindesk.com/arc/outboundfeeds/rss/", category: "crypto" }
+  - { name: "CoinTelegraph",   url: "https://cointelegraph.com/rss",                    category: "crypto" }
+  - { name: "Decrypt",         url: "https://decrypt.co/feed",                          category: "crypto" }
+  - { name: "The Block",       url: "https://www.theblock.co/rss.xml",                  category: "crypto" }
+  - { name: "CryptoPotato",    url: "https://cryptopotato.com/feed/",                   category: "crypto" }
+  - { name: "Bitcoin Magazine",url: "https://bitcoinmagazine.com/feed",                 category: "crypto" }
+  - { name: "CryptoSlate",     url: "https://cryptoslate.com/feed/",                    category: "crypto" }
+  # Markets & finance
+  - { name: "Investing.com",   url: "https://www.investing.com/rss/news.rss",           category: "markets" }
+  - { name: "MarketWatch",     url: "https://feeds.marketwatch.com/marketwatch/topstories/", category: "markets" }
+  - { name: "CNBC Finance",    url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664", category: "markets" }
+  - { name: "Yahoo Finance",   url: "https://finance.yahoo.com/news/rssindex",          category: "markets" }
+  - { name: "Finbold",         url: "https://finbold.com/feed/",                        category: "crypto" }
+
+# Niche filter: an item must contain at least one keyword in title/summary.
+keywords:
+  - bitcoin
+  - btc
+  - ethereum
+  - eth
+  - crypto
+  - blockchain
+  - stablecoin
+  - altcoin
+  - defi
+  - nft
+  - token
+  - solana
+  - xrp
+  - dogecoin
+  - regulation
+  - sec
+  - etf
+  - fed
+  - interest rate
+  - inflation
+  - stock market
+  - fintech
+
+# Hard topic ban — anything touching these is rejected before writing (YMYL safety).
+forbidden_topics:
+  - medical advice
+  - personal financial advice
+  - price predictions with guaranteed returns
+  - gambling
+  - adult content
+  - violence
+  - terrorism
+  - sanctions evasion
+  - pump and dump
+
+# Affiliate links: inserted only into topically relevant articles, always labelled.
+affiliates:
+  enabled: true
+  programs:
+    # Replace with your own IDs after joining (free): Admitad, Impact, Binance affiliate, Coinbase affiliate...
+    - { name: "Example Exchange", match: ["exchange", "buy bitcoin", "trading"], url: "https://example.com/ref/YOURID", label: "Sponsored partner link" }
+
+monetization:
+  # Ad slots stay commented-out placeholders until AdSense/RS approves the site.
+  adsense_enabled: false
+  adsense_client: ""
+  ad_slot_top: ""
+  ad_slot_bottom: ""
+
+notification:
+  telegram:
+    enabled: false             # set true after creating a bot via @BotFather
+    bot_token_env: "TELEGRAM_BOT_TOKEN"
+    chat_id_env: "TELEGRAM_CHAT_ID"
+
+quality:
+  min_words: 600
+  max_words: 1200
+  min_sources: 1
+  uniqueness_threshold: 0.85   # n-gram overlap with previously published posts must stay below this
+
+seo:
+  meta_description_chars: 160
+  ai_disclosure: true          # required honesty footer — keep true

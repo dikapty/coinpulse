@@ -1,0 +1,66 @@
+name: CoinPulse 24/7 Pipeline
+
+on:
+  schedule:
+    # Every 6 hours (UTC). GitHub may delay cron by minutes on busy runners — that's normal.
+    - cron: "0 1,7,13,19 * * *"
+  workflow_dispatch: {}   # manual trigger from the Actions tab
+
+permissions:
+  contents: write   # needed to commit generated content + state back to the repo
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run pipeline (collect -> write -> gate -> publish -> build)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/pipeline.py
+
+      - name: Commit content + state back to repo
+        run: |
+          git config user.name "coinpulse-bot"
+          git config user.email "coinpulse-bot@users.noreply.github.com"
+          git add content/ data/ config.yaml || true
+          if ! git diff --cached --quiet; then
+            git commit -m "content: auto-publish $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          else
+            echo "Nothing to commit."
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  # --- GitHub Pages deploy (option A). Delete this job if you use Cloudflare Pages. ---
+  deploy-pages:
+    needs: pipeline
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

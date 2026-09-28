@@ -1,0 +1,52 @@
+:root {
+  --bg: #0f1117;
+  --panel: #171a23;
+  --text: #d8dce6;
+  --muted: #8a90a3;
+  --accent: #f7931a; /* bitcoin orange */
+  --link: #7fb3ff;
+  --border: #262b3a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+a { color: var(--link); }
+.site-header { border-bottom: 1px solid var(--border); background: var(--panel); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+.logo { font-weight: 800; font-size: 22px; color: var(--accent); text-decoration: none; letter-spacing: .3px; }
+.site-header nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-size: 15px; }
+.site-header nav a:hover { color: var(--text); }
+.cards { display: grid; gap: 16px; margin: 28px 0; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+.card h2 { margin: 0 0 6px; font-size: 20px; }
+.card h2 a { color: var(--text); text-decoration: none; }
+.card h2 a:hover { color: var(--accent); }
+.card time { color: var(--muted); font-size: 13px; }
+.card p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+.pagination { display: flex; justify-content: space-between; margin: 24px 0; }
+.article-page { padding-top: 28px; padding-bottom: 40px; }
+.article-page article h1 { font-size: 30px; line-height: 1.25; margin: 10px 0 6px; }
+.article-page h2 { margin-top: 34px; font-size: 22px; color: var(--accent); }
+.meta { color: var(--muted); font-size: 14px; }
+.tag { display: inline-block; background: var(--border); color: var(--muted); border-radius: 20px; padding: 1px 10px; font-size: 12px; margin-left: 6px; }
+blockquote { border-left: 3px solid var(--accent); margin: 18px 0; padding: 4px 18px; color: var(--muted); }
+code { background: var(--panel); padding: 2px 6px; border-radius: 4px; font-size: 15px; }
+pre { background: var(--panel); padding: 14px; border-radius: 8px; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+.affiliate-box { background: var(--panel); border: 1px dashed var(--accent); border-radius: 8px; padding: 12px 16px; margin: 22px 0; font-size: 15px; }
+.disclosure { color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; padding-top: 14px; }
+.site-footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 20px 0; color: var(--muted); font-size: 13px; }
+.archive { list-style: none; padding: 0; }
+.archive li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive time { color: var(--muted); margin-right: 12px; font-size: 14px; }
+.ad-slot { margin: 20px 0; min-height: 90px; }
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .article-page article h1 { font-size: 24px; }
+}

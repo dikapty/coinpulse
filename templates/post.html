@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} — {{SITE_NAME}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{CANONICAL}}">
+<link rel="stylesheet" href="{{BASE}}style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"{{TITLE}}","datePublished":"{{DATE}}","author":{"@type":"Organization","name":"{{AUTHOR}}"},"publisher":{"@type":"Organization","name":"{{SITE_NAME}}"}}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="{{BASE}}">{{SITE_NAME}}</a>
+    <nav><a href="{{BASE}}">Home</a><a href="{{BASE}}archive.html">Archive</a><a href="{{BASE}}about.html">About</a></nav>
+  </div>
+</header>
+<main class="wrap article-page">
+  <article>
+    <p class="meta"><time>{{DATE}}</time> · {{AUTHOR}} <span class="tags">{{TAGS}}</span></p>
+    {{AD_TOP}}
+    {{BODY}}
+    {{AD_BOTTOM}}
+  </article>
+  {{DISCLOSURE}}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; {{SITE_NAME}} — news aggregation and AI-assisted analysis. Not financial advice.</p>
+    <p><a href="{{BASE}}privacy.html">Privacy</a> · <a href="{{BASE}}about.html">About</a> · <a href="{{BASE}}feed.xml">RSS</a></p>
+  </div>
+</footer>
+</body>
+</html>
