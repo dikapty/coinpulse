@@ -21,14 +21,14 @@ publishing:
     - 8
 llm:
   provider: gemini
+  daily_budget: 18   # local soft budget per UTC day; real Gemini free limit = 20 req/day PER MODEL
   gemini:
-    model: gemini-3.8-flash
+    model: gemini-3.6-flash   # verified working on this key's free tier (2026-09-28)
     fallback_models:
-    - gemini-flash-latest
-    - gemini-3.7-flash
-    - gemini-3.6-flash
     - gemini-3.5-flash
     - gemini-3.1-flash-lite
+    - gemini-2.5-flash-lite
+    - gemini-flash-latest
     api_key_env: GEMINI_API_KEY
   groq:
     model: llama-3.3-70b-versatile

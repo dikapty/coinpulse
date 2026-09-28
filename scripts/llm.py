@@ -6,7 +6,7 @@ import time
 
 import requests
 
-from common import load_config, log
+from common import load_config, log, load_state, save_state
 
 
 def _require_key(env_var: str) -> str:
@@ -20,6 +20,50 @@ GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/interactions"
 # Legacy generateContent — kept as fallback for older model names.
 GEMINI_LEGACY_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+# Free-tier daily request budget. Gemini free = 20 req/day per model on fresh keys;
+# keep a safety margin. Each article costs ~3 calls (draft + self-edit + gate score).
+# Override via config llm.daily_budget. When exhausted, complete() fails fast with
+# BudgetExhaustedError so the pipeline stops cleanly instead of wasting quota.
+DEFAULT_DAILY_BUDGET = 18
+
+
+class BudgetExhaustedError(RuntimeError):
+    pass
+
+
+def _budget_state() -> dict:
+    from datetime import datetime, timezone
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    st = load_state("llm_budget", {"day": day, "used": 0})
+    if st.get("day") != day:  # new UTC day -> reset
+        st = {"day": day, "used": 0}
+    return st
+
+
+def _budget_limit() -> int:
+    try:
+        return int(load_config()["llm"].get("daily_budget", DEFAULT_DAILY_BUDGET))
+    except Exception:
+        return DEFAULT_DAILY_BUDGET
+
+
+def budget_remaining() -> int:
+    return max(0, _budget_limit() - _budget_state()["used"])
+
+
+def _budget_consume() -> None:
+    st = _budget_state()
+    st["used"] += 1
+    save_state("llm_budget", st)
+
+
+def _budget_check() -> None:
+    if budget_remaining() <= 0:
+        st = _budget_state()
+        raise BudgetExhaustedError(
+            f"LLM daily budget exhausted ({st['used']}/{_budget_limit()} calls today); "
+            "resumes next UTC day (Gemini free tier = 20 req/day per model)")
 
 
 _resolved_model = {"name": None}
@@ -87,17 +131,36 @@ def _extract_interaction_text(data) -> str:
 
 
 def _model_chain(cfg: dict) -> list:
-    """Configured model first, then fallbacks (free tiers restrict some models)."""
+    """Configured model first, then fallbacks. Free-tier quota is PER MODEL
+    (20 req/day each), so the chain is a real quota pool: on 429 we move on."""
     configured = _resolved_model["name"] or cfg["gemini"]["model"]
     fallbacks = cfg["gemini"].get("fallback_models", []) or []
-    return [configured] + [m for m in fallbacks if m != configured]
+    chain = [configured] + [m for m in fallbacks if m != configured]
+    # models already quota-exhausted today go last (still tried only if all else fails)
+    exhausted = set(_exhausted_models())
+    return sorted(chain, key=lambda m: m in exhausted)
+
+
+def _exhausted_models() -> list:
+    st = _budget_state()
+    return list(st.get("exhausted", []))
+
+
+def _mark_model_exhausted(model: str) -> None:
+    st = _budget_state()
+    ex = set(st.get("exhausted", []))
+    ex.add(model)
+    st["exhausted"] = sorted(ex)
+    save_state("llm_budget", st)
 
 
 def _gemini(prompt: str, cfg: dict) -> str:
     key = _require_key(cfg["gemini"]["api_key_env"])
     headers = {"x-goog-api-key": key, "Content-Type": "application/json"}
+    chain = _model_chain(cfg)
     last_err = None
-    for model in _model_chain(cfg):
+    quota_hits = 0
+    for model in chain:
         body = {
             "model": model,
             "input": prompt,
@@ -107,18 +170,12 @@ def _gemini(prompt: str, cfg: dict) -> str:
         }
         r = requests.post(GEMINI_URL, headers=headers, json=body, timeout=180)
         if r.status_code == 429:
-            # Rate limits are per-project, not per-model: wait once (honor Retry-After
-            # if present), retry SAME model, then fail fast — no chain walk on quota.
-            try:
-                wait = min(int(float(r.headers.get("Retry-After", "70"))), 120)
-            except ValueError:
-                wait = 70
-            wait = max(wait, 5)
-            log(f"Gemini {model}: 429 rate-limited ({r.text[:150]!r}) — waiting {wait}s, one retry")
-            time.sleep(wait)
-            r = requests.post(GEMINI_URL, headers=headers, json=body, timeout=180)
-            if r.status_code == 429:
-                raise RuntimeError(f"GEMINI_QUOTA: {model} still 429 after wait: {r.text[:200]}")
+            # Per-model daily quota hit. Mark it, try the next model in the chain.
+            quota_hits += 1
+            _mark_model_exhausted(model)
+            last_err = RuntimeError(f"GEMINI_QUOTA {model}: {r.text[:150]}")
+            log(f"Gemini {model}: daily quota exhausted -> next model")
+            continue
         if r.status_code in (400, 403, 404):
             last_err = RuntimeError(f"GEMINI_MODEL {model} -> {r.status_code}: {r.text[:200]}")
             log(f"Gemini model {model} refused ({r.status_code}) -> next model")
@@ -138,10 +195,13 @@ def _gemini(prompt: str, cfg: dict) -> str:
             data = dicts[-1] if dicts else {}
         text = _extract_interaction_text(data)
         if _resolved_model["name"] != model:
-            # remember the model that actually works on this key (quota is precious)
-            log(f"Gemini: '{model}' works on this key — remembering for subsequent calls")
+            log(f"Gemini: '{model}' works on this key — using it for subsequent calls")
             _resolved_model["name"] = model
         return text
+    if quota_hits and quota_hits == len(chain):
+        raise BudgetExhaustedError(
+            "Gemini free-tier daily quota exhausted on ALL models "
+            f"({', '.join(chain)}). Resumes next UTC day.")
     raise last_err or RuntimeError("GEMINI: all models exhausted")
 
 
@@ -164,13 +224,18 @@ def _groq(prompt: str, cfg: dict) -> str:
 def complete(prompt: str, retries: int = 3) -> str:
     """Generate text using the configured provider, falling back to the other on quota errors."""
     cfg = load_config()["llm"]
+    _budget_check()
     order = ["gemini", "groq"] if cfg.get("provider", "gemini") == "gemini" else ["groq", "gemini"]
     last_err = None
     for provider in order:
         fn = _gemini if provider == "gemini" else _groq
         for attempt in range(1, retries + 1):
             try:
-                return fn(prompt, cfg)
+                text = fn(prompt, cfg)
+                _budget_consume()
+                return text
+            except BudgetExhaustedError:
+                raise  # all Gemini models quota-exhausted today -> stop pipeline stage
             except RuntimeError as e:  # quota — switch provider immediately
                 log(f"LLM {provider}: {e}")
                 last_err = e
@@ -180,6 +245,13 @@ def complete(prompt: str, retries: int = 3) -> str:
                 log(f"LLM {provider} attempt {attempt} failed: {e}")
                 time.sleep(2 ** attempt)
     raise RuntimeError(f"All LLM providers failed: {last_err}")
+
+
+def _budget_exhausted_flag() -> None:
+    """Kept for compatibility; per-model 429s are tracked via _mark_model_exhausted."""
+    st = _budget_state()
+    st["used"] = max(st["used"], _budget_limit())
+    save_state("llm_budget", st)
 
 
 def extract_json(text: str):

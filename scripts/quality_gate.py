@@ -25,7 +25,7 @@ from collections import Counter
 
 from common import (DRAFTS, POSTS, PUBLISHED, REJECTED, load_config, log,
                     load_state, save_state)
-from llm import complete, extract_json
+from llm import BudgetExhaustedError, complete, extract_json
 
 PENDING = DRAFTS.parent / "drafts_pending"
 PENDING.mkdir(parents=True, exist_ok=True)
@@ -126,6 +126,8 @@ def llm_score(body: str, title: str) -> dict:
         result = extract_json(complete(SCORING_PROMPT.format(article=body[:12000])))
         result["overall"] = float(result.get("overall", 0))
         return result
+    except BudgetExhaustedError:
+        raise  # no quota left today — stop the gate; drafts stay queued, not penalized
     except Exception as e:
         log(f"  ! LLM scoring failed ({e}) — treated as score 0 (goes to pending review)")
         return {"overall": 0.0, "verdict": f"scoring error: {e}"}
@@ -158,7 +160,12 @@ def run() -> list:
     for path in drafts:
         report, front, body = check_article(path, cfg)
         log(f"Reviewing: {report['title']}")
-        score = llm_score(body, report["title"])
+        try:
+            score = llm_score(body, report["title"])
+        except BudgetExhaustedError as e:
+            log(f"  Stopping gate: {e}")
+            log(f"  {len(drafts) - len(results)} draft(s) stay queued in data/drafts/ for the next run.")
+            break
         report["score"] = score
         decision = decide(report, score, cfg, path)
         report["decision"] = decision

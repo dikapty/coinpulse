@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from common import DRAFTS, INBOX, PUBLISHED, load_config, log, load_state, save_state
-from llm import complete, extract_json
+from llm import BudgetExhaustedError, complete, extract_json
 
 SYSTEM_RULES = """You are a professional financial news editor for an English-language site.
 ABSOLUTE RULES (violation = article rejected):
@@ -170,6 +170,9 @@ def run(n_articles: int) -> None:
         chunk, remaining = remaining[:4], remaining[4:]  # 4 items per article -> merge related
         try:
             art = write_one(chunk, cfg)
+        except BudgetExhaustedError as e:
+            log(f"  Stopping: {e}")
+            break
         except Exception as e:
             log(f"  ! writer failed: {e}")
             continue
