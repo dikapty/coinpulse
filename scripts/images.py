@@ -84,58 +84,99 @@ PALETTES = [
 ]
 
 
+def esc_svg(s: str) -> str:
+    return (s.replace("&", "&amp;").replace("<", "&lt;")
+             .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def wrap_title(title: str, per_line: int = 26, max_lines: int = 4) -> list:
+    words, lines, cur = title.split(), [], ""
+    for w in words:
+        if len(cur) + len(w) + 1 <= per_line:
+            cur = (cur + " " + w).strip()
+        else:
+            lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return lines
+
+
 def gen_svg_cover(front: dict, slug: str, dest) -> None:
-    """Deterministic abstract cover: layered gradients + orbiting coin motif."""
+    """Deterministic branded cover: gradient + candlesticks + coin + article title."""
     h = int(hashlib.md5(slug.encode()).hexdigest()[:8], 16)
     bg, mid, accent = PALETTES[h % len(PALETTES)]
     rng = lambda n: (h >> n) % 1000 / 1000.0
     w, ht = 1200, 675
 
     circles = []
-    for i in range(7):
-        cx = 80 + rng(i * 3) * 1040
-        cy = 40 + rng(i * 3 + 1) * 595
-        r = 25 + rng(i * 3 + 2) * 95
-        op = 0.05 + rng(i * 5) * 0.14
+    for i in range(6):
+        cx = 500 + rng(i * 3) * 660
+        cy = 30 + rng(i * 3 + 1) * 615
+        r = 25 + rng(i * 3 + 2) * 85
+        op = 0.05 + rng(i * 5) * 0.12
         circles.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="{accent}" opacity="{op:.2f}"/>')
 
-    # candlestick motif (abstract, right side)
+    # candlestick motif (right side, behind title area)
     candles = []
-    base_y = ht - 90
-    for i in range(9):
-        x = 640 + i * 58
+    base_y = ht - 70
+    for i in range(7):
+        x = 720 + i * 64
         up = ((h >> i) & 1) == 1
-        bh = 60 + rng(i + 20) * 190
+        bh = 60 + rng(i + 20) * 210
         y = base_y - bh
         col = "#3ddc84" if up else "#ff5c6c"
-        candles.append(f'<rect x="{x}" y="{y:.0f}" width="22" height="{bh:.0f}" rx="4" fill="{col}" opacity="0.55"/>')
-        candles.append(f'<rect x="{x + 8}" y="{y - 26:.0f}" width="6" height="{bh + 52:.0f}" rx="3" fill="{col}" opacity="0.3"/>')
+        candles.append(f'<rect x="{x}" y="{y:.0f}" width="24" height="{bh:.0f}" rx="4" fill="{col}" opacity="0.5"/>')
+        candles.append(f'<rect x="{x + 9}" y="{y - 24:.0f}" width="6" height="{bh + 48:.0f}" rx="3" fill="{col}" opacity="0.25"/>')
 
-    # big coin
-    coin_x, coin_y, coin_r = 300, ht // 2, 150
+    # coin, bottom-right corner, partially cropped
+    cx0, cy0, cr = 1010, 545, 130
     coin = (
-        f'<circle cx="{coin_x}" cy="{coin_y}" r="{coin_r}" fill="none" stroke="{accent}" stroke-width="10" opacity="0.9"/>'
-        f'<circle cx="{coin_x}" cy="{coin_y}" r="{coin_r - 34}" fill="none" stroke="{accent}" stroke-width="3" opacity="0.5"/>'
-        f'<path d="M {coin_x - 40} {coin_y - 62} h 80 M {coin_x - 40} {coin_y + 62} h 80 '
-        f'M {coin_x - 55} {coin_y - 20} h 110 a 32 32 0 0 1 0 64 h -110 a 32 32 0 0 1 0 -64 h 130" '
-        f'fill="none" stroke="{accent}" stroke-width="12" stroke-linecap="round" opacity="0.9"/>'
+        f'<circle cx="{cx0}" cy="{cy0}" r="{cr}" fill="none" stroke="{accent}" stroke-width="9" opacity="0.85"/>'
+        f'<circle cx="{cx0}" cy="{cy0}" r="{cr - 30}" fill="none" stroke="{accent}" stroke-width="3" opacity="0.4"/>'
+        f'<path d="M {cx0 - 34} {cy0 - 52} h 68 M {cx0 - 34} {cy0 + 52} h 68 '
+        f'M {cx0 - 46} {cy0 - 17} h 92 a 27 27 0 0 1 0 54 h -92 a 27 27 0 0 1 0 -54 h 108" '
+        f'fill="none" stroke="{accent}" stroke-width="10" stroke-linecap="round" opacity="0.85"/>'
     )
+
+    # masthead + title text (left column)
+    title = front.get("title", slug.replace("-", " ").title())
+    lines = wrap_title(title)
+    ty0, lh, fs = 235, 62, 46
+    tspans = "".join(
+        f'<tspan x="70" y="{ty0 + i * lh}">{esc_svg(ln)}</tspan>'
+        for i, ln in enumerate(lines))
+    tag_txt = (front.get("tags") or ["crypto"])[0].upper()[:18]
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{ht}" viewBox="0 0 {w} {ht}">
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="{bg}"/><stop offset="0.55" stop-color="{mid}"/><stop offset="1" stop-color="{bg}"/>
+<stop offset="0" stop-color="{bg}"/><stop offset="0.6" stop-color="{mid}"/><stop offset="1" stop-color="{bg}"/>
 </linearGradient>
-<radialGradient id="glow" cx="0.25" cy="0.5" r="0.6">
-<stop offset="0" stop-color="{accent}" stop-opacity="0.22"/><stop offset="1" stop-color="{accent}" stop-opacity="0"/>
+<radialGradient id="glow" cx="0.8" cy="0.85" r="0.7">
+<stop offset="0" stop-color="{accent}" stop-opacity="0.16"/><stop offset="1" stop-color="{accent}" stop-opacity="0"/>
 </radialGradient>
+<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="{bg}" stop-opacity="0.88"/><stop offset="0.62" stop-color="{bg}" stop-opacity="0.55"/><stop offset="1" stop-color="{bg}" stop-opacity="0.1"/>
+</linearGradient>
 </defs>
 <rect width="{w}" height="{ht}" fill="url(#bg)"/>
-<rect width="{w}" height="{ht}" fill="url(#glow)"/>
 <g>{''.join(circles)}</g>
-<g opacity="0.9">{coin}</g>
 <g>{''.join(candles)}</g>
-<rect width="{w}" height="{ht}" fill="none" stroke="{accent}" stroke-opacity="0.18" stroke-width="2"/>
+<g>{coin}</g>
+<rect width="{w}" height="{ht}" fill="url(#glow)"/>
+<rect width="{w}" height="{ht}" fill="url(#shade)"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<rect x="70" y="52" width="150" height="34" rx="17" fill="{accent}"/>
+<text x="145" y="75" font-size="17" font-weight="bold" fill="{bg}" text-anchor="middle" letter-spacing="1">COINPULSE</text>
+<rect x="70" y="150" width="{min(30 + len(tag_txt) * 12, 260)}" height="32" rx="16" fill="{accent}" opacity="0.18"/>
+<text x="86" y="172" font-size="16" font-weight="bold" fill="{accent}" letter-spacing="1.5">{esc_svg(tag_txt)}</text>
+<text font-size="{fs}" font-weight="bold" fill="#f2f4fa">{tspans}</text>
+<rect x="70" y="{ht - 78}" width="90" height="6" rx="3" fill="{accent}"/>
+</g>
 </svg>'''
     dest.write_text(svg, encoding="utf-8")
 
