@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto.md",
+  "title": "Institutional Adoption Meets Retail Volatility: The State of the Crypto Market",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "767 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "100% unique (most similar: 2026-09-28-california-enacts-law-barring-public-officials-from-launching-meme-coi.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A high-quality, professional summary that successfully synthesizes fragmented market data into a cohesive, context-driven narrative.",
+    "overall": 9.5
+  },
+  "word_count": 767,
+  "decision": "publish"
+}

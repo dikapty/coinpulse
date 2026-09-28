@@ -43,5 +43,9 @@ The signing of the bill by Governor Newsom creates a formal legal precedent gove
 
 Cryptocurrency exchanges and digital asset platforms operating within the state are required to adjust their compliance procedures to verify that listed assets comply with the new restrictions. Market participants should note that updates regarding cryptocurrency legislation and regulatory changes are published solely for informational purposes; this is not financial advice.
 
+
+<!-- affiliate-box -->
+<div class="affiliate-box"><strong>Related:</strong> <a href="https://example.com/ref/YOURID" rel="sponsored noopener" target="_blank">Example Exchange</a> — <em>Sponsored partner link</em></div>
+
 ## Sources
 * [Decrypt](https://decrypt.co/379404/california-bans-public-officials-from-issuing-meme-coins-under-new-newsom-law)

@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md",
+  "title": "Bitget Resumes Bitcoin Withdrawals Following $388 Million Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "817 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "100% unique (most similar: 2026-09-28-california-enacts-law-barring-public-officials-from-launching-meme-coi.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 6,
+    "readability": 7,
+    "neutrality": 9,
+    "verdict": "The article is technically accurate but suffers from poor structure, as it pivots abruptly from a specific exchange hack into unrelated technical patches and Ethereum roadmap speculation.",
+    "overall": 7.5
+  },
+  "word_count": 817,
+  "decision": "publish"
+}
