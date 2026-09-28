@@ -50,6 +50,11 @@ def run() -> None:
         "total_posts": len(list(POSTS.glob("*.md"))),
         "site_online": site_online(cfg),
     }
+    try:
+        from llm import budget_remaining
+        report["llm_budget_left"] = budget_remaining()
+    except Exception:
+        pass
 
     # Adaptive safety: if LLM rejected >= half of today's drafts, halve tomorrow's quota.
     quota_key = "quota_override"
@@ -71,6 +76,8 @@ def run() -> None:
         f"Pending your review: {report['pending_review']} | Rejected: {report['rejected']}\n"
         f"Inbox backlog: {report['inbox_backlog']}"
     )
+    if "llm_budget_left" in report:
+        digest += f" | LLM budget left today: {report['llm_budget_left']}"
     if report.get("quota_override"):
         digest += f"\nWARNING: {report['quota_override']}"
     log(digest)

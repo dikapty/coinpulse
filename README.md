@@ -4,6 +4,8 @@ An automated content pipeline: collects news from RSS → AI writes sourced arti
 
 **Niche:** crypto & finance (English) · **Mode:** hybrid (strong articles auto-publish, weak ones wait for your review) · **Budget:** $0/month.
 
+**Live:** https://dikapty.github.io/coinpulse/ · **Repo:** https://github.com/dikapty/coinpulse · **Runs:** 4×/day via GitHub Actions cron (`0 1,7,13,19 * * *` UTC) + daily monitor digest at 20:30 UTC.
+
 ```
 RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate ──┬─> content/posts ──> site/ ──> Pages
   (4x/day)     filter+dedupe    plan→draft→edit      score ≥ 7: auto │
@@ -16,7 +18,7 @@ RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate �
 |---|---|---|
 | Scheduler + compute | **GitHub Actions** (public repo) | Unlimited minutes on public repos |
 | Hosting | **GitHub Pages** (built-in) or **Cloudflare Pages** | Unlimited static bandwidth |
-| LLM | **Google AI Studio (Gemini)** free tier | ~hundreds of requests/day — enough for 2–8 articles |
+| LLM | **Google AI Studio (Gemini)** free tier | **20 requests/day per model** on fresh keys — the pipeline chains ~5 models as a quota pool (~100 req/day total), each article costs ~3 calls, so ~5–8 articles/day is the free ceiling |
 | LLM backup | **Groq** free tier | generous rate limits |
 | Alerts | **Telegram bot** | free |
 
@@ -120,7 +122,7 @@ templates/ + static/     # site HTML/CSS
 - **Change niche:** edit `sources`, `keywords`, `forbidden_topics` in `config.yaml`.
 - **More/fewer articles:** edit `publishing.rampup.week_limits` and cron frequency.
 - **Stricter quality:** raise `publishing.min_score` (8–9) or switch `mode: manual` while the site is young.
-- **LLM quota exhausted:** the client auto-falls back Gemini → Groq; add more free providers in `scripts/llm.py`.
+- **LLM quota exhausted:** the client walks a chain of Gemini models (each has its own 20 req/day free allowance), tracks exhausted models per UTC day, and stops cleanly when the whole pool is spent — the next cron run resumes where it left off.
 
 ## Honest limitations
 
