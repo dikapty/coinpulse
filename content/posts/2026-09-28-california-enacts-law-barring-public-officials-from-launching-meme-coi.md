@@ -16,13 +16,14 @@
   "source_names": [
     "Decrypt"
   ],
-  "status": "draft",
+  "status": "published",
   "used_item_ids": [
     "87b00022dce87d39"
   ],
   "draft_of_batch": "20260928-110654"
 }
 ---
+
 
 # California Enacts Law Barring Public Officials From Launching Meme Coins
 

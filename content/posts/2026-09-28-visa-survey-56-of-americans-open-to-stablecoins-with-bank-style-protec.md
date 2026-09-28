@@ -16,13 +16,14 @@
   "source_names": [
     "CryptoPotato"
   ],
-  "status": "draft",
+  "status": "published",
   "used_item_ids": [
     "fd9836f2f2e5b19b"
   ],
   "draft_of_batch": "20260928-110654"
 }
 ---
+
 
 # Visa Survey: 56% of Americans Open to Stablecoins with Bank-Style Protections
 
