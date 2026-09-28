@@ -47,29 +47,43 @@ def _discover_gemini_model(key: str, cfg: dict) -> str:
         return configured
 
 
-def _extract_interaction_text(data: dict) -> str:
-    """Extract reply text from an Interactions API response (tolerant to shape variants)."""
+def _extract_interaction_text(data) -> str:
+    """Extract reply text from an Interactions API response.
+
+    Canonical shape: {"status": "completed", "steps": [
+        {"type": "model_output", "content": [{"type": "text", "text": "..."}]}]}
+    Tolerates string parts, string content, and dict/part variants.
+    """
+    if not isinstance(data, dict):
+        raise RuntimeError(f"GEMINI_PARSE: unexpected response type {type(data).__name__}: {str(data)[:300]}")
     if isinstance(data.get("output_text"), str) and data["output_text"].strip():
         return data["output_text"].strip()
-    # walk execution steps for the final model output
     texts = []
     for step in data.get("steps") or []:
-        mo = step.get("model_output") or step.get("content") or {}
-        parts = (mo.get("content") or {}).get("parts") or mo.get("parts") or []
-        if isinstance(parts, list):
-            texts.append("".join(p.get("text", "") for p in parts if isinstance(p, dict)))
-        elif isinstance(mo, str):
-            texts.append(mo)
+        if not isinstance(step, dict):
+            continue
+        if step.get("type") not in (None, "model_output"):
+            continue
+        content = step.get("content")
+        if isinstance(content, str):
+            texts.append(content)
+        elif isinstance(content, list):
+            for part in content:
+                if isinstance(part, dict) and part.get("text"):
+                    texts.append(part["text"])
+                elif isinstance(part, str):
+                    texts.append(part)
+        elif isinstance(content, dict):
+            for part in content.get("parts") or []:
+                if isinstance(part, dict) and part.get("text"):
+                    texts.append(part["text"])
     out = "\n".join(t for t in texts if t).strip()
     if out:
         return out
-    # last resort: legacy generateContent shape
-    parts = data.get("candidates", [{}])[0].get("content", {}).get("parts", [])
-    out = "".join(p.get("text", "") for p in parts).strip()
-    if out:
-        return out
-    import json as _json
-    raise RuntimeError(f"GEMINI_PARSE: could not extract text; response keys={list(data.keys())}; head={_json.dumps(data)[:400]}")
+    status = data.get("status")
+    if status and status != "completed":
+        raise RuntimeError(f"GEMINI_INCOMPLETE: interaction status={status}, id={data.get('id')}")
+    raise RuntimeError(f"GEMINI_PARSE: no text in response; head={json.dumps(data)[:400]}")
 
 
 def _gemini(prompt: str, cfg: dict) -> str:
