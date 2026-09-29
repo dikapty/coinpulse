@@ -1,0 +1,11 @@
+{
+  "id": "ba4f153f41b5de21",
+  "title": "Chainlink CCIP 2.0 exposes bridge risk, and issuer gates trigger stalls",
+  "summary": "An optional required verifier can hold up destination tokens after a source-chain lock or burn; named production use remains unverified. The post Chainlink CCIP 2.0 exposes bridge risk, and issuer gates trigger stalls appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/chainlink-ccip-2-0-lets-issuers-delay-delivery-after-a-cross-chain-transfer-starts/",
+  "category": "crypto",
+  "published": "2026-09-29T08:00:09+00:00",
+  "collected_at": "2026-09-29T13:07:11.407260+00:00",
+  "batch": "20260929-130709"
+}
