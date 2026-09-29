@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md",
+  "title": "Bitget Resumes Bitcoin Withdrawals Following $387 Million Hack as Ethereum and USDT Access Remains Delayed",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "626 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "The article is highly objective and factual, but it suffers from severe thematic dilution by forcing unrelated macroeconomic and geopolitical news into a story about a crypto exchange hack.",
+    "overall": 8.3
+  },
+  "word_count": 626,
+  "decision": "publish"
+}

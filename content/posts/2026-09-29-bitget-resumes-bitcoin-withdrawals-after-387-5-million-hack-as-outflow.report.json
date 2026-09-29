@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.md",
+  "title": "Bitget Resumes Bitcoin Withdrawals After $387.5 Million Hack as Outflows Surge",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "786 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6.5,
+    "usefulness": 7.0,
+    "readability": 8.0,
+    "neutrality": 9.0,
+    "verdict": "The article is well-structured and objective, but it contains major temporal anomalies by reporting on events in late 2026 as if they have already occurred, which severely undermines its factual credibility.",
+    "overall": 7.6
+  },
+  "word_count": 786,
+  "decision": "publish"
+}
