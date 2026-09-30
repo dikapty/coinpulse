@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha.md",
+  "title": "Bitcoin Slips to $82,000 as Macro Economic Pressures and Regulatory Changes Impact Markets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "722 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "The article is highly objective and well-sourced, but it lacks cohesive news value by awkwardly stitching together unrelated stories (crypto, mining credit, and NYC real estate) under a single narrative.",
+    "overall": 8.3
+  },
+  "word_count": 722,
+  "decision": "publish"
+}

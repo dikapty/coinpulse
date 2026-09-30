@@ -1,0 +1,36 @@
+{
+  "file": "2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md",
+  "title": "Crypto Market Shifts: New Investment Vehicles Debut Alongside Governance and Macro Developments",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "806 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "An exceptionally well-written, objective, and analytical round-up that eschews hype and provides clear macroeconomic and structural context for every claim.",
+    "overall": 9.5
+  },
+  "word_count": 806,
+  "decision": "publish"
+}
