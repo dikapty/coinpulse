@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-01-kalshi-cuts-trading-incentive-scheme-early-amid-scrutiny-over-crypto-m.md",
+  "title": "Kalshi Cuts Trading Incentive Scheme Early Amid Scrutiny Over Crypto Market Volume",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "776 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 3,
+    "readability": 4,
+    "neutrality": 6,
+    "verdict": "The piece starts with a viable regulatory news hook but completely unravels into an unreadable SEO-stuffed article filled with irrelevant macro filler, absurd hallucinated dates, and misattributed metrics.",
+    "overall": 4.3
+  },
+  "word_count": 776,
+  "decision": "pending"
+}

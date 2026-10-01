@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-01-bitcoin-surges-40-in-strongest-quarter-since-late-2024-following-us-tr.md",
+  "title": "Bitcoin Surges 40% in Strongest Quarter Since Late 2024 Following US Treasury Buybacks",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "706 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-structured and neutral, the article relies on a nonsensical temporal timeline ('best quarter since late 2024') and acts as an unfocused aggregator of unrelated crypto press releases rather than a cohesive financial analysis.",
+    "overall": 6.5
+  },
+  "word_count": 706,
+  "decision": "pending"
+}
