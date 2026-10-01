@@ -1,0 +1,11 @@
+{
+  "id": "fd545598722aae21",
+  "title": "Three hidden flaws in Uniswap’s StablePair hook drain LP returns",
+  "summary": "StablePair can retain rebalancing value for liquidity providers, but fees anchored to a configured rate leave token and inventory risk with LPs. The post Three hidden flaws in Uniswap’s StablePair hook drain LP returns appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/three-hidden-flaws-in-uniswaps-stablepair-hook-drain-lp-returns/",
+  "category": "crypto",
+  "published": "2026-10-01T05:10:32+00:00",
+  "collected_at": "2026-10-01T07:06:20.207231+00:00",
+  "batch": "20261001-070618"
+}

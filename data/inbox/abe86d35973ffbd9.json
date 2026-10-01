@@ -1,0 +1,11 @@
+{
+  "id": "abe86d35973ffbd9",
+  "title": "New Bitcoin upgrade catches hidden key leaks hiding the exact fix",
+  "summary": "BIP461 would make compliant ECDSA signatures reproducible, enabling comparisons that flag deviations without proving malicious firmware. The post New Bitcoin upgrade catches hidden key leaks hiding the exact fix appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/new-bitcoin-upgrade-catches-hidden-key-leaks-hiding-the-exact-fix/",
+  "category": "crypto",
+  "published": "2026-10-01T01:20:32+00:00",
+  "collected_at": "2026-10-01T07:06:20.208920+00:00",
+  "batch": "20261001-070618"
+}
