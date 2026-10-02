@@ -1,0 +1,11 @@
+{
+  "id": "92850d512ac6ca56",
+  "title": "Unpatched Eclair Bitcoin Lightning nodes could crash again every time they restart",
+  "summary": "New disclosures show how saved unfunded channels could overwhelm older nodes again on restart, despite a fix shipping in July. The post Unpatched Eclair Bitcoin Lightning nodes could crash again every time they restart appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/unpatched-eclair-bitcoin-lightning-nodes-could-crash-again-every-time-they-restart/",
+  "category": "crypto",
+  "published": "2026-10-02T15:40:12+00:00",
+  "collected_at": "2026-10-02T19:05:08.541813+00:00",
+  "batch": "20261002-190507"
+}
