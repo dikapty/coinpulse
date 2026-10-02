@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md",
+  "title": "Diverging Monetary Policies: Fed Holds Steady as Bank of Japan Signals Tightening",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "775 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and professionally cited analysis that maintains objective distance while providing necessary context on central bank policy divergence.",
+    "overall": 8.8
+  },
+  "word_count": 775,
+  "decision": "publish"
+}

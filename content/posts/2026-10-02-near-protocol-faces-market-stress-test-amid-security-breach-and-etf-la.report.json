@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-02-near-protocol-faces-market-stress-test-amid-security-breach-and-etf-la.md",
+  "title": "NEAR Protocol Faces Market Stress Test Amid Security Breach and ETF Launch",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "890 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "14 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "100% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, objective summary that effectively contextualizes isolated events within broader market trends, though it relies heavily on a single source provider.",
+    "overall": 8.8
+  },
+  "word_count": 890,
+  "decision": "publish"
+}
