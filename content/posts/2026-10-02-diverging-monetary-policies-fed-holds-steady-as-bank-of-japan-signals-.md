@@ -22,7 +22,7 @@
     "747dd036409cc6b9"
   ],
   "draft_of_batch": "20261002-010542",
-  "image": "img/2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.svg"
+  "image": "img/2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.jpg"
 }
 ---
 

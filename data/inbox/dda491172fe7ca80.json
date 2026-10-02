@@ -1,0 +1,11 @@
+{
+  "id": "dda491172fe7ca80",
+  "title": "Electrum patches Lightning flaw, but old Bitcoin backups break",
+  "summary": "September’s security fix repairs exports, but older backups for anchor channels with non-deterministic Lightning keys still need replacing. The post Electrum patches Lightning flaw, but old Bitcoin backups break appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/electrum-patches-lightning-flaw-but-old-bitcoin-backups-break/",
+  "category": "crypto",
+  "published": "2026-10-02T05:30:01+00:00",
+  "collected_at": "2026-10-02T07:06:15.884087+00:00",
+  "batch": "20261002-070614"
+}
