@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-03-stablecoin-issuers-absorbing-us-debt-demand-shift-as-foreign-reserves-.md",
+  "title": "Stablecoin Issuers Absorbing US Debt Demand Shift as Foreign Reserves Fall",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "728 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 8,
+    "verdict": "The article attempts to stitch together four completely unrelated crypto news stories into a single, unfocused narrative that loses its core macro-economic point.",
+    "overall": 6.3
+  },
+  "word_count": 728,
+  "decision": "pending"
+}

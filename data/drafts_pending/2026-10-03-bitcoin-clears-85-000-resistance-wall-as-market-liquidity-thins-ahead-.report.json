@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-03-bitcoin-clears-85-000-resistance-wall-as-market-liquidity-thins-ahead-.md",
+  "title": "Bitcoin Clears $85,000 Resistance Wall as Market Liquidity Thins Ahead of Target Milestones",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "799 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "While the article maintains a neutral tone and explains order book mechanics well, it invents a future date (Oct. 2, 2026) and suffers from severe structural coherence issues by jamming unrelated Aave hack and political ETF news into a Bitcoin price piece.",
+    "overall": 6.0
+  },
+  "word_count": 799,
+  "decision": "pending"
+}
