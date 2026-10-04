@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md",
+  "title": "South Korea Considers Crypto Market Makers After Yen Stablecoin Trades Four Times Above Peg",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "704 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "90% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 7,
+    "neutrality": 8,
+    "verdict": "A well-neutralized and explanatory piece that clearly links a local market anomaly to regulatory policy, though it suffers from repetitive phrasing and a slightly shoehorned section on global altcoin volume.",
+    "overall": 7.5
+  },
+  "word_count": 704,
+  "decision": "publish"
+}

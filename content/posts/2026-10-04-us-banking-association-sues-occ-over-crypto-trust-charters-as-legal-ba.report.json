@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba.md",
+  "title": "US Banking Association Sues OCC Over Crypto Trust Charters as Legal Battle Escalates",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "716 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective news report that clearly explains the legal conflict between traditional banks and crypto firms, though the final section introducing hedge fund basis trades feels somewhat shoehorned in.",
+    "overall": 8.5
+  },
+  "word_count": 716,
+  "decision": "publish"
+}
