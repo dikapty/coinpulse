@@ -1,0 +1,11 @@
+{
+  "id": "344d6e79c5690527",
+  "title": "Bitcoin Core’s new fix closes gap that could redirect funds without stealing keys",
+  "summary": "A missing-output SIGHASH_SINGLE request can leave recipients unbound; Core’s merged PSBT repair has no confirmed fixed-release destination. The post Bitcoin Core’s new fix closes gap that could redirect funds without stealing keys appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/bitcoin-cores-new-fix-closes-gap-that-could-redirect-funds-without-stealing-keys/",
+  "category": "crypto",
+  "published": "2026-10-04T19:40:34+00:00",
+  "collected_at": "2026-10-04T21:21:27.359685+00:00",
+  "batch": "20261004-212126"
+}
