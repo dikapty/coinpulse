@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.md",
+  "title": "El Salvador Maintains Bitcoin Holdings Following IMF Review Amid Global Policy Shifts",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "804 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article provides a competent synthesis of complex regulatory and geopolitical developments but suffers from editorial drift, inconsistently blending hard-news analysis with speculative long-term price targets.",
+    "overall": 7.0
+  },
+  "word_count": 804,
+  "decision": "publish"
+}

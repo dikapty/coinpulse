@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi.md",
+  "title": "Global Markets Diverge on Shifting Interest Rate Expectations and Regional Economic Data",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "776 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured, objective summary that effectively contextualizes global macro divergence, though it relies heavily on a single source provider.",
+    "overall": 9.0
+  },
+  "word_count": 776,
+  "decision": "publish"
+}

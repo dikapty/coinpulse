@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0c1620"/><stop offset="0.6" stop-color="#1c4a52"/><stop offset="1" stop-color="#0c1620"/>
+</linearGradient>
+<radialGradient id="glow" cx="0.8" cy="0.85" r="0.7">
+<stop offset="0" stop-color="#3ddc84" stop-opacity="0.16"/><stop offset="1" stop-color="#3ddc84" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#0c1620" stop-opacity="0.88"/><stop offset="0.62" stop-color="#0c1620" stop-opacity="0.55"/><stop offset="1" stop-color="#0c1620" stop-opacity="0.1"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<g><circle cx="762" cy="459" r="55" fill="#3ddc84" opacity="0.10"/><circle cx="945" cy="545" r="103" fill="#3ddc84" opacity="0.16"/><circle cx="1133" cy="325" r="45" fill="#3ddc84" opacity="0.12"/><circle cx="579" cy="374" r="49" fill="#3ddc84" opacity="0.10"/><circle cx="592" cy="380" r="92" fill="#3ddc84" opacity="0.08"/><circle cx="759" cy="151" r="33" fill="#3ddc84" opacity="0.06"/></g>
+<g><rect x="720" y="490" width="24" height="115" rx="4" fill="#3ddc84" opacity="0.5"/><rect x="729" y="466" width="6" height="163" rx="3" fill="#3ddc84" opacity="0.25"/><rect x="784" y="412" width="24" height="193" rx="4" fill="#ff5c6c" opacity="0.5"/><rect x="793" y="388" width="6" height="241" rx="3" fill="#ff5c6c" opacity="0.25"/><rect x="848" y="374" width="24" height="231" rx="4" fill="#3ddc84" opacity="0.5"/><rect x="857" y="350" width="6" height="279" rx="3" fill="#3ddc84" opacity="0.25"/><rect x="912" y="460" width="24" height="145" rx="4" fill="#ff5c6c" opacity="0.5"/><rect x="921" y="436" width="6" height="193" rx="3" fill="#ff5c6c" opacity="0.25"/><rect x="976" y="502" width="24" height="103" rx="4" fill="#3ddc84" opacity="0.5"/><rect x="985" y="478" width="6" height="151" rx="3" fill="#3ddc84" opacity="0.25"/><rect x="1040" y="524" width="24" height="81" rx="4" fill="#ff5c6c" opacity="0.5"/><rect x="1049" y="500" width="6" height="129" rx="3" fill="#ff5c6c" opacity="0.25"/><rect x="1104" y="534" width="24" height="70" rx="4" fill="#3ddc84" opacity="0.5"/><rect x="1113" y="510" width="6" height="118" rx="3" fill="#3ddc84" opacity="0.25"/></g>
+<g><circle cx="1010" cy="545" r="130" fill="none" stroke="#3ddc84" stroke-width="9" opacity="0.85"/><circle cx="1010" cy="545" r="100" fill="none" stroke="#3ddc84" stroke-width="3" opacity="0.4"/><path d="M 976 493 h 68 M 976 597 h 68 M 964 528 h 92 a 27 27 0 0 1 0 54 h -92 a 27 27 0 0 1 0 -54 h 108" fill="none" stroke="#3ddc84" stroke-width="10" stroke-linecap="round" opacity="0.85"/></g>
+<rect width="1200" height="675" fill="url(#glow)"/>
+<rect width="1200" height="675" fill="url(#shade)"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<rect x="70" y="52" width="150" height="34" rx="17" fill="#3ddc84"/>
+<text x="145" y="75" font-size="17" font-weight="bold" fill="#0c1620" text-anchor="middle" letter-spacing="1">COINPULSE</text>
+<rect x="70" y="150" width="114" height="32" rx="16" fill="#3ddc84" opacity="0.18"/>
+<text x="86" y="172" font-size="16" font-weight="bold" fill="#3ddc84" letter-spacing="1.5">BITCOIN</text>
+<text font-size="46" font-weight="bold" fill="#f2f4fa"><tspan x="70" y="235">El Salvador Maintains</tspan><tspan x="70" y="297">Bitcoin Holdings Following</tspan><tspan x="70" y="359">IMF Review Amid Global</tspan><tspan x="70" y="421">Policy Shifts</tspan></text>
+<rect x="70" y="597" width="90" height="6" rx="3" fill="#3ddc84"/>
+</g>
+</svg>
