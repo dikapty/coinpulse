@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-06-house-democrat-introduces-bill-to-ban-candidates-from-trading-election.md",
+  "title": "House Democrat Introduces Bill to Ban Candidates From Trading Election Prediction Markets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "776 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 8,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The article is factually accurate and neutral, but suffers from SEO-driven fluff and jarring pivots to unrelated asset classes in the second half.",
+    "overall": 8.3
+  },
+  "word_count": 776,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-06-crypto-analyst-peter-brandt-and-ai-models-outline-key-targets-as-xrp-s.md",
+  "title": "Crypto Analyst Peter Brandt and AI Models Outline Key Targets as XRP Seeks Breakout",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "628 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": false,
+      "detail": "guaranteed"
+    }
+  },
+  "score": {
+    "facts": 4.0,
+    "usefulness": 2.0,
+    "readability": 7.0,
+    "neutrality": 9.0,
+    "verdict": "While neutral and structurally clean, the article lacks editorial value and factual credibility by relying on speculative 'cup-and-handle' chart patterns and meaningless ChatGPT price predictions for late 2026.",
+    "overall": 5.5
+  },
+  "word_count": 628,
+  "decision": "pending"
+}
