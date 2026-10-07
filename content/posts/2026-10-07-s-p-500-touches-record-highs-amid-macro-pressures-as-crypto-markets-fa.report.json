@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md",
+  "title": "S&P 500 Touches Record Highs Amid Macro Pressures as Crypto Markets Face Rate Uncertainties",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "727 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7.0,
+    "usefulness": 8.0,
+    "readability": 8.0,
+    "neutrality": 9.0,
+    "verdict": "The article provides solid market context and maintains neutrality, but suffers from disjointed subject matter and references a likely hallucinated future date (October 2026).",
+    "overall": 8.0
+  },
+  "word_count": 727,
+  "decision": "publish"
+}

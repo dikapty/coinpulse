@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-07-open-usd-supply-reaches-666-million-as-concentration-in-top-wallets-ra.md",
+  "title": "Open USD Supply Reaches $666 Million as Concentration in Top Wallets Raises Distribution Questions",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "768 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 4,
+    "readability": 5,
+    "neutrality": 9,
+    "verdict": "The article starts with a solid, well-attributed lead on Open USD metrics, but rapidly devolves into a disjointed 'kitchen sink' summary of unrelated crypto news stories.",
+    "overall": 6.8
+  },
+  "word_count": 768,
+  "decision": "pending"
+}

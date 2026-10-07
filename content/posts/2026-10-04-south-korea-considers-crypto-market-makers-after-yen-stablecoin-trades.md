@@ -23,7 +23,7 @@
     "ff22de26c4269e48"
   ],
   "draft_of_batch": "20260930-130813",
-  "image": "img/2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.svg"
+  "image": "img/2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.jpg"
 }
 ---
 
