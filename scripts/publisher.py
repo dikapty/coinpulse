@@ -394,19 +394,31 @@ def build_site(cfg: dict) -> None:
             TITLE=escape(front.get("title", p.stem.title())), BODY=html_body,
             DISCLOSURE="", HEAD_EXTRA=head_extra), encoding="utf-8")
 
-    # --- RSS of our own site ---
+    # --- RSS of our own site (styled for humans via feed.xsl) ---
+    def rfc822(iso: str) -> str:
+        try:
+            dt = datetime.strptime(iso[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)
+            return dt.strftime("%a, %d %b %Y %H:%M:%S GMT")
+        except Exception:
+            return datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
+
     items = "".join(
         f"<item><title>{escape(p.get('title',''))}</title>"
         f"<link>{base}posts/{p['_stem']}.html</link>"
         f"<guid>{base}posts/{p['_stem']}.html</guid>"
-        f"<pubDate>{p.get('date','')}</pubDate>"
+        f"<pubDate>{rfc822(p.get('date',''))}</pubDate>"
         f"<description>{escape(p.get('description',''))}</description>"
-        + (f"<enclosure url=\"{base}{p['image']}\" type=\"image/jpeg\"/>" if p.get('image') else "")
+        + (f'<enclosure url="{base}{p["image"]}" '
+           f'type="{"image/svg+xml" if p["image"].endswith(".svg") else "image/jpeg"}" length="0"/>'
+           if p.get('image') else "")
         + "</item>"
         for p in posts[:50])
     (SITE / "feed.xml").write_text(
-        '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        f'<?xml-stylesheet type="text/xsl" href="{base}feed.xsl"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
         f"<title>{escape(site_cfg['name'])}</title><link>{base}</link>"
+        f'<atom:link href="{base}feed.xml" rel="self" type="application/rss+xml"/>'
         f"<description>{escape(site_cfg.get('tagline',''))}</description>{items}"
         "</channel></rss>", encoding="utf-8")
 
