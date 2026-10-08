@@ -9,7 +9,7 @@ An automated content pipeline: collects news from RSS → AI writes sourced arti
 ```
 RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate ──┬─> content/posts ──> images ──> site/ ──> Pages
   (4x/day)     filter+dedupe    plan→draft→edit      score ≥ 7: auto │      (AI hero + SVG fallback)       │
-                                                   score < 7:  ─────┴─> data/drafts_pending/ (you review)  │
+                                                   score < 7:  ─────┴─> drafts_pending → auto-purged (5d)  │
                                                                                                           ▼
                                                           promote: IndexNow + PingOMatic + Telegram post
 ```
@@ -53,7 +53,12 @@ python3 scripts/pipeline.py build     # 5. renders site/  → open site/index.ht
 
 Or one shot: `python3 scripts/pipeline.py`
 
-**Reviewing pending articles** (`data/drafts_pending/`): read the `.md`, fix if needed, move it to `data/drafts/`, delete its `.report.json`, then run `gate` + `publish` again (or edit directly into `content/posts/` with `"status": "published"` in frontmatter and run `build`).
+**Pending articles** (`data/drafts_pending/`): drafts scored below the bar park here. In
+**hands-off mode** (default, `publishing.auto_purge_pending_days: 5`) they are automatically
+moved to `data/rejected/` after 5 days — you never have to touch the queue; the pipeline
+keeps producing fresh candidates daily. To review manually instead, set
+`auto_purge_pending_days: 0`, then: read the `.md`, fix if wanted, move it to
+`content/posts/` with `"status": "published"` in the frontmatter and run `build`.
 
 ## Phase 2 — deploy 24/7 on GitHub
 
