@@ -137,6 +137,34 @@ def telegram_post(cfg: dict, front: dict, url: str, image_url: str = "") -> bool
     return to_channel or to_owner
 
 
+def weekly_channel_digest(cfg: dict, promoted: dict, all_urls: dict) -> None:
+    """Once a week, post a 'This week on CoinPulse' roundup to the public channel.
+    Keeps the channel alive with curated content beyond per-article announcements."""
+    import time as _t
+    if not channel_id():
+        return
+    if _t.time() - promoted.get("last_weekly_digest", 0) < 6.5 * 86400:
+        return
+    from datetime import datetime, timedelta, timezone
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+    week = sorted((s for s in all_urls if s[:10] >= cutoff), reverse=True)[:7]
+    if len(week) < 3:
+        return  # not enough fresh material for a meaningful digest
+    base = cfg["site"]["url"].rstrip("/") + "/"
+    lines = ["🗞 This week on CoinPulse", ""]
+    for slug in week:
+        try:
+            front, _ = parse_frontmatter((POSTS / f"{slug}.md").read_text(encoding="utf-8"))
+            lines.append(f"• {front.get('title', slug)}\n  {base}posts/{slug}.html")
+        except Exception:
+            continue
+    lines += ["", f"All {len(all_urls)} articles: {base}"]
+    if send_channel("\n".join(lines)[:4000]):
+        promoted["last_weekly_digest"] = _t.time()
+        save_state("promoted", promoted)
+        log("Telegram channel: weekly digest posted")
+
+
 def run() -> None:
     cfg = load_config()
     promoted = load_state("promoted", {"urls": []})
@@ -155,6 +183,7 @@ def run() -> None:
             if submit_indexnow(cfg, [home], key):
                 promoted["last_home_submit"] = _t.time()
                 save_state("promoted", promoted)
+        weekly_channel_digest(cfg, promoted, all_urls)
         return
 
     log(f"Promote: {len(fresh)} new URL(s)")
@@ -184,6 +213,8 @@ def run() -> None:
         ping_o_matic(cfg)  # only when we have genuinely new content
     else:
         log("IndexNow submission failed — will retry on next run (state not updated).")
+
+    weekly_channel_digest(cfg, promoted, all_urls)
 
 
 if __name__ == "__main__":
