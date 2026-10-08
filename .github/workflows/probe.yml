@@ -1,0 +1,22 @@
+name: Probe (temporary utility)
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "space-separated URLs to probe"
+        required: true
+        default: "https://coinpulse.pages.dev/"
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: curl each URL, print status
+        run: |
+          for u in ${{ github.event.inputs.urls }}; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 25 "$u" -H "User-Agent: Mozilla/5.0")
+            echo "PROBE $u -> HTTP $code"
+          done
+          echo "NOTE: for *.pages.dev — 404 means project name is FREE, 200 means taken."
