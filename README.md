@@ -8,8 +8,10 @@ An automated content pipeline: collects news from RSS → AI writes sourced arti
 
 ```
 RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate ──┬─> content/posts ──> images ──> site/ ──> Pages
-  (4x/day)     filter+dedupe    plan→draft→edit      score ≥ 7: auto │      (AI hero + SVG fallback)
-                                                   score < 7:  ─────┴─> data/drafts_pending/ (you review)
+  (4x/day)     filter+dedupe    plan→draft→edit      score ≥ 7: auto │      (AI hero + SVG fallback)       │
+                                                   score < 7:  ─────┴─> data/drafts_pending/ (you review)  │
+                                                                                                          ▼
+                                                          promote: IndexNow + PingOMatic + Telegram post
 ```
 
 ## What runs it 24/7 for free
@@ -23,6 +25,7 @@ RSS feeds ──> collector ──> writer (Gemini/Groq) ──> quality-gate �
 | Alerts | **Telegram bot** | free |
 | Article images | **Pollinations.ai** (flux) | free, no key; rate-limited → local SVG covers as automatic fallback |
 | Price ticker | **CoinGecko public API** | free, 10-min client cache |
+| Indexing | **IndexNow** (Bing/Yandex/Naver/Seznam) + **PingOMatic** | free, instant, no account |
 
 ---
 
@@ -72,20 +75,55 @@ Or one shot: `python3 scripts/pipeline.py`
 5. Set the real URL in `config.yaml` → `site.url` (with trailing slash), commit & push. This matters for sitemap/canonical/RSS.
 6. Actions tab → run **CoinPulse 24/7 Pipeline** manually once (workflow_dispatch) to verify, then the cron (`0 1,7,13,19 * * *` = 4 runs/day) takes over. Daily digest at 20:30 UTC via the monitor workflow.
 
-## Phase 3 — monetization (after traffic appears)
+## Phase 3 — free promotion (already automated)
 
-1. **Wait for content + traffic.** Apply to ad networks only when you have 30–50 quality posts and real visitors (typically 1–3 months). Applying too early = rejection.
-2. **Google AdSense** (adsense.google.com): add the verification snippet to `templates/*.html` `<head>`, then set in `config.yaml`:
-   ```yaml
-   monetization:
-     adsense_enabled: true
-     adsense_client: "ca-pub-XXXXXXXX"
-     ad_slot_top: "1111111111"
-     ad_slot_bottom: "2222222222"
-   ```
-   A custom domain (~$10/yr, the only expense ever) noticeably improves approval odds.
-3. **Affiliates** (free to join): exchange affiliate programs, VPNs, hardware wallets, trading tools. Put your links in `config.yaml → affiliates.programs` with `match` keywords; `scripts/affiliate.py` inserts clearly-labelled sponsored boxes automatically.
-4. Realistic expectations: first cents in month 1–3, meaningful income only with consistent traffic. Nobody can promise daily income from day one — anyone who does is selling a course.
+Everything below runs by itself after each deploy (job `promote` in publish.yml):
+
+- **IndexNow** — new article URLs submitted instantly to Bing, Yandex, Naver, Seznam.
+  Key file ships with the site; already-submitted URLs tracked in `data/state/promoted.json`.
+- **PingOMatic** — update pings to blog directories on every new publish.
+- **Telegram** — each new article posted to your chat with rich OG preview
+  (forward those to groups/channels — instant distribution).
+- **SEO built into every page** — sitemap.xml (posts + tag hubs), robots.txt,
+  canonical, Open Graph + Twitter cards, JSON-LD (NewsArticle + BreadcrumbList),
+  breadcrumbs, tag hub pages with internal links, RSS with image enclosures.
+
+### Manual checklist (~20 min, once — biggest ROI)
+
+| Action | Why |
+|---|---|
+| **Google Search Console**: add URL-prefix property, submit sitemap | Google is still the #1 traffic source. Verification token goes to `monetization.site_verification` — it renders into every page head automatically |
+| **Bing Webmaster Tools**: import from GSC | Bing powers ChatGPT/Copilot citations — AI-answer traffic |
+| Create **X (Twitter)** + **Telegram channel** for the brand | The share buttons already target X/Telegram/Reddit/WhatsApp |
+| Post articles **manually** in relevant subreddits (weekly discussion threads) | Reddit ranks extremely well; automated spam gets banned — human posting doesn't |
+| Answer crypto questions on **Quora** with article links where genuinely relevant | Long-tail referral traffic |
+| Custom domain (~$10/yr, later) | AdSense approval odds + trust |
+
+## Phase 4 — monetization (after traffic appears)
+
+The site is **revenue-ready from day one** — ads infrastructure is built in, you flip switches:
+
+1. **Display ads.**
+   - **Google AdSense** (apply at ~30–50 posts): in `config.yaml`:
+     ```yaml
+     monetization:
+       adsense_enabled: true
+       adsense_client: "ca-pub-XXXXXXXX"
+       ad_slot_top: "1111111111"
+       ad_slot_inline: "3333333333"
+       ad_slot_bottom: "2222222222"
+       ad_slot_index: "4444444444"
+     ```
+     Loader script, `<ins>` tags and **ads.txt** are generated automatically.
+   - **Crypto-friendly networks with lower thresholds** (Adsterra, Monetag, Coinzilla,
+     PropellerAds): paste their raw HTML snippet into `monetization.custom_html.<slot>` —
+     renders in the same slots; extra ads.txt rows via `monetization.ads_txt_lines`.
+2. **Affiliates** (free to join): exchanges, hardware wallets, VPNs, trading tools.
+   Put real links in `config.yaml → affiliates.programs` + `affiliates.enabled: true`.
+   Boxes are auto-inserted with mandatory "Affiliate" labels.
+3. Realistic expectations: ~$2–8 RPM crypto traffic → 1,000 visits/day ≈ $60–240/month;
+   first cents typically in month 1–3. Nobody can promise daily income from day one —
+   anyone who does is selling a course.
 
 ## Quality & platform-compliance safeguards (built in)
 
@@ -110,6 +148,7 @@ scripts/
   quality_gate.py        # deterministic checks + LLM scoring → publish/pending/reject
   publisher.py           # quota, posts, static site builder → site/
   images.py              # AI hero images (Pollinations) + SVG fallback covers
+  promote.py             # IndexNow + PingOMatic + Telegram article posts
   affiliate.py           # labelled affiliate boxes
   monitor.py             # daily health digest + adaptive throttle
   llm.py / notify.py / common.py

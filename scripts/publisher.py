@@ -107,12 +107,98 @@ def render_template(name: str, **ctx) -> str:
 
 
 def ad_html(cfg: dict, slot: str) -> str:
+    """Ad slot renderer supporting two mechanisms:
+    1. AdSense: monetization.adsense_enabled + adsense_client + ad_slot_* ids
+    2. Custom HTML (any other network — e.g. adsterra, propellerads, coinzilla):
+       monetization.custom_html.<slot> inserted verbatim inside the ad-slot div.
+    """
     mon = cfg.get("monetization", {})
-    if not mon.get("adsense_enabled") or not mon.get(slot):
+    out = ""
+    if mon.get("adsense_enabled") and mon.get("adsense_client") and mon.get(slot):
+        out += (f'<!-- AdSense {slot} -->\n'
+                f'<ins class="adsbygoogle" style="display:block" '
+                f'data-ad-client="{mon["adsense_client"]}" data-ad-slot="{mon[slot]}" '
+                f'data-ad-format="auto" data-full-width-responsive="true"></ins>\n'
+                f'<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>')
+    custom = (mon.get("custom_html") or {}).get(slot, "").strip()
+    if custom:
+        out += f"<!-- custom ad {slot} -->\n{custom}"
+    if not out:
         return ""
-    return (f'<div class="ad-slot"><!-- AdSense {slot} -->\n'
-            f'<ins class="adsbygoogle" data-ad-client="{mon["adsense_client"]}" '
-            f'data-ad-slot="{mon[slot]}"></ins></div>')
+    return f'<div class="ad-slot" aria-label="Advertisement">\n{out}\n</div>'
+
+
+def ads_head_html(cfg: dict) -> str:
+    """Head snippet: AdSense loader + any custom head code (verification meta tags etc.)."""
+    mon = cfg.get("monetization", {})
+    parts = []
+    if mon.get("adsense_enabled") and mon.get("adsense_client"):
+        parts.append(
+            f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+            f'?client={mon["adsense_client"]}" crossorigin="anonymous"></script>')
+    head_custom = (mon.get("custom_html") or {}).get("head", "").strip()
+    if head_custom:
+        parts.append(head_custom)
+    verif = mon.get("site_verification", "").strip()
+    if verif:
+        parts.append(f'<meta name="google-site-verification" content="{verif}">')
+    return "\n".join(parts)
+
+
+def build_ads_txt(cfg: dict) -> str:
+    """ads.txt for ad-network verification (required by most networks)."""
+    mon = cfg.get("monetization", {})
+    lines = ["# CoinPulse ads.txt — add rows as networks approve the site"]
+    if mon.get("adsense_enabled") and mon.get("adsense_client"):
+        lines.append(f"google.com, {mon['adsense_client'].replace('ca-pub-', 'pub-')}, DIRECT, f08c47fec0942fa0")
+    extra = mon.get("ads_txt_lines") or []
+    lines.extend(extra)
+    return "\n".join(lines) + "\n"
+
+
+def slugify(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:40] or "tag"
+
+
+def build_tag_pages(cfg: dict, base: str, posts: list) -> list:
+    """Tag hub pages: /tags/<tag>.html listing all articles with that tag.
+    Returns list of tag slugs (for sitemap)."""
+    by_tag: dict = {}
+    for p in posts:
+        for t in p.get("tags", []):
+            by_tag.setdefault(slugify(t), []).append((t, p))
+    tags_dir = SITE / "tags"
+    tags_dir.mkdir(exist_ok=True)
+    for tag_slug, entries in by_tag.items():
+        display = entries[0][0]
+        items = []
+        for _, p in sorted(entries, key=lambda e: e[1].get("date", ""), reverse=True):
+            img = (f'<img src="{base}{p["image"]}" alt="" loading="lazy">'
+                   if p.get("image") else '<div class="thumb-fallback"></div>')
+            items.append(
+                f'<a class="card" href="{base}posts/{p["_stem"]}.html">'
+                f'<div class="thumb">{img}</div>'
+                f'<div class="card-body"><h2>{escape(p.get("title",""))}</h2>'
+                f'<p>{escape(p.get("description",""))}</p>'
+                f'<p class="card-meta"><time>{p.get("date","")[:10]}</time></p></div></a>')
+        page = render_template(
+            "page.html", SITE_NAME=cfg["site"]["name"], BASE=base,
+            TITLE=f"{escape(display)} News",
+            HEAD_EXTRA="",
+            BODY=(f'<h1 class="tag-page-title">{escape(display)}</h1>'
+                  f'<p class="tag-count">{len(items)} article(s)</p>'
+                  f'<section class="cards">{"".join(items)}</section>'),
+            DISCLOSURE="",
+        )
+        (tags_dir / f"{tag_slug}.html").write_text(page, encoding="utf-8")
+    return sorted(by_tag.keys())
+
+
+def breadcrumbs(base: str, title: str) -> str:
+    return (f'<nav class="breadcrumbs" aria-label="Breadcrumb">'
+            f'<a href="{base}">Home</a> <span>›</span> '
+            f'<a href="{base}archive.html">News</a> <span>›</span> '
+            f'<span>{escape(title[:70])}</span></nav>')
 
 
 def reading_time(body_md: str) -> int:
@@ -194,12 +280,14 @@ def build_site(cfg: dict) -> None:
                       "news sources, edited and fact-checked against those sources, and are "
                       "provided for information only — this is not financial advice.</p>")
 
+    head_extra = ads_head_html(cfg)
+
     # --- individual posts ---
     for post in posts:
         body_md = re.sub(r"^\s*#\s+.*\n+", "", post["_body"], count=1)  # title rendered by template
         html_body = md_lib.markdown(body_md, extensions=["tables", "toc"])
         tags = "".join(
-            f'<a class="tag" href="{base}archive.html">{escape(t)}</a>'
+            f'<a class="tag" href="{base}tags/{slugify(t)}.html">{escape(t)}</a>'
             for t in post.get("tags", []))
         image = post.get("image", "")
         og_image = f'{base}{image}' if image else f'{base}og-default.jpg'
@@ -215,16 +303,22 @@ def build_site(cfg: dict) -> None:
             AUTHOR=escape(site_cfg.get("author", "")),
             READING_TIME=f"{rtime} min read",
             HERO=hero,
+            BREADCRUMBS=breadcrumbs(base, post.get("title", "")),
             TOC=build_toc(html_body),
             BODY=html_body,
             RELATED=related_posts(post, posts, base),
             SHARE=share_buttons(post, base, post["_stem"]),
             AD_TOP=ad_html(cfg, "ad_slot_top"), AD_BOTTOM=ad_html(cfg, "ad_slot_bottom"),
+            AD_INLINE=ad_html(cfg, "ad_slot_inline"),
             DISCLOSURE=disclosure,
             CANONICAL=f'{base}posts/{post["_stem"]}.html',
             OG_IMAGE=og_image,
+            HEAD_EXTRA=head_extra,
         )
         (SITE / "posts" / f"{post['_stem']}.html").write_text(page, encoding="utf-8")
+
+    # --- tag hub pages (SEO: topic clusters + internal linking) ---
+    tag_slugs = build_tag_pages(cfg, base, posts)
 
     # --- index with pagination ---
     per_page = 11  # 1 featured + 10 grid
@@ -266,17 +360,23 @@ def build_site(cfg: dict) -> None:
             TAGLINE=escape(site_cfg.get("tagline", "")),
             FEATURED=featured_html, CARDS=cards,
             PAGINATION=f'<div class="pagination">{older}{newer}</div>',
+            AD_MID=ad_html(cfg, "ad_slot_index"),
             TICKER='<div class="ticker" id="ticker" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>',
-            DISCLOSURE=disclosure), encoding="utf-8")
+            DISCLOSURE=disclosure,
+            HEAD_EXTRA=head_extra), encoding="utf-8")
 
     # --- archive ---
     archive_items = "".join(
         f'<li><time>{p.get("date","")[:10]}</time> <a href="{base}posts/{p["_stem"]}.html">{escape(p.get("title",""))}</a></li>'
         for p in posts)
+    tag_cloud = "".join(
+        f'<a class="tag" href="{base}tags/{ts}.html">{escape(ts.replace("-", " "))}</a>'
+        for ts in tag_slugs)
     (SITE / "archive.html").write_text(render_template(
         "page.html", SITE_NAME=site_cfg["name"], BASE=base, TITLE="Archive",
-        BODY=f'<h1>All articles</h1><ul class="archive">{archive_items}</ul>',
-        DISCLOSURE=disclosure), encoding="utf-8")
+        BODY=(f'<h1>All articles</h1><ul class="archive">{archive_items}</ul>'
+              f'<h2 class="tag-cloud-title">Browse by topic</h2><p class="tag-cloud">{tag_cloud}</p>'),
+        DISCLOSURE=disclosure, HEAD_EXTRA=head_extra), encoding="utf-8")
 
     # --- static pages from content/pages ---
     for p in (CONTENT / "pages").glob("*.md"):
@@ -285,7 +385,7 @@ def build_site(cfg: dict) -> None:
         (SITE / f"{p.stem}.html").write_text(render_template(
             "page.html", SITE_NAME=site_cfg["name"], BASE=base,
             TITLE=escape(front.get("title", p.stem.title())), BODY=html_body,
-            DISCLOSURE=""), encoding="utf-8")
+            DISCLOSURE="", HEAD_EXTRA=head_extra), encoding="utf-8")
 
     # --- RSS of our own site ---
     items = "".join(
@@ -305,7 +405,9 @@ def build_site(cfg: dict) -> None:
 
     # --- sitemap.xml ---
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    urls = [f"{base}", f"{base}archive.html"] + [f"{base}posts/{p['_stem']}.html" for p in posts]
+    urls = ([f"{base}", f"{base}archive.html"]
+            + [f"{base}posts/{p['_stem']}.html" for p in posts]
+            + [f"{base}tags/{ts}.html" for ts in tag_slugs])
     (SITE / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         + "".join(f"<url><loc>{u}</loc><lastmod>{today_str}</lastmod></url>" for u in urls)
@@ -315,7 +417,21 @@ def build_site(cfg: dict) -> None:
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n", encoding="utf-8")
 
-    log(f"Site built: {SITE} ({len(posts)} posts, {pages} index page(s))")
+    # --- ads.txt (ad-network verification) ---
+    (SITE / "ads.txt").write_text(build_ads_txt(cfg), encoding="utf-8")
+
+    # --- IndexNow key file (instant indexing) ---
+    # MUST be generated here (pre-deploy) so it ships with the site; promote.py
+    # later references the same key from state when submitting URLs.
+    key = load_state("indexnow_key", None)
+    if not key:
+        import secrets
+        key = secrets.token_hex(16)
+        save_state("indexnow_key", key)
+        log(f"Generated IndexNow key: {key}")
+    (SITE / f"{key}.txt").write_text(key, encoding="utf-8")
+
+    log(f"Site built: {SITE} ({len(posts)} posts, {len(tag_slugs)} tag pages, {pages} index page(s))")
 
 
 def run(build_only: bool = False) -> None:

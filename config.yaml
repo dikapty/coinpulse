@@ -121,7 +121,21 @@ monetization:
   adsense_enabled: false
   adsense_client: ''
   ad_slot_top: ''
+  ad_slot_inline: ''
   ad_slot_bottom: ''
+  ad_slot_index: ''
+  # Any non-AdSense network (Adsterra, PropellerAds, Coinzilla, Monetag...):
+  # paste the raw HTML snippet; it renders inside the corresponding ad-slot div.
+  custom_html:
+    head: ''
+    ad_slot_top: ''
+    ad_slot_inline: ''
+    ad_slot_bottom: ''
+    ad_slot_index: ''
+  # google-site-verification meta token (from Search Console), value only
+  site_verification: ''
+  # extra ads.txt rows, e.g. "coinzilla.com, PUB-XXXX, DIRECT"
+  ads_txt_lines: []
 notification:
   telegram:
     enabled: true

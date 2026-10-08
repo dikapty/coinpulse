@@ -9,7 +9,8 @@ import requests
 from common import load_config, log
 
 
-def send(text: str) -> bool:
+def send(text: str, preview: bool = False) -> bool:
+    """Send a Telegram message. preview=True renders the link's OG card (for article posts)."""
     cfg = load_config()
     tg = cfg.get("notification", {}).get("telegram", {})
     if not tg.get("enabled"):
@@ -22,7 +23,7 @@ def send(text: str) -> bool:
     try:
         r = requests.post(
             f"https://api.telegram.org/bot{token}/sendMessage",
-            json={"chat_id": chat_id, "text": text[:4000], "disable_web_page_preview": True},
+            json={"chat_id": chat_id, "text": text[:4000], "disable_web_page_preview": not preview},
             timeout=20,
         )
         if r.status_code != 200:

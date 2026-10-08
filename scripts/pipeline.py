@@ -72,6 +72,17 @@ def stage_images():
     img_run([])
 
 
+def stage_promote():
+    """Free promotion: IndexNow instant indexing (Bing/Yandex/Naver/Seznam),
+    PingOMatic broadcast, Telegram article posts.
+
+    NOTE: requires LIVE URLs — in CI this runs as a separate job AFTER deploy-pages,
+    never in the local full pipeline. Invoke explicitly: pipeline.py promote
+    """
+    from promote import run as promote_run
+    promote_run()
+
+
 def stage_build():
     from publisher import build_site
     build_site(load_config())
@@ -137,6 +148,10 @@ def main(argv):
             stage_images()
         if full or "build" in stages:
             stage_build()
+        # promote is NEVER part of `full` — it needs live/deployed URLs, so in CI it
+        # runs as a separate post-deploy job. Only runs when explicitly requested.
+        if "promote" in stages:
+            stage_promote()
         if full or "monitor" in stages:
             stage_monitor()
         log("PIPELINE OK")

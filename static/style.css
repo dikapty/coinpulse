@@ -153,10 +153,29 @@ a.tag:hover { color: var(--accent); }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--accent); }
 
+/* breadcrumbs */
+.breadcrumbs { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.breadcrumbs a { color: var(--muted); text-decoration: none; }
+.breadcrumbs a:hover { color: var(--accent); }
+.breadcrumbs span { margin: 0 4px; }
+
+/* tag pages */
+.tag-page-title { color: var(--accent); }
+.tag-count { color: var(--muted); font-size: 14px; margin-top: -8px; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-cloud .tag { font-size: 13px; padding: 4px 14px; }
+.tag-cloud-title { margin-top: 36px; font-size: 15px; text-transform: uppercase;
+  letter-spacing: .8px; color: var(--muted); }
+
 .archive { list-style: none; padding: 0; }
 .archive li { padding: 8px 0; border-bottom: 1px solid var(--border); }
 .archive time { color: var(--muted); margin-right: 12px; font-size: 14px; }
-.ad-slot { margin: 22px 0; min-height: 90px; }
+
+/* ad slots — render nothing when empty, neat dashed box when filled */
+.ad-slot { margin: 24px 0; min-height: 100px; display: flex; align-items: center;
+  justify-content: center; background: var(--panel); border: 1px dashed var(--border);
+  border-radius: 10px; overflow: hidden; }
+.ad-slot ins { width: 100%; }
 
 @media (max-width: 720px) {
   body { font-size: 16px; }

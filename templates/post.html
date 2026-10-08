@@ -20,6 +20,10 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsArticle","headline":"{{TITLE}}","description":"{{DESCRIPTION}}","image":"{{OG_IMAGE}}","datePublished":"{{DATE}}","author":{"@type":"Organization","name":"{{AUTHOR}}"},"publisher":{"@type":"Organization","name":"{{SITE_NAME}}","logo":{"@type":"ImageObject","url":"{{OG_IMAGE}}"}}}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{BASE}}"},{"@type":"ListItem","position":2,"name":"News","item":"{{BASE}}archive.html"},{"@type":"ListItem","position":3,"name":"{{TITLE}}"}]}
+</script>
+{{HEAD_EXTRA}}
 </head>
 <body>
 <div id="progress"></div>
@@ -31,6 +35,7 @@
 </header>
 <main class="wrap article-page">
   <article>
+    {{BREADCRUMBS}}
     <h1 class="post-title">{{TITLE}}</h1>
     <p class="meta"><time datetime="{{DATE}}">{{DATE}}</time> · {{AUTHOR}} · {{READING_TIME}} <span class="tags">{{TAGS}}</span></p>
     {{HERO}}
@@ -39,6 +44,7 @@
     <div class="post-body">
     {{BODY}}
     </div>
+    {{AD_INLINE}}
     {{SHARE}}
     {{AD_BOTTOM}}
   </article>

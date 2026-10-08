@@ -70,3 +70,41 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # --- Free promotion AFTER the site is live: IndexNow (Bing/Yandex instant
+  #     indexing), PingOMatic, Telegram posts for new articles ---
+  promote:
+    needs: deploy-pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4   # fresh checkout: has the content committed by `pipeline`
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Wait for CDN propagation
+        run: sleep 60
+
+      - name: Submit to IndexNow + ping services + Telegram posts
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/pipeline.py promote
+
+      - name: Commit promotion state
+        run: |
+          git config user.name "coinpulse-bot"
+          git config user.email "coinpulse-bot@users.noreply.github.com"
+          git add data/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "state: promote $(date -u +%F)"
+            for i in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main || git rebase --abort
+            done
+          fi
