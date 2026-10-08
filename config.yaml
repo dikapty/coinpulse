@@ -6,6 +6,7 @@ site:
   author: CoinPulse Editorial
   timezone: UTC
 publishing:
+  auto_purge_pending_days: 5
   mode: hybrid
   min_score: 7.0
   rampup:

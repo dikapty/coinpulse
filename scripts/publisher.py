@@ -420,6 +420,41 @@ def build_site(cfg: dict) -> None:
     # --- ads.txt (ad-network verification) ---
     (SITE / "ads.txt").write_text(build_ads_txt(cfg), encoding="utf-8")
 
+    # --- llms.txt (AI search engines: ChatGPT, Perplexity, Copilot discoverability) ---
+    llms_lines = [
+        f"# {site_cfg['name']}",
+        "",
+        f"> {site_cfg.get('tagline', 'Crypto and finance news with context.')}",
+        "",
+        f"Fresh English-language crypto & finance news articles, AI-assisted from public",
+        f"sources and fact-checked against them. Published multiple times per day.",
+        "",
+        "## Latest articles",
+        "",
+    ]
+    for p in posts[:40]:
+        llms_lines.append(
+            f"- [{p.get('title','')}]({base}posts/{p['_stem']}.html): "
+            f"{(p.get('description','') or '')[:140]}")
+    llms_lines += ["", "## Topics", ""]
+    for ts in tag_slugs[:40]:
+        llms_lines.append(f"- [{ts.replace('-',' ').title()}]({base}tags/{ts}.html)")
+    (SITE / "llms.txt").write_text("\n".join(llms_lines) + "\n", encoding="utf-8")
+
+    # --- custom 404 (GitHub Pages serves 404.html automatically) ---
+    latest_cards = "".join(
+        f'<li><a href="{base}posts/{p["_stem"]}.html">{escape(p.get("title",""))}</a>'
+        f' <time>{p.get("date","")[:10]}</time></li>'
+        for p in posts[:8])
+    (SITE / "404.html").write_text(render_template(
+        "page.html", SITE_NAME=site_cfg["name"], BASE=base, TITLE="Page not found",
+        HEAD_EXTRA=head_extra,
+        BODY=('<div class="nf"><h1 class="nf-code">404</h1>'
+              '<p class="nf-text">This page does not exist (or was renamed).</p>'
+              f'<h2>Latest articles</h2><ul class="archive">{latest_cards}</ul>'
+              f'<p><a class="nf-home" href="{base}">&larr; Back to homepage</a></p></div>'),
+        DISCLOSURE=""), encoding="utf-8")
+
     # --- IndexNow key file (instant indexing) ---
     # MUST be generated here (pre-deploy) so it ships with the site; promote.py
     # later references the same key from state when submitting URLs.

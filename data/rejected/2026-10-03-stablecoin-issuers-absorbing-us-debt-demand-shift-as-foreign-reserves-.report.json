@@ -32,5 +32,6 @@
     "overall": 6.3
   },
   "word_count": 728,
-  "decision": "pending"
+  "decision": "rejected",
+  "purge_reason": "auto-purged: unreviewed for 5+ days (hands-off mode)"
 }

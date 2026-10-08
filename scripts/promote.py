@@ -139,19 +139,29 @@ def run() -> None:
     cfg = load_config()
     promoted = load_state("promoted", {"urls": []})
     done = set(promoted.get("urls", []))
+    home = cfg["site"]["url"].rstrip("/") + "/"
+    key = get_indexnow_key(cfg)
 
     all_urls = published_urls(cfg)
     fresh = [(slug, url) for slug, url in all_urls.items() if url not in done]
     if not fresh:
         log("Promote: nothing new to submit.")
-        write_key_file(get_indexnow_key(cfg))
+        write_key_file(key)
+        # weekly refresh: resubmit homepage so crawlers keep returning
+        import time as _t
+        if _t.time() - promoted.get("last_home_submit", 0) > 6 * 86400:
+            if submit_indexnow(cfg, [home], key):
+                promoted["last_home_submit"] = _t.time()
+                save_state("promoted", promoted)
         return
 
     log(f"Promote: {len(fresh)} new URL(s)")
-    key = get_indexnow_key(cfg)
     write_key_file(key)
 
-    ok_index = submit_indexnow(cfg, [u for _, u in fresh], key)
+    # article URLs + homepage together (keeps the root fresh in the index too)
+    ok_index = submit_indexnow(cfg, [u for _, u in fresh] + [home], key)
+    if ok_index:
+        promoted["last_home_submit"] = __import__("time").time()
 
     # Telegram: post the newest article (max 2 per run to avoid spamming the chat)
     fresh_sorted = sorted(fresh, key=lambda x: x[0], reverse=True)[:2]
