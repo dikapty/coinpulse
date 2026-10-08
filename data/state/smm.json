@@ -1,11 +1,16 @@
 {
-  "posted": [],
+  "posted": [
+    "2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa"
+  ],
   "daily": {
-    "2026-10-08": 1
+    "2026-10-08": 2
   },
   "polls": [],
   "snapshots": {
     "2026-10-08": true
   },
-  "last_post_ts": 1791468399.373992
+  "last_post_ts": 1791473725.12746,
+  "articles_today": {
+    "2026-10-08": 1
+  }
 }
