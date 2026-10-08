@@ -73,7 +73,8 @@ def run() -> None:
         f"CoinPulse daily digest — {key}\n"
         f"Site: {emoji} | Published today: {report['published']} | Total posts: {report['total_posts']}\n"
         f"Collected: {report['collected']} | Written: {report['written']} | "
-        f"Pending your review: {report['pending_review']} | Rejected: {report['rejected']}\n"
+        f"Below-bar drafts queued: {report['pending_review']} (auto-purged after 5 days) | "
+        f"Rejected: {report['rejected']}\n"
         f"Inbox backlog: {report['inbox_backlog']}"
     )
     if "llm_budget_left" in report:
