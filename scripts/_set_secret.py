@@ -28,9 +28,9 @@ def seal(name: str, value: str) -> None:
                       headers=h, timeout=30)
     pk.raise_for_status()
     key_id = pk.json()["key_id"]
-    sealed = public.SealedBox(public.PublicKey(pk.json()["key"].encode())).encrypt(
-        value.encode("utf-8"))
     import base64
+    pub = public.PublicKey(pk.json()["key"].encode(), encoding.Base64Encoder)
+    sealed = public.SealedBox(pub).encrypt(value.encode("utf-8"))
     r = requests.put(
         f"https://api.github.com/repos/{REPO}/actions/secrets/{name}",
         headers=h, timeout=30,

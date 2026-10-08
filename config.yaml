@@ -5,6 +5,8 @@ site:
   url: https://dikapty.github.io/coinpulse/
   author: CoinPulse Editorial
   timezone: UTC
+  social:
+    telegram_channel: https://t.me/coinpulsedailynews
 publishing:
   auto_purge_pending_days: 5
   mode: hybrid
