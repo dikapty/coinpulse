@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-08-government-crypto-transfers-regulatory-push-and-ai-security-warnings-s.md",
+  "title": "Government Crypto Transfers, Regulatory Push, and AI Security Warnings Shape Digital Asset Market",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "749 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "While neutral and appropriately framed, the article hallucinates a non-existent CFTC Chair ('Mike Selig') and relies on exaggerated, clickbait-level claims regarding AI breaking crypto cryptography.",
+    "overall": 6.0
+  },
+  "word_count": 749,
+  "decision": "pending"
+}

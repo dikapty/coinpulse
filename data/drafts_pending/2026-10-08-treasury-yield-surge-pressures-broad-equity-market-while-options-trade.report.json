@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-08-treasury-yield-surge-pressures-broad-equity-market-while-options-trade.md",
+  "title": "Treasury Yield Surge Pressures Broad Equity Market While Options Traders Target Rate Cuts",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "750 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The piece provides decent context on market mechanics, but severe temporal hallucination (referencing 2026 as current/past) and excessive repetition drag down its factual accuracy and readability.",
+    "overall": 6.0
+  },
+  "word_count": 750,
+  "decision": "pending"
+}
