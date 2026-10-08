@@ -15,7 +15,7 @@ import secrets
 import requests
 
 from common import POSTS, SITE, load_config, log, load_state, save_state
-from notify import send
+from notify import send, send_channel, channel_id
 
 INDEXNOW_ENDPOINTS = [
     "https://api.indexnow.org/indexnow",
@@ -124,7 +124,7 @@ def ping_o_matic(cfg: dict) -> bool:
         return False
 
 
-def telegram_post(cfg: dict, front: dict, url: str) -> bool:
+def telegram_post(cfg: dict, front: dict, url: str, image_url: str = "") -> bool:
     tg = cfg.get("notification", {}).get("telegram", {})
     if not tg.get("enabled"):
         return False
@@ -132,7 +132,9 @@ def telegram_post(cfg: dict, front: dict, url: str) -> bool:
     title = front.get("title", "New article")
     desc = (front.get("description", "") or "")[:200]
     text = f"📰 {title}\n\n{desc}\n\n{url}\n\n{tags}"
-    return send(text, preview=True)  # OG card preview makes the post attractive
+    to_channel = send_channel(text, preview=True, photo=image_url)
+    to_owner = send(text, preview=True)  # OG card preview makes the post attractive
+    return to_channel or to_owner
 
 
 def run() -> None:
@@ -163,12 +165,18 @@ def run() -> None:
     if ok_index:
         promoted["last_home_submit"] = __import__("time").time()
 
-    # Telegram: post the newest article (max 2 per run to avoid spamming the chat)
-    fresh_sorted = sorted(fresh, key=lambda x: x[0], reverse=True)[:2]
+    # Telegram: post newest articles (limit per run to avoid spamming owner + channel)
+    tg = cfg.get("notification", {}).get("telegram", {})
+    limit = int(tg.get("channel_posts_per_run", 3)) if channel_id() else 2
+    fresh_sorted = sorted(fresh, key=lambda x: x[0], reverse=True)[:limit]
+    base = cfg["site"]["url"].rstrip("/") + "/"
     for slug, url in fresh_sorted:
         front, _ = parse_frontmatter((POSTS / f"{slug}.md").read_text(encoding="utf-8"))
-        if telegram_post(cfg, front, url):
-            log(f"Telegram: posted {slug[:60]}")
+        # sendPhoto needs JPEG/PNG; SVG hero covers -> let the OG preview handle the image
+        img = front.get("image", "")
+        photo = f"{base}{img}" if img.endswith((".jpg", ".jpeg", ".png")) else ""
+        if telegram_post(cfg, front, url, photo):
+            log(f"Telegram: posted {slug[:60]}" + (" [photo]" if photo else ""))
 
     if ok_index:
         promoted["urls"] = (promoted.get("urls", []) + [u for _, u in fresh])[-500:]

@@ -144,6 +144,12 @@ notification:
     enabled: true
     bot_token_env: TELEGRAM_BOT_TOKEN
     chat_id_env: TELEGRAM_CHAT_ID
+    # public channel for auto-broadcasting articles: "@yourchannel" or "-100..."
+    # set via TELEGRAM_CHANNEL_ID secret/env, or paste here directly
+    channel_id_env: TELEGRAM_CHANNEL_ID
+    channel_id: ''
+    # max article posts to the channel per pipeline run (anti-spam)
+    channel_posts_per_run: 3
 quality:
   min_words: 600
   max_words: 1200
