@@ -194,3 +194,12 @@ a.tag:hover { color: var(--accent); }
 .nf-home { display: inline-block; padding: 10px 24px; background: var(--accent); color: #12161f;
   border-radius: 8px; font-weight: 700; text-decoration: none; }
 .nf-home:hover { filter: brightness(1.1); }
+
+/* social links in footer */
+.social { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 0 14px; }
+.social a { display: inline-flex; align-items: center; gap: 7px; padding: 8px 18px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 999px;
+  color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600;
+  transition: border-color .2s, transform .2s; }
+.social a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+.social a span { font-size: 16px; }

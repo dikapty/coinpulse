@@ -103,7 +103,30 @@ def render_template(name: str, **ctx) -> str:
     tpl = (TEMPLATE_DIR / name).read_text(encoding="utf-8")
     for k, v in ctx.items():
         tpl = tpl.replace("{{" + k + "}}", str(v))
-    return tpl
+    # safety: any placeholder not supplied by the caller renders as empty,
+    # never as literal {{TEXT}} on a live page
+    return re.sub(r"\{\{[A-Z_]+\}\}", "", tpl)
+
+
+def social_links(cfg: dict) -> str:
+    """Footer social block from site.social: {telegram_channel, twitter, youtube...}.
+    Renders nothing when empty, so it stays invisible until configured."""
+    social = cfg.get("site", {}).get("social") or {}
+    labels = {
+        "telegram_channel": ("✈", "Telegram channel"),
+        "telegram_chat": ("💬", "Telegram chat"),
+        "twitter": ("𝕏", "Follow on X"),
+        "youtube": ("▶", "YouTube"),
+    }
+    links = []
+    for key, (icon, label) in labels.items():
+        url = str(social.get(key, "")).strip()
+        if url:
+            links.append(f'<a href="{escape(url)}" target="_blank" rel="noopener" '
+                         f'title="{label}"><span>{icon}</span> {label}</a>')
+    if not links:
+        return ""
+    return f'<p class="social">{"".join(links)}</p>'
 
 
 def ad_html(cfg: dict, slot: str) -> str:
@@ -192,6 +215,7 @@ def build_tag_pages(cfg: dict, base: str, posts: list) -> list:
             "page.html", SITE_NAME=cfg["site"]["name"], BASE=base,
             TITLE=f"{escape(display)} News",
             HEAD_EXTRA="",
+            SOCIAL=social_links(cfg),
             BODY=(f'<h1 class="tag-page-title">{escape(display)}</h1>'
                   f'<p class="tag-count">{len(items)} article(s)</p>'
                   f'<section class="cards">{"".join(items)}</section>'),
@@ -288,6 +312,7 @@ def build_site(cfg: dict) -> None:
                       "provided for information only — this is not financial advice.</p>")
 
     head_extra = ads_head_html(cfg)
+    social = social_links(cfg)
 
     # --- individual posts ---
     for post in posts:
@@ -321,6 +346,7 @@ def build_site(cfg: dict) -> None:
             CANONICAL=f'{base}posts/{post["_stem"]}.html',
             OG_IMAGE=og_image,
             HEAD_EXTRA=head_extra,
+            SOCIAL=social,
         )
         (SITE / "posts" / f"{post['_stem']}.html").write_text(page, encoding="utf-8")
 
@@ -370,7 +396,8 @@ def build_site(cfg: dict) -> None:
             AD_MID=ad_html(cfg, "ad_slot_index"),
             TICKER='<div class="ticker" id="ticker" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>',
             DISCLOSURE=disclosure,
-            HEAD_EXTRA=head_extra), encoding="utf-8")
+            HEAD_EXTRA=head_extra,
+            SOCIAL=social), encoding="utf-8")
 
     # --- archive ---
     archive_items = "".join(
@@ -383,7 +410,7 @@ def build_site(cfg: dict) -> None:
         "page.html", SITE_NAME=site_cfg["name"], BASE=base, TITLE="Archive",
         BODY=(f'<h1>All articles</h1><ul class="archive">{archive_items}</ul>'
               f'<h2 class="tag-cloud-title">Browse by topic</h2><p class="tag-cloud">{tag_cloud}</p>'),
-        DISCLOSURE=disclosure, HEAD_EXTRA=head_extra), encoding="utf-8")
+        DISCLOSURE=disclosure, HEAD_EXTRA=head_extra, SOCIAL=social), encoding="utf-8")
 
     # --- static pages from content/pages ---
     for p in (CONTENT / "pages").glob("*.md"):
@@ -392,7 +419,7 @@ def build_site(cfg: dict) -> None:
         (SITE / f"{p.stem}.html").write_text(render_template(
             "page.html", SITE_NAME=site_cfg["name"], BASE=base,
             TITLE=escape(front.get("title", p.stem.title())), BODY=html_body,
-            DISCLOSURE="", HEAD_EXTRA=head_extra), encoding="utf-8")
+            DISCLOSURE="", HEAD_EXTRA=head_extra, SOCIAL=social), encoding="utf-8")
 
     # --- RSS of our own site (styled for humans via feed.xsl) ---
     def rfc822(iso: str) -> str:
@@ -472,7 +499,7 @@ def build_site(cfg: dict) -> None:
               '<p class="nf-text">This page does not exist (or was renamed).</p>'
               f'<h2>Latest articles</h2><ul class="archive">{latest_cards}</ul>'
               f'<p><a class="nf-home" href="{base}">&larr; Back to homepage</a></p></div>'),
-        DISCLOSURE=""), encoding="utf-8")
+        DISCLOSURE="", SOCIAL=social), encoding="utf-8")
 
     # --- IndexNow key file (instant indexing) ---
     # MUST be generated here (pre-deploy) so it ships with the site; promote.py
