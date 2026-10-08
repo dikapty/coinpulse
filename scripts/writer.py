@@ -21,6 +21,8 @@ SYSTEM_RULES = """You are a professional financial news editor for an English-la
 ABSOLUTE RULES (violation = article rejected):
 1. Use ONLY facts present in the provided source material. NEVER invent numbers, dates,
    quotes, names, events or price levels. If a fact is not in the sources, it does not exist.
+   Never invent officials, executives or their titles (e.g. do not name a "CFTC Chair" or
+   "CEO" unless the source material names that exact person in that exact role).
 2. Every article cites its sources inline as markdown links and lists them at the end.
 3. This is news journalism, NOT financial advice. No "you should buy/sell", no promises
    of returns. Where relevant, keep the neutral line: "This is not financial advice."
@@ -28,6 +30,11 @@ ABSOLUTE RULES (violation = article rejected):
 5. Added value: explain WHY the news matters, give context, connect related developments.
 6. Structure: ## H2 subheadings every 150-250 words. Plain markdown, no HTML.
 7. Length: 600-1200 words.
+8. ONE article = ONE story. Never stitch several unrelated news items into one piece;
+   pick the single strongest story and go deep on it only.
+9. Dates: the source material shows the current date. Treat event dates RELATIVE to it —
+   never describe the future as past, never place "today" in the wrong year, and use
+   explicit dates ("on September 28, 2026") whenever the material provides them.
 """
 
 PLAN_PROMPT = """{rules}
@@ -104,7 +111,13 @@ def strip_code_fence(md: str) -> str:
 
 def write_one(items: list, cfg: dict) -> dict | None:
     rules = SYSTEM_RULES
-    sources_json = json.dumps([compact(i) for i in items], ensure_ascii=False, indent=1)
+    today = datetime.now(timezone.utc).strftime("%A, %B %d, %Y")
+    sources_json = json.dumps(
+        {"current_date": today,
+         "note": "All articles must be written as of current_date. Events published before "
+                 "current_date are PAST; nothing after it exists yet.",
+         "items": [compact(i) for i in items]},
+        ensure_ascii=False, indent=1)
 
     # 2 LLM calls per article (draft + self-edit). Planning was folded into the draft
     # prompt to conserve the free-tier quota (20 requests/day).

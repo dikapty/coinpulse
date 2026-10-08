@@ -150,8 +150,50 @@ def decide(report: dict, score: dict, cfg: dict, path) -> str:
     return "pending"
 
 
+def purge_stale_pending(cfg: dict) -> int:
+    """Hands-off operation: pending drafts nobody reviewed within
+    publishing.auto_purge_pending_days (default 5, 0 = keep forever) are moved to
+    rejected/ with a note. Keeps the review queue from piling up when the owner
+    prefers full automation. The gate keeps producing fresh candidates every run.
+    """
+    from datetime import datetime, timezone
+    days = int(cfg.get("publishing", {}).get("auto_purge_pending_days", 5))
+    if days <= 0:
+        return 0
+    cutoff = datetime.now(timezone.utc).timestamp() - days * 86400
+    purged = 0
+    for md in PENDING.glob("*.md"):
+        # CI checkouts reset file mtimes, so derive age from the article date in
+        # the frontmatter (falls back to the filename prefix / mtime).
+        try:
+            front, _ = parse_frontmatter(md.read_text(encoding="utf-8"))
+            date_str = (front.get("date") or md.stem[:10])[:10]
+            age_ts = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc).timestamp()
+        except Exception:
+            age_ts = md.stat().st_mtime
+        if age_ts >= cutoff:
+            continue
+        report = PENDING / (md.stem + ".report.json")
+        try:
+            if report.exists():
+                r = json.loads(report.read_text(encoding="utf-8"))
+                r["decision"] = "rejected"
+                r["purge_reason"] = f"auto-purged: unreviewed for {days}+ days (hands-off mode)"
+                report.write_text(json.dumps(r, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception:
+            pass
+        shutil.move(str(md), REJECTED / md.name)
+        if report.exists():
+            shutil.move(str(report), REJECTED / report.name)
+        purged += 1
+    if purged:
+        log(f"Auto-purged {purged} stale pending draft(s) (> {days} days unreviewed).")
+    return purged
+
+
 def run() -> list:
     cfg = load_config()
+    purge_stale_pending(cfg)
     drafts = sorted(DRAFTS.glob("*.md"))
     if not drafts:
         log("No drafts to review.")
