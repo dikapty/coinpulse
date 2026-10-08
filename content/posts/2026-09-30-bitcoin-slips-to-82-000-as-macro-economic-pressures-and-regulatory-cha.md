@@ -31,7 +31,7 @@
     "7043c9642f590fd0"
   ],
   "draft_of_batch": "20260930-010614",
-  "image": "img/2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha.svg"
+  "image": "img/2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha.jpg"
 }
 ---
 

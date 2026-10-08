@@ -25,20 +25,31 @@ def channel_id() -> str:
     return (os.environ.get(env, "") or str(tg.get("channel_id", ""))).strip()
 
 
-def post(chat_id: str, text: str, preview: bool = False, photo: str = "") -> bool:
-    """Low-level send. preview=True renders the link's OG card; photo = public image URL
-    (Telegram fetches it server-side; JPEG/PNG only — SVG is unsupported by sendPhoto)."""
+def post(chat_id: str, text: str, preview: bool = False, photo: str = "",
+         photo_file: str = "") -> bool:
+    """Low-level send.
+
+    preview=True renders the link's OG card. photo = public image URL (Telegram fetches
+    it server-side). photo_file = LOCAL path uploaded multipart (works for dynamically
+    generated images and doesn't depend on deployment state). JPEG/PNG only.
+    """
     token = _token()
     if not token or not chat_id:
         return False
-    method = "sendPhoto" if photo else "sendMessage"
+    import os
+    method = "sendPhoto" if (photo or photo_file) else "sendMessage"
     payload = {"chat_id": chat_id}
-    if photo:
+    files = None
+    if photo_file and os.path.exists(photo_file):
+        payload["caption"] = text[:1024]
+        files = {"photo": open(photo_file, "rb")}
+    elif photo:
         payload.update({"photo": photo, "caption": text[:1024]})
     else:
         payload.update({"text": text[:4000], "disable_web_page_preview": not preview})
     try:
-        r = requests.post(f"https://api.telegram.org/bot{token}/{method}", json=payload, timeout=25)
+        r = requests.post(f"https://api.telegram.org/bot{token}/{method}",
+                          data=payload, files=files, timeout=40 if files else 25)
         if r.status_code != 200:
             detail = r.text[:300]
             if "chat not found" in detail.lower():
@@ -57,8 +68,10 @@ def post(chat_id: str, text: str, preview: bool = False, photo: str = "") -> boo
                     "as an administrator with the 'Post messages' right.")
             elif "unauthorized" in detail.lower() or "Not Found" in detail:
                 log("Telegram: bot token invalid or revoked — create a new one via @BotFather.")
-            elif photo and "wrong type of file" in detail.lower():
-                log("Telegram: image format rejected — retrying without photo.")
+            elif (photo or photo_file) and ("wrong type of file" in detail.lower()
+                                            or "failed to get" in detail.lower()
+                                            or "wrong file identifier" in detail.lower()):
+                log("Telegram: image rejected — retrying as plain text.")
                 return post(chat_id, text, preview)
             else:
                 log(f"Telegram send failed: HTTP {r.status_code} {detail}")
@@ -67,6 +80,12 @@ def post(chat_id: str, text: str, preview: bool = False, photo: str = "") -> boo
     except Exception as e:
         log(f"Telegram send failed: {e}")
         return False
+    finally:
+        if files:
+            try:
+                files["photo"].close()
+            except Exception:
+                pass
 
 
 def send(text: str, preview: bool = False) -> bool:

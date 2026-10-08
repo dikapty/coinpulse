@@ -22,7 +22,7 @@
     "1db30f70ba2efee6"
   ],
   "draft_of_batch": "20260929-010528",
-  "image": "img/2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.svg"
+  "image": "img/2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.jpg"
 }
 ---
 

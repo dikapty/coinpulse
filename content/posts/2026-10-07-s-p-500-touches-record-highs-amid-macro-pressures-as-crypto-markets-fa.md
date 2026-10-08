@@ -32,7 +32,7 @@
     "dbbfaeaf65a3c61b"
   ],
   "draft_of_batch": "20261007-010814",
-  "image": "img/2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.svg"
+  "image": "img/2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.jpg"
 }
 ---
 

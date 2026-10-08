@@ -23,7 +23,7 @@
     "a2a4e6406e4364bb"
   ],
   "draft_of_batch": "20261005-010712",
-  "image": "img/2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.svg"
+  "image": "img/2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.jpg"
 }
 ---
 

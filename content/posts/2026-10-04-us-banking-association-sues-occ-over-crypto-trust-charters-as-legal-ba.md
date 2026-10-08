@@ -22,7 +22,7 @@
     "8e2f47ea14a9de32"
   ],
   "draft_of_batch": "20261004-022445",
-  "image": "img/2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba.svg"
+  "image": "img/2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba.jpg"
 }
 ---
 

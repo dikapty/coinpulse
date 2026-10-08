@@ -1,20 +1,21 @@
-"""Hero images for articles — free AI generation via Pollinations + local SVG fallback.
+"""Hero images for articles — free AI generation via Pollinations + branded raster covers.
 
 Strategy (cost: $0, robustness: always produces an image):
 1. Try Pollinations (free, no key): editorial AI illustration, 16:9, cached per slug.
-2. If it fails/rate-limited: generate a deterministic local SVG cover (gradient +
-   abstract crypto motif seeded from the article title). The site never ships without
-   a hero image; on the next run the SVG posts are retried with AI again.
+2. If it fails/rate-limited: generate a deterministic branded JPEG cover with Pillow
+   (gradient + crypto motif + article headline). Raster (not SVG) because SVG does NOT
+   render as og:image in Telegram/X/Facebook and is rejected by Telegram's sendPhoto.
+   The site never ships without a hero; AI-jpg posts are never retried, branded covers
+   are upgraded to AI art on a later run when the free service recovers.
 
-Frontmatter gets "image": img/<slug>.jpg (AI) or img/<slug>.svg (fallback).
+Frontmatter: "image": img/<slug>.jpg  and  "image_ai": true  only for real AI art.
 
-Run: python3 scripts/images.py [slug ...]   (no args = all published posts missing AI images)
+Run: python3 scripts/images.py [slug ...]   (no args = all published posts)
 """
 from __future__ import annotations
 
 import hashlib
 import json
-import math
 import re
 import sys
 import time
@@ -75,144 +76,52 @@ def gen_ai_image(prompt: str, seed: int, dest, w: int = 1200, h: int = 675, retr
     return False
 
 
-PALETTES = [
-    ("#101828", "#1f3a5f", "#f7931a"),  # navy -> bitcoin orange
-    ("#131026", "#3b2a63", "#ff7a45"),  # violet -> ember
-    ("#0c1620", "#1c4a52", "#3ddc84"),  # deep teal -> mint
-    ("#1a1008", "#5a3410", "#ffc46b"),  # brown-gold
-    ("#0e1526", "#26406e", "#7fb3ff"),  # steel blue
-]
-
-
-def esc_svg(s: str) -> str:
-    return (s.replace("&", "&amp;").replace("<", "&lt;")
-             .replace(">", "&gt;").replace('"', "&quot;"))
-
-
-def wrap_title(title: str, per_line: int = 26, max_lines: int = 4) -> list:
-    words, lines, cur = title.split(), [], ""
-    for w in words:
-        if len(cur) + len(w) + 1 <= per_line:
-            cur = (cur + " " + w).strip()
-        else:
-            lines.append(cur)
-            cur = w
-    if cur:
-        lines.append(cur)
-    if len(lines) > max_lines:
-        lines = lines[:max_lines]
-        lines[-1] = lines[-1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
-    return lines
-
-
-def gen_svg_cover(front: dict, slug: str, dest) -> None:
-    """Deterministic branded cover: gradient + candlesticks + coin + article title."""
-    h = int(hashlib.md5(slug.encode()).hexdigest()[:8], 16)
-    bg, mid, accent = PALETTES[h % len(PALETTES)]
-    rng = lambda n: (h >> n) % 1000 / 1000.0
-    w, ht = 1200, 675
-
-    circles = []
-    for i in range(6):
-        cx = 500 + rng(i * 3) * 660
-        cy = 30 + rng(i * 3 + 1) * 615
-        r = 25 + rng(i * 3 + 2) * 85
-        op = 0.05 + rng(i * 5) * 0.12
-        circles.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="{accent}" opacity="{op:.2f}"/>')
-
-    # candlestick motif (right side, behind title area)
-    candles = []
-    base_y = ht - 70
-    for i in range(7):
-        x = 720 + i * 64
-        up = ((h >> i) & 1) == 1
-        bh = 60 + rng(i + 20) * 210
-        y = base_y - bh
-        col = "#3ddc84" if up else "#ff5c6c"
-        candles.append(f'<rect x="{x}" y="{y:.0f}" width="24" height="{bh:.0f}" rx="4" fill="{col}" opacity="0.5"/>')
-        candles.append(f'<rect x="{x + 9}" y="{y - 24:.0f}" width="6" height="{bh + 48:.0f}" rx="3" fill="{col}" opacity="0.25"/>')
-
-    # coin, bottom-right corner, partially cropped
-    cx0, cy0, cr = 1010, 545, 130
-    coin = (
-        f'<circle cx="{cx0}" cy="{cy0}" r="{cr}" fill="none" stroke="{accent}" stroke-width="9" opacity="0.85"/>'
-        f'<circle cx="{cx0}" cy="{cy0}" r="{cr - 30}" fill="none" stroke="{accent}" stroke-width="3" opacity="0.4"/>'
-        f'<path d="M {cx0 - 34} {cy0 - 52} h 68 M {cx0 - 34} {cy0 + 52} h 68 '
-        f'M {cx0 - 46} {cy0 - 17} h 92 a 27 27 0 0 1 0 54 h -92 a 27 27 0 0 1 0 -54 h 108" '
-        f'fill="none" stroke="{accent}" stroke-width="10" stroke-linecap="round" opacity="0.85"/>'
-    )
-
-    # masthead + title text (left column)
-    title = front.get("title", slug.replace("-", " ").title())
-    lines = wrap_title(title)
-    ty0, lh, fs = 235, 62, 46
-    tspans = "".join(
-        f'<tspan x="70" y="{ty0 + i * lh}">{esc_svg(ln)}</tspan>'
-        for i, ln in enumerate(lines))
-    tag_txt = (front.get("tags") or ["crypto"])[0].upper()[:18]
-
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{ht}" viewBox="0 0 {w} {ht}">
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="{bg}"/><stop offset="0.6" stop-color="{mid}"/><stop offset="1" stop-color="{bg}"/>
-</linearGradient>
-<radialGradient id="glow" cx="0.8" cy="0.85" r="0.7">
-<stop offset="0" stop-color="{accent}" stop-opacity="0.16"/><stop offset="1" stop-color="{accent}" stop-opacity="0"/>
-</radialGradient>
-<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="{bg}" stop-opacity="0.88"/><stop offset="0.62" stop-color="{bg}" stop-opacity="0.55"/><stop offset="1" stop-color="{bg}" stop-opacity="0.1"/>
-</linearGradient>
-</defs>
-<rect width="{w}" height="{ht}" fill="url(#bg)"/>
-<g>{''.join(circles)}</g>
-<g>{''.join(candles)}</g>
-<g>{coin}</g>
-<rect width="{w}" height="{ht}" fill="url(#glow)"/>
-<rect width="{w}" height="{ht}" fill="url(#shade)"/>
-<g font-family="Helvetica, Arial, sans-serif">
-<rect x="70" y="52" width="150" height="34" rx="17" fill="{accent}"/>
-<text x="145" y="75" font-size="17" font-weight="bold" fill="{bg}" text-anchor="middle" letter-spacing="1">COINPULSE</text>
-<rect x="70" y="150" width="{min(30 + len(tag_txt) * 12, 260)}" height="32" rx="16" fill="{accent}" opacity="0.18"/>
-<text x="86" y="172" font-size="16" font-weight="bold" fill="{accent}" letter-spacing="1.5">{esc_svg(tag_txt)}</text>
-<text font-size="{fs}" font-weight="bold" fill="#f2f4fa">{tspans}</text>
-<rect x="70" y="{ht - 78}" width="90" height="6" rx="3" fill="{accent}"/>
-</g>
-</svg>'''
-    dest.write_text(svg, encoding="utf-8")
+def branded_cover(front: dict, slug: str, dest) -> int:
+    """Raster branded cover via cover.branded_cover (Pillow). Returns byte size."""
+    from cover import branded_cover as _bc
+    title = front.get("title") or slug.replace("-", " ").title()
+    tag = (front.get("tags") or ["crypto"])[0]
+    return _bc(title, tag, slug, dest)
 
 
 def process_post(path, ai_budget: int) -> tuple:
-    """Returns (used_ai: bool, ok: bool)."""
+    """Returns (used_ai: bool, ok: bool).
+
+    AI art is tried only while the budget lasts and only for posts that don't already
+    have AI art (front['image_ai']). Otherwise a branded raster JPEG is produced, which
+    renders everywhere (site hero, og:image, Telegram sendPhoto).
+    """
     front, body = parse_frontmatter(path.read_text(encoding="utf-8"))
     if not front:
         log(f"  ! {path.name}: no frontmatter — skipped")
         return False, False
     slug = path.stem
     jpg = IMAGES / f"{slug}.jpg"
-    svg = IMAGES / f"{slug}.svg"
     current = front.get("image", "")
 
-    # already have an AI jpg cached -> done
+    # already have a raster jpg wired up -> done (no re-generation, no AI spend)
     if jpg.exists() and current == f"img/{slug}.jpg":
         return False, True
 
-    used_ai = False
-    if ai_budget > 0:
+    # try AI art only when budget remains AND this post doesn't already have AI art
+    if ai_budget > 0 and not front.get("image_ai"):
         prompt = image_prompt(front)
         seed = int(hashlib.md5(slug.encode()).hexdigest()[:8], 16)
         log(f"  AI hero: {front.get('title','')[:55]}...")
         if gen_ai_image(prompt, seed, jpg):
             front["image"] = f"img/{slug}.jpg"
+            front["image_ai"] = True
             save_frontmatter(path, front, body)
-            log(f"  + {jpg.name} ({jpg.stat().st_size // 1024} KB)")
+            log(f"  + {jpg.name} (AI, {jpg.stat().st_size // 1024} KB)")
             return True, True
-        log(f"  ! AI failed — generating local SVG cover instead")
+        log(f"  ! AI failed — generating branded raster cover instead")
 
-    # SVG fallback (deterministic, always works)
-    gen_svg_cover(front, slug, svg)
-    front["image"] = f"img/{slug}.svg"
+    # branded raster cover (deterministic, always works, renders in socials)
+    size = branded_cover(front, slug, jpg)
+    front["image"] = f"img/{slug}.jpg"
+    front.pop("image_ai", None)  # not AI art — allow a later AI upgrade
     save_frontmatter(path, front, body)
-    log(f"  + {svg.name} (SVG cover)")
+    log(f"  + {jpg.name} (branded cover, {size // 1024} KB)")
     return False, True
 
 
@@ -233,7 +142,7 @@ def run(slugs: list, force: bool = False) -> None:
             ok += 1
         if used:
             time.sleep(2)  # polite spacing for the free service
-    log(f"Images done: {ok}/{len(targets)} ready ({ai_used} AI, rest SVG covers)")
+    log(f"Images done: {ok}/{len(targets)} ready ({ai_used} AI, rest branded raster covers)")
 
 
 if __name__ == "__main__":
