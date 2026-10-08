@@ -1,0 +1,51 @@
+name: CoinPulse SMM Manager
+
+# Human-like channel cadence: runs every 3 hours; scripts/smm.py decides whether
+# anything is due (market snapshot, article post, poll, weekly digest) and enforces
+# the daily cap + minimum gap between posts. Most runs intentionally do nothing.
+
+on:
+  schedule:
+    - cron: "20 2,5,8,11,14,17,20 * * *"   # 7 windows/day across global timezones
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # commits smm state back to the repo
+
+concurrency:
+  group: smm
+  cancel-in-progress: false
+
+jobs:
+  smm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run SMM manager
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+        run: python3 scripts/pipeline.py smm
+
+      - name: Commit smm state
+        run: |
+          git config user.name "coinpulse-bot"
+          git config user.email "coinpulse-bot@users.noreply.github.com"
+          git add data/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "state: smm $(date -u +%F_%H)"
+            for i in 1 2 3; do
+              if git push; then break; fi
+              git pull --rebase origin main || git rebase --abort
+            done
+          fi

@@ -90,6 +90,29 @@ def send_channel(text: str, preview: bool = False, photo: str = "") -> bool:
     return post(cid, text, preview, photo)
 
 
+def send_poll_channel(question: str, options: list) -> bool:
+    """Interactive poll in the public channel (engagement = Telegram boosts reach)."""
+    token = _token()
+    cid = channel_id()
+    if not token or not cid:
+        return False
+    try:
+        r = requests.post(
+            f"https://api.telegram.org/bot{token}/sendPoll",
+            json={"chat_id": cid, "question": question[:300],
+                  "options": [str(o)[:100] for o in options[:10]],
+                  "is_anonymous": True, "type": "regular"},
+            timeout=25,
+        )
+        if r.status_code != 200:
+            log(f"Telegram poll failed: HTTP {r.status_code} {r.text[:200]}")
+            return False
+        return True
+    except Exception as e:
+        log(f"Telegram poll failed: {e}")
+        return False
+
+
 if __name__ == "__main__":
     msg = sys.argv[1] if len(sys.argv) > 1 else "CoinPulse test message"
     print("sent" if send(msg) else "skipped/failed")

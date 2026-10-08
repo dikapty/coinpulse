@@ -152,6 +152,18 @@ notification:
     channel_id: ''
     # max article posts to the channel per pipeline run (anti-spam)
     channel_posts_per_run: 3
+smm:
+  # scripts/smm.py = autonomous SMM manager for the Telegram channel:
+  # market snapshots, article posts with rotating hooks, polls, weekly digest.
+  # Runs on its own cron (every 3h) for human-like pacing.
+  enabled: true
+  daily_post_cap: 4          # max posts/day to the channel (all kinds)
+  articles_per_day: 3        # max article posts/day
+  min_gap_minutes: 45        # minimum minutes between any two posts
+  market_snapshot: true      # daily live-price snapshot post
+  poll_every_days: 2         # interactive poll cadence
+  digest_weekday: 6          # 0=Mon..6=Sun for "This week on CoinPulse"
+  utm: utm_source=telegram&utm_medium=channel
 quality:
   min_words: 600
   max_words: 1200

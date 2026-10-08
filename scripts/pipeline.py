@@ -83,6 +83,17 @@ def stage_promote():
     promote_run()
 
 
+def stage_smm():
+    """Autonomous SMM manager for the Telegram channel (scripts/smm.py).
+
+    Market snapshots, article posts with rotating hooks/CTA, polls, weekly digest —
+    with human-like pacing (max N/day, min gap between posts). Own workflow cron
+    (smm.yml) invokes it explicitly: pipeline.py smm
+    """
+    from smm import run as smm_run
+    smm_run()
+
+
 def stage_build():
     from publisher import build_site
     build_site(load_config())
@@ -152,6 +163,9 @@ def main(argv):
         # runs as a separate post-deploy job. Only runs when explicitly requested.
         if "promote" in stages:
             stage_promote()
+        # smm runs on its own cron (smm.yml) — explicit only, same reason.
+        if "smm" in stages:
+            stage_smm()
         if full or "monitor" in stages:
             stage_monitor()
         log("PIPELINE OK")

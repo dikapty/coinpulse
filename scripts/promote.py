@@ -15,7 +15,7 @@ import secrets
 import requests
 
 from common import POSTS, SITE, load_config, log, load_state, save_state
-from notify import send, send_channel, channel_id
+from notify import send
 
 INDEXNOW_ENDPOINTS = [
     "https://api.indexnow.org/indexnow",
@@ -125,6 +125,11 @@ def ping_o_matic(cfg: dict) -> bool:
 
 
 def telegram_post(cfg: dict, front: dict, url: str, image_url: str = "") -> bool:
+    """Announce a new article to the OWNER's private chat only.
+
+    The public channel is managed exclusively by scripts/smm.py (SMM engine) —
+    posting here too would create duplicates. image_url kept for signature compat.
+    """
     tg = cfg.get("notification", {}).get("telegram", {})
     if not tg.get("enabled"):
         return False
@@ -132,37 +137,7 @@ def telegram_post(cfg: dict, front: dict, url: str, image_url: str = "") -> bool
     title = front.get("title", "New article")
     desc = (front.get("description", "") or "")[:200]
     text = f"📰 {title}\n\n{desc}\n\n{url}\n\n{tags}"
-    to_channel = send_channel(text, preview=True, photo=image_url)
-    to_owner = send(text, preview=True)  # OG card preview makes the post attractive
-    return to_channel or to_owner
-
-
-def weekly_channel_digest(cfg: dict, promoted: dict, all_urls: dict) -> None:
-    """Once a week, post a 'This week on CoinPulse' roundup to the public channel.
-    Keeps the channel alive with curated content beyond per-article announcements."""
-    import time as _t
-    if not channel_id():
-        return
-    if _t.time() - promoted.get("last_weekly_digest", 0) < 6.5 * 86400:
-        return
-    from datetime import datetime, timedelta, timezone
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
-    week = sorted((s for s in all_urls if s[:10] >= cutoff), reverse=True)[:7]
-    if len(week) < 3:
-        return  # not enough fresh material for a meaningful digest
-    base = cfg["site"]["url"].rstrip("/") + "/"
-    lines = ["🗞 This week on CoinPulse", ""]
-    for slug in week:
-        try:
-            front, _ = parse_frontmatter((POSTS / f"{slug}.md").read_text(encoding="utf-8"))
-            lines.append(f"• {front.get('title', slug)}\n  {base}posts/{slug}.html")
-        except Exception:
-            continue
-    lines += ["", f"All {len(all_urls)} articles: {base}"]
-    if send_channel("\n".join(lines)[:4000]):
-        promoted["last_weekly_digest"] = _t.time()
-        save_state("promoted", promoted)
-        log("Telegram channel: weekly digest posted")
+    return send(text, preview=True)  # OG card preview makes the post attractive
 
 
 def run() -> None:
@@ -183,7 +158,6 @@ def run() -> None:
             if submit_indexnow(cfg, [home], key):
                 promoted["last_home_submit"] = _t.time()
                 save_state("promoted", promoted)
-        weekly_channel_digest(cfg, promoted, all_urls)
         return
 
     log(f"Promote: {len(fresh)} new URL(s)")
@@ -194,10 +168,8 @@ def run() -> None:
     if ok_index:
         promoted["last_home_submit"] = __import__("time").time()
 
-    # Telegram: post newest articles (limit per run to avoid spamming owner + channel)
-    tg = cfg.get("notification", {}).get("telegram", {})
-    limit = int(tg.get("channel_posts_per_run", 3)) if channel_id() else 2
-    fresh_sorted = sorted(fresh, key=lambda x: x[0], reverse=True)[:limit]
+    # Telegram: announce newest articles to the OWNER (channel is smm.py's job)
+    fresh_sorted = sorted(fresh, key=lambda x: x[0], reverse=True)[:2]
     base = cfg["site"]["url"].rstrip("/") + "/"
     for slug, url in fresh_sorted:
         front, _ = parse_frontmatter((POSTS / f"{slug}.md").read_text(encoding="utf-8"))
@@ -213,8 +185,6 @@ def run() -> None:
         ping_o_matic(cfg)  # only when we have genuinely new content
     else:
         log("IndexNow submission failed — will retry on next run (state not updated).")
-
-    weekly_channel_digest(cfg, promoted, all_urls)
 
 
 if __name__ == "__main__":
