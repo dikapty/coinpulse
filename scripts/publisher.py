@@ -139,9 +139,16 @@ def ads_head_html(cfg: dict) -> str:
     head_custom = (mon.get("custom_html") or {}).get("head", "").strip()
     if head_custom:
         parts.append(head_custom)
-    verif = mon.get("site_verification", "").strip()
+    # Google Search Console token (legacy single-value key)
+    verif = str(mon.get("site_verification", "")).strip()
     if verif:
         parts.append(f'<meta name="google-site-verification" content="{verif}">')
+    # Any number of verification metas: monetization.verifications: {name: token}
+    # e.g. {"google-site-verification": "...", "msvalidate.01": "...", "yandex-verification": "..."}
+    for name, token in (mon.get("verifications") or {}).items():
+        token = str(token).strip()
+        if token and name:
+            parts.append(f'<meta name="{escape(name)}" content="{escape(token)}">')
     return "\n".join(parts)
 
 

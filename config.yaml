@@ -135,6 +135,8 @@ monetization:
     ad_slot_index: ''
   # google-site-verification meta token (from Search Console), value only
   site_verification: ''
+  # any number of verification metas: {"msvalidate.01": "bing token", "yandex-verification": "..."}
+  verifications: {}
   # extra ads.txt rows, e.g. "coinzilla.com, PUB-XXXX, DIRECT"
   ads_txt_lines: []
 notification:
