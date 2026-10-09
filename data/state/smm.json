@@ -2,19 +2,21 @@
   "posted": [
     "2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa",
     "2026-10-06-house-democrat-introduces-bill-to-ban-candidates-from-trading-election",
-    "2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi"
+    "2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi",
+    "2026-10-09-nasdaq-ceo-adena-friedman-tokenization-to-unleash-tens-of-billions-in-"
   ],
   "daily": {
     "2026-10-08": 4,
-    "2026-10-09": 1
+    "2026-10-09": 2
   },
   "polls": [],
   "snapshots": {
     "2026-10-08": true,
     "2026-10-09": true
   },
-  "last_post_ts": 1791513398.002634,
+  "last_post_ts": 1791524259.824171,
   "articles_today": {
-    "2026-10-08": 3
+    "2026-10-08": 3,
+    "2026-10-09": 1
   }
 }
