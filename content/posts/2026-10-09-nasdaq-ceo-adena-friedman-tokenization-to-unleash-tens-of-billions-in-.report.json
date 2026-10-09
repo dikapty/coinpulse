@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-09-nasdaq-ceo-adena-friedman-tokenization-to-unleash-tens-of-billions-in-.md",
+  "title": "Nasdaq CEO Adena Friedman: Tokenization to Unleash Tens of Billions in Trapped Capital",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "974 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 8,
+    "readability": 7,
+    "neutrality": 10,
+    "verdict": "A highly accurate and objective report on Nasdaq's tokenization outlook, though it loses some structural cohesion in the second half by grafting unrelated cryptocurrency market updates onto the core institutional story.",
+    "overall": 8.8
+  },
+  "word_count": 974,
+  "decision": "publish"
+}

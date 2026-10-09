@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu.md",
+  "title": "Bitcoin Drops Toward $80,000 as Liquidations Top $1 Billion Following Buy Wall Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "674 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6.0,
+    "usefulness": 8.0,
+    "readability": 9.0,
+    "neutrality": 10.0,
+    "verdict": "A well-written and neutral piece of market analysis, though it is severely undermined by hallucinated/anachronistic future dates (October 2026) and the awkward shoehorning of unrelated GitHub commit news into a market-wrap article.",
+    "overall": 8.3
+  },
+  "word_count": 674,
+  "decision": "publish"
+}
