@@ -43,7 +43,14 @@ def log(msg: str) -> None:
 
 def load_config() -> dict:
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        cfg = yaml.safe_load(f)
+    # SITE_URL env override: lets the same repo build for a second host
+    # (e.g. Cloudflare Pages with a short domain) while config.yaml keeps
+    # the canonical URL. Set in Cloudflare build settings, never locally.
+    override = os.environ.get("SITE_URL", "").strip().rstrip("/")
+    if override:
+        cfg.setdefault("site", {})["url"] = override + "/"
+    return cfg
 
 
 def load_state(name: str, default=None):
