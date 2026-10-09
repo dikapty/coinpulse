@@ -1,0 +1,11 @@
+{
+  "id": "7bab273493c9daec",
+  "title": "Core Lightning patches critical security flaws and a Bitcoin payment bug",
+  "summary": "Version v26.06.9 repairs a v26.06.8 regression that could delay channel traffic on busy nodes and adds protections for forwarded funds. The post Core Lightning patches critical security flaws and a Bitcoin payment bug appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/core-lightning-patches-critical-security-flaws-and-a-bitcoin-payment-bug/",
+  "category": "crypto",
+  "published": "2026-10-09T05:20:19+00:00",
+  "collected_at": "2026-10-09T07:08:57.367930+00:00",
+  "batch": "20261009-070856"
+}
