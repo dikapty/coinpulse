@@ -5,13 +5,15 @@
     "2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi"
   ],
   "daily": {
-    "2026-10-08": 4
+    "2026-10-08": 4,
+    "2026-10-09": 1
   },
   "polls": [],
   "snapshots": {
-    "2026-10-08": true
+    "2026-10-08": true,
+    "2026-10-09": true
   },
-  "last_post_ts": 1791491940.79182,
+  "last_post_ts": 1791513398.002634,
   "articles_today": {
     "2026-10-08": 3
   }
