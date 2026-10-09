@@ -4,20 +4,21 @@
     "2026-10-06-house-democrat-introduces-bill-to-ban-candidates-from-trading-election",
     "2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi",
     "2026-10-09-nasdaq-ceo-adena-friedman-tokenization-to-unleash-tens-of-billions-in-",
-    "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu"
+    "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu",
+    "2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa"
   ],
   "daily": {
     "2026-10-08": 4,
-    "2026-10-09": 3
+    "2026-10-09": 4
   },
   "polls": [],
   "snapshots": {
     "2026-10-08": true,
     "2026-10-09": true
   },
-  "last_post_ts": 1791535155.037694,
+  "last_post_ts": 1791545715.117121,
   "articles_today": {
     "2026-10-08": 3,
-    "2026-10-09": 2
+    "2026-10-09": 3
   }
 }
