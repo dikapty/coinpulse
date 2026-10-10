@@ -1,0 +1,11 @@
+{
+  "id": "63aeb6897f18ef6c",
+  "title": "BTCPay Docker users must opt into Tor at their next update to keep onion access",
+  "summary": "Existing installations must explicitly select Tor at their next setup or update, even though existing Tor data is preserved. The post BTCPay Docker users must opt into Tor at their next update to keep onion access appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/btcpays-docker-servers-must-opt-into-tor-to-keep-onion-access/",
+  "category": "crypto",
+  "published": "2026-10-10T19:00:26+00:00",
+  "collected_at": "2026-10-10T19:04:56.518425+00:00",
+  "batch": "20261010-190455"
+}
