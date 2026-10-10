@@ -5,12 +5,13 @@
     "2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi",
     "2026-10-09-nasdaq-ceo-adena-friedman-tokenization-to-unleash-tens-of-billions-in-",
     "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu",
-    "2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa"
+    "2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa",
+    "2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba"
   ],
   "daily": {
     "2026-10-08": 4,
     "2026-10-09": 4,
-    "2026-10-10": 1
+    "2026-10-10": 2
   },
   "polls": [],
   "snapshots": {
@@ -18,9 +19,10 @@
     "2026-10-09": true,
     "2026-10-10": true
   },
-  "last_post_ts": 1791599802.852166,
+  "last_post_ts": 1791610537.673751,
   "articles_today": {
     "2026-10-08": 3,
-    "2026-10-09": 3
+    "2026-10-09": 3,
+    "2026-10-10": 1
   }
 }
