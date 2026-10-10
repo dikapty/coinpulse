@@ -7,12 +7,13 @@
     "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu",
     "2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa",
     "2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba",
-    "2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades"
+    "2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades",
+    "2026-10-02-near-protocol-faces-market-stress-test-amid-security-breach-and-etf-la"
   ],
   "daily": {
     "2026-10-08": 4,
     "2026-10-09": 4,
-    "2026-10-10": 3
+    "2026-10-10": 4
   },
   "polls": [],
   "snapshots": {
@@ -20,10 +21,10 @@
     "2026-10-09": true,
     "2026-10-10": true
   },
-  "last_post_ts": 1791621372.343902,
+  "last_post_ts": 1791632080.000113,
   "articles_today": {
     "2026-10-08": 3,
     "2026-10-09": 3,
-    "2026-10-10": 2
+    "2026-10-10": 3
   }
 }
