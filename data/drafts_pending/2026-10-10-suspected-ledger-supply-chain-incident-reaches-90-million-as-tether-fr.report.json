@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-10-suspected-ledger-supply-chain-incident-reaches-90-million-as-tether-fr.md",
+  "title": "Suspected Ledger Supply Chain Incident Reaches $90 Million as Tether Freezes Compromised Stables",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "576 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "While the article is well-structured, clear, and informative regarding security context, it severely fails factual rigor by citing an event with a fictional future date (October 2026) and referencing a non-existent CryptoSlate report.",
+    "overall": 6.8
+  },
+  "word_count": 576,
+  "decision": "pending"
+}

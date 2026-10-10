@@ -1,0 +1,11 @@
+{
+  "id": "6888c08c01d3d719",
+  "title": "XRP Ledger lets institutions share account duties without sharing their keys",
+  "summary": "The XRP Ledger (XRPL) now lets institutions delegate account tasks while retaining control of their primary signing keys. The PermissionDelegationV1_1 amendment went live on Oct. 8 at ledger 107,524,865. It lets account owners assign specific transaction permissions to other accounts. The upgrade mirrors the division of responsibilities in traditional finance. Treasury departments, compliance officers and […] The post XRP Ledger lets institutions share account duties without sharing their keys appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/ripple-wants-to-turn-xrpls-4-5-billion-in-tokenized-assets-into-round-the-clock-collateral/",
+  "category": "crypto",
+  "published": "2026-10-09T20:00:29+00:00",
+  "collected_at": "2026-10-10T01:09:01.854542+00:00",
+  "batch": "20261010-010859"
+}

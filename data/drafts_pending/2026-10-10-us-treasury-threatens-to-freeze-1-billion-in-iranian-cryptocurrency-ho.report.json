@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-10-us-treasury-threatens-to-freeze-1-billion-in-iranian-cryptocurrency-ho.md",
+  "title": "US Treasury Threatens to Freeze $1 Billion in Iranian Cryptocurrency Holdings",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "701 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 3,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "While well-structured and analytically useful, the article fails on basic fact-checking by attributing the quote and action to 'US Treasury Secretary Scott Bessent,' who is not a confirmed member of the US cabinet, rendering the core news premise unverified or hallucinatory.",
+    "overall": 6.3
+  },
+  "word_count": 701,
+  "decision": "pending"
+}
