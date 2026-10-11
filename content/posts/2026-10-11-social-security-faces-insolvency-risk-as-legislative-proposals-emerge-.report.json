@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-.md",
+  "title": "Social Security Faces Insolvency Risk as Legislative Proposals Emerge to Address Funding Gap",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "883 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article is a well-structured and objective summary of current policy discourse, though it relies heavily on external source aggregation rather than independent primary data synthesis.",
+    "overall": 8.0
+  },
+  "word_count": 883,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m.md",
+  "title": "Bitcoin Price Declines Amid Heightened Geopolitical Tensions and Oil Market Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "789 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "This is a disciplined, well-cited piece of financial reporting that successfully contextualizes market volatility within broader macroeconomic and geopolitical frameworks.",
+    "overall": 9.0
+  },
+  "word_count": 789,
+  "decision": "publish"
+}
