@@ -1,0 +1,11 @@
+{
+  "id": "c4b4dadb801f636a",
+  "title": "Lightning apps using unpatched LDK risk Bitcoin theft from a reconnect lie",
+  "summary": "The October 1-dated v0.2.7 and v0.1.13 patches close a reconnect theft path, while v0.2.7 also fixes an LSPS2 payment-amount flaw. The post Lightning apps using unpatched LDK risk Bitcoin theft from a reconnect lie appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/unpatched-ldk-apps-can-lose-bitcoin-when-a-lightning-peer-lies-after-reconnecting/",
+  "category": "crypto",
+  "published": "2026-10-11T18:00:02+00:00",
+  "collected_at": "2026-10-11T19:04:47.479504+00:00",
+  "batch": "20261011-190446"
+}
