@@ -1043,5 +1043,18 @@
     "total_posts": 20,
     "site_online": true,
     "llm_budget_left": 12
+  },
+  {
+    "date": "2026-10-11",
+    "collected": 8,
+    "written": 2,
+    "approved": 2,
+    "published": 2,
+    "pending_review": 5,
+    "rejected": 0,
+    "inbox_backlog": 1196,
+    "total_posts": 20,
+    "site_online": true,
+    "llm_budget_left": 12
   }
 ]
