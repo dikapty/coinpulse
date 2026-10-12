@@ -12,13 +12,14 @@
     "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-",
     "2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m",
     "2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-",
-    "2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc"
+    "2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc",
+    "2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha"
   ],
   "daily": {
     "2026-10-09": 4,
     "2026-10-10": 4,
     "2026-10-11": 4,
-    "2026-10-12": 2
+    "2026-10-12": 3
   },
   "polls": [],
   "snapshots": {
@@ -27,11 +28,11 @@
     "2026-10-11": true,
     "2026-10-12": true
   },
-  "last_post_ts": 1791783561.128725,
+  "last_post_ts": 1791794652.667057,
   "articles_today": {
     "2026-10-09": 3,
     "2026-10-10": 3,
     "2026-10-11": 3,
-    "2026-10-12": 1
+    "2026-10-12": 2
   }
 }
