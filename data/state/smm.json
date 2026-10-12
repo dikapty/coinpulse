@@ -11,13 +11,14 @@
     "2026-10-02-near-protocol-faces-market-stress-test-amid-security-breach-and-etf-la",
     "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-",
     "2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m",
-    "2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-"
+    "2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-",
+    "2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc"
   ],
   "daily": {
     "2026-10-09": 4,
     "2026-10-10": 4,
     "2026-10-11": 4,
-    "2026-10-12": 1
+    "2026-10-12": 2
   },
   "polls": [],
   "snapshots": {
@@ -26,11 +27,11 @@
     "2026-10-11": true,
     "2026-10-12": true
   },
-  "last_post_ts": 1791772789.246884,
+  "last_post_ts": 1791783561.128725,
   "articles_today": {
-    "2026-10-08": 3,
     "2026-10-09": 3,
     "2026-10-10": 3,
-    "2026-10-11": 3
+    "2026-10-11": 3,
+    "2026-10-12": 1
   }
 }
