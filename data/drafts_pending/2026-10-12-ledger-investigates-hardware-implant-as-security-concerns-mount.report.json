@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-12-ledger-investigates-hardware-implant-as-security-concerns-mount.md",
+  "title": "Ledger Investigates Hardware Implant as Security Concerns Mount",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "796 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": false,
+      "detail": "guaranteed"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective report, though it relies on external links for primary source verification rather than internal documentation.",
+    "overall": 8.8
+  },
+  "word_count": 796,
+  "decision": "pending"
+}
