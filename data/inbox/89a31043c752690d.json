@@ -1,0 +1,11 @@
+{
+  "id": "89a31043c752690d",
+  "title": "Eclair merges fixes for Lightning flaws that could burn Bitcoin in fees",
+  "summary": "October funding and splicing repairs limit peer fees and verify backend transactions, while the latest listed release remains September's v0.14.3. The post Eclair merges fixes for Lightning flaws that could burn Bitcoin in fees appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/eclair-merges-fixes-for-lightning-fee-losses-that-do-not-require-stolen-keys/",
+  "category": "crypto",
+  "published": "2026-10-12T16:20:36+00:00",
+  "collected_at": "2026-10-12T19:07:23.607365+00:00",
+  "batch": "20261012-190722"
+}

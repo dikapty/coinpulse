@@ -1,0 +1,11 @@
+{
+  "id": "3066fcacd5b14bf1",
+  "title": "Solana’s offline-signing proposal would keep approvals valid after failed transactions",
+  "summary": "Proposed signer programs would preserve offline approval while requiring affected operators to reassess account authorities, application access and custody controls. The post Solana’s offline-signing proposal would keep approvals valid after failed transactions appeared first on CryptoSlate .",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/solanas-cold-wallet-migration-plan-would-add-a-new-layer-between-keys-and-funds/",
+  "category": "crypto",
+  "published": "2026-10-12T17:20:24+00:00",
+  "collected_at": "2026-10-12T19:07:23.606114+00:00",
+  "batch": "20261012-190722"
+}

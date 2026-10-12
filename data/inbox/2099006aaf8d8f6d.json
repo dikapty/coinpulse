@@ -1,0 +1,11 @@
+{
+  "id": "2099006aaf8d8f6d",
+  "title": "XRP Ledger’s Payment Engine Had a Counterfeiting Bug Hiding Since 2015",
+  "summary": "An integer overflow in the payment engine, dormant since 2015, could have let an attacker mint spendable XRP beyond the token’s total supply.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/380693/xrp-ledger-payment-engine-counterfeiting-bug-hiding",
+  "category": "crypto",
+  "published": "2026-10-12T15:56:35+00:00",
+  "collected_at": "2026-10-12T19:07:22.969079+00:00",
+  "batch": "20261012-190722"
+}
