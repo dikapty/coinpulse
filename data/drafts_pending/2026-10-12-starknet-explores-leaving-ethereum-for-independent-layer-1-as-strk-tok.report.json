@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-12-starknet-explores-leaving-ethereum-for-independent-layer-1-as-strk-tok.md",
+  "title": "Starknet Explores Leaving Ethereum for Independent Layer 1 as STRK Token Rallies",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "668 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-structured and neutral, the article completely fails on factual integrity by hallucinating specific future dates in 2026 for events that occurred in October 2024.",
+    "overall": 6.0
+  },
+  "word_count": 668,
+  "decision": "pending"
+}

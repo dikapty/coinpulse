@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-12-autonomous-ai-agents-enter-e-commerce-via-bedrock-agentcore-payments-a.md",
+  "title": "Autonomous AI Agents Enter E-Commerce via Bedrock AgentCore Payments as Merchant Infrastructure Lags",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "730 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-structured and neutral, the article invents a non-existent Amazon framework and fabricates a future date (October 2026), severely undermining its factual integrity.",
+    "overall": 6.3
+  },
+  "word_count": 730,
+  "decision": "pending"
+}

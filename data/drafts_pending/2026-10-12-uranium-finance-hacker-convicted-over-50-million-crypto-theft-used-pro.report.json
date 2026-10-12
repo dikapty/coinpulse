@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-12-uranium-finance-hacker-convicted-over-50-million-crypto-theft-used-pro.md",
+  "title": "Uranium Finance Hacker Convicted Over $50 Million Crypto Theft Used Proceeds for Rare Collectibles",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "603 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": false,
+      "detail": "moon"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "A well-sourced, neutral, and informative piece of financial reporting that clearly details the legal and structural implications of the exploit without resorting to hype.",
+    "overall": 8.8
+  },
+  "word_count": 603,
+  "decision": "pending"
+}
