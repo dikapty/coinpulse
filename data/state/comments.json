@@ -50,15 +50,9 @@
     }
   },
   "salt": "acf82083dc44d2e9f0090e556b834eb3",
-  "sessions": {
-    "ab30bc6b701ab7f8bb42a4ea": {
-      "slug": "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-",
-      "ts": 1791896696.1625803,
-      "chat_id": 8002569240
-    }
-  },
+  "sessions": {},
   "fingerprints": [],
   "ratelimit": {},
   "last_ts": {},
-  "offset": 672103213
+  "offset": 672103214
 }
