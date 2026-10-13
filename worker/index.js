@@ -111,22 +111,36 @@ function codeKey(email) { return "code:" + email.toLowerCase(); }
 function rlKey(scope, id) { return `rl:${scope}:${id}:${Math.floor(Date.now() / DAY)}`; }
 
 async function sendEmail(env, to, code) {
-  // Resend free tier. Replace this function to use another provider.
-  const from = env.MAIL_FROM || "CoinPulse <no-reply@coinpulse.dev>";
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { "Authorization": `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from, to, subject: `${code} is your CoinPulse sign-in code`,
-      html: `<div style="font-family:system-ui,Arial,sans-serif;background:#0b0e14;color:#dde1ec;padding:28px;border-radius:14px;max-width:460px">` +
-        `<h2 style="color:#f7931a;margin:0 0 8px">CoinPulse</h2>` +
-        `<p style="margin:0 0 18px;color:#8a90a3">Your sign-in code is:</p>` +
-        `<div style="font-size:34px;font-weight:800;letter-spacing:6px;background:#141824;border:1px solid #242a3c;border-radius:10px;padding:18px;text-align:center;color:#fff">${code}</div>` +
-        `<p style="margin:18px 0 0;color:#8a90a3;font-size:13px">It expires in 10 minutes. If you didn't request this, ignore the email.</p>` +
-        `</div>`,
-    }),
-  });
-  return res.ok;
+  // Resend free tier. Returns { ok } or { ok:false, error } so the caller can log why.
+  // NOTE on `from`: it MUST be an address on a domain verified in Resend. The shared
+  // test sender onboarding@resend.dev always works; a custom no-reply@yourdomain only
+  // works after that domain is added + verified in Resend (set MAIL_FROM then).
+  const from = env.MAIL_FROM || "CoinPulse <onboarding@resend.dev>";
+  let res;
+  try {
+    res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { "Authorization": `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from, to, subject: `${code} is your CoinPulse sign-in code`,
+        html: `<div style="font-family:system-ui,Arial,sans-serif;background:#0b0e14;color:#dde1ec;padding:28px;border-radius:14px;max-width:460px">` +
+          `<h2 style="color:#f7931a;margin:0 0 8px">CoinPulse</h2>` +
+          `<p style="margin:0 0 18px;color:#8a90a3">Your sign-in code is:</p>` +
+          `<div style="font-size:34px;font-weight:800;letter-spacing:6px;background:#141824;border:1px solid #242a3c;border-radius:10px;padding:18px;text-align:center;color:#fff">${code}</div>` +
+          `<p style="margin:18px 0 0;color:#8a90a3;font-size:13px">It expires in 10 minutes. If you didn't request this, ignore the email.</p>` +
+          `</div>`,
+      }),
+    });
+  } catch (e) {
+    return { ok: false, error: `fetch_failed: ${e && e.message || e}` };
+  }
+  if (res.ok) return { ok: true };
+  let detail = `HTTP ${res.status}`;
+  try {
+    const body = await res.json();
+    detail = body.message || body.statusCode || JSON.stringify(body).slice(0, 200);
+  } catch (_) {}
+  return { ok: false, error: detail };
 }
 
 async function rateLimited(env, scope, id, limit) {
@@ -208,7 +222,11 @@ export default {
 
         const code = String(Math.floor(100000 + Math.random() * 900000)); // 6 digits
         const sent = await sendEmail(env, e, code);
-        if (!sent) return json({ ok: false, error: "email_send_failed" }, 502, cors);
+        if (!sent.ok) {
+          // full provider reason goes to `wrangler tail`; the client gets a neutral error
+          console.error(`send-code failed for ${e}: ${sent.error}`);
+          return json({ ok: false, error: "email_send_failed" }, 502, cors);
+        }
         await env.COMMENTS.put(codeKey(e), JSON.stringify({ code, attempts: 0, sentAt: Date.now() }),
                                { expirationTtl: CODE_TTL_SEC });
         return json({ ok: true }, 200, cors);
@@ -233,9 +251,15 @@ export default {
         // success
         await env.COMMENTS.delete(codeKey(e));
         const now = new Date().toISOString();
-        const u = (await env.COMMENTS.get(userKey(e), "json")) || { email: e, joined: now, comments: 0 };
+        const existed = await env.COMMENTS.get(userKey(e), "json");
+        const u = existed || { email: e, joined: now, comments: 0 };
         u.last_seen = now;
         await env.COMMENTS.put(userKey(e), JSON.stringify(u));
+        if (!existed) {
+          // bump the public member counter (best-effort, race-tolerant)
+          const n = parseInt((await env.COMMENTS.get("meta:member_count")) || "0", 10);
+          await env.COMMENTS.put("meta:member_count", String(n + 1));
+        }
         const token = await signToken(e, secret);
         return json({ ok: true, token, name: displayName(e), joined: u.joined }, 200, cors);
       }

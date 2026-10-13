@@ -5,3 +5,8 @@ site/
 .DS_Store
 
 .venv/
+
+# wrangler / node tooling (worker is deployed, deps are not committed)
+node_modules/
+.wrangler/
+.dev.vars
