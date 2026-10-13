@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q.md",
+  "title": "Standard Chartered Adds Ripple’s RLUSD to Custody Services Following Quarterly Growth",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "724 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, professional report that provides necessary context for institutional crypto-custody developments without succumbing to market hype.",
+    "overall": 8.8
+  },
+  "word_count": 724,
+  "decision": "publish"
+}

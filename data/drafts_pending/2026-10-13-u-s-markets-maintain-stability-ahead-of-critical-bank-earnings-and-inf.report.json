@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-13-u-s-markets-maintain-stability-ahead-of-critical-bank-earnings-and-inf.md",
+  "title": "U.S. Markets Maintain Stability Ahead of Critical Bank Earnings and Inflation Reports",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "852 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 3,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The article provides a coherent macro-narrative but relies on an unverifiable 'internal briefing' as its primary source and invents a specific date in 2026 to frame its analysis.",
+    "overall": 6.5
+  },
+  "word_count": 852,
+  "decision": "pending"
+}

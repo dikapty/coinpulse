@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-13-south-korean-lender-jeonbuk-bank-pioneers-bitcoin-backed-loan-services.md",
+  "title": "South Korean Lender Jeonbuk Bank Pioneers Bitcoin-Backed Loan Services",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "784 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 7,
+    "verdict": "The article is well-structured and contextually valuable, but it relies on 'future-dated' and unverifiable event data, rendering its factual basis entirely hypothetical.",
+    "overall": 6.5
+  },
+  "word_count": 784,
+  "decision": "pending"
+}
