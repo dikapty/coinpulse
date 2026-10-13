@@ -117,6 +117,18 @@ def stage_sync_comments():
 
 
 def stage_build():
+    """Build the static site.
+
+    First gives the on-page Telegram Comments widget a chance to switch itself on: as soon
+    as the channel owner links a discussion group, channel_comments.run() detects it and
+    flips comments.telegram_widget in config.yaml, so THIS build already renders the box.
+    Config is reloaded afterwards because that step rewrites the file on disk.
+    """
+    try:
+        from channel_comments import run as widget_autodetect
+        widget_autodetect()
+    except Exception as e:
+        log(f"Comments widget auto-detect skipped: {e}")
     from publisher import build_site
     build_site(load_config())
 
