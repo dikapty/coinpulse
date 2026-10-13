@@ -1,0 +1,23 @@
+name = "coinpulse-api"
+main = "index.js"
+compatibility_date = "2026-01-01"
+
+# After `wrangler kv:namespace create COMMENTS`, paste the returned id below.
+# Example:
+#   [[kv_namespaces]]
+#   binding = "COMMENTS"
+#   id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+kv_namespaces = [
+  { binding = "COMMENTS", id = "REPLACE_WITH_KV_NAMESPACE_ID" },
+]
+
+[vars]
+# Only the site origin(s) may call the API. Set to your live domain (no trailing slash).
+# GitHub Pages now; switch to the short domain / custom domain after migration.
+ALLOWED_ORIGIN = "https://dikapty.github.io"
+# Optional: override the "from" address (must be a domain you verified in Resend).
+# MAIL_FROM = "CoinPulse <no-reply@yourdomain.com>"
+
+# Secrets are NOT stored here. Set them with:
+#   wrangler secret put RESEND_API_KEY      # from resend.com (free tier)
+#   wrangler secret put SESSION_SECRET      # any long random string: `openssl rand -hex 32`

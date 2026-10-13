@@ -160,6 +160,11 @@ comments:
   enabled: true
   poll_rounds: 3
   poll_timeout: 10
+  # Cloudflare Worker API base (worker/index.js). EMPTY until the owner deploys it.
+  # Once set, every article page also gets an on-site email sign-in + comment box,
+  # and sync_comments.py pulls those comments into the static pages at build time.
+  # Example: https://coinpulse-api.<your-subdomain>.workers.dev
+  api_url: ''
 smm:
   # scripts/smm.py = autonomous SMM manager for the Telegram channel:
   # market snapshots, article posts with rotating hooks, polls, weekly digest.

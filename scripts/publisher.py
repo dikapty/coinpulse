@@ -99,6 +99,16 @@ def load_posts() -> list:
     return posts
 
 
+def comments_head(cfg: dict) -> str:
+    """Injects the API base URL for the on-site comment box, but ONLY when the owner
+    has deployed the Cloudflare Worker and put its URL in config (comments.api_url).
+    Until then the page stays exactly as before — no dead form, no failed requests."""
+    api = str(cfg.get("comments", {}).get("api_url", "") or "").strip().rstrip("/")
+    if not api:
+        return ""
+    return f'<script>window.__CP_API__ = "{api}";</script>'
+
+
 def render_template(name: str, **ctx) -> str:
     tpl = (TEMPLATE_DIR / name).read_text(encoding="utf-8")
     for k, v in ctx.items():
@@ -311,7 +321,7 @@ def build_site(cfg: dict) -> None:
                       "news sources, edited and fact-checked against those sources, and are "
                       "provided for information only — this is not financial advice.</p>")
 
-    head_extra = ads_head_html(cfg)
+    head_extra = ads_head_html(cfg) + comments_head(cfg)
     social = social_links(cfg)
 
     # --- individual posts ---

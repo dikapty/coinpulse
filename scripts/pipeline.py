@@ -106,6 +106,16 @@ def stage_comments():
     return comments_run()
 
 
+def stage_sync_comments():
+    """Pull on-site (Cloudflare Worker/KV) comments into data/ before a build, so the
+    statically rendered pages show them even to visitors with JS disabled.
+
+    No-op unless comments.api_url is configured (Worker deployed). Safe to always run.
+    """
+    from sync_comments import run as sync_run
+    sync_run()
+
+
 def stage_build():
     from publisher import build_site
     build_site(load_config())
@@ -169,6 +179,8 @@ def main(argv):
             stage_affiliate()
         if full or "images" in stages:
             stage_images()
+        if full or "sync_comments" in stages:
+            stage_sync_comments()
         if full or "build" in stages:
             stage_build()
         # promote is NEVER part of `full` — it needs live/deployed URLs, so in CI it

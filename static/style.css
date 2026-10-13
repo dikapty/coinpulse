@@ -225,3 +225,32 @@ a.tag:hover { color: var(--accent); }
 .cmt-time { color: var(--muted); font-size: .78rem; }
 .cmt-text { color: var(--text); line-height: 1.55; font-size: .95rem; word-wrap: break-word; }
 .cmt-powered { color: var(--muted); font-size: .78rem; margin-top: 16px; }
+
+/* ---------- email sign-in + comment form ---------- */
+.cmt-auth { background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px 18px; margin: 6px 0 18px; }
+.cmt-auth.signed { border-color: var(--accent); }
+.cmt-auth-title { margin: 0 0 12px; font-weight: 600; font-size: .98rem; color: var(--text); }
+.cmt-auth-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.cmt-input { flex: 1; min-width: 200px; background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 9px; color: var(--text); padding: 11px 14px; font-size: .95rem; font-family: inherit; }
+.cmt-input:focus { outline: none; border-color: var(--accent); }
+.cmt-code { letter-spacing: 4px; text-align: center; font-weight: 700; max-width: 180px; }
+.cmt-area { width: 100%; resize: vertical; min-height: 74px; line-height: 1.5; }
+.cmt-btn { background: var(--accent); color: #12141c; font-weight: 700; border: none;
+  border-radius: 9px; padding: 11px 20px; font-size: .92rem; cursor: pointer;
+  transition: transform .12s ease, filter .12s ease; font-family: inherit; }
+.cmt-btn:hover:not(:disabled) { transform: translateY(-1px); filter: brightness(1.08); }
+.cmt-btn:disabled { opacity: .6; cursor: default; }
+.cmt-btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.cmt-btn.ghost:hover:not(:disabled) { color: var(--text); border-color: var(--accent); }
+.cmt-form-row { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; gap: 12px; }
+.cmt-counter { color: var(--muted); font-size: .8rem; }
+.cmt-msg { margin: 10px 0 0; font-size: .88rem; min-height: 1.2em; }
+.cmt-msg.ok { color: var(--up); }
+.cmt-msg.err { color: var(--down); }
+.cmt-link { background: none; border: none; color: var(--muted); font-size: .8rem;
+  cursor: pointer; text-decoration: underline; padding: 0; font-family: inherit; }
+.cmt-link:hover { color: var(--down); }
+.cmt-cta.cmt-alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.cmt-list { margin: 8px 0 4px; }
