@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md",
+  "title": "Bitcoin Price Volatility Intensifies Amid Major Liquidations and Tech Sector Sell-Off",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "909 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is a well-cited, professional summary that successfully contextualizes market mechanics, though it occasionally drifts into analytical speculation.",
+    "overall": 8.5
+  },
+  "word_count": 909,
+  "decision": "publish"
+}
