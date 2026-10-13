@@ -94,6 +94,18 @@ def stage_smm():
     smm_run()
 
 
+def stage_comments():
+    """Telegram-backed comments for the static site (scripts/comments.py).
+
+    Polls the bot for reader messages, moderates deterministically, stores approved
+    comments in data/comments/, replies to readers. Returns the number of newly
+    approved comments — the workflow rebuilds + redeploys only when > 0.
+    Invoked explicitly: pipeline.py comments
+    """
+    from comments import run as comments_run
+    return comments_run()
+
+
 def stage_build():
     from publisher import build_site
     build_site(load_config())
@@ -166,6 +178,13 @@ def main(argv):
         # smm runs on its own cron (smm.yml) — explicit only, same reason.
         if "smm" in stages:
             stage_smm()
+        # comments runs on its own cron (comments.yml). Exit 10 when new comments
+        # were approved so the workflow knows to rebuild + redeploy the site.
+        if "comments" in stages:
+            n_new = stage_comments()
+            if n_new:
+                log(f"PIPELINE OK ({n_new} new comment(s) -> redeploy)")
+                return 10
         if full or "monitor" in stages:
             stage_monitor()
         log("PIPELINE OK")

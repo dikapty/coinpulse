@@ -326,6 +326,8 @@ def build_site(cfg: dict) -> None:
         hero = (f'<figure class="hero"><img src="{base}{image}" alt="{escape(post.get("title",""))}">'
                 f'<figcaption>AI-generated illustration</figcaption></figure>') if image else ""
         rtime = reading_time(post["_body"])
+        from comments import render_comments, bot_username
+        comments_html = render_comments(post["_stem"], base, bot_username())
         page = render_template(
             "post.html",
             SITE_NAME=site_cfg["name"], BASE=base,
@@ -340,6 +342,7 @@ def build_site(cfg: dict) -> None:
             BODY=html_body,
             RELATED=related_posts(post, posts, base),
             SHARE=share_buttons(post, base, post["_stem"]),
+            COMMENTS=comments_html,
             AD_TOP=ad_html(cfg, "ad_slot_top"), AD_BOTTOM=ad_html(cfg, "ad_slot_bottom"),
             AD_INLINE=ad_html(cfg, "ad_slot_inline"),
             DISCLOSURE=disclosure,

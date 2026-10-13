@@ -152,6 +152,14 @@ notification:
     channel_id: ''
     # max article posts to the channel per pipeline run (anti-spam)
     channel_posts_per_run: 3
+    # bot username for comment deep links (https://t.me/<bot>?start=c_<id>)
+    bot_username: myfirstrich_bot
+comments:
+  # scripts/comments.py: readers comment via the Telegram bot; CI polls,
+  # moderates (deterministic rules), stores in data/comments/, renders at build.
+  enabled: true
+  poll_rounds: 3
+  poll_timeout: 10
 smm:
   # scripts/smm.py = autonomous SMM manager for the Telegram channel:
   # market snapshots, article posts with rotating hooks, polls, weekly digest.

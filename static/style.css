@@ -203,3 +203,25 @@ a.tag:hover { color: var(--accent); }
   transition: border-color .2s, transform .2s; }
 .social a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
 .social a span { font-size: 16px; }
+
+/* ---------- comments ---------- */
+.comments { margin: 34px 0 10px; border-top: 1px solid var(--border); padding-top: 22px; }
+.cmt-title { font-size: 1.25rem; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+.cmt-count { background: var(--accent-soft); color: var(--accent); font-size: .85rem;
+  padding: 2px 10px; border-radius: 999px; font-weight: 700; }
+.cmt-cta { display: inline-block; background: var(--accent); color: #12141c; font-weight: 700;
+  padding: 11px 22px; border-radius: 10px; text-decoration: none; margin: 4px 0 8px;
+  transition: transform .12s ease, filter .12s ease; }
+.cmt-cta:hover { transform: translateY(-1px); filter: brightness(1.08); }
+.cmt-note { color: var(--muted); font-size: .86rem; margin: 4px 0 18px; }
+.cmt-empty { color: var(--muted); font-style: italic; margin: 14px 0; }
+.cmt { display: flex; gap: 12px; margin: 16px 0; }
+.cmt-avatar { width: 40px; height: 40px; min-width: 40px; border-radius: 50%; color: #10131c;
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; }
+.cmt-body { flex: 1; background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 14px; }
+.cmt-meta { display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; }
+.cmt-name { font-weight: 700; color: var(--text); }
+.cmt-time { color: var(--muted); font-size: .78rem; }
+.cmt-text { color: var(--text); line-height: 1.55; font-size: .95rem; word-wrap: break-word; }
+.cmt-powered { color: var(--muted); font-size: .78rem; margin-top: 16px; }
