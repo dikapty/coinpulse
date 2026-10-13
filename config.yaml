@@ -24,9 +24,9 @@ publishing:
     - 8
 llm:
   provider: gemini
-  daily_budget: 18   # local soft budget per UTC day; real Gemini free limit = 20 req/day PER MODEL
+  daily_budget: 18
   gemini:
-    model: gemini-3.6-flash   # verified working on this key's free tier (2026-09-28)
+    model: gemini-3.6-flash
     fallback_models:
     - gemini-3.5-flash
     - gemini-3.1-flash-lite
@@ -109,8 +109,6 @@ forbidden_topics:
 - sanctions evasion
 - pump and dump
 affiliates:
-  # DISABLED until you join a real program and put your own links here —
-  # the placeholder must never appear on the live site.
   enabled: false
   programs:
   - name: Example Exchange
@@ -127,62 +125,40 @@ monetization:
   ad_slot_inline: ''
   ad_slot_bottom: ''
   ad_slot_index: ''
-  # Any non-AdSense network (Adsterra, PropellerAds, Coinzilla, Monetag...):
-  # paste the raw HTML snippet; it renders inside the corresponding ad-slot div.
   custom_html:
     head: ''
     ad_slot_top: ''
     ad_slot_inline: ''
     ad_slot_bottom: ''
     ad_slot_index: ''
-  # google-site-verification meta token (from Search Console), value only
-  site_verification: 'guLGblCEMa7k3JV3fwATQ0VLjOoBjozmGaQ7LsKgUZU'
-  # any number of verification metas: {"msvalidate.01": "bing token", "yandex-verification": "..."}
+  site_verification: guLGblCEMa7k3JV3fwATQ0VLjOoBjozmGaQ7LsKgUZU
   verifications: {}
-  # extra ads.txt rows, e.g. "coinzilla.com, PUB-XXXX, DIRECT"
   ads_txt_lines: []
 notification:
   telegram:
     enabled: true
     bot_token_env: TELEGRAM_BOT_TOKEN
     chat_id_env: TELEGRAM_CHAT_ID
-    # public channel for auto-broadcasting articles: "@yourchannel" or "-100..."
-    # set via TELEGRAM_CHANNEL_ID secret/env, or paste here directly
     channel_id_env: TELEGRAM_CHANNEL_ID
     channel_id: ''
-    # max article posts to the channel per pipeline run (anti-spam)
     channel_posts_per_run: 3
-    # bot username for comment deep links (https://t.me/<bot>?start=c_<id>)
     bot_username: myfirstrich_bot
 comments:
-  # scripts/comments.py: readers comment via the Telegram bot; CI polls,
-  # moderates (deterministic rules), stores in data/comments/, renders at build.
   enabled: true
   poll_rounds: 3
   poll_timeout: 10
-  # Official Telegram Comments widget = a real comment box ON the page (iframe from
-  # telegram.org). Free, no email service, no Worker. Requires the channel to have a
-  # LINKED DISCUSSION GROUP (channel settings -> Discussion -> Create a new group).
-  # Flip to true right after linking the group; widget_limit = visible comments.
-  telegram_widget: false
-  telegram_channel: ''
+  telegram_widget: true
+  telegram_channel: coinpulsedailynews
   widget_limit: 5
-  # Cloudflare Worker API base (worker/index.js). EMPTY until the owner deploys it.
-  # Once set, every article page also gets an on-site email sign-in + comment box,
-  # and sync_comments.py pulls those comments into the static pages at build time.
-  # Example: https://coinpulse-api.<your-subdomain>.workers.dev
   api_url: ''
 smm:
-  # scripts/smm.py = autonomous SMM manager for the Telegram channel:
-  # market snapshots, article posts with rotating hooks, polls, weekly digest.
-  # Runs on its own cron (every 3h) for human-like pacing.
   enabled: true
-  daily_post_cap: 4          # max posts/day to the channel (all kinds)
-  articles_per_day: 3        # max article posts/day
-  min_gap_minutes: 45        # minimum minutes between any two posts
-  market_snapshot: true      # daily live-price snapshot post
-  poll_every_days: 2         # interactive poll cadence
-  digest_weekday: 6          # 0=Mon..6=Sun for "This week on CoinPulse"
+  daily_post_cap: 4
+  articles_per_day: 3
+  min_gap_minutes: 45
+  market_snapshot: true
+  poll_every_days: 2
+  digest_weekday: 6
   utm: utm_source=telegram&utm_medium=channel
 quality:
   min_words: 600
