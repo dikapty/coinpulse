@@ -224,7 +224,7 @@ def build_tag_pages(cfg: dict, base: str, posts: list) -> list:
         page = render_template(
             "page.html", SITE_NAME=cfg["site"]["name"], BASE=base,
             TITLE=f"{escape(display)} News",
-            HEAD_EXTRA="",
+            HEAD_EXTRA=ads_head_html(cfg),
             SOCIAL=social_links(cfg),
             BODY=(f'<h1 class="tag-page-title">{escape(display)}</h1>'
                   f'<p class="tag-count">{len(items)} article(s)</p>'
