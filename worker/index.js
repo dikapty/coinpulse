@@ -156,17 +156,33 @@ function bearer(req) {
   return h.startsWith("Bearer ") ? h.slice(7).trim() : "";
 }
 
+// Which browser origins may call the API. GitHub Pages and Cloudflare Pages hosts are
+// always allowed (any subdomain of them), so the comment form keeps working after the
+// site moves to a short domain without redeploying the Worker. Extra domains can be
+// added through the ALLOWED_ORIGIN var (comma-separated, with or without https://).
+const AUTO_HOSTS = ["github.io", "pages.dev"];
+function originAllowed(origin, env) {
+  if (!origin) return false;
+  let host;
+  try { host = new URL(origin).hostname.toLowerCase(); } catch (_) { return false; }
+  if (AUTO_HOSTS.some(d => host === d || host.endsWith("." + d))) return true;
+  return String(env.ALLOWED_ORIGIN || "")
+    .split(",").map(s => s.trim().replace(/^https?:\/\//, "").replace(/\/.*$/, "").toLowerCase())
+    .filter(Boolean)
+    .some(d => host === d || host.endsWith("." + d));
+}
+
 // ---------- main handler ----------
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
     const origin = req.headers.get("Origin") || "";
-    const allowOrigin = (env.ALLOWED_ORIGIN && origin.startsWith(env.ALLOWED_ORIGIN)) ? origin
-                        : (env.ALLOWED_ORIGIN || "*");
     const cors = {
-      "Access-Control-Allow-Origin": allowOrigin,
+      "Access-Control-Allow-Origin": originAllowed(origin, env) ? origin : "null",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Max-Age": "86400",
+      "Vary": "Origin",
     };
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 

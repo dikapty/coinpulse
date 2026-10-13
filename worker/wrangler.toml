@@ -14,7 +14,9 @@ kv_namespaces = [
 [vars]
 # Only the site origin(s) may call the API. Set to your live domain (no trailing slash).
 # GitHub Pages now; switch to the short domain / custom domain after migration.
-ALLOWED_ORIGIN = "https://dikapty.github.io"
+# *.github.io and *.pages.dev are always allowed by worker/index.js (AUTO_HOSTS),
+# so this only needs extra custom domains after a move (comma-separated):
+ALLOWED_ORIGIN = ""
 # Optional: override the "from" address (must be a domain you verified in Resend).
 # MAIL_FROM = "CoinPulse <no-reply@yourdomain.com>"
 
