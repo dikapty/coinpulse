@@ -6,8 +6,9 @@
  * member lists are ALSO synced to data/ by scripts/sync_comments.py at build time so the
  * pages stay correct even for visitors with JS disabled.
  *
- * Email delivery uses Resend (free: 100/day, 3k/mo). Swap sendEmail() for Mailgun/Brevo/
- * SendGrid by changing that one function. RESEND_API_KEY is a Worker secret.
+ * Email delivery is provider-pluggable (see sendEmail): Resend / Mailjet / SendGrid / Brevo.
+ * Resend's free tier sends only to the owner inbox, so public sign-up needs one of the
+ * others with a verified single sender. Keys are Worker secrets; MAIL_PROVIDER picks one.
  *
  * Endpoints (all JSON, CORS-enabled for the site origin):
  *   POST /auth/send-code   {email}                -> {ok}            emails a 6-digit code
@@ -110,37 +111,119 @@ function commentsKey(slug) { return "comments:" + slug; }
 function codeKey(email) { return "code:" + email.toLowerCase(); }
 function rlKey(scope, id) { return `rl:${scope}:${id}:${Math.floor(Date.now() / DAY)}`; }
 
-async function sendEmail(env, to, code) {
-  // Resend free tier. Returns { ok } or { ok:false, error } so the caller can log why.
-  // NOTE on `from`: it MUST be an address on a domain verified in Resend. The shared
-  // test sender onboarding@resend.dev always works; a custom no-reply@yourdomain only
-  // works after that domain is added + verified in Resend (set MAIL_FROM then).
-  const from = env.MAIL_FROM || "CoinPulse <onboarding@resend.dev>";
-  let res;
+// ---------------------------------------------------------------------------
+// Email delivery — provider-pluggable, all free tiers.
+//
+// WHY several providers: Resend's free tier is hard-limited to sending ONLY to
+// the account owner's own inbox until a sending DOMAIN is verified (and a domain
+// costs money). That is unusable for public sign-up. Mailjet / SendGrid / Brevo
+// instead let you verify a SINGLE SENDER ADDRESS (one confirmation click in your
+// own mailbox) and then deliver to anyone — free, no domain required.
+//
+// Pick one via the MAIL_PROVIDER var (default "resend"):
+//   mailjet  -> MAILJET_API_KEY + MAILJET_SECRET_KEY   (200/day, 6000/mo)
+//   sendgrid -> SENDGRID_API_KEY                       (100/day)
+//   brevo    -> BREVO_API_KEY                          (300/day)
+//   resend   -> RESEND_API_KEY                         (100/day, owner-inbox only
+//              unless a domain is verified in Resend)
+// MAIL_FROM must be an address the chosen provider has verified, e.g.
+//   "CoinPulse <you@gmail.com>".
+// ---------------------------------------------------------------------------
+
+function codeEmailHtml(code) {
+  return `<div style="font-family:system-ui,Arial,sans-serif;background:#0b0e14;color:#dde1ec;padding:28px;border-radius:14px;max-width:460px">` +
+    `<h2 style="color:#f7931a;margin:0 0 8px">CoinPulse</h2>` +
+    `<p style="margin:0 0 18px;color:#8a90a3">Your sign-in code is:</p>` +
+    `<div style="font-size:34px;font-weight:800;letter-spacing:6px;background:#141824;border:1px solid #242a3c;border-radius:10px;padding:18px;text-align:center;color:#fff">${code}</div>` +
+    `<p style="margin:18px 0 0;color:#8a90a3;font-size:13px">It expires in 10 minutes. If you didn't request this, ignore the email.</p>` +
+    `</div>`;
+}
+
+function codeEmailText(code) {
+  return `Your CoinPulse sign-in code is ${code}. It expires in 10 minutes. ` +
+    `If you didn't request this, ignore the email.`;
+}
+
+// "CoinPulse <you@x.com>" -> { name: "CoinPulse", email: "you@x.com" }
+function parseFrom(from) {
+  const m = /^\s*(.*?)\s*<([^>]+)>\s*$/.exec(from || "");
+  if (m) return { name: m[1] || "CoinPulse", email: m[2].trim() };
+  return { name: "CoinPulse", email: String(from || "").trim() };
+}
+
+async function postJson(url, headers, body) {
   try {
-    res = await fetch("https://api.resend.com/emails", {
+    const res = await fetch(url, {
       method: "POST",
-      headers: { "Authorization": `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        from, to, subject: `${code} is your CoinPulse sign-in code`,
-        html: `<div style="font-family:system-ui,Arial,sans-serif;background:#0b0e14;color:#dde1ec;padding:28px;border-radius:14px;max-width:460px">` +
-          `<h2 style="color:#f7931a;margin:0 0 8px">CoinPulse</h2>` +
-          `<p style="margin:0 0 18px;color:#8a90a3">Your sign-in code is:</p>` +
-          `<div style="font-size:34px;font-weight:800;letter-spacing:6px;background:#141824;border:1px solid #242a3c;border-radius:10px;padding:18px;text-align:center;color:#fff">${code}</div>` +
-          `<p style="margin:18px 0 0;color:#8a90a3;font-size:13px">It expires in 10 minutes. If you didn't request this, ignore the email.</p>` +
-          `</div>`,
-      }),
+      headers: { "Content-Type": "application/json", ...headers },
+      body: JSON.stringify(body),
     });
+    if (res.ok) return { ok: true };
+    let detail = `HTTP ${res.status}`;
+    try {
+      const j = await res.json();
+      detail = j.message || (j.errors && j.errors[0] && j.errors[0].message) || j.errorMessage
+             || (j.Errors && j.Errors[0] && (j.Errors[0].ErrorMessage || j.Errors[0].ErrorIdentifier))
+             || JSON.stringify(j).slice(0, 200);
+    } catch (_) {}
+    return { ok: false, error: detail };
   } catch (e) {
     return { ok: false, error: `fetch_failed: ${e && e.message || e}` };
   }
-  if (res.ok) return { ok: true };
-  let detail = `HTTP ${res.status}`;
-  try {
-    const body = await res.json();
-    detail = body.message || body.statusCode || JSON.stringify(body).slice(0, 200);
-  } catch (_) {}
-  return { ok: false, error: detail };
+}
+
+function basicAuth(user, pass) {
+  const raw = `${user}:${pass}`;
+  let bin = "";
+  for (const ch of new TextEncoder().encode(raw)) bin += String.fromCharCode(ch);
+  return "Basic " + btoa(bin);
+}
+
+async function sendEmail(env, to, code) {
+  const provider = String(env.MAIL_PROVIDER || "resend").toLowerCase();
+  const subject = `${code} is your CoinPulse sign-in code`;
+  const html = codeEmailHtml(code);
+  const text = codeEmailText(code);
+  const from = env.MAIL_FROM || (provider === "resend" ? "CoinPulse <onboarding@resend.dev>" : "");
+
+  if (provider === "mailjet") {
+    if (!env.MAILJET_API_KEY || !env.MAILJET_SECRET_KEY)
+      return { ok: false, error: "MAILJET_API_KEY / MAILJET_SECRET_KEY not set" };
+    if (!from) return { ok: false, error: "MAIL_FROM not set (must be a verified sender)" };
+    const f = parseFrom(from);
+    return postJson("https://api.mailjet.com/v3.1/send",
+      { Authorization: basicAuth(env.MAILJET_API_KEY, env.MAILJET_SECRET_KEY) },
+      { Messages: [{ From: { Email: f.email, Name: f.name },
+                     To: [{ Email: to }], Subject: subject, HTMLPart: html, TextPart: text }] });
+  }
+
+  if (provider === "sendgrid") {
+    if (!env.SENDGRID_API_KEY) return { ok: false, error: "SENDGRID_API_KEY not set" };
+    if (!from) return { ok: false, error: "MAIL_FROM not set (must be a verified single sender)" };
+    const f = parseFrom(from);
+    return postJson("https://api.sendgrid.com/v3/mail/send",
+      { Authorization: `Bearer ${env.SENDGRID_API_KEY}` },
+      { personalizations: [{ to: [{ email: to }] }],
+        from: { email: f.email, name: f.name },
+        subject,
+        content: [{ type: "text/plain", value: text }, { type: "text/html", value: html }] });
+  }
+
+  if (provider === "brevo") {
+    if (!env.BREVO_API_KEY) return { ok: false, error: "BREVO_API_KEY not set" };
+    if (!from) return { ok: false, error: "MAIL_FROM not set (must be a verified sender)" };
+    const f = parseFrom(from);
+    return postJson("https://api.brevo.com/v3/smtp/email",
+      { "api-key": env.BREVO_API_KEY },
+      { sender: { name: f.name, email: f.email },
+        to: [{ email: to }], subject, htmlContent: html, textContent: text });
+  }
+
+  // default: Resend (works out of the box, but free tier delivers only to the owner inbox)
+  if (!env.RESEND_API_KEY) return { ok: false, error: "no mail provider key configured" };
+  return postJson("https://api.resend.com/emails",
+    { Authorization: `Bearer ${env.RESEND_API_KEY}` },
+    { from: from || "CoinPulse <onboarding@resend.dev>", to, subject, html, text });
 }
 
 async function rateLimited(env, scope, id, limit) {

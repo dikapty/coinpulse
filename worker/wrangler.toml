@@ -4,24 +4,29 @@ workers_dev = true
 main = "index.js"
 compatibility_date = "2026-01-01"
 
-# After `wrangler kv:namespace create COMMENTS`, paste the returned id below.
-# Example:
-#   [[kv_namespaces]]
-#   binding = "COMMENTS"
-#   id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+# LIVE: deployed at https://coinpulse-api.globalromil.workers.dev
+# KV namespace "coinpulse-comments" (created via API):
 kv_namespaces = [
   { binding = "COMMENTS", id = "5c7dd2360e834abebe97411aec8c06b5" },
 ]
 
 [vars]
-# Only the site origin(s) may call the API. Set to your live domain (no trailing slash).
-# GitHub Pages now; switch to the short domain / custom domain after migration.
-# *.github.io and *.pages.dev are always allowed by worker/index.js (AUTO_HOSTS),
-# so this only needs extra custom domains after a move (comma-separated):
+# Which origins may call the API. *.github.io and *.pages.dev are ALWAYS allowed by
+# worker/index.js (AUTO_HOSTS), so this stays empty unless you add a custom domain
+# (comma-separated, with or without https://).
 ALLOWED_ORIGIN = ""
-# Optional: override the "from" address (must be a domain you verified in Resend).
-# MAIL_FROM = "CoinPulse <no-reply@yourdomain.com>"
+# Email provider: resend (default) | mailjet | sendgrid | brevo.
+# Resend's free tier delivers ONLY to the owner's own inbox, so for public sign-up set
+# MAIL_PROVIDER=sendgrid or brevo and add the matching key (see ИНСТРУКЦИЯ.md Этап 4.6).
+# MAIL_PROVIDER = "sendgrid"
+# MAIL_FROM must be a sender the chosen provider has verified, e.g.:
+# MAIL_FROM = "CoinPulse <you@gmail.com>"
 
-# Secrets are NOT stored here. Set them with:
-#   wrangler secret put RESEND_API_KEY      # from resend.com (free tier)
-#   wrangler secret put SESSION_SECRET      # any long random string: `openssl rand -hex 32`
+# Secrets are NOT stored here. Already set on the live worker:
+#   wrangler secret put SESSION_SECRET       # random 64-hex, signs session tokens
+#   wrangler secret put RESEND_API_KEY        # current provider key
+# To switch provider, set the matching key, e.g.:
+#   wrangler secret put SENDGRID_API_KEY      # starts with SG.
+#   wrangler secret put MAILJET_API_KEY ; wrangler secret put MAILJET_SECRET_KEY
+#   wrangler secret put BREVO_API_KEY         # starts with xkeysib-
+# Then flip MAIL_PROVIDER above and re-run: wrangler deploy
