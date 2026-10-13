@@ -1,4 +1,6 @@
 name = "coinpulse-api"
+account_id = "28a94ab77b04c1246bca9b435717d34e"
+workers_dev = true
 main = "index.js"
 compatibility_date = "2026-01-01"
 
@@ -8,7 +10,7 @@ compatibility_date = "2026-01-01"
 #   binding = "COMMENTS"
 #   id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 kv_namespaces = [
-  { binding = "COMMENTS", id = "REPLACE_WITH_KV_NAMESPACE_ID" },
+  { binding = "COMMENTS", id = "5c7dd2360e834abebe97411aec8c06b5" },
 ]
 
 [vars]
