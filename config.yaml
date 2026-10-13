@@ -160,6 +160,13 @@ comments:
   enabled: true
   poll_rounds: 3
   poll_timeout: 10
+  # Official Telegram Comments widget = a real comment box ON the page (iframe from
+  # telegram.org). Free, no email service, no Worker. Requires the channel to have a
+  # LINKED DISCUSSION GROUP (channel settings -> Discussion -> Create a new group).
+  # Flip to true right after linking the group; widget_limit = visible comments.
+  telegram_widget: false
+  telegram_channel: ''
+  widget_limit: 5
   # Cloudflare Worker API base (worker/index.js). EMPTY until the owner deploys it.
   # Once set, every article page also gets an on-site email sign-in + comment box,
   # and sync_comments.py pulls those comments into the static pages at build time.

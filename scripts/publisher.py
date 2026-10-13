@@ -109,6 +109,40 @@ def comments_head(cfg: dict) -> str:
     return f'<script>window.__CP_API__ = "{api}";</script>'
 
 
+def telegram_comments_widget(cfg: dict) -> str:
+    """Official Telegram Comments widget = a real comment box rendered ON the page
+    (an iframe from telegram.org). Free, no email service, no Worker, no database.
+
+    Requires the public channel to have a LINKED DISCUSSION GROUP (owner does this once
+    in the Telegram app: channel -> Manage -> Discussion -> Create a new group). Until
+    comments.telegram_widget is true we render nothing, so a half-configured widget can
+    never appear on the live site.
+    """
+    ccfg = cfg.get("comments", {})
+    if not ccfg.get("telegram_widget"):
+        return ""
+    chan = str(ccfg.get("telegram_channel", "") or "").strip().lstrip("@")
+    if not chan:
+        link = str((cfg.get("site", {}).get("social", {}) or {}).get("telegram_channel", "") or "")
+        m = re.search(r"t\.me/([A-Za-z0-9_]{4,32})", link)
+        chan = m.group(1) if m else ""
+    if not chan:
+        log("Comments widget enabled but no channel username found — widget not rendered.")
+        return ""
+    limit = int(ccfg.get("widget_limit", 5))
+    return (
+        '<section class="comments" id="comments">'
+        '<h2 class="cmt-title">💬 Comments</h2>'
+        f'<script async src="https://telegram.org/js/telegram-widget.js?22" '
+        f'data-telegram-discuss="{escape(chan)}" '
+        f'data-limit="{limit}" '
+        'data-color="f7931a" data-dark="1" data-dark-color="8a90a3" '
+        'data-height="400"></script>'
+        '<p class="cmt-powered">Comments are hosted by Telegram — sign in there once '
+        'and you can discuss any article.</p>'
+        '</section>')
+
+
 def render_template(name: str, **ctx) -> str:
     tpl = (TEMPLATE_DIR / name).read_text(encoding="utf-8")
     for k, v in ctx.items():
@@ -337,7 +371,10 @@ def build_site(cfg: dict) -> None:
                 f'<figcaption>AI-generated illustration</figcaption></figure>') if image else ""
         rtime = reading_time(post["_body"])
         from comments import render_comments, bot_username
-        comments_html = render_comments(post["_stem"], base, bot_username())
+        # One comment system per page: the official Telegram widget (a real on-page box)
+        # wins when enabled; otherwise the bot deep-link CTA + stored comments are used.
+        comments_html = (telegram_comments_widget(cfg)
+                         or render_comments(post["_stem"], base, bot_username()))
         page = render_template(
             "post.html",
             SITE_NAME=site_cfg["name"], BASE=base,
