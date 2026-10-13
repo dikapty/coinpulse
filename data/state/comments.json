@@ -20,7 +20,9 @@
       "2851": "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu",
       "vz6": "2026-10-09-nasdaq-ceo-adena-friedman-tokenization-to-unleash-tens-of-billions-in-",
       "34x": "2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m",
-      "uzi": "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-"
+      "uzi": "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-",
+      "cl91": "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-",
+      "te71": "2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q"
     },
     "by_slug": {
       "2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea": "wvy",
@@ -42,12 +44,15 @@
       "2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu": "2851",
       "2026-10-09-nasdaq-ceo-adena-friedman-tokenization-to-unleash-tens-of-billions-in-": "vz6",
       "2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m": "34x",
-      "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-": "uzi"
+      "2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-": "uzi",
+      "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-": "cl91",
+      "2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q": "te71"
     }
   },
   "salt": "acf82083dc44d2e9f0090e556b834eb3",
   "sessions": {},
   "fingerprints": [],
   "ratelimit": {},
-  "last_ts": {}
+  "last_ts": {},
+  "offset": 1
 }
