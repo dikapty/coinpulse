@@ -15,13 +15,14 @@
     "2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc",
     "2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha",
     "2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether",
-    "2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q"
+    "2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q",
+    "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-"
   ],
   "daily": {
     "2026-10-10": 4,
     "2026-10-11": 4,
     "2026-10-12": 4,
-    "2026-10-13": 2
+    "2026-10-13": 3
   },
   "polls": [],
   "snapshots": {
@@ -30,11 +31,11 @@
     "2026-10-12": true,
     "2026-10-13": true
   },
-  "last_post_ts": 1791870007.43789,
+  "last_post_ts": 1791880983.876612,
   "articles_today": {
     "2026-10-10": 3,
     "2026-10-11": 3,
     "2026-10-12": 3,
-    "2026-10-13": 1
+    "2026-10-13": 2
   }
 }
