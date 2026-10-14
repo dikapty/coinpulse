@@ -85,15 +85,16 @@ async function signToken(email, secret) {
 async function verifyToken(token, secret) {
   if (!token || !token.includes(".")) return null;
   const [e, s] = token.split(".");
-  let email;
-  try { email = new TextDecoder().decode(fromB64url(e)); } catch (_) { return null; }
-  if (!EMAIL_RE.test(email)) return null;
-  const expect = b64url(await hmac(secret, email));
+  let id;
+  try { id = new TextDecoder().decode(fromB64url(e)); } catch (_) { return null; }
+  // identity is either an email or a Telegram login id ("tg:<numeric id>")
+  if (!(EMAIL_RE.test(id) || /^tg:\d{1,20}$/.test(id))) return null;
+  const expect = b64url(await hmac(secret, id));
   // constant-time-ish compare
   if (s.length !== expect.length) return null;
   let diff = 0;
   for (let i = 0; i < s.length; i++) diff |= s.charCodeAt(i) ^ expect.charCodeAt(i);
-  return diff === 0 ? email : null;
+  return diff === 0 ? id : null;
 }
 function json(obj, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(obj), {
@@ -102,11 +103,12 @@ function json(obj, status = 200, extraHeaders = {}) {
   });
 }
 function displayName(email) {
+  if (String(email).startsWith("tg:")) return "Telegram user";  // overridden by stored name
   const local = email.split("@")[0].replace(/[._-]+/g, " ").trim();
   const name = local ? local.charAt(0).toUpperCase() + local.slice(1) : "Reader";
   return name.slice(0, 32);
 }
-function userKey(email) { return "user:" + email.toLowerCase(); }
+function userKey(email) { return "user:" + String(email).toLowerCase(); }
 function commentsKey(slug) { return "comments:" + slug; }
 function codeKey(email) { return "code:" + email.toLowerCase(); }
 function rlKey(scope, id) { return `rl:${scope}:${id}:${Math.floor(Date.now() / DAY)}`; }
@@ -292,7 +294,8 @@ export default {
         const { email } = await req.json().catch(() => ({}));
         const e = (email || "").trim().toLowerCase();
         if (!EMAIL_RE.test(e)) return json({ ok: false, error: "invalid_email" }, 400, cors);
-        if (!env.RESEND_API_KEY) return json({ ok: false, error: "email_not_configured" }, 503, cors);
+        if (!env.RESEND_API_KEY || String(env.EMAIL_SIGNIN || "").toLowerCase() !== "true")
+          return json({ ok: false, error: "email_not_configured" }, 503, cors);
         if (await rateLimited(env, "code-email", e, 5))
           return json({ ok: false, error: "rate_limited" }, 429, cors);
         if (await rateLimited(env, "code-ip", ip, 20))
@@ -347,37 +350,105 @@ export default {
         return json({ ok: true, token, name: displayName(e), joined: u.joined }, 200, cors);
       }
 
+      // ---- POST /auth/telegram ----
+      // Official Telegram Login Widget payload: {id, first_name, last_name?, username?,
+      // photo_url?, auth_date, hash}. Verify hash per Telegram spec:
+      //   secret_key = SHA256(bot_token);  data_check_string = sorted "k=v" lines of all
+      //   fields except hash;  hash must equal HMAC_SHA256(data_check_string, secret_key).
+      if (url.pathname === "/auth/telegram" && req.method === "POST") {
+        if (!env.TELEGRAM_BOT_TOKEN)
+          return json({ ok: false, error: "telegram_not_configured" }, 503, cors);
+        const data = await req.json().catch(() => ({}));
+        const hash = String(data.hash || "");
+        const authDate = Number(data.auth_date || 0);
+        if (!hash || !authDate || !data.id) return json({ ok: false, error: "bad_payload" }, 400, cors);
+        // freshness: reject payloads older than 24h
+        if (Math.abs(Date.now() / 1000 - authDate) > 86400)
+          return json({ ok: false, error: "stale_auth" }, 400, cors);
+        if (await rateLimited(env, "tg-ip", ip, 50))
+          return json({ ok: false, error: "rate_limited" }, 429, cors);
+
+        // verify signature server-side
+        const tokenBytes = new Uint8Array(await crypto.subtle.digest(
+          "SHA-256", new TextEncoder().encode(env.TELEGRAM_BOT_TOKEN)));
+        const checkParts = Object.keys(data).filter(k => k !== "hash").sort()
+          .map(k => `${k}=${data[k]}`);
+        const expected = b64url(new Uint8Array(await crypto.subtle.sign(
+          "HMAC",
+          await crypto.subtle.importKey("raw", tokenBytes, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]),
+          new TextEncoder().encode(checkParts.join("\n")))));
+        const expectedHex = [...fromB64url(expected)]
+          .map(b => b.toString(16).padStart(2, "0")).join("");
+        if (expectedHex.length !== hash.length) return json({ ok: false, error: "bad_hash" }, 403, cors);
+        let diff = 0;
+        for (let i = 0; i < hash.length; i++) diff |= hash.charCodeAt(i) ^ expectedHex.charCodeAt(i);
+        if (diff !== 0) return json({ ok: false, error: "bad_hash" }, 403, cors);
+
+        // signed payload OK -> issue our session
+        const tgId = `tg:${String(data.id).replace(/\D/g, "")}`;
+        const firstName = String(data.first_name || "").replace(/[<>\"'`\[\]{}]+/g, "").slice(0, 24).trim() || "Telegram user";
+        const username = String(data.username || "").slice(0, 32);
+        const now = new Date().toISOString();
+        const existed = await env.COMMENTS.get(userKey(tgId), "json");
+        const u = existed || { id: tgId, joined: now, comments: 0 };
+        u.name = firstName;
+        u.username = username;
+        u.last_seen = now;
+        await env.COMMENTS.put(userKey(tgId), JSON.stringify(u));
+        if (!existed) {
+          const n = parseInt((await env.COMMENTS.get("meta:member_count")) || "0", 10);
+          await env.COMMENTS.put("meta:member_count", String(n + 1));
+        }
+        const token = await signToken(tgId, secret);
+        return json({ ok: true, token, name: firstName, joined: u.joined }, 200, cors);
+      }
+
+      // ---- GET /auth/telegram-config ----
+      // Public, no secrets: the site needs the numeric bot id to call Telegram.Login.auth.
+      if (url.pathname === "/auth/telegram-config" && req.method === "GET") {
+        const botId = String(env.TELEGRAM_BOT_TOKEN || "").split(":")[0];
+        const botOk = /^\d{5,20}$/.test(botId);
+        // Email sign-in is only advertised when a provider that can deliver to ANYONE
+        // is configured (owner sets EMAIL_SIGNIN=true after SendGrid/Brevo/domain setup).
+        const emailOn = String(env.EMAIL_SIGNIN || "").toLowerCase() === "true";
+        return json({ ok: botOk || emailOn, bot_id: botOk ? Number(botId) : 0,
+                      email_enabled: emailOn }, 200, cors);
+      }
+
       // ---- GET /me ----
       if (url.pathname === "/me" && req.method === "GET") {
-        const email = await verifyToken(bearer(req), secret);
-        if (!email) return json({ ok: false, error: "unauthorized" }, 401, cors);
-        const u = (await env.COMMENTS.get(userKey(email), "json")) || { email, comments: 0 };
-        return json({ ok: true, name: displayName(email), joined: u.joined, comments: u.comments || 0 }, 200, cors);
+        const id = await verifyToken(bearer(req), secret);
+        if (!id) return json({ ok: false, error: "unauthorized" }, 401, cors);
+        const u = (await env.COMMENTS.get(userKey(id), "json")) || { id, comments: 0 };
+        const name = u.name || displayName(id);
+        return json({ ok: true, name, joined: u.joined, comments: u.comments || 0,
+                      method: String(id).startsWith("tg:") ? "telegram" : "email" }, 200, cors);
       }
 
       // ---- POST /comments ----
       if (url.pathname === "/comments" && req.method === "POST") {
-        const email = await verifyToken(bearer(req), secret);
-        if (!email) return json({ ok: false, error: "unauthorized" }, 401, cors);
+        const id = await verifyToken(bearer(req), secret);
+        if (!id) return json({ ok: false, error: "unauthorized" }, 401, cors);
         const { slug, text } = await req.json().catch(() => ({}));
         if (!slug || !/^[\w.-]{1,120}$/.test(slug)) return json({ ok: false, error: "bad_slug" }, 400, cors);
         const reason = moderate(text);
         if (reason) return json({ ok: false, error: reason }, 400, cors);
-        const uid = email;                                   // internal only, never returned
+        const uid = id;                                        // internal only, never returned
         if (await rateLimited(env, "cmt-day", uid, MAX_PER_USER_DAY))
           return json({ ok: false, error: "daily_limit" }, 429, cors);
         if (await rateLimited(env, "cmt-ip", ip, 20))
           return json({ ok: false, error: "rate_limited" }, 429, cors);
 
+        const u = (await env.COMMENTS.get(userKey(uid), "json")) || { id: uid, comments: 0 };
+        const name = u.name || displayName(uid);
         const list = (await env.COMMENTS.get(commentsKey(slug), "json")) || [];
         const now = new Date().toISOString();
-        const id = b64url(await hmac(secret, uid + now + text.slice(0, 16))).slice(0, 10);
-        list.push({ id, name: displayName(email), uid_key: uid.slice(0, 6) + "***", text: text.trim().slice(0, MAX_LEN), ts: now, status: "approved" });
+        const cid = b64url(await hmac(secret, uid + now + text.slice(0, 16))).slice(0, 10);
+        list.push({ id: cid, name, uid_key: uid.slice(0, 6) + "***", text: text.trim().slice(0, MAX_LEN), ts: now, status: "approved" });
         await env.COMMENTS.put(commentsKey(slug), JSON.stringify(list.slice(-200)));
-        const u = (await env.COMMENTS.get(userKey(email), "json")) || { email, comments: 0 };
         u.comments = (u.comments || 0) + 1; u.last_seen = now;
-        await env.COMMENTS.put(userKey(email), JSON.stringify(u));
-        return json({ ok: true, id, ts: now, name: displayName(email) }, 200, cors);
+        await env.COMMENTS.put(userKey(uid), JSON.stringify(u));
+        return json({ ok: true, id: cid, ts: now, name }, 200, cors);
       }
 
       // ---- GET /comments?slug= ----
@@ -396,7 +467,7 @@ export default {
         return json({ ok: true, count: n }, 200, { ...cors, "Cache-Control": "public, max-age=300" });
       }
 
-      return json({ ok: false, error: "not_found", paths: ["/auth/send-code", "/auth/verify", "/me", "/comments", "/members/count"] }, 404, cors);
+      return json({ ok: false, error: "not_found", paths: ["/auth/send-code", "/auth/verify", "/auth/telegram", "/auth/telegram-config", "/me", "/comments", "/members/count"] }, 404, cors);
     } catch (err) {
       return json({ ok: false, error: "server_error", detail: String(err && err.message || err) }, 500, cors);
     }

@@ -254,3 +254,6 @@ a.tag:hover { color: var(--accent); }
 .cmt-link:hover { color: var(--down); }
 .cmt-cta.cmt-alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
 .cmt-list { margin: 8px 0 4px; }
+.cmt-btn.tg { background: #2AABEE; color: #fff; display: inline-flex; align-items: center; gap: 8px; }
+.cmt-btn.tg:hover:not(:disabled) { filter: brightness(1.08); }
+.tg-ico { font-size: 1.05rem; }
