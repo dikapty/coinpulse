@@ -19,13 +19,14 @@
     "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-",
     "2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow",
     "2026-10-14-hardware-wallet-security-concerns-mount-as-trezor-announces-major-rese",
-    "2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec"
+    "2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec",
+    "2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto"
   ],
   "daily": {
     "2026-10-11": 4,
     "2026-10-12": 4,
     "2026-10-13": 4,
-    "2026-10-14": 3
+    "2026-10-14": 4
   },
   "polls": [],
   "snapshots": {
@@ -34,11 +35,11 @@
     "2026-10-13": true,
     "2026-10-14": true
   },
-  "last_post_ts": 1791968189.598306,
+  "last_post_ts": 1791978825.532881,
   "articles_today": {
     "2026-10-11": 3,
     "2026-10-12": 3,
     "2026-10-13": 3,
-    "2026-10-14": 2
+    "2026-10-14": 3
   }
 }
