@@ -27,9 +27,15 @@ jobs:
           dom = os.environ["DOMAIN"].strip().replace("https://", "").replace("http://", "").rstrip("/")
           me = requests.get(f"https://api.telegram.org/bot{t}/getMe", timeout=25).json()
           print("BOT:", json.dumps(me.get("result", {}), ensure_ascii=False))
-          r = requests.get(f"https://api.telegram.org/bot{t}/setDomain",
-                           params={"domain": dom}, timeout=25).json()
-          print("SETDOMAIN:", json.dumps(r, ensure_ascii=False))
+          # setDomain via POST JSON (GET returned 404); fall back to GET if POST fails
+          r = requests.post(f"https://api.telegram.org/bot{t}/setDomain",
+                            json={"domain": dom}, timeout=25).json()
+          print("SETDOMAIN_POST:", json.dumps(r, ensure_ascii=False))
+          if not r.get("ok"):
+              r2 = requests.get(f"https://api.telegram.org/bot{t}/setDomain",
+                                params={"domain": dom}, timeout=25).json()
+              print("SETDOMAIN_GET:", json.dumps(r2, ensure_ascii=False))
+              r = r2
           print("DOMAIN_REGISTERED:", bool(r.get("ok")))
           info = requests.get(f"https://api.telegram.org/bot{t}/getChat",
                               params={"chat_id": "@coinpulsedailynews"}, timeout=25).json()
