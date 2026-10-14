@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-14-metaplanet-initiates-capital-raise-and-share-buyback-following-equity-.md",
+  "title": "Metaplanet Initiates Capital Raise and Share Buyback Following Equity Decline",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "682 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: False"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A technically sound and highly analytical report that effectively contextualizes corporate treasury mechanics within the broader macroeconomic environment.",
+    "overall": 8.8
+  },
+  "word_count": 682,
+  "decision": "pending"
+}

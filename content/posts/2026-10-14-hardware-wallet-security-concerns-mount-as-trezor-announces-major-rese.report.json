@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-14-hardware-wallet-security-concerns-mount-as-trezor-announces-major-rese.md",
+  "title": "Hardware Wallet Security Concerns Mount as Trezor Announces Major Reseller Crackdown",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "804 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, professional report that effectively synthesizes industry-specific security developments with broader macroeconomic context without resorting to sensationalism.",
+    "overall": 9.3
+  },
+  "word_count": 804,
+  "decision": "publish"
+}

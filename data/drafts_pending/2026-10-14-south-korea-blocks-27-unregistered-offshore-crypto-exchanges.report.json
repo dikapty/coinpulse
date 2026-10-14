@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-14-south-korea-blocks-27-unregistered-offshore-crypto-exchanges.md",
+  "title": "South Korea Blocks 27 Unregistered Offshore Crypto Exchanges",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "800 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": false,
+      "detail": "guaranteed"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "A well-structured and informative report that provides necessary context for the regulatory shift without resorting to sensationalist rhetoric.",
+    "overall": 8.5
+  },
+  "word_count": 800,
+  "decision": "pending"
+}
