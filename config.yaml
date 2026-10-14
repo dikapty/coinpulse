@@ -150,7 +150,7 @@ comments:
   telegram_widget: true
   telegram_channel: coinpulsedailynews
   widget_limit: 5
-  api_url: ''
+  api_url: https://coinpulse-api.globalromil.workers.dev
 smm:
   enabled: true
   daily_post_cap: 4

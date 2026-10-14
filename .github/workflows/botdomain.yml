@@ -1,0 +1,39 @@
+name: Bot setDomain (temporary utility)
+
+# Telegram Login Widget only works after the bot's domain is registered via setDomain.
+# api.telegram.org is unreachable from the owner's machine, so this runs in CI.
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: "Domain to register for Telegram Login (no scheme, no path)"
+        required: true
+        default: "dikapty.github.io"
+
+jobs:
+  setdomain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: setDomain + verify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          DOMAIN: ${{ github.event.inputs.domain }}
+        run: |
+          python3 - <<'PY'
+          import json, os, requests
+          t = os.environ["TELEGRAM_BOT_TOKEN"]
+          dom = os.environ["DOMAIN"].strip().replace("https://", "").replace("http://", "").rstrip("/")
+          me = requests.get(f"https://api.telegram.org/bot{t}/getMe", timeout=25).json()
+          print("BOT:", json.dumps(me.get("result", {}), ensure_ascii=False))
+          r = requests.get(f"https://api.telegram.org/bot{t}/setDomain",
+                           params={"domain": dom}, timeout=25).json()
+          print("SETDOMAIN:", json.dumps(r, ensure_ascii=False))
+          print("DOMAIN_REGISTERED:", bool(r.get("ok")))
+          info = requests.get(f"https://api.telegram.org/bot{t}/getChat",
+                              params={"chat_id": "@coinpulsedailynews"}, timeout=25).json()
+          res = info.get("result", {}) or {}
+          print("CHANNEL linked_chat_id:", res.get("linked_chat_id"))
+          print("DISCUSSION_GROUP_LINKED:", bool(res.get("linked_chat_id")))
+          PY
