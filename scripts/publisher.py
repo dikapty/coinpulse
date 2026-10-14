@@ -102,11 +102,14 @@ def load_posts() -> list:
 def comments_head(cfg: dict) -> str:
     """Injects the API base URL for the on-site comment box, but ONLY when the owner
     has deployed the Cloudflare Worker and put its URL in config (comments.api_url).
-    Until then the page stays exactly as before — no dead form, no failed requests."""
+    Until then the page stays exactly as before — no dead form, no failed requests.
+    Also warms the TLS connection early (preconnect) so the first API call is faster."""
     api = str(cfg.get("comments", {}).get("api_url", "") or "").strip().rstrip("/")
     if not api:
         return ""
-    return f'<script>window.__CP_API__ = "{api}";</script>'
+    m = re.match(r"https?://[^/]+", api)
+    hint = f'<link rel="preconnect" href="{m.group(0)}" crossorigin>' if m else ""
+    return f'{hint}<script>window.__CP_API__ = "{api}";</script>'
 
 
 def telegram_comments_widget(cfg: dict) -> str:
