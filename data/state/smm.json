@@ -17,13 +17,14 @@
     "2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether",
     "2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q",
     "2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-",
-    "2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow"
+    "2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow",
+    "2026-10-14-hardware-wallet-security-concerns-mount-as-trezor-announces-major-rese"
   ],
   "daily": {
     "2026-10-11": 4,
     "2026-10-12": 4,
     "2026-10-13": 4,
-    "2026-10-14": 1
+    "2026-10-14": 2
   },
   "polls": [],
   "snapshots": {
@@ -32,11 +33,11 @@
     "2026-10-13": true,
     "2026-10-14": true
   },
-  "last_post_ts": 1791946283.589919,
+  "last_post_ts": 1791957112.551014,
   "articles_today": {
-    "2026-10-10": 3,
     "2026-10-11": 3,
     "2026-10-12": 3,
-    "2026-10-13": 3
+    "2026-10-13": 3,
+    "2026-10-14": 1
   }
 }
