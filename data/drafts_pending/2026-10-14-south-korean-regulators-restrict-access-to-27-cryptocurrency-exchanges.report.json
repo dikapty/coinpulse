@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-14-south-korean-regulators-restrict-access-to-27-cryptocurrency-exchanges.md",
+  "title": "South Korean Regulators Restrict Access to 27 Cryptocurrency Exchanges",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "757 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 7,
+    "neutrality": 6,
+    "verdict": "While the reporting on South Korean regulations is clear, the article suffers from the inclusion of dubious, hallucinated, or irrelevant claims regarding 'SkyAI' and 'Anthropic' that undermine the credibility of the entire piece.",
+    "overall": 5.5
+  },
+  "word_count": 757,
+  "decision": "pending"
+}
