@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0e14">
+<link rel="manifest" href="{{BASE}}manifest.webmanifest">
 <title>{{SITE_NAME}} — {{TAGLINE}}</title>
 <meta name="description" content="{{TAGLINE}} Fresh crypto and finance news with context, decoded daily.">
 <link rel="canonical" href="{{BASE}}">
@@ -14,18 +16,20 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="{{SITE_NAME}}" href="{{BASE}}feed.xml">
 <link rel="icon" type="image/svg+xml" href="{{BASE}}favicon.svg">
+<link rel="apple-touch-icon" href="{{BASE}}icon-192.png">
 <link rel="stylesheet" href="{{BASE}}style.css">
 {{HEAD_EXTRA}}
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="{{BASE}}">{{SITE_NAME}}</a>
-    <nav><a href="{{BASE}}">Home</a><a href="{{BASE}}archive.html">Archive</a><a href="{{BASE}}about.html">About</a></nav>
+    <nav aria-label="Main"><a href="{{BASE}}">Home</a><a href="{{BASE}}archive.html">Archive</a><a href="{{BASE}}search.html">Search</a><a href="{{BASE}}about.html">About</a></nav>
   </div>
 </header>
 {{TICKER}}
-<main class="wrap">
+<main class="wrap" id="main">
   {{FEATURED}}
   <section class="cards">
     {{CARDS}}

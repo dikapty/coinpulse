@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0e14">
+<link rel="manifest" href="{{BASE}}manifest.webmanifest">
 <title>{{TITLE}} — {{SITE_NAME}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
 <link rel="canonical" href="{{CANONICAL}}">
@@ -16,24 +18,21 @@
 <meta name="twitter:description" content="{{DESCRIPTION}}">
 <meta name="twitter:image" content="{{OG_IMAGE}}">
 <link rel="icon" type="image/svg+xml" href="{{BASE}}favicon.svg">
+<link rel="apple-touch-icon" href="{{BASE}}icon-192.png">
 <link rel="stylesheet" href="{{BASE}}style.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"NewsArticle","headline":"{{TITLE}}","description":"{{DESCRIPTION}}","image":"{{OG_IMAGE}}","datePublished":"{{DATE}}","author":{"@type":"Organization","name":"{{AUTHOR}}"},"publisher":{"@type":"Organization","name":"{{SITE_NAME}}","logo":{"@type":"ImageObject","url":"{{OG_IMAGE}}"}}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{BASE}}"},{"@type":"ListItem","position":2,"name":"News","item":"{{BASE}}archive.html"},{"@type":"ListItem","position":3,"name":"{{TITLE}}"}]}
-</script>
+ {{JSONLD}}
 {{HEAD_EXTRA}}
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div id="progress"></div>
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="{{BASE}}">{{SITE_NAME}}</a>
-    <nav><a href="{{BASE}}">Home</a><a href="{{BASE}}archive.html">Archive</a><a href="{{BASE}}about.html">About</a></nav>
+    <nav aria-label="Main"><a href="{{BASE}}">Home</a><a href="{{BASE}}archive.html">Archive</a><a href="{{BASE}}search.html">Search</a><a href="{{BASE}}about.html">About</a></nav>
   </div>
 </header>
-<main class="wrap article-page">
+<main class="wrap article-page" id="main">
   <article>
     {{BREADCRUMBS}}
     <h1 class="post-title">{{TITLE}}</h1>
@@ -48,6 +47,7 @@
     {{SHARE}}
     {{AD_BOTTOM}}
     {{COMMENTS}}
+    {{PREVNEXT}}
   </article>
   {{RELATED}}
   {{DISCLOSURE}}

@@ -247,7 +247,7 @@ def build_tag_pages(cfg: dict, base: str, posts: list) -> list:
         display = entries[0][0]
         items = []
         for _, p in sorted(entries, key=lambda e: e[1].get("date", ""), reverse=True):
-            img = (f'<img src="{base}{p["image"]}" alt="" loading="lazy">'
+            img = (f'<img src="{base}{p["image"]}" alt="" loading="lazy" width="400" height="225" decoding="async">'
                    if p.get("image") else '<div class="thumb-fallback"></div>')
             items.append(
                 f'<a class="card" href="{base}posts/{p["_stem"]}.html">'
@@ -305,7 +305,7 @@ def related_posts(post: dict, all_posts: list, base: str, limit: int = 3) -> str
     cards = []
     for _, _, p in scored[:limit]:
         img = p.get("image")
-        thumb = (f'<img src="{base}{img}" alt="" loading="lazy">'
+        thumb = (f'<img src="{base}{img}" alt="" loading="lazy" width="400" height="225" decoding="async">'
                  if img else '<div class="thumb-fallback"></div>')
         cards.append(
             f'<a class="related-card" href="{base}posts/{p["_stem"]}.html">{thumb}'
@@ -313,6 +313,64 @@ def related_posts(post: dict, all_posts: list, base: str, limit: int = 3) -> str
     if not cards:
         return ""
     return f'<aside class="related"><h3>Keep reading</h3><div class="related-grid">{"".join(cards)}</div></aside>'
+
+
+def build_jsonld(post: dict, base: str, canonical: str, og_image: str,
+                 site_name: str, author: str, word_count: int) -> str:
+    """Schema.org NewsArticle + BreadcrumbList as properly escaped JSON-LD."""
+    import json as _json
+    date_iso = post.get("date", "")[:10]
+    article = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": post.get("title", ""),
+        "description": post.get("description", ""),
+        "image": {"@type": "ImageObject", "url": og_image, "width": 1200, "height": 675},
+        "datePublished": date_iso,
+        "dateModified": date_iso,
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
+        "keywords": ", ".join(post.get("tags", [])),
+        "articleSection": "Cryptocurrency",
+        "wordCount": word_count,
+        "inLanguage": "en",
+        "isAccessibleForFree": True,
+        "author": {"@type": "Organization", "name": author, "url": f"{base}about.html"},
+        "publisher": {"@type": "Organization", "name": site_name,
+                      "logo": {"@type": "ImageObject", "url": f"{base}og-default.jpg"}},
+    }
+    crumbs = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": base},
+            {"@type": "ListItem", "position": 2, "name": "News", "item": f"{base}archive.html"},
+            {"@type": "ListItem", "position": 3, "name": post.get("title", "")[:80]},
+        ],
+    }
+    return ('<script type="application/ld+json">'
+            + _json.dumps(article, ensure_ascii=False) + "</script>\n"
+            '<script type="application/ld+json">'
+            + _json.dumps(crumbs, ensure_ascii=False) + "</script>")
+
+
+def prev_next_nav(post: dict, all_posts: list, base: str) -> str:
+    """Previous/next article links (all_posts is newest-first)."""
+    try:
+        i = next(n for n, p in enumerate(all_posts) if p["_stem"] == post["_stem"])
+    except StopIteration:
+        return ""
+    # all_posts is newest-first: index i-1 is NEWER, i+1 is OLDER
+    newer = all_posts[i - 1] if i > 0 else None
+    older = all_posts[i + 1] if i + 1 < len(all_posts) else None
+    if not newer and not older:
+        return ""
+    left = (f'<a class="pn prev" href="{base}posts/{newer["_stem"]}.html">'
+            f'<span class="pn-dir">‹ Newer</span><span class="pn-title">{escape(newer.get("title",""))}</span></a>'
+            ) if newer else '<span class="pn empty"></span>'
+    right = (f'<a class="pn next" href="{base}posts/{older["_stem"]}.html">'
+             f'<span class="pn-dir">Older ›</span><span class="pn-title">{escape(older.get("title",""))}</span></a>'
+             ) if older else '<span class="pn empty"></span>'
+    return f'<nav class="prevnext" aria-label="Article navigation">{left}{right}</nav>'
 
 
 def share_buttons(post: dict, base: str, stem: str) -> str:
@@ -367,14 +425,23 @@ def build_site(cfg: dict) -> None:
             for t in post.get("tags", []))
         image = post.get("image", "")
         og_image = f'{base}{image}' if image else f'{base}og-default.jpg'
-        hero = (f'<figure class="hero"><img src="{base}{image}" alt="{escape(post.get("title",""))}">'
+        # Hero is the LCP element: explicit dimensions (no layout shift), high fetch
+        # priority, eager load; aspect ratio kept via CSS so exact size can vary.
+        hero = (f'<figure class="hero"><img src="{base}{image}" '
+                f'alt="{escape(post.get("title",""))}" width="1200" height="675" '
+                f'fetchpriority="high" decoding="async">'
                 f'<figcaption>AI-generated illustration</figcaption></figure>') if image else ""
         rtime = reading_time(post["_body"])
+        word_count = len(re.findall(r"\w+", post["_body"]))
+        canonical = f'{base}posts/{post["_stem"]}.html'
+        jsonld = build_jsonld(post, base, canonical, og_image,
+                              site_cfg["name"], site_cfg.get("author", ""), word_count)
         from comments import render_comments, bot_username
         # Comments live ON the page and belong to the site: our own store (data/comments/)
         # plus the email sign-in form injected by static/comments.js. No Telegram iframe
         # and no deep link away from the site.
         comments_html = render_comments(post["_stem"], base, bot_username())
+        prevnext = prev_next_nav(post, posts, base)
         page = render_template(
             "post.html",
             SITE_NAME=site_cfg["name"], BASE=base,
@@ -390,6 +457,8 @@ def build_site(cfg: dict) -> None:
             RELATED=related_posts(post, posts, base),
             SHARE=share_buttons(post, base, post["_stem"]),
             COMMENTS=comments_html,
+            PREVNEXT=prevnext,
+            JSONLD=jsonld,
             AD_TOP=ad_html(cfg, "ad_slot_top"), AD_BOTTOM=ad_html(cfg, "ad_slot_bottom"),
             AD_INLINE=ad_html(cfg, "ad_slot_inline"),
             DISCLOSURE=disclosure,
@@ -413,7 +482,9 @@ def build_site(cfg: dict) -> None:
         if page_no == 0 and chunk:
             f = chunk[0]
             grid = chunk[1:]
-            fimg = (f'<img src="{base}{f["image"]}" alt="{escape(f.get("title",""))}">'
+            # Featured card sits above the fold: eager + high priority, explicit size
+            fimg = (f'<img src="{base}{f["image"]}" alt="{escape(f.get("title",""))}" '
+                    f'width="1200" height="675" fetchpriority="high" decoding="async">'
                     if f.get("image") else '<div class="thumb-fallback"></div>')
             featured_html = render_template(
                 "featured.html", BASE=base, STEM=f["_stem"],
@@ -426,7 +497,8 @@ def build_site(cfg: dict) -> None:
                             DATE=p.get("date", "")[:10],
                             READING_TIME=f"{reading_time(p['_body'])} min",
                             TAG=escape((p.get("tags") or ["news"])[0]),
-                            IMAGE=(f'<img src="{base}{p["image"]}" alt="" loading="lazy">'
+                            IMAGE=(f'<img src="{base}{p["image"]}" alt="" loading="lazy" '
+                                   f'width="400" height="225" decoding="async">'
                                    if p.get("image") else '<div class="thumb-fallback"></div>'),
                             DESCRIPTION=escape(p.get("description", "")))
             for p in grid
@@ -501,7 +573,7 @@ def build_site(cfg: dict) -> None:
 
     # --- sitemap.xml ---
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    urls = ([f"{base}", f"{base}archive.html"]
+    urls = ([f"{base}", f"{base}archive.html", f"{base}search.html"]
             + [f"{base}posts/{p['_stem']}.html" for p in posts]
             + [f"{base}tags/{ts}.html" for ts in tag_slugs])
     (SITE / "sitemap.xml").write_text(
@@ -536,6 +608,30 @@ def build_site(cfg: dict) -> None:
     for ts in tag_slugs[:40]:
         llms_lines.append(f"- [{ts.replace('-',' ').title()}]({base}tags/{ts}.html)")
     (SITE / "llms.txt").write_text("\n".join(llms_lines) + "\n", encoding="utf-8")
+
+    # --- client-side search: a small JSON index + a zero-dependency search page ---
+    import json as _json
+    search_index = [{
+        "t": p.get("title", ""),
+        "d": (p.get("description", "") or "")[:160],
+        "u": f"{base}posts/{p['_stem']}.html",
+        "g": p.get("date", "")[:10],
+        "k": " ".join(p.get("tags", []))[:80],
+    } for p in posts]
+    (SITE / "search-index.json").write_text(
+        _json.dumps(search_index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (SITE / "search.html").write_text(render_template(
+        "page.html", SITE_NAME=site_cfg["name"], BASE=base, TITLE="Search",
+        HEAD_EXTRA=head_extra, SOCIAL=social, DISCLOSURE="",
+        BODY=('<h1>Search</h1>'
+              '<div class="search-box">'
+              '<input id="q" type="search" class="search-input" placeholder="Search articles, topics…" '
+              'autocomplete="off" aria-label="Search articles">'
+              '<p class="search-hint" id="search-status" role="status"></p>'
+              '<div id="results" class="search-results"></div>'
+              '</div>'
+              '<script>window.__CP_BASE__=' + _json.dumps(base) + ';</script>')),
+        encoding="utf-8")
 
     # --- custom 404 (GitHub Pages serves 404.html automatically) ---
     latest_cards = "".join(
