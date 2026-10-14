@@ -350,69 +350,15 @@ export default {
         return json({ ok: true, token, name: displayName(e), joined: u.joined }, 200, cors);
       }
 
-      // ---- POST /auth/telegram ----
-      // Official Telegram Login Widget payload: {id, first_name, last_name?, username?,
-      // photo_url?, auth_date, hash}. Verify hash per Telegram spec:
-      //   secret_key = SHA256(bot_token);  data_check_string = sorted "k=v" lines of all
-      //   fields except hash;  hash must equal HMAC_SHA256(data_check_string, secret_key).
-      if (url.pathname === "/auth/telegram" && req.method === "POST") {
-        if (!env.TELEGRAM_BOT_TOKEN)
-          return json({ ok: false, error: "telegram_not_configured" }, 503, cors);
-        const data = await req.json().catch(() => ({}));
-        const hash = String(data.hash || "");
-        const authDate = Number(data.auth_date || 0);
-        if (!hash || !authDate || !data.id) return json({ ok: false, error: "bad_payload" }, 400, cors);
-        // freshness: reject payloads older than 24h
-        if (Math.abs(Date.now() / 1000 - authDate) > 86400)
-          return json({ ok: false, error: "stale_auth" }, 400, cors);
-        if (await rateLimited(env, "tg-ip", ip, 50))
-          return json({ ok: false, error: "rate_limited" }, 429, cors);
-
-        // verify signature server-side
-        const tokenBytes = new Uint8Array(await crypto.subtle.digest(
-          "SHA-256", new TextEncoder().encode(env.TELEGRAM_BOT_TOKEN)));
-        const checkParts = Object.keys(data).filter(k => k !== "hash").sort()
-          .map(k => `${k}=${data[k]}`);
-        const expected = b64url(new Uint8Array(await crypto.subtle.sign(
-          "HMAC",
-          await crypto.subtle.importKey("raw", tokenBytes, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]),
-          new TextEncoder().encode(checkParts.join("\n")))));
-        const expectedHex = [...fromB64url(expected)]
-          .map(b => b.toString(16).padStart(2, "0")).join("");
-        if (expectedHex.length !== hash.length) return json({ ok: false, error: "bad_hash" }, 403, cors);
-        let diff = 0;
-        for (let i = 0; i < hash.length; i++) diff |= hash.charCodeAt(i) ^ expectedHex.charCodeAt(i);
-        if (diff !== 0) return json({ ok: false, error: "bad_hash" }, 403, cors);
-
-        // signed payload OK -> issue our session
-        const tgId = `tg:${String(data.id).replace(/\D/g, "")}`;
-        const firstName = String(data.first_name || "").replace(/[<>\"'`\[\]{}]+/g, "").slice(0, 24).trim() || "Telegram user";
-        const username = String(data.username || "").slice(0, 32);
-        const now = new Date().toISOString();
-        const existed = await env.COMMENTS.get(userKey(tgId), "json");
-        const u = existed || { id: tgId, joined: now, comments: 0 };
-        u.name = firstName;
-        u.username = username;
-        u.last_seen = now;
-        await env.COMMENTS.put(userKey(tgId), JSON.stringify(u));
-        if (!existed) {
-          const n = parseInt((await env.COMMENTS.get("meta:member_count")) || "0", 10);
-          await env.COMMENTS.put("meta:member_count", String(n + 1));
-        }
-        const token = await signToken(tgId, secret);
-        return json({ ok: true, token, name: firstName, joined: u.joined }, 200, cors);
-      }
-
-      // ---- GET /auth/telegram-config ----
-      // Public, no secrets: the site needs the numeric bot id to call Telegram.Login.auth.
-      if (url.pathname === "/auth/telegram-config" && req.method === "GET") {
-        const botId = String(env.TELEGRAM_BOT_TOKEN || "").split(":")[0];
-        const botOk = /^\d{5,20}$/.test(botId);
-        // Email sign-in is only advertised when a provider that can deliver to ANYONE
-        // is configured (owner sets EMAIL_SIGNIN=true after SendGrid/Brevo/domain setup).
+      // ---- GET /auth/config ----
+      // Public, no secrets: tells the site which sign-in method actually works.
+      // Email is advertised only when a mail provider that can deliver to ANY recipient
+      // is configured (owner sets EMAIL_SIGNIN=true after SendGrid/Mailjet/Brevo or a
+      // verified domain). Until then the site shows a placeholder, not a broken form.
+      if (url.pathname === "/auth/config" && req.method === "GET") {
         const emailOn = String(env.EMAIL_SIGNIN || "").toLowerCase() === "true";
-        return json({ ok: botOk || emailOn, bot_id: botOk ? Number(botId) : 0,
-                      email_enabled: emailOn }, 200, cors);
+        return json({ ok: true, email_enabled: emailOn, method: emailOn ? "email" : "none" },
+                    200, { ...cors, "Cache-Control": "public, max-age=60" });
       }
 
       // ---- GET /me ----
@@ -467,7 +413,7 @@ export default {
         return json({ ok: true, count: n }, 200, { ...cors, "Cache-Control": "public, max-age=300" });
       }
 
-      return json({ ok: false, error: "not_found", paths: ["/auth/send-code", "/auth/verify", "/auth/telegram", "/auth/telegram-config", "/me", "/comments", "/members/count"] }, 404, cors);
+      return json({ ok: false, error: "not_found", paths: ["/auth/send-code", "/auth/verify", "/auth/config", "/me", "/comments", "/members/count"] }, 404, cors);
     } catch (err) {
       return json({ ok: false, error: "server_error", detail: String(err && err.message || err) }, 500, cors);
     }

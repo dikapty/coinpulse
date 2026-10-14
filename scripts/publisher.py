@@ -371,10 +371,10 @@ def build_site(cfg: dict) -> None:
                 f'<figcaption>AI-generated illustration</figcaption></figure>') if image else ""
         rtime = reading_time(post["_body"])
         from comments import render_comments, bot_username
-        # One comment system per page: the official Telegram widget (a real on-page box)
-        # wins when enabled; otherwise the bot deep-link CTA + stored comments are used.
-        comments_html = (telegram_comments_widget(cfg)
-                         or render_comments(post["_stem"], base, bot_username()))
+        # Comments live ON the page and belong to the site: our own store (data/comments/)
+        # plus the email sign-in form injected by static/comments.js. No Telegram iframe
+        # and no deep link away from the site.
+        comments_html = render_comments(post["_stem"], base, bot_username())
         page = render_template(
             "post.html",
             SITE_NAME=site_cfg["name"], BASE=base,

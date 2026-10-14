@@ -134,75 +134,28 @@
 
   // ---------- sign-in / comment box ----------
 
-  // Which sign-in methods the server can actually fulfil right now.
-  // Email is advertised only when a provider that can mail ANYONE is configured;
-  // Telegram Login works as soon as the bot domain is set via @BotFather.
-  var AUTH = { botId: 0, email: false, checked: false };
+  // Is email sign-in actually deliverable right now? The server advertises it only
+  // when a mail provider that can reach ANY recipient is configured (EMAIL_SIGNIN).
+  var AUTH = { email: false, checked: false };
   async function loadAuthConfig() {
     if (AUTH.checked) return AUTH;
     try {
-      var r = await api("/auth/telegram-config");
-      if (r.status === 200 && r.data.ok) {
-        AUTH.botId = r.data.bot_id || 0;
-        AUTH.email = !!r.data.email_enabled;
-      }
+      var r = await api("/auth/config");
+      if (r.status === 200 && r.data.ok) AUTH.email = !!r.data.email_enabled;
     } catch (e) {}
     AUTH.checked = true;
     return AUTH;
   }
 
-  function loadTelegramScript(cb) {
-    if (window.Telegram && window.Telegram.Login) { cb(); return; }
-    var s = document.createElement("script");
-    s.src = "https://telegram.org/js/telegram-widget.js?22";
-    s.async = true;
-    s.onload = cb;
-    s.onerror = function () { cb(); };
-    document.head.appendChild(s);
-  }
-
-  // Real on-page registration: a button that opens Telegram's one-tap confirm popup,
-  // then the signed payload is verified by our Worker and exchanged for a session.
-  // Uses the documented Telegram Login API: Telegram.Login.auth({bot_id: <numeric>}).
-  function telegramLoginBox(botId) {
-    var box = el(
+  // Shown only in the (transitional) window when the API is live but mail delivery
+  // is not configured yet — honest placeholder instead of a form that would fail.
+  function emailPendingBox() {
+    return el(
       '<div class="cmt-auth">' +
-        '<p class="cmt-auth-title">Sign in to comment</p>' +
-        '<button type="button" class="cmt-btn tg" name="tg-login">' +
-          '<span class="tg-ico">✈</span> Continue with Telegram</button>' +
-        '<p class="cmt-msg" role="status"></p>' +
-        '<p class="cmt-note">One tap with your Telegram account — no email, no password. ' +
-        'Only your first name is shown publicly.</p>' +
+        '<p class="cmt-auth-title">Sign in with email to comment</p>' +
+        '<p class="cmt-msg">Registration by email code is being set up — it will appear here shortly. ' +
+        'Comments already posted are shown below.</p>' +
       '</div>');
-    var msg = box.querySelector(".cmt-msg");
-    var btn = box.querySelector("button[name=tg-login]");
-    btn.addEventListener("click", function () {
-      msg.className = "cmt-msg"; msg.textContent = "";
-      loadTelegramScript(function () {
-        if (!(window.Telegram && window.Telegram.Login && window.Telegram.Login.auth)) {
-          msg.className = "cmt-msg err";
-          msg.textContent = "Telegram login could not load. Check your connection and retry.";
-          return;
-        }
-        window.Telegram.Login.auth({ bot_id: botId, request_access: false })
-          .then(async function (user) {
-            msg.className = "cmt-msg"; msg.textContent = "Signing you in…";
-            var r = await api("/auth/telegram", { method: "POST", body: user });
-            if (r.status === 200 && r.data.ok) {
-              setSession(r.data.token, "");
-              box.replaceWith(commentForm(r.data.name));
-            } else {
-              msg.className = "cmt-msg err";
-              msg.textContent = humanError(r.data.error, "Telegram sign-in failed. Please try again.");
-            }
-          })
-          .catch(function () {
-            msg.className = "cmt-msg err";
-            msg.textContent = "Sign-in cancelled.";
-          });
-      });
-    });
-    return box;
   }
 
   function signInForm() {
@@ -332,8 +285,7 @@
     // Telegram Login (works once the bot domain is set via @BotFather) and/or email
     // (works once a mass-mail provider is configured). Otherwise nothing changes and
     // the server-rendered Telegram CTA below remains the way to comment.
-    var cta = section.querySelector(".cmt-cta");
-    var note = section.querySelector(".cmt-note");
+    var mount = section.querySelector(".cmt-mount");
     var auth = await loadAuthConfig();
     var box = null;
     if (token()) {
@@ -345,15 +297,12 @@
       }
     }
     if (!box) {
-      if (auth.botId) box = telegramLoginBox(auth.botId);
-      else if (auth.email) box = signInForm();
+      // Registration is by EMAIL CODE only — no Telegram, no password.
+      if (auth.email) box = signInForm();
+      else box = emailPendingBox();
     }
-    if (box) {
-      if (cta && cta.parentNode) cta.parentNode.insertBefore(box, cta);
-      else if (note && note.parentNode) note.parentNode.insertBefore(box, note);
-      else section.insertBefore(box, section.querySelector(".cmt-powered"));
-      if (cta) cta.classList.add("cmt-alt");
-    }
+    if (mount && mount.parentNode) mount.parentNode.replaceChild(box, mount);
+    else section.insertBefore(box, section.querySelector(".cmt-powered"));
     await loadComments();
   }
 

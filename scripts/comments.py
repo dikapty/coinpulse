@@ -477,22 +477,26 @@ def _rel_time(iso: str) -> str:
     return dt.strftime("%b %d, %Y")
 
 
-def render_comments(slug: str, base: str, bot: str) -> str:
-    """HTML block for an article page: count, CTA deep link, existing comments."""
+def render_comments(slug: str, base: str, bot: str = "") -> str:
+    """HTML block for an article page: heading, comment box mount point, comments.
+
+    Comments live ON the page — readers never leave the site. The `bot` argument is
+    accepted for backwards compatibility but deliberately unused: no Telegram deep link
+    is rendered any more. static/comments.js upgrades the mount point into an email
+    sign-in + comment form; the comment list below is server-rendered, so it is visible
+    even with JavaScript disabled.
+    """
     comments = [c for c in load_comments(slug) if c.get("status") == "approved"]
     comments.sort(key=lambda c: c.get("ts", ""))
     n = len(comments)
-    sid = load_state("comments", {}).get("ids", {}).get("by_slug", {}).get(slug, "")
 
     head = (f'<h2 class="cmt-title">💬 Comments'
             f'<span class="cmt-count">{n}</span></h2>')
-    if bot and sid:
-        cta = (f'<a class="cmt-cta" href="https://t.me/{html.escape(bot)}?start=c_{html.escape(sid)}" '
-               f'target="_blank" rel="noopener">✍️ Write a comment</a>'
-               f'<p class="cmt-note">Opens Telegram — one tap, no email and no password. '
-               f'Your first name shows next to the comment.</p>')
-    else:
-        cta = ('<p class="cmt-note">Comments are not configured yet.</p>')
+    # Mount point for the on-page form (email sign-in -> textarea -> post).
+    # Server-rendered fallback stays readable without JS.
+    mount = ('<div class="cmt-mount" data-slug="' + html.escape(slug) + '">'
+             '<noscript><p class="cmt-note">Enable JavaScript to sign in with your email '
+             'and write a comment right here on the page.</p></noscript></div>')
 
     if not comments:
         body = ('<p class="cmt-empty">No comments yet — be the first to share your take '
@@ -514,11 +518,12 @@ def render_comments(slug: str, base: str, bot: str) -> str:
                 f'<span class="cmt-time">{_rel_time(c.get("ts", ""))}</span></div>'
                 f'<div class="cmt-text">{text}</div>'
                 '</div></div>')
-        body = "".join(items)
+        body = '<div class="cmt-list">' + "".join(items) + '</div>'
 
-    powered = ('<p class="cmt-powered">Comments are checked automatically: advertising, '
-               'insults, ALL CAPS and signal links are rejected.</p>')
-    return f'<section class="comments" id="comments">{head}{cta}{body}{powered}</section>'
+    powered = ('<p class="cmt-powered">Comments stay on this page. Sign-in is by email code '
+               '(no password); advertising, insults, ALL CAPS and signal links are rejected '
+               'automatically.</p>')
+    return f'<section class="comments" id="comments">{head}{mount}{body}{powered}</section>'
 
 
 if __name__ == "__main__":
