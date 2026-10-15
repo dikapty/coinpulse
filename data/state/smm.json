@@ -20,13 +20,14 @@
     "2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow",
     "2026-10-14-hardware-wallet-security-concerns-mount-as-trezor-announces-major-rese",
     "2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec",
-    "2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto"
+    "2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto",
+    "2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan"
   ],
   "daily": {
     "2026-10-12": 4,
     "2026-10-13": 4,
     "2026-10-14": 4,
-    "2026-10-15": 1
+    "2026-10-15": 2
   },
   "polls": [],
   "snapshots": {
@@ -35,11 +36,11 @@
     "2026-10-14": true,
     "2026-10-15": true
   },
-  "last_post_ts": 1792032817.020243,
+  "last_post_ts": 1792043520.261153,
   "articles_today": {
-    "2026-10-11": 3,
     "2026-10-12": 3,
     "2026-10-13": 3,
-    "2026-10-14": 3
+    "2026-10-14": 3,
+    "2026-10-15": 1
   }
 }
