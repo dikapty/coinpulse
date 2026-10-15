@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-15-evernorth-outlines-strategy-for-473-million-xrp-treasury-with-industry.md",
+  "title": "Evernorth Outlines Strategy for 473 Million XRP Treasury With Industry Partners",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "766 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-ai-agents-surpass-138-million-crypto-payments-as-industry-faces-securi.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is a well-structured, professional report on corporate treasury management in the crypto sector, though it relies on hypothetical 2026 scenarios that cannot be independently verified against current reality.",
+    "overall": 8.8
+  },
+  "word_count": 766,
+  "decision": "pending"
+}
