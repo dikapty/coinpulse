@@ -22,13 +22,14 @@
     "2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec",
     "2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto",
     "2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan",
-    "2026-10-15-kraken-parent-company-payward-announces-181-million-acquisition-of-sal"
+    "2026-10-15-kraken-parent-company-payward-announces-181-million-acquisition-of-sal",
+    "2026-10-15-ai-agents-surpass-138-million-crypto-payments-as-industry-faces-securi"
   ],
   "daily": {
     "2026-10-12": 4,
     "2026-10-13": 4,
     "2026-10-14": 4,
-    "2026-10-15": 3
+    "2026-10-15": 4
   },
   "polls": [],
   "snapshots": {
@@ -37,11 +38,11 @@
     "2026-10-14": true,
     "2026-10-15": true
   },
-  "last_post_ts": 1792054647.390204,
+  "last_post_ts": 1792065192.410187,
   "articles_today": {
     "2026-10-12": 3,
     "2026-10-13": 3,
     "2026-10-14": 3,
-    "2026-10-15": 2
+    "2026-10-15": 3
   }
 }
