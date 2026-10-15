@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-15-ai-agents-surpass-138-million-crypto-payments-as-industry-faces-securi.md",
+  "title": "AI Agents Surpass 138 Million Crypto Payments as Industry Faces Security Call",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "746 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "This is a high-quality, professional brief that effectively contextualizes emerging fintech trends within the broader regulatory and security landscape.",
+    "overall": 9.0
+  },
+  "word_count": 746,
+  "decision": "publish"
+}

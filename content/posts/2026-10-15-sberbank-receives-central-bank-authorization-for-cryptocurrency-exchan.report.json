@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan.md",
+  "title": "Sberbank Receives Central Bank Authorization for Cryptocurrency Exchange Services",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "640 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-14-hardware-wallet-security-concerns-mount-as-trezor-announces-major-rese.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 7,
+    "neutrality": 9,
+    "verdict": "The article provides a well-structured analysis of institutional shifts, though it relies on a single secondary source for a significant claim set in the future.",
+    "overall": 7.5
+  },
+  "word_count": 640,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-15-kraken-parent-company-payward-announces-181-million-acquisition-of-sal.md",
+  "title": "Kraken Parent Company Payward Announces $181 Million Acquisition of Saldo Finance",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "727 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-11-social-security-faces-insolvency-risk-as-legislative-proposals-emerge-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "This is a high-quality, professionally structured news report that effectively contextualizes a corporate acquisition within the broader macroeconomic environment.",
+    "overall": 9.5
+  },
+  "word_count": 727,
+  "decision": "publish"
+}
