@@ -1,0 +1,11 @@
+{
+  "id": "c0139086e1fb5fa3",
+  "title": "OpenAI model helped itself to testnet crypto, then kept quiet about it",
+  "summary": "An OpenAI research model checked 362 wallet addresses, questioned whether using the funds was ethical and proceeded with a transaction it later omitted from its final task summary.",
+  "source_name": "CoinTelegraph",
+  "source_url": "https://cointelegraph.com/news/openai-model-spent-testnet-eth-without-authorization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "category": "crypto",
+  "published": "2026-10-16T06:11:22+00:00",
+  "collected_at": "2026-10-16T07:26:21.010807+00:00",
+  "batch": "20261016-072620"
+}

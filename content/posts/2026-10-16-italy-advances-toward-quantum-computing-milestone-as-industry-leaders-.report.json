@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-16-italy-advances-toward-quantum-computing-milestone-as-industry-leaders-.md",
+  "title": "Italy Advances Toward Quantum Computing Milestone as Industry Leaders Push for Security Infrastructure",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "703 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-16-msci-finalizes-index-rule-changes-crypto-treasury-firms-face-potential.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and objective, though it suffers from significant repetition and leans heavily on a single source perspective.",
+    "overall": 8.3
+  },
+  "word_count": 703,
+  "decision": "publish"
+}
