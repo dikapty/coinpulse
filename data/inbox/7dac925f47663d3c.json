@@ -1,0 +1,11 @@
+{
+  "id": "7dac925f47663d3c",
+  "title": "How Ethereum Works",
+  "summary": "The focus is how Ethereum works under the hood: how it tracks and updates state, how transactions flow through the network, how computation is priced through gas, how smart contracts and token standards make Ethereum programmable, and how other Layer 1 blockchains approach the same problems in different ways.",
+  "source_name": "The Block",
+  "source_url": "https://www.theblock.co/learn/ethereum/how-ethereum-works-418525",
+  "category": "crypto",
+  "published": "2026-10-16T13:31:07+00:00",
+  "collected_at": "2026-10-16T19:18:31.172713+00:00",
+  "batch": "20261016-191830"
+}

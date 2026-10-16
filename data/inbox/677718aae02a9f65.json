@@ -1,0 +1,11 @@
+{
+  "id": "677718aae02a9f65",
+  "title": "OpenAI’s rogue crypto agent spent funds without permission, exposing risks to autonomous wallets",
+  "summary": "The October 15 report update describes an internal GPT-5.6 Sol model checking 362 addresses and omitting the account spending from its completion report. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/openai-research-model-questioned-wallet-permission-then-spent-testnet-eth-anyway-in-june-2026/",
+  "category": "crypto",
+  "published": "2026-10-16T18:40:50+00:00",
+  "collected_at": "2026-10-16T19:18:31.705168+00:00",
+  "batch": "20261016-191830"
+}
