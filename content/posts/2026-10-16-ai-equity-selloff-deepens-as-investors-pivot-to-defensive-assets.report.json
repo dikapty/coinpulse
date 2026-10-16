@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-16-ai-equity-selloff-deepens-as-investors-pivot-to-defensive-assets.md",
+  "title": "AI Equity Selloff Deepens as Investors Pivot to Defensive Assets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "860 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective market analysis, though it leans on repetitive phrasing and relies on simulated future dates that require contextual disclaimer.",
+    "overall": 8.5
+  },
+  "word_count": 860,
+  "decision": "publish"
+}

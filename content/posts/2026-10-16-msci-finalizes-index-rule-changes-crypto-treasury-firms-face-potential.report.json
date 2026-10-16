@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-16-msci-finalizes-index-rule-changes-crypto-treasury-firms-face-potential.md",
+  "title": "MSCI Finalizes Index Rule Changes: Crypto Treasury Firms Face Potential Exclusion",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "909 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-kraken-parent-company-payward-announces-181-million-acquisition-of-sal.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article provides a coherent and professional analysis of index governance, though it undermines its credibility by pivoting to speculative, unrelated commentary on Pi Network and quantum security in the final section.",
+    "overall": 7.8
+  },
+  "word_count": 909,
+  "decision": "publish"
+}

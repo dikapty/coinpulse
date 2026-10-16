@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-16-brooklyn-da-dismantles-massive-cryptocurrency-scam-network-in-landmark.md",
+  "title": "Brooklyn DA Dismantles Massive Cryptocurrency Scam Network in Landmark Cyber Takedown",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "714 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 6,
+    "verdict": "The article provides a competent, well-structured synthesis of industry developments but leans slightly toward promotional narrative regarding specific security products.",
+    "overall": 7.5
+  },
+  "word_count": 714,
+  "decision": "publish"
+}
