@@ -23,13 +23,14 @@
     "2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto",
     "2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan",
     "2026-10-15-kraken-parent-company-payward-announces-181-million-acquisition-of-sal",
-    "2026-10-15-ai-agents-surpass-138-million-crypto-payments-as-industry-faces-securi"
+    "2026-10-15-ai-agents-surpass-138-million-crypto-payments-as-industry-faces-securi",
+    "2026-10-16-msci-finalizes-index-rule-changes-crypto-treasury-firms-face-potential"
   ],
   "daily": {
     "2026-10-13": 4,
     "2026-10-14": 4,
     "2026-10-15": 4,
-    "2026-10-16": 1
+    "2026-10-16": 2
   },
   "polls": [],
   "snapshots": {
@@ -38,11 +39,11 @@
     "2026-10-15": true,
     "2026-10-16": true
   },
-  "last_post_ts": 1792119186.114675,
+  "last_post_ts": 1792129882.287144,
   "articles_today": {
-    "2026-10-12": 3,
     "2026-10-13": 3,
     "2026-10-14": 3,
-    "2026-10-15": 3
+    "2026-10-15": 3,
+    "2026-10-16": 1
   }
 }
