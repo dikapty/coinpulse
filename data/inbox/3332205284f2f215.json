@@ -1,0 +1,11 @@
+{
+  "id": "3332205284f2f215",
+  "title": "OpenAI Model Used Testnet Ethereum Wallet Without Permission to Finish Coding Task",
+  "summary": "The internal model derived keys from public developer recovery phrases, spent another account's test ETH, and left it out of its report.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/381123/openai-model-used-testnet-ethereum-wallet-without-permission-to-finish-coding-task",
+  "category": "crypto",
+  "published": "2026-10-16T10:39:08+00:00",
+  "collected_at": "2026-10-16T13:28:53.044276+00:00",
+  "batch": "20261016-132852"
+}
