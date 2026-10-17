@@ -28,13 +28,14 @@
     "2026-10-16-italy-advances-toward-quantum-computing-milestone-as-industry-leaders-",
     "2026-10-16-brooklyn-da-dismantles-massive-cryptocurrency-scam-network-in-landmark",
     "2026-10-17-td-cowen-raises-strive-price-target-by-27-amid-bitcoin-acquisition-str",
-    "2026-10-17-visa-and-mastercard-expand-usdc-payout-capabilities-to-200-countries"
+    "2026-10-17-visa-and-mastercard-expand-usdc-payout-capabilities-to-200-countries",
+    "2026-10-17-cardano-treasury-nears-spending-cap-as-governance-approvals-consume-91"
   ],
   "daily": {
     "2026-10-14": 4,
     "2026-10-15": 4,
     "2026-10-16": 4,
-    "2026-10-17": 3
+    "2026-10-17": 4
   },
   "polls": [],
   "snapshots": {
@@ -43,11 +44,11 @@
     "2026-10-16": true,
     "2026-10-17": true
   },
-  "last_post_ts": 1792226937.392534,
+  "last_post_ts": 1792237490.514933,
   "articles_today": {
     "2026-10-14": 3,
     "2026-10-15": 3,
     "2026-10-16": 3,
-    "2026-10-17": 2
+    "2026-10-17": 3
   }
 }
