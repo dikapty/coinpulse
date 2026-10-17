@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-17-visa-and-mastercard-expand-usdc-payout-capabilities-to-200-countries.md",
+  "title": "Visa and Mastercard Expand USDC Payout Capabilities to 200 Countries",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "690 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 7,
+    "neutrality": 10,
+    "verdict": "The article offers solid context on cross-border payment infrastructure, but it relies heavily on a single secondary source and contains slight repetitive fluff across sections.",
+    "overall": 8.0
+  },
+  "word_count": 690,
+  "decision": "publish"
+}
