@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-17-cardano-treasury-nears-spending-cap-as-governance-approvals-consume-91.md",
+  "title": "Cardano Treasury Nears Spending Cap as Governance Approvals Consume 91% of Available Allowance",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "656 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A technically sound and objective report that effectively distinguishes between protocol governance mechanics and market-based token performance.",
+    "overall": 9.0
+  },
+  "word_count": 656,
+  "decision": "publish"
+}
