@@ -26,13 +26,14 @@
     "2026-10-15-ai-agents-surpass-138-million-crypto-payments-as-industry-faces-securi",
     "2026-10-16-msci-finalizes-index-rule-changes-crypto-treasury-firms-face-potential",
     "2026-10-16-italy-advances-toward-quantum-computing-milestone-as-industry-leaders-",
-    "2026-10-16-brooklyn-da-dismantles-massive-cryptocurrency-scam-network-in-landmark"
+    "2026-10-16-brooklyn-da-dismantles-massive-cryptocurrency-scam-network-in-landmark",
+    "2026-10-17-td-cowen-raises-strive-price-target-by-27-amid-bitcoin-acquisition-str"
   ],
   "daily": {
     "2026-10-14": 4,
     "2026-10-15": 4,
     "2026-10-16": 4,
-    "2026-10-17": 1
+    "2026-10-17": 2
   },
   "polls": [],
   "snapshots": {
@@ -41,11 +42,11 @@
     "2026-10-16": true,
     "2026-10-17": true
   },
-  "last_post_ts": 1792205483.263401,
+  "last_post_ts": 1792216102.384796,
   "articles_today": {
-    "2026-10-13": 3,
     "2026-10-14": 3,
     "2026-10-15": 3,
-    "2026-10-16": 3
+    "2026-10-16": 3,
+    "2026-10-17": 1
   }
 }
