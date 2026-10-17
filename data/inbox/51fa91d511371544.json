@@ -1,0 +1,11 @@
+{
+  "id": "51fa91d511371544",
+  "title": "Eclair patches a browser attack that could send commands to your Lightning node",
+  "summary": "The Oct. 15 release blocks a cached-authentication route to Eclair's API and requires direct browser interfaces to add a backend. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/eclair-blocks-browser-requests-that-could-let-a-webpage-control-a-bitcoin-lightning-node/",
+  "category": "crypto",
+  "published": "2026-10-17T12:00:20+00:00",
+  "collected_at": "2026-10-17T13:19:02.058439+00:00",
+  "batch": "20261017-131900"
+}
