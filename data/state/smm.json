@@ -29,19 +29,19 @@
     "2026-10-16-brooklyn-da-dismantles-massive-cryptocurrency-scam-network-in-landmark"
   ],
   "daily": {
-    "2026-10-13": 4,
     "2026-10-14": 4,
     "2026-10-15": 4,
-    "2026-10-16": 4
+    "2026-10-16": 4,
+    "2026-10-17": 1
   },
   "polls": [],
   "snapshots": {
-    "2026-10-13": true,
     "2026-10-14": true,
     "2026-10-15": true,
-    "2026-10-16": true
+    "2026-10-16": true,
+    "2026-10-17": true
   },
-  "last_post_ts": 1792151563.986842,
+  "last_post_ts": 1792205483.263401,
   "articles_today": {
     "2026-10-13": 3,
     "2026-10-14": 3,
