@@ -30,13 +30,14 @@
     "2026-10-17-td-cowen-raises-strive-price-target-by-27-amid-bitcoin-acquisition-str",
     "2026-10-17-visa-and-mastercard-expand-usdc-payout-capabilities-to-200-countries",
     "2026-10-17-cardano-treasury-nears-spending-cap-as-governance-approvals-consume-91",
-    "2026-10-18-corporate-pushback-mounts-against-tokenized-stock-trading-on-okxice"
+    "2026-10-18-corporate-pushback-mounts-against-tokenized-stock-trading-on-okxice",
+    "2026-10-18-bitcoin-resilience-and-the-interconnected-risks-of-global-markets"
   ],
   "daily": {
     "2026-10-15": 4,
     "2026-10-16": 4,
     "2026-10-17": 4,
-    "2026-10-18": 2
+    "2026-10-18": 3
   },
   "polls": [],
   "snapshots": {
@@ -45,11 +46,11 @@
     "2026-10-17": true,
     "2026-10-18": true
   },
-  "last_post_ts": 1792302495.439188,
+  "last_post_ts": 1792313360.42098,
   "articles_today": {
     "2026-10-15": 3,
     "2026-10-16": 3,
     "2026-10-17": 3,
-    "2026-10-18": 1
+    "2026-10-18": 2
   }
 }
