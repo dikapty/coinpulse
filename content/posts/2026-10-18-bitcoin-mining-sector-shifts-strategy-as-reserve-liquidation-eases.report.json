@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-18-bitcoin-mining-sector-shifts-strategy-as-reserve-liquidation-eases.md",
+  "title": "Bitcoin Mining Sector Shifts Strategy as Reserve Liquidation Eases",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "667 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured, objective analysis that successfully balances industry-specific trends with necessary macroeconomic context without resorting to sensationalism.",
+    "overall": 9.0
+  },
+  "word_count": 667,
+  "decision": "publish"
+}

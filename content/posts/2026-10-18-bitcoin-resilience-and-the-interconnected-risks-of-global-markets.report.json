@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-18-bitcoin-resilience-and-the-interconnected-risks-of-global-markets.md",
+  "title": "Bitcoin Resilience and the Interconnected Risks of Global Markets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "812 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "95% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article provides a well-structured, evidence-based analysis of market correlations while maintaining appropriate professional distance from speculative outcomes.",
+    "overall": 9.0
+  },
+  "word_count": 812,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-18-corporate-pushback-mounts-against-tokenized-stock-trading-on-okxice.md",
+  "title": "Corporate Pushback Mounts Against Tokenized Stock Trading on OKXICE",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "753 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 10,
+    "neutrality": 10,
+    "verdict": "An exemplary piece of professional financial journalism that maintains a balanced tone while providing essential context for a complex emerging market issue.",
+    "overall": 9.5
+  },
+  "word_count": 753,
+  "decision": "publish"
+}
