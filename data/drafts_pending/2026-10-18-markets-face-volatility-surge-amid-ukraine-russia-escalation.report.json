@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-18-markets-face-volatility-surge-amid-ukraine-russia-escalation.md",
+  "title": "Markets Face Volatility Surge Amid Ukraine-Russia Escalation",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "857 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "12 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 6,
+    "neutrality": 4,
+    "verdict": "The article relies on sensationalist tabloid-style framing and hyperbolic 'Black Monday' narratives, despite providing accurate links to underlying events.",
+    "overall": 5.8
+  },
+  "word_count": 857,
+  "decision": "pending"
+}
