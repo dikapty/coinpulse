@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md",
+  "title": "Bitget Restores Services Following Major $388 Million Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "847 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "93% unique (most similar: 2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and professionally toned, though it leans slightly on external context that is only tangentially related to the core security incident.",
+    "overall": 8.8
+  },
+  "word_count": 847,
+  "decision": "publish"
+}

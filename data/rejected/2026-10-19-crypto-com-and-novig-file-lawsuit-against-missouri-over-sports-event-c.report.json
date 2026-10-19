@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-19-crypto-com-and-novig-file-lawsuit-against-missouri-over-sports-event-c.md",
+  "title": "Crypto.com and Novig File Lawsuit Against Missouri Over Sports Event Contracts",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "799 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-18-bitcoin-resilience-and-the-interconnected-risks-of-global-markets.md)"
+    },
+    "forbidden": {
+      "ok": false,
+      "detail": "gambling"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective report that provides necessary regulatory context, though it unnecessarily pads the narrative with loosely related industry news in the final sections.",
+    "overall": 8.8
+  },
+  "word_count": 799,
+  "decision": "reject"
+}

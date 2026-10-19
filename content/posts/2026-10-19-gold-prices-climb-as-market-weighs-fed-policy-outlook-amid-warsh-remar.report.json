@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-19-gold-prices-climb-as-market-weighs-fed-policy-outlook-amid-warsh-remar.md",
+  "title": "Gold Prices Climb as Market Weighs Fed Policy Outlook Amid Warsh Remarks",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "757 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article provides a well-reasoned macroeconomic synthesis, though it relies on external reporting rather than primary source verification.",
+    "overall": 8.5
+  },
+  "word_count": 757,
+  "decision": "publish"
+}
