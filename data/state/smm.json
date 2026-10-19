@@ -32,13 +32,14 @@
     "2026-10-17-cardano-treasury-nears-spending-cap-as-governance-approvals-consume-91",
     "2026-10-18-corporate-pushback-mounts-against-tokenized-stock-trading-on-okxice",
     "2026-10-18-bitcoin-resilience-and-the-interconnected-risks-of-global-markets",
-    "2026-10-18-bitcoin-mining-sector-shifts-strategy-as-reserve-liquidation-eases"
+    "2026-10-18-bitcoin-mining-sector-shifts-strategy-as-reserve-liquidation-eases",
+    "2026-10-19-gold-prices-climb-as-market-weighs-fed-policy-outlook-amid-warsh-remar"
   ],
   "daily": {
     "2026-10-16": 4,
     "2026-10-17": 4,
     "2026-10-18": 4,
-    "2026-10-19": 1
+    "2026-10-19": 2
   },
   "polls": [],
   "snapshots": {
@@ -47,11 +48,11 @@
     "2026-10-18": true,
     "2026-10-19": true
   },
-  "last_post_ts": 1792378382.696119,
+  "last_post_ts": 1792389182.101741,
   "articles_today": {
-    "2026-10-15": 3,
     "2026-10-16": 3,
     "2026-10-17": 3,
-    "2026-10-18": 3
+    "2026-10-18": 3,
+    "2026-10-19": 1
   }
 }
