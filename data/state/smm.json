@@ -34,13 +34,14 @@
     "2026-10-18-bitcoin-resilience-and-the-interconnected-risks-of-global-markets",
     "2026-10-18-bitcoin-mining-sector-shifts-strategy-as-reserve-liquidation-eases",
     "2026-10-19-gold-prices-climb-as-market-weighs-fed-policy-outlook-amid-warsh-remar",
-    "2026-10-19-bitget-restores-services-following-major-388-million-security-breach"
+    "2026-10-19-bitget-restores-services-following-major-388-million-security-breach",
+    "2026-10-16-ai-equity-selloff-deepens-as-investors-pivot-to-defensive-assets"
   ],
   "daily": {
     "2026-10-16": 4,
     "2026-10-17": 4,
     "2026-10-18": 4,
-    "2026-10-19": 3
+    "2026-10-19": 4
   },
   "polls": [],
   "snapshots": {
@@ -49,11 +50,11 @@
     "2026-10-18": true,
     "2026-10-19": true
   },
-  "last_post_ts": 1792400429.333068,
+  "last_post_ts": 1792410959.841281,
   "articles_today": {
     "2026-10-16": 3,
     "2026-10-17": 3,
     "2026-10-18": 3,
-    "2026-10-19": 2
+    "2026-10-19": 3
   }
 }
