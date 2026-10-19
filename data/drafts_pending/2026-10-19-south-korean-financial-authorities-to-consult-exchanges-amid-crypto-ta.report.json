@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-19-south-korean-financial-authorities-to-consult-exchanges-amid-crypto-ta.md",
+  "title": "South Korean Financial Authorities to Consult Exchanges Amid Crypto Tax Deferral Push",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "843 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article provides a well-structured and balanced overview of regional regulatory developments, though it relies on generalized sourcing rather than direct citations of specific legislative documents or official press releases.",
+    "overall": 8.0
+  },
+  "word_count": 843,
+  "decision": "pending"
+}
