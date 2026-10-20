@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-20-super-league-stockholders-approve-metaplanet-investment-structure-to-e.md",
+  "title": "Super League Stockholders Approve Metaplanet Investment Structure to Enable 2,100 BTC Strategy",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "737 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 7,
+    "readability": 6,
+    "neutrality": 10,
+    "verdict": "The piece is factually precise and neutral, but it suffers from heavy repetition across sections and lacks vital financial context regarding Super League's core business model.",
+    "overall": 8.3
+  },
+  "word_count": 737,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-20-cardano-founder-unveils-new-programming-language-amid-ecosystem-challe.md",
+  "title": "Cardano Founder Unveils New Programming Language Amid Ecosystem Challenges",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "562 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective analytical piece, though its factual reliability is undermined by a hallucinated future date.",
+    "overall": 8.0
+  },
+  "word_count": 562,
+  "decision": "pending"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-20-blackrock-files-for-managed-protect-bitcoin-etf-targeting-downside-ris.md",
+  "title": "BlackRock Files for Managed Protect Bitcoin ETF Targeting Downside Risk",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "392 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-17-td-cowen-raises-strive-price-target-by-27-amid-bitcoin-acquisition-str.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7.0,
+    "usefulness": 6.0,
+    "readability": 8.0,
+    "neutrality": 10.0,
+    "verdict": "The article is clean, objective, and well-structured, but relies heavily on a single secondary source and lacks specific details regarding caps, buffers, and fee structures due to the preliminary nature of the filing.",
+    "overall": 7.8
+  },
+  "word_count": 392,
+  "decision": "pending"
+}
