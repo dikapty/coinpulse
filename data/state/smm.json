@@ -36,13 +36,14 @@
     "2026-10-19-gold-prices-climb-as-market-weighs-fed-policy-outlook-amid-warsh-remar",
     "2026-10-19-bitget-restores-services-following-major-388-million-security-breach",
     "2026-10-16-ai-equity-selloff-deepens-as-investors-pivot-to-defensive-assets",
-    "2026-10-20-super-league-stockholders-approve-metaplanet-investment-structure-to-e"
+    "2026-10-20-super-league-stockholders-approve-metaplanet-investment-structure-to-e",
+    "2026-09-28-california-enacts-law-barring-public-officials-from-launching-meme-coi"
   ],
   "daily": {
     "2026-10-17": 4,
     "2026-10-18": 4,
     "2026-10-19": 4,
-    "2026-10-20": 2
+    "2026-10-20": 3
   },
   "polls": [],
   "snapshots": {
@@ -51,11 +52,11 @@
     "2026-10-19": true,
     "2026-10-20": true
   },
-  "last_post_ts": 1792475560.128907,
+  "last_post_ts": 1792486582.09645,
   "articles_today": {
     "2026-10-17": 3,
     "2026-10-18": 3,
     "2026-10-19": 3,
-    "2026-10-20": 1
+    "2026-10-20": 2
   }
 }
