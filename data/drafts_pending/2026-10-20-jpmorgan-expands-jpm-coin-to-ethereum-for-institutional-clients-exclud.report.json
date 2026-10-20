@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-20-jpmorgan-expands-jpm-coin-to-ethereum-for-institutional-clients-exclud.md",
+  "title": "JPMorgan Expands JPM Coin to Ethereum for Institutional Clients, Excluding Retail Traders",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "472 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-30-bitcoin-slips-to-82-000-as-macro-economic-pressures-and-regulatory-cha.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 4,
+    "readability": 7,
+    "neutrality": 8,
+    "verdict": "The article is well-written and neutral, but it bases its analysis on a completely false premise, as JPMorgan has not deployed JPM Coin on the public Ethereum blockchain.",
+    "overall": 5.8
+  },
+  "word_count": 472,
+  "decision": "pending"
+}
