@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-21-switzerland-approves-landmark-retail-bitcoin-etf-following-regulatory-.md",
+  "title": "Switzerland Approves Landmark Retail Bitcoin ETF Following Regulatory Assessment",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "429 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-02-near-protocol-faces-market-stress-test-amid-security-breach-and-etf-la.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7.0,
+    "usefulness": 7.5,
+    "readability": 8.0,
+    "neutrality": 8.5,
+    "verdict": "The article provides a clean, well-structured, and neutral overview of FINMA's regulatory decision, though it relies heavily on high-level concepts without specifying key details like the fund manager's name or exact volume metrics.",
+    "overall": 7.8
+  },
+  "word_count": 429,
+  "decision": "pending"
+}
