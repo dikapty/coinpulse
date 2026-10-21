@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-21-liquid-network-reaches-final-recovery-stages-following-4-000-bitcoin-s.md",
+  "title": "Liquid Network Reaches Final Recovery Stages Following 4,000 Bitcoin Security Breach",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "544 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece reads well and stays neutral, but it heavily fails on factual accuracy by citing a completely fabricated 4,000 BTC hack and hallucinating a future date (October 2026).",
+    "overall": 6.0
+  },
+  "word_count": 544,
+  "decision": "pending"
+}

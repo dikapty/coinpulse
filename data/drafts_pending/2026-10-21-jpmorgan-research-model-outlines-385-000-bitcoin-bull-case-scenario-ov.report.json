@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-21-jpmorgan-research-model-outlines-385-000-bitcoin-bull-case-scenario-ov.md",
+  "title": "JPMorgan Research Model Outlines $385,000 Bitcoin Bull Case Scenario Over 10-to-15-Year Horizon",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "545 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A disciplined, objective report that accurately context-checks a sensational headline price target against institutional reality, though it relies entirely on a secondary source aggregation.",
+    "overall": 8.0
+  },
+  "word_count": 545,
+  "decision": "pending"
+}

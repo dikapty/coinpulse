@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-21-netflix-stock-faces-investor-sell-off-amid-growing-viewership-hours-co.md",
+  "title": "Netflix Stock Faces Investor Sell-Off Amid Growing Viewership Hours Concerns and Competition",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "494 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 5,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The piece is neutral and attempts to explain financial metrics, but it is severely compromised by hallucinated future date references and excessive structural repetition.",
+    "overall": 5.0
+  },
+  "word_count": 494,
+  "decision": "pending"
+}
