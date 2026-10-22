@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility.md",
+  "title": "Bitcoin ETF Inflows Surge Amid Warnings of Potential Market Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "888 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and professionally balanced, though it relies heavily on external opinion pieces rather than primary market data to support its thesis.",
+    "overall": 8.0
+  },
+  "word_count": 888,
+  "decision": "publish"
+}
