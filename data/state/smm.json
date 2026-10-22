@@ -39,13 +39,14 @@
     "2026-10-20-super-league-stockholders-approve-metaplanet-investment-structure-to-e",
     "2026-09-28-california-enacts-law-barring-public-officials-from-launching-meme-coi",
     "2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea",
-    "2026-10-22-bitcoin-pulls-back-from-85-000-milestone-amid-broader-tech-market-vola"
+    "2026-10-22-bitcoin-pulls-back-from-85-000-milestone-amid-broader-tech-market-vola",
+    "2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility"
   ],
   "daily": {
     "2026-10-19": 4,
     "2026-10-20": 4,
     "2026-10-21": 2,
-    "2026-10-22": 2
+    "2026-10-22": 3
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00"
@@ -56,10 +57,10 @@
     "2026-10-21": true,
     "2026-10-22": true
   },
-  "last_post_ts": 1792677285.81563,
+  "last_post_ts": 1792694310.456703,
   "articles_today": {
     "2026-10-19": 3,
     "2026-10-20": 3,
-    "2026-10-22": 1
+    "2026-10-22": 2
   }
 }
