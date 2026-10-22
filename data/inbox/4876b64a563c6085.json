@@ -1,0 +1,11 @@
+{
+  "id": "4876b64a563c6085",
+  "title": "Bitcoin Core 32 can stall multisig signing on older nodes as fix slips to next patch",
+  "summary": "A reported PSBT v2 import failure affects mixed-version Core wallets, while an explicit RPC option still creates v0 files. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/bitcoin-core-32s-wallet-change-can-break-co-signing-with-older-nodes/",
+  "category": "crypto",
+  "published": "2026-10-22T18:00:57+00:00",
+  "collected_at": "2026-10-22T21:59:05.488070+00:00",
+  "batch": "20261022-215904"
+}
