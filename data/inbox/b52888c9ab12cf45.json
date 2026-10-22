@@ -1,0 +1,11 @@
+{
+  "id": "b52888c9ab12cf45",
+  "title": "Layer 2 Scaling Solutions",
+  "summary": "Layer 2 scaling solutions help blockchains like Ethereum process more activity without forcing every transaction to happen directly on the base chain. Ethereum’s main network is secure and decentralized, but blockspace is limited. When demand rises, fees increase and users can get priced out. Layer 2s address this by moving transaction activity to scaling systems that sit around Ethereum while still using it for settlement, security, data posting, or verification. The most important Layer 2 designs today are rollups. Rollups process transactions off-chain, bundle them together, and post data or proofs back to Ethereum. This makes transactions cheaper and faster while keeping a connection to Ethereum’s trust foundation.",
+  "source_name": "The Block",
+  "source_url": "https://www.theblock.co/learn/campus/layer-2-scaling-solutions-419685",
+  "category": "crypto",
+  "published": "2026-10-22T09:15:50+00:00",
+  "collected_at": "2026-10-22T12:36:55.745756+00:00",
+  "batch": "20261022-123655"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "6c46ea6547ff5614",
+  "title": "Qubic’s recovery rules require ownership checks even for unstolen funds in vulnerable wallets",
+  "summary": "Listed vulnerable wallets can require evidence beyond a valid signature before holders regain access, even when an attacker took nothing. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/qubics-recovery-rules-require-ownership-checks-even-for-unstolen-funds-in-vulnerable-wallets/",
+  "category": "crypto",
+  "published": "2026-10-22T12:00:24+00:00",
+  "collected_at": "2026-10-22T12:36:56.323167+00:00",
+  "batch": "20261022-123655"
+}
