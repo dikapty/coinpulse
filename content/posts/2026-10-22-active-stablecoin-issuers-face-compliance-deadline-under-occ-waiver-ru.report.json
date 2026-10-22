@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru.md",
+  "title": "Active Stablecoin Issuers Face Compliance Deadline Under OCC Waiver Rule",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "672 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-04-us-banking-association-sues-occ-over-crypto-trust-charters-as-legal-ba.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 5,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The article provides a coherent overview of regulatory shifts but relies on secondary industry-blog reporting rather than primary OCC regulatory filings, making its core claims difficult to verify independently.",
+    "overall": 7.0
+  },
+  "word_count": 672,
+  "decision": "publish"
+}

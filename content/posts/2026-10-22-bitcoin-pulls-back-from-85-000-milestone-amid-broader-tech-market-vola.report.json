@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-22-bitcoin-pulls-back-from-85-000-milestone-amid-broader-tech-market-vola.md",
+  "title": "Bitcoin Pulls Back From $85,000 Milestone Amid Broader Tech Market Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "828 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a disciplined, well-cited analysis of market correlations, though it leans slightly on technical speculation regarding specific price targets.",
+    "overall": 8.8
+  },
+  "word_count": 828,
+  "decision": "publish"
+}

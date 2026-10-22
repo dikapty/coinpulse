@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-22-malaysia-s-central-bank-advances-tokenized-finance-with-new-dlt-platfo.md",
+  "title": "Malaysia’s Central Bank Advances Tokenized Finance with New DLT Platform",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "757 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "While the article provides an excellent, professional analysis of institutional financial infrastructure, it relies on unverified internal placeholder sources and hypothetical future events.",
+    "overall": 8.0
+  },
+  "word_count": 757,
+  "decision": "pending"
+}

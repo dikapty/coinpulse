@@ -1,7 +1,8 @@
 {
-  "day": "2026-10-21",
-  "used": 12,
+  "day": "2026-10-22",
+  "used": 9,
   "exhausted": [
+    "gemini-3.5-flash",
     "gemini-3.6-flash"
   ]
 }
