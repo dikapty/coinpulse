@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la.md",
+  "title": "Spot Bitcoin ETFs Saw Capital Outflows in 7 of 8 Market Crashes, DWF Labs Report Shows",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "645 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "While well-written and insightful regarding ETF redemption mechanics, the article severely undermines its factual accuracy by introducing a hallucinated future date ('October 22, 2026') into its macro environment analysis.",
+    "overall": 8.0
+  },
+  "word_count": 645,
+  "decision": "publish"
+}

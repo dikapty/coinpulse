@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-23-chainlink-partners-with-lg-cns-to-expand-korean-won-stablecoin-ecosyst.md",
+  "title": "Chainlink Partners With LG CNS to Expand Korean Won Stablecoin Ecosystem",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "476 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-17-td-cowen-raises-strive-price-target-by-27-amid-bitcoin-acquisition-str.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, objective report that accurately attributes its sources and effectively connects a corporate blockchain partnership to broader market conditions.",
+    "overall": 9.0
+  },
+  "word_count": 476,
+  "decision": "pending"
+}

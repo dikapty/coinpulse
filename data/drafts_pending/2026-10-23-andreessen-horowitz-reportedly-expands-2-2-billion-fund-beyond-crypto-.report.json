@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-23-andreessen-horowitz-reportedly-expands-2-2-billion-fund-beyond-crypto-.md",
+  "title": "Andreessen Horowitz Reportedly Expands $2.2 Billion Fund Beyond Crypto into AI and Frontier Tech",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "543 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 7,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and neutral, but it heavily fails on facts by citing impossible future dates (May and October 2026) and relying entirely on unconfirmed aggregation of another outlet's report.",
+    "overall": 5.5
+  },
+  "word_count": 543,
+  "decision": "pending"
+}
