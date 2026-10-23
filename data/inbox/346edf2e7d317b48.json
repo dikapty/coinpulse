@@ -1,0 +1,11 @@
+{
+  "id": "346edf2e7d317b48",
+  "title": "Bitcoin Core Rewrites Its Security Policy for a World Where AI Finds Bugs in One Prompt",
+  "summary": "Developers will now backport fixes and cut releases immediately for flaws flagged as “easily discoverable,” abandoning long embargoes for bugs an attacker can surface with a single AI prompt.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats",
+  "category": "crypto",
+  "published": "2026-10-23T17:16:03+00:00",
+  "collected_at": "2026-10-23T17:34:50.725163+00:00",
+  "batch": "20261023-173450"
+}
