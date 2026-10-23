@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-23-phillip-securities-analyst-raises-spacex-price-target-by-233.md",
+  "title": "Phillip Securities Analyst Raises SpaceX Price Target by 233%",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "373 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-institutional-adoption-meets-retail-volatility-the-state-of-the-crypto.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 2,
+    "readability": 4,
+    "neutrality": 8,
+    "verdict": "This article fails basic fact-checking by presenting SpaceX as a publicly traded company with sell-side stock price targets, masking a fundamental inaccuracy behind dense, AI-generated generic prose.",
+    "overall": 4.0
+  },
+  "word_count": 373,
+  "decision": "pending"
+}
