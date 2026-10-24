@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-24-franklin-templeton-expands-tokenized-asset-footprint-with-150-million-.md",
+  "title": "Franklin Templeton Expands Tokenized Asset Footprint With $150 Million XRP Ledger Mint",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "881 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 4,
+    "readability": 7,
+    "neutrality": 8,
+    "verdict": "The article is well-written and maintains a neutral, non-hyped tone, but it fails completely on factual accuracy by hallucinating futuristic dates (October 2026) and fabricated events.",
+    "overall": 5.0
+  },
+  "word_count": 881,
+  "decision": "pending"
+}

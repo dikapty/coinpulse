@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-24-switzerland-approves-first-spot-bitcoin-etf-for-retail-investors.md",
+  "title": "Switzerland Approves First Spot Bitcoin ETF for Retail Investors",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "663 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "94% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article relies on a single, potentially unreliable source to report on a future event (November 2026) that lacks verifiable primary-source confirmation, rendering the core premise factually suspect.",
+    "overall": 6.5
+  },
+  "word_count": 663,
+  "decision": "pending"
+}

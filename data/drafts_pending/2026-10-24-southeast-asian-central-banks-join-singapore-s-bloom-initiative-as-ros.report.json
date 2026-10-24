@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-24-southeast-asian-central-banks-join-singapore-s-bloom-initiative-as-ros.md",
+  "title": "Southeast Asian Central Banks Join Singapore's BLOOM Initiative as Roster Expands to 24 Firms",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "566 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece provides solid contextual analysis of Southeast Asian central bank collaboration, but its credibility is severely undermined by referencing a future date (October 23, 2026) and relying on a single secondary source.",
+    "overall": 7.5
+  },
+  "word_count": 566,
+  "decision": "pending"
+}
