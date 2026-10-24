@@ -1,0 +1,11 @@
+{
+  "id": "2704966c79a9a5a7",
+  "title": "Bitcoin Core speeds up security fixes as 44% of surveyed nodes run unsupported versions",
+  "summary": "Bitcoin Core merged a policy amendment on Oct. 22 that lets developers backport fixes for easily rediscovered vulnerabilities to every maintained release line and publish an advisory alongside them. A network snapshot from Oct. 18 shows that 3,671 of 8,422 self-reported Bitcoin Core peers (43.6%) ran release lines that had already reached end of life.… Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/bitcoin-core-speeds-up-security-fixes-as-44-of-surveyed-nodes-run-unsupported-versions/",
+  "category": "crypto",
+  "published": "2026-10-24T14:45:04+00:00",
+  "collected_at": "2026-10-24T16:20:19.320832+00:00",
+  "batch": "20261024-162018"
+}
