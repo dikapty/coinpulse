@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-24-new-york-state-seeks-1-3-billion-recovery-in-novatech-fraud-case-as-vi.md",
+  "title": "New York State Seeks $1.3 Billion Recovery in NovaTech Fraud Case as Victims Face Further Delays",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "831 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-14-hardware-wallet-security-concerns-mount-as-trezor-announces-major-rese.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured and professionally balanced report that effectively communicates complex legal hurdles without resorting to sensationalism.",
+    "overall": 9.0
+  },
+  "word_count": 831,
+  "decision": "publish"
+}
