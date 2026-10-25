@@ -1,0 +1,32 @@
+{
+  "file": "2026-10-25-blackrock-secures-over-560-million-in-bitcoin-etf-inflows-within-five-.md",
+  "title": "BlackRock Secures Over $560 Million in Bitcoin ETF Inflows Within Five Days",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "657 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "overall": 0.0,
+    "verdict": "scoring error: All LLM providers failed: MISSING_KEY: GROQ_API_KEY is empty (set it in .env or GitHub Secrets)"
+  },
+  "word_count": 657,
+  "decision": "pending"
+}
