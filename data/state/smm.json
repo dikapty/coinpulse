@@ -43,13 +43,14 @@
     "2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility",
     "2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru",
     "2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la",
-    "2026-10-24-new-york-state-seeks-1-3-billion-recovery-in-novatech-fraud-case-as-vi"
+    "2026-10-24-new-york-state-seeks-1-3-billion-recovery-in-novatech-fraud-case-as-vi",
+    "2026-10-25-uae-led-global-operation-flags-39-billion-linked-to-crypto-and-online-"
   ],
   "daily": {
     "2026-10-22": 4,
     "2026-10-23": 3,
     "2026-10-24": 2,
-    "2026-10-25": 1
+    "2026-10-25": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -61,10 +62,11 @@
     "2026-10-24": true,
     "2026-10-25": true
   },
-  "last_post_ts": 1792914030.751722,
+  "last_post_ts": 1792934074.997707,
   "articles_today": {
     "2026-10-22": 3,
     "2026-10-23": 1,
-    "2026-10-24": 1
+    "2026-10-24": 1,
+    "2026-10-25": 1
   }
 }
