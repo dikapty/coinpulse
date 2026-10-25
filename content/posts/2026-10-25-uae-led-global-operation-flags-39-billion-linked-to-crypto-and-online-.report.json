@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-25-uae-led-global-operation-flags-39-billion-linked-to-crypto-and-online-.md",
+  "title": "UAE-Led Global Operation Flags $39 Billion Linked to Crypto and Online Scams",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "622 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "While neutral and easy to read, the article relies on a single crypto-blog source without independent verification and uses repetitive macro-generalizations to pad its context.",
+    "overall": 7.8
+  },
+  "word_count": 622,
+  "decision": "publish"
+}

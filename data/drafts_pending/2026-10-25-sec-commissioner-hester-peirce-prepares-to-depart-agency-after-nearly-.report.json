@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-25-sec-commissioner-hester-peirce-prepares-to-depart-agency-after-nearly-.md",
+  "title": "SEC Commissioner Hester Peirce Prepares to Depart Agency After Nearly a Decade",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "558 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 2,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The article is bloated, highly repetitive, and fundamentally useless because it inexplicably omits Hester Peirce's defining legacy—her famously pro-crypto 'Crypto Mom' stance and dissent against SEC overreach.",
+    "overall": 5.5
+  },
+  "word_count": 558,
+  "decision": "pending"
+}
