@@ -1,0 +1,11 @@
+{
+  "id": "90fd822f543402a4",
+  "title": "Bitcoin Wallet Fixes Critical Flaw That Redirected Funds to Attackers",
+  "summary": "A confirmed exploit let rogue servers replace Electrum’s pending transactions, tricking users into redirecting Bitcoin to attacker addresses.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/381844/bitcoin-wallet-flaw-trick-users-paying-attackers",
+  "category": "crypto",
+  "published": "2026-10-26T17:41:21+00:00",
+  "collected_at": "2026-10-26T22:56:14.681313+00:00",
+  "batch": "20261026-225614"
+}

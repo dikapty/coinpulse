@@ -1,0 +1,11 @@
+{
+  "id": "e30414a96539ef35",
+  "title": "August updates block critical private key leak in crypto wallet Vultisig",
+  "summary": "An already-compromised signer could recover the key through many malicious ECDSA messages when the application ignored a critical stop condition. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/august-updates-block-critical-private-key-leak-in-crypto-wallet-vultisig/",
+  "category": "crypto",
+  "published": "2026-10-26T21:10:35+00:00",
+  "collected_at": "2026-10-26T22:56:15.226733+00:00",
+  "batch": "20261026-225614"
+}
