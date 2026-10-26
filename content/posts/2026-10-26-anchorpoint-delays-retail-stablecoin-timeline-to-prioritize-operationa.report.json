@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-26-anchorpoint-delays-retail-stablecoin-timeline-to-prioritize-operationa.md",
+  "title": "Anchorpoint Delays Retail Stablecoin Timeline to Prioritize Operational and Compliance Readiness",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "640 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "94% unique (most similar: 2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and disciplined report that successfully contextualizes a corporate delay within the broader regulatory realities of institutional finance.",
+    "overall": 8.8
+  },
+  "word_count": 640,
+  "decision": "publish"
+}

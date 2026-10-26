@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-26-solana-company-named-strategic-enterprise-in-hong-kong-as-firm-expands.md",
+  "title": "Solana Company Named Strategic Enterprise in Hong Kong as Firm Expands Validator Operations",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "493 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "94% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 6,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article is professionally written and neutral but suffers from vague sourcing and a lack of specific corporate identification, which undermines its utility for a serious financial reader.",
+    "overall": 8.3
+  },
+  "word_count": 493,
+  "decision": "pending"
+}

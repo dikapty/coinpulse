@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md",
+  "title": "Canada Proposes Direct Stablecoin Redemptions for Small Holders with 1% Fee Cap",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "664 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and objective, but its credibility is severely undermined by relying on a single, circular source and inventing a future date (October 2026) that suggests either hallucination or a misunderstanding of current events.",
+    "overall": 7.0
+  },
+  "word_count": 664,
+  "decision": "publish"
+}
