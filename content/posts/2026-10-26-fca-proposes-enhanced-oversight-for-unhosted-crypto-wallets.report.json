@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-26-fca-proposes-enhanced-oversight-for-unhosted-crypto-wallets.md",
+  "title": "FCA Proposes Enhanced Oversight for Unhosted Crypto Wallets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "807 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article provides a sophisticated, well-structured analysis of evolving regulatory expectations, though it relies on secondary reporting for its primary source material.",
+    "overall": 9.0
+  },
+  "word_count": 807,
+  "decision": "publish"
+}

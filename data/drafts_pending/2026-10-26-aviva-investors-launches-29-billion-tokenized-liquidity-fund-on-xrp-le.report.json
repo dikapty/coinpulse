@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-26-aviva-investors-launches-29-billion-tokenized-liquidity-fund-on-xrp-le.md",
+  "title": "Aviva Investors Launches $29 Billion Tokenized Liquidity Fund on XRP Ledger",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "822 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 3,
+    "verdict": "The article is a fabrication based on a fictional event dated in the future, rendering all factual claims and source links invalid.",
+    "overall": 4.0
+  },
+  "word_count": 822,
+  "decision": "pending"
+}

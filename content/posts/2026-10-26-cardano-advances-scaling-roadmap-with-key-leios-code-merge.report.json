@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-26-cardano-advances-scaling-roadmap-with-key-leios-code-merge.md",
+  "title": "Cardano Advances Scaling Roadmap with Key Leios Code Merge",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "682 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "A well-structured and technically grounded report that effectively contextualizes the upgrade, though it relies on a single secondary source rather than direct primary documentation.",
+    "overall": 8.5
+  },
+  "word_count": 682,
+  "decision": "publish"
+}

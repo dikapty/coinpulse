@@ -1,0 +1,11 @@
+{
+  "id": "ba361617e71a2d4e",
+  "title": "BTCPay’s API key fix is merged, but its latest release still predates the patch",
+  "summary": "The October 19 merge restricts broad store-scoped grants, while the latest listed release still predates the change. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/a-btcpay-api-key-limited-to-one-bitcoin-store-could-exceed-its-permissions/",
+  "category": "crypto",
+  "published": "2026-10-26T13:00:44+00:00",
+  "collected_at": "2026-10-26T13:43:10.035133+00:00",
+  "batch": "20261026-134307"
+}
