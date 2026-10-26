@@ -44,13 +44,14 @@
     "2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru",
     "2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la",
     "2026-10-24-new-york-state-seeks-1-3-billion-recovery-in-novatech-fraud-case-as-vi",
-    "2026-10-25-uae-led-global-operation-flags-39-billion-linked-to-crypto-and-online-"
+    "2026-10-25-uae-led-global-operation-flags-39-billion-linked-to-crypto-and-online-",
+    "2026-10-26-fca-proposes-enhanced-oversight-for-unhosted-crypto-wallets"
   ],
   "daily": {
     "2026-10-23": 3,
     "2026-10-24": 2,
     "2026-10-25": 4,
-    "2026-10-26": 1
+    "2026-10-26": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -63,12 +64,12 @@
     "2026-10-25": true,
     "2026-10-26": true
   },
-  "last_post_ts": 1793001310.18989,
+  "last_post_ts": 1793027860.531583,
   "articles_today": {
-    "2026-10-22": 3,
     "2026-10-23": 1,
     "2026-10-24": 1,
-    "2026-10-25": 1
+    "2026-10-25": 1,
+    "2026-10-26": 1
   },
   "last_digest_week": "2026-W43"
 }
