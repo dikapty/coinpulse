@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-27-optimism-governance-proposal-revisions-target-tokenholder-election-str.md",
+  "title": "Optimism Governance Proposal Revisions Target Tokenholder Election Structure",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "658 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-17-visa-and-mastercard-expand-usdc-payout-capabilities-to-200-countries.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 8,
+    "readability": 7,
+    "neutrality": 10,
+    "verdict": "A well-balanced and objective breakdown of a complex governance shift, though it suffers slightly from repetitive framing and a future-dated typo in the lead sentence.",
+    "overall": 8.3
+  },
+  "word_count": 658,
+  "decision": "publish"
+}

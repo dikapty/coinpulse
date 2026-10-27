@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-27-evernorth-secures-80-7-million-equity-facility-with-cantor-fitzgerald-.md",
+  "title": "Evernorth Secures $80.7 Million Equity Facility With Cantor Fitzgerald for XRP Treasury Strategy",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "576 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 4,
+    "neutrality": 6,
+    "verdict": "The piece repeats a single basic transaction fact across multiple bloated, corporate-jargon-heavy sections without providing concrete SEC filing details, execution timelines, or broader market numbers.",
+    "overall": 5.3
+  },
+  "word_count": 576,
+  "decision": "pending"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-27-ripple-secures-final-occ-approval-to-establish-national-trust-bank-for.md",
+  "title": "Ripple Secures Final OCC Approval to Establish National Trust Bank for RLUSD Oversight",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "610 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "95% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article is a professional, well-structured report that maintains objective journalistic standards and provides necessary institutional context without resorting to speculation.",
+    "overall": 9.5
+  },
+  "word_count": 610,
+  "decision": "publish"
+}
