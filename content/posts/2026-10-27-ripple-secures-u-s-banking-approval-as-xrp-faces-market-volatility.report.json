@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-27-ripple-secures-u-s-banking-approval-as-xrp-faces-market-volatility.md",
+  "title": "Ripple Secures U.S. Banking Approval as XRP Faces Market Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "780 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-02-near-protocol-faces-market-stress-test-amid-security-breach-and-etf-la.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 7,
+    "verdict": "The article provides a coherent and well-structured analysis of the news, though it relies on speculative market predictions and potentially sensationalist source material that undermines its factual authority.",
+    "overall": 7.5
+  },
+  "word_count": 780,
+  "decision": "publish"
+}

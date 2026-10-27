@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-27-coindcx-confirms-16-million-loss-following-initial-denial-of-security-.md",
+  "title": "CoinDCX Confirms $16 Million Loss Following Initial Denial of Security Incident",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "768 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, professional report that effectively contextualizes the incident within industry standards, though it relies heavily on external editorializing regarding the Zcash comparison.",
+    "overall": 8.8
+  },
+  "word_count": 768,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-27-coinbase-initiates-mica-compliance-delisting-for-non-compliant-stablec.md",
+  "title": "Coinbase Initiates MiCA Compliance Delisting for Non-Compliant Stablecoins",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "886 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-27-ripple-secures-final-occ-approval-to-establish-national-trust-bank-for.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "A well-structured and informative piece that clearly explains the implications of MiCA compliance for retail users, though it contains forward-looking date projections that may be speculative.",
+    "overall": 8.5
+  },
+  "word_count": 886,
+  "decision": "publish"
+}
