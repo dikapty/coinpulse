@@ -1,0 +1,11 @@
+{
+  "id": "f31cacba3b3a7bd6",
+  "title": "Lightning tightens invoice rules after reported attack made Bitcoin withdrawals look unpaid",
+  "summary": "BOLT11 now requires one payment hash and one payment secret, while operators must check how their software records withdrawals. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/lightning-tightens-invoice-rules-after-reported-attack-made-bitcoin-withdrawals-look-unpaid/",
+  "category": "crypto",
+  "published": "2026-10-27T19:00:10+00:00",
+  "collected_at": "2026-10-27T22:45:05.007598+00:00",
+  "batch": "20261027-224503"
+}
