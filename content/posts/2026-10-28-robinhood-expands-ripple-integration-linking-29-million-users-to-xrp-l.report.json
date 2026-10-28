@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-28-robinhood-expands-ripple-integration-linking-29-million-users-to-xrp-l.md",
+  "title": "Robinhood Expands Ripple Integration, Linking 29 Million Users to XRP Ledger",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "850 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-28-datavault-ai-stock-collapses-50-following-withdrawal-issues-with-150-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is professionally written and analytically sound, though it relies on secondary sources for some claims and includes a somewhat tangential section on Bitcoin's performance relative to the S&P 500.",
+    "overall": 8.3
+  },
+  "word_count": 850,
+  "decision": "publish"
+}
