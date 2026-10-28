@@ -1,0 +1,11 @@
+{
+  "id": "3dc8b841d02c2dea",
+  "title": "Ethereum client security fixes leave binary users with a separate Java check",
+  "summary": "Teku and Besu Docker releases fix certificate trust, while binary users need to check their separately installed Java runtime. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/ethereum-client-security-fixes-leave-binary-users-with-a-separate-java-check/",
+  "category": "crypto",
+  "published": "2026-10-28T15:40:51+00:00",
+  "collected_at": "2026-10-28T22:54:49.754906+00:00",
+  "batch": "20261028-225447"
+}
