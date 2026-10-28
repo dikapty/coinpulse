@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md",
+  "title": "Bitcoin Applications Face Fee Drain Risks Linked to Software Library Bugs",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "742 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-27-optimism-governance-proposal-revisions-target-tokenholder-election-str.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A technically sound and objective breakdown of a specific infrastructure vulnerability that avoids alarmism while providing clear context for developers and users.",
+    "overall": 9.3
+  },
+  "word_count": 742,
+  "decision": "publish"
+}

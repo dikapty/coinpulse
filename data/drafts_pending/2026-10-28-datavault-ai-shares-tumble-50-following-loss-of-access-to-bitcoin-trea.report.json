@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-28-datavault-ai-shares-tumble-50-following-loss-of-access-to-bitcoin-trea.md",
+  "title": "Datavault AI Shares Tumble 50% Following Loss of Access to Bitcoin Treasury",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "822 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-19-gold-prices-climb-as-market-weighs-fed-policy-outlook-amid-warsh-remar.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is a well-structured, professional analysis that effectively contextualizes a corporate crisis within broader market trends while maintaining an objective tone.",
+    "overall": 8.8
+  },
+  "word_count": 822,
+  "decision": "pending"
+}

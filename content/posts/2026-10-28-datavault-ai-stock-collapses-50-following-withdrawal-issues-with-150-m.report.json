@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-28-datavault-ai-stock-collapses-50-following-withdrawal-issues-with-150-m.md",
+  "title": "Datavault AI Stock Collapses 50% Following Withdrawal Issues With $150 Million Bitcoin Deal",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "743 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-10-27-ripple-secures-final-occ-approval-to-establish-national-trust-bank-for.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "This is a professional, well-structured financial report that effectively contextualizes a specific corporate liquidity failure within broader market challenges.",
+    "overall": 9.0
+  },
+  "word_count": 743,
+  "decision": "publish"
+}
