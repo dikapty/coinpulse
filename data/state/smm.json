@@ -49,13 +49,14 @@
     "2026-10-26-cardano-advances-scaling-roadmap-with-key-leios-code-merge",
     "2026-10-27-ripple-secures-u-s-banking-approval-as-xrp-faces-market-volatility",
     "2026-10-27-ripple-secures-final-occ-approval-to-establish-national-trust-bank-for",
-    "2026-10-28-robinhood-expands-ripple-integration-linking-29-million-users-to-xrp-l"
+    "2026-10-28-robinhood-expands-ripple-integration-linking-29-million-users-to-xrp-l",
+    "2026-10-28-inflation-concerns-mount-as-tariff-refunds-near-their-end"
   ],
   "daily": {
     "2026-10-25": 4,
     "2026-10-26": 3,
     "2026-10-27": 3,
-    "2026-10-28": 2
+    "2026-10-28": 3
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -68,12 +69,12 @@
     "2026-10-27": true,
     "2026-10-28": true
   },
-  "last_post_ts": 1793207569.920856,
+  "last_post_ts": 1793223857.511868,
   "articles_today": {
     "2026-10-25": 1,
     "2026-10-26": 2,
     "2026-10-27": 2,
-    "2026-10-28": 1
+    "2026-10-28": 2
   },
   "last_digest_week": "2026-W43"
 }
