@@ -13,19 +13,6 @@
     "llm_budget_left": 6
   },
   {
-    "date": "2026-10-12",
-    "collected": 90,
-    "written": 4,
-    "approved": 0,
-    "published": 0,
-    "pending_review": 12,
-    "rejected": 0,
-    "inbox_backlog": 1302,
-    "total_posts": 20,
-    "site_online": true,
-    "llm_budget_left": 6
-  },
-  {
     "date": "2026-10-13",
     "collected": 19,
     "written": 3,
@@ -1168,5 +1155,18 @@
     "total_posts": 59,
     "site_online": true,
     "llm_budget_left": 18
+  },
+  {
+    "date": "2026-10-29",
+    "collected": 15,
+    "written": 3,
+    "approved": 1,
+    "published": 1,
+    "pending_review": 11,
+    "rejected": 0,
+    "inbox_backlog": 2729,
+    "total_posts": 60,
+    "site_online": true,
+    "llm_budget_left": 9
   }
 ]

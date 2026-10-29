@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-29-ripple-projects-record-900-million-revenue-run-rate-as-rlusd-wins-coin.md",
+  "title": "Ripple Projects Record $900 Million Revenue Run Rate as RLUSD Wins Coinbase Support and Moody's Rating",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "832 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 7,
+    "verdict": "The article is well-structured and insightful, but it relies on unverified future-dated claims (October 2026) that cannot be fact-checked against current reality.",
+    "overall": 7.0
+  },
+  "word_count": 832,
+  "decision": "publish"
+}

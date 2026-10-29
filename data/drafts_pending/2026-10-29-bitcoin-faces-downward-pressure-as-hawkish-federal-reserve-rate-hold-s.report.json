@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-29-bitcoin-faces-downward-pressure-as-hawkish-federal-reserve-rate-hold-s.md",
+  "title": "Bitcoin Faces Downward Pressure as Hawkish Federal Reserve Rate Hold Shifts December Expectations",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "482 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "92% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7.0,
+    "usefulness": 8.0,
+    "readability": 6.0,
+    "neutrality": 9.0,
+    "verdict": "The article provides sound macroeconomic context for Bitcoin's weakness, but it relies excessively on repetitive citations to a single secondary aggregator and contains significant structural redundancy.",
+    "overall": 7.5
+  },
+  "word_count": 482,
+  "decision": "pending"
+}

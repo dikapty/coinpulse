@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-29-global-fintech-dealmaking-rebounds-to-103-1-billion-as-mispricing-chal.md",
+  "title": "Global Fintech Dealmaking Rebounds to $103.1 Billion as Mispricing Challenges Persist",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "629 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece provides solid structural analysis on fintech valuation dynamics, but it fails basic factual standards by fabricating futuristic H1 2026 data ($103.1B) out of whole cloth.",
+    "overall": 6.8
+  },
+  "word_count": 629,
+  "decision": "pending"
+}
