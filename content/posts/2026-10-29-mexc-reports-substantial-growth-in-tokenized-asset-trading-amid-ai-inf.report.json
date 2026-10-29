@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-29-mexc-reports-substantial-growth-in-tokenized-asset-trading-amid-ai-inf.md",
+  "title": "MEXC Reports Substantial Growth in Tokenized Asset Trading Amid AI Infrastructure Demand",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "838 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a clear, professional summary of a specific industry trend, though it relies on a single proprietary source for its data points.",
+    "overall": 8.5
+  },
+  "word_count": 838,
+  "decision": "publish"
+}

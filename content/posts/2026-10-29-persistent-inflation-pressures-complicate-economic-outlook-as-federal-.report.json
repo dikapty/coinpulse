@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-29-persistent-inflation-pressures-complicate-economic-outlook-as-federal-.md",
+  "title": "Persistent Inflation Pressures Complicate Economic Outlook as Federal Reserve Pauses Rate Hikes",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "790 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article is a well-structured, professional synthesis of current economic trends, though its reliance on a specific anecdotal case study to explain broad inflation risks slightly detracts from its institutional tone.",
+    "overall": 8.5
+  },
+  "word_count": 790,
+  "decision": "publish"
+}

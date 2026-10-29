@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-29-whitebit-enhances-institutional-infrastructure-with-bcb-group-partners.md",
+  "title": "WhiteBIT Enhances Institutional Infrastructure With BCB Group Partnership",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "653 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured, professional analysis that effectively explains the operational importance of institutional banking integration without resorting to promotional hyperbole.",
+    "overall": 9.0
+  },
+  "word_count": 653,
+  "decision": "publish"
+}
