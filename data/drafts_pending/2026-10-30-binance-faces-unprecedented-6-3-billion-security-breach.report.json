@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-30-binance-faces-unprecedented-6-3-billion-security-breach.md",
+  "title": "Binance Faces Unprecedented $6.3 Billion Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "728 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 7,
+    "verdict": "This article is a work of fiction masquerading as journalism, referencing non-existent future events and speculative financial details.",
+    "overall": 5.0
+  },
+  "word_count": 728,
+  "decision": "pending"
+}

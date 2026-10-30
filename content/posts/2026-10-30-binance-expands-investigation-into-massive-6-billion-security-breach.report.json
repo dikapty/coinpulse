@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-30-binance-expands-investigation-into-massive-6-billion-security-breach.md",
+  "title": "Binance Expands Investigation into Massive $6 Billion Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "817 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article provides a well-structured, professional overview of systemic cybersecurity risks, though the specific 'October 30, 2026' date and event details are hypothetical scenarios.",
+    "overall": 9.0
+  },
+  "word_count": 817,
+  "decision": "publish"
+}

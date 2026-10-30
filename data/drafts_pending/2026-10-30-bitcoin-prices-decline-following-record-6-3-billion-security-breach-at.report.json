@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-30-bitcoin-prices-decline-following-record-6-3-billion-security-breach-at.md",
+  "title": "Bitcoin Prices Decline Following Record $6.3 Billion Security Breach at Binance",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "790 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is built upon a fictional premise involving a hypothetical 2026 date and a non-existent $6.3 billion Binance hack, rendering the factual score critically low despite the professional tone.",
+    "overall": 6.5
+  },
+  "word_count": 790,
+  "decision": "pending"
+}

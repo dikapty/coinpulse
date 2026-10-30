@@ -682,5 +682,23 @@
     "title": "Stablecoin Issuers Freeze Over $2.6 Billion Following Suspected Record Binance Security Breach",
     "decision": "publish",
     "score": 8.5
+  },
+  {
+    "file": "2026-10-30-binance-expands-investigation-into-massive-6-billion-security-breach.md",
+    "title": "Binance Expands Investigation into Massive $6 Billion Security Breach",
+    "decision": "publish",
+    "score": 9.0
+  },
+  {
+    "file": "2026-10-30-binance-faces-unprecedented-6-3-billion-security-breach.md",
+    "title": "Binance Faces Unprecedented $6.3 Billion Security Breach",
+    "decision": "pending",
+    "score": 5.0
+  },
+  {
+    "file": "2026-10-30-bitcoin-prices-decline-following-record-6-3-billion-security-breach-at.md",
+    "title": "Bitcoin Prices Decline Following Record $6.3 Billion Security Breach at Binance",
+    "decision": "pending",
+    "score": 6.5
   }
 ]
