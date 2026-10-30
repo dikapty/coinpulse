@@ -1,6 +1,6 @@
 {
-  "file": "2026-10-25-swiss-regulators-approve-nation-s-first-spot-bitcoin-etf-for-retail-in.md",
-  "title": "Swiss Regulators Approve Nation's First Spot Bitcoin ETF for Retail Investors",
+  "file": "2026-10-30-binance-hit-by-6-36-billion-security-breach-as-bitcoin-falls-below-79-.md",
+  "title": "Binance Hit by $6.36 Billion Security Breach as Bitcoin Falls Below $79,000",
   "checks": {
     "length": {
       "ok": false,
@@ -12,7 +12,7 @@
     },
     "uniqueness": {
       "ok": true,
-      "detail": "94% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+      "detail": "98% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
     },
     "forbidden": {
       "ok": true,
@@ -28,7 +28,7 @@
     "usefulness": 4,
     "readability": 8,
     "neutrality": 9,
-    "verdict": "While well-written and objective in tone, the article relies on a hallucinated premise regarding an approval for November 2026 and conflates Swiss ETPs with retail spot ETFs.",
+    "verdict": "The article is a hallucination reporting on a non-existent major event, rendering the entire text factually void despite its professional structure.",
     "overall": 5.8
   },
   "word_count": 527,

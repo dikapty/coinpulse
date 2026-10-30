@@ -1,0 +1,37 @@
+{
+  "file": "2026-10-25-swiss-regulators-approve-nation-s-first-spot-bitcoin-etf-for-retail-in.md",
+  "title": "Swiss Regulators Approve Nation's First Spot Bitcoin ETF for Retail Investors",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "527 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "94% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-written and objective in tone, the article relies on a hallucinated premise regarding an approval for November 2026 and conflates Swiss ETPs with retail spot ETFs.",
+    "overall": 5.8
+  },
+  "word_count": 527,
+  "decision": "rejected",
+  "purge_reason": "auto-purged: unreviewed for 5+ days (hands-off mode)"
+}

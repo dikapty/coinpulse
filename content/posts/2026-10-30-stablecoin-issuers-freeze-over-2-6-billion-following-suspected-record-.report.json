@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-.md",
+  "title": "Stablecoin Issuers Freeze Over $2.6 Billion Following Suspected Record Binance Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "759 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article is a well-structured and objective summary of a significant industry event, though it relies heavily on secondary news aggregators rather than primary investigative data.",
+    "overall": 8.5
+  },
+  "word_count": 759,
+  "decision": "publish"
+}

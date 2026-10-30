@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-30-institutional-adoption-expands-as-20-firms-join-dtcc-token-service-acr.md",
+  "title": "Institutional Adoption Expands as 20 Firms Join DTCC Token Service Across 34 Eligible Securities",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "516 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured, objective analysis that clarifies the operational nuances of institutional blockchain adoption without resorting to industry hyperbole.",
+    "overall": 9.0
+  },
+  "word_count": 516,
+  "decision": "pending"
+}

@@ -28,5 +28,6 @@
     "verdict": "scoring error: All LLM providers failed: MISSING_KEY: GROQ_API_KEY is empty (set it in .env or GitHub Secrets)"
   },
   "word_count": 657,
-  "decision": "pending"
+  "decision": "rejected",
+  "purge_reason": "auto-purged: unreviewed for 5+ days (hands-off mode)"
 }
