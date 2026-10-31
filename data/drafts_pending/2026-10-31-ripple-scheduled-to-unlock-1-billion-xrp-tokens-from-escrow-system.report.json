@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-31-ripple-scheduled-to-unlock-1-billion-xrp-tokens-from-escrow-system.md",
+  "title": "Ripple Scheduled to Unlock 1 Billion XRP Tokens from Escrow System",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "520 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "While well-structured and neutral, the article relies on a source link containing a severe date anomaly—attributing a routine 2024 news story to late 2026—which severely undermines its factual accuracy.",
+    "overall": 6.3
+  },
+  "word_count": 520,
+  "decision": "pending"
+}
