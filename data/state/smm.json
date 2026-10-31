@@ -54,13 +54,14 @@
     "2026-10-29-whitebit-enhances-institutional-infrastructure-with-bcb-group-partners",
     "2026-10-29-ripple-projects-record-900-million-revenue-run-rate-as-rlusd-wins-coin",
     "2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-",
-    "2026-10-30-binance-expands-investigation-into-massive-6-billion-security-breach"
+    "2026-10-30-binance-expands-investigation-into-massive-6-billion-security-breach",
+    "2026-10-31-maple-finance-locks-280-million-in-xrp-collateral-as-loan-maturities-r"
   ],
   "daily": {
     "2026-10-28": 3,
     "2026-10-29": 3,
     "2026-10-30": 3,
-    "2026-10-31": 1
+    "2026-10-31": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -73,12 +74,12 @@
     "2026-10-30": true,
     "2026-10-31": true
   },
-  "last_post_ts": 1793435575.019883,
+  "last_post_ts": 1793463098.919579,
   "articles_today": {
-    "2026-10-27": 2,
     "2026-10-28": 2,
     "2026-10-29": 2,
-    "2026-10-30": 2
+    "2026-10-30": 2,
+    "2026-10-31": 1
   },
   "last_digest_week": "2026-W43"
 }
