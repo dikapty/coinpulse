@@ -700,5 +700,23 @@
     "title": "Bitcoin Prices Decline Following Record $6.3 Billion Security Breach at Binance",
     "decision": "pending",
     "score": 6.5
+  },
+  {
+    "file": "2026-10-31-altcoin-spot-trading-volume-reaches-four-times-bitcoin-level-as-invest.md",
+    "title": "Altcoin Spot Trading Volume Reaches Four Times Bitcoin Level as Investors Shift Capital",
+    "decision": "pending",
+    "score": 6.5
+  },
+  {
+    "file": "2026-10-31-binance-hit-by-record-6-3-billion-security-breach-as-3-3-billion-remai.md",
+    "title": "Binance Hit by Record $6.3 Billion Security Breach as $3.3 Billion Remains Unrecovered",
+    "decision": "pending",
+    "score": 4.5
+  },
+  {
+    "file": "2026-10-31-maple-finance-locks-280-million-in-xrp-collateral-as-loan-maturities-r.md",
+    "title": "Maple Finance Locks $280 Million in XRP Collateral as Loan Maturities Risk Liquidations",
+    "decision": "publish",
+    "score": 8.5
   }
 ]

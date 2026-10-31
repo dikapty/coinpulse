@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-31-altcoin-spot-trading-volume-reaches-four-times-bitcoin-level-as-invest.md",
+  "title": "Altcoin Spot Trading Volume Reaches Four Times Bitcoin Level as Investors Shift Capital",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "561 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "While the article provides sound structural analysis and maintains strict neutrality, its factual credibility is severely undermined by referencing a future date (September 2025) as a historical benchmark, along with repetitive phrasing.",
+    "overall": 6.5
+  },
+  "word_count": 561,
+  "decision": "pending"
+}

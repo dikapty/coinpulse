@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-31-maple-finance-locks-280-million-in-xrp-collateral-as-loan-maturities-r.md",
+  "title": "Maple Finance Locks $280 Million in XRP Collateral as Loan Maturities Risk Liquidations",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "703 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 7,
+    "neutrality": 10,
+    "verdict": "The article is accurate and strictly neutral, but it suffers from excessive fluff and over-explains basic DeFi concepts.",
+    "overall": 8.5
+  },
+  "word_count": 703,
+  "decision": "publish"
+}

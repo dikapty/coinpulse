@@ -1,0 +1,36 @@
+{
+  "file": "2026-10-31-binance-hit-by-record-6-3-billion-security-breach-as-3-3-billion-remai.md",
+  "title": "Binance Hit by Record $6.3 Billion Security Breach as $3.3 Billion Remains Unrecovered",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "599 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 2,
+    "readability": 7,
+    "neutrality": 8,
+    "verdict": "The article reports a completely fabricated $6.3 billion hack in October 2026 based on non-existent sources, rendering it entirely untruthful despite decent readability and tone.",
+    "overall": 4.5
+  },
+  "word_count": 599,
+  "decision": "pending"
+}
