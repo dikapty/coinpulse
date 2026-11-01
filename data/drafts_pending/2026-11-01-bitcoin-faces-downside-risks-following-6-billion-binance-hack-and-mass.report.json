@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-01-bitcoin-faces-downside-risks-following-6-billion-binance-hack-and-mass.md",
+  "title": "Bitcoin Faces Downside Risks Following $6 Billion Binance Hack and Massive ETF Outflows",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "512 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 2,
+    "readability": 6,
+    "neutrality": 8,
+    "verdict": "The article is built around completely fabricated events, including a fictional $6 billion Binance hack set in the future (November 2026), rendering it entirely unreliable despite a neutral tone.",
+    "overall": 4.3
+  },
+  "word_count": 512,
+  "decision": "pending"
+}

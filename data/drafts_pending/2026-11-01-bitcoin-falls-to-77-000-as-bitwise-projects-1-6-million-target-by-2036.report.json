@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-01-bitcoin-falls-to-77-000-as-bitwise-projects-1-6-million-target-by-2036.md",
+  "title": "Bitcoin Falls to $77,000 as Bitwise Projects $1.6 Million Target by 2036",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "798 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece reads clearly and remains neutral, but it relies entirely on a single crypto blog as its source while containing an unverified timeline inconsistency by setting the current narrative in November 2026.",
+    "overall": 6.5
+  },
+  "word_count": 798,
+  "decision": "pending"
+}
