@@ -1,0 +1,11 @@
+{
+  "id": "da81d62bae5ba153",
+  "title": "Zero-token withdrawals let a hacker drain 97 million CORE from Bitcoin staking platform b14g",
+  "summary": "Bitcoin staking platform b14g suffered a $1.47 million exploit on Oct. 31, losing approximately 97 million CORE tokens. The attacker drained 91 staking positions in a single transaction by submitting withdrawal requests for zero CORE, according to an investigation by blockchain analytics firm Bitquery. The staking platform confirmed the unauthorized withdrawals and said it had… Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/zero-token-withdrawals-let-a-hacker-drain-97-million-core-from-bitcoin-staking-platform-b14g/",
+  "category": "crypto",
+  "published": "2026-11-01T13:20:52+00:00",
+  "collected_at": "2026-11-01T14:04:32.752310+00:00",
+  "batch": "20261101-140430"
+}

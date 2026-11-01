@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-01-fbi-attributes-6-billion-binance-breach-to-north-korean-cyber-actors.md",
+  "title": "FBI Attributes $6 Billion Binance Breach to North Korean Cyber Actors",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "811 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-30-binance-expands-investigation-into-massive-6-billion-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is written with professional journalistic polish, but it relies on an entirely fabricated premise regarding a major 2026 security event that never occurred.",
+    "overall": 7.0
+  },
+  "word_count": 811,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-01-binance-initiates-phased-withdrawals-following-6-3-billion-security-br.md",
+  "title": "Binance Initiates Phased Withdrawals Following $6.3 Billion Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "747 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-10-19-bitget-restores-services-following-major-388-million-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is a well-structured, professional report that effectively synthesizes a major security event with its broader regulatory and geopolitical consequences while maintaining appropriate professional distance.",
+    "overall": 9.3
+  },
+  "word_count": 747,
+  "decision": "publish"
+}

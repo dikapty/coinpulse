@@ -736,5 +736,23 @@
     "title": "Bitcoin Falls to $77,000 as Bitwise Projects $1.6 Million Target by 2036",
     "decision": "pending",
     "score": 6.5
+  },
+  {
+    "file": "2026-11-01-binance-initiates-phased-withdrawals-following-6-3-billion-security-br.md",
+    "title": "Binance Initiates Phased Withdrawals Following $6.3 Billion Security Breach",
+    "decision": "publish",
+    "score": 9.3
+  },
+  {
+    "file": "2026-11-01-bitcoin-s-october-performance-why-the-market-remains-resilient-above-7.md",
+    "title": "Bitcoin's October Performance: Why the Market Remains Resilient Above $77,000",
+    "decision": "publish",
+    "score": 7.0
+  },
+  {
+    "file": "2026-11-01-fbi-attributes-6-billion-binance-breach-to-north-korean-cyber-actors.md",
+    "title": "FBI Attributes $6 Billion Binance Breach to North Korean Cyber Actors",
+    "decision": "publish",
+    "score": 7.0
   }
 ]

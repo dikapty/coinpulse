@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-01-bitcoin-s-october-performance-why-the-market-remains-resilient-above-7.md",
+  "title": "Bitcoin's October Performance: Why the Market Remains Resilient Above $77,000",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "923 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-19-gold-prices-climb-as-market-weighs-fed-policy-outlook-amid-warsh-remar.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 7,
+    "verdict": "While the article provides a coherent analysis of market sentiment, it relies heavily on circular sourcing from a single publication rather than independent or primary data, undermining its authority.",
+    "overall": 7.0
+  },
+  "word_count": 923,
+  "decision": "publish"
+}
