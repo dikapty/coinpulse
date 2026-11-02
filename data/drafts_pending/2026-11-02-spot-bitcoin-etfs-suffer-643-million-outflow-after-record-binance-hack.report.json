@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-02-spot-bitcoin-etfs-suffer-643-million-outflow-after-record-binance-hack.md",
+  "title": "Spot Bitcoin ETFs Suffer $643 Million Outflow After Record Binance Hack and THORChain Freeze",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "594 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "93% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a coherent, well-sourced summary of a complex market event, though its reliance on secondary industry trade publications rather than primary source filings prevents a perfect score.",
+    "overall": 8.8
+  },
+  "word_count": 594,
+  "decision": "pending"
+}

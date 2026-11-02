@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-02-btcpay-server-urges-operators-to-shut-down-systems-following-hot-walle.md",
+  "title": "BTCPay Server Urges Operators to Shut Down Systems Following Hot Wallet Drains",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "581 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-10-28-datavault-ai-stock-collapses-50-following-withdrawal-issues-with-150-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "This is a highly professional, well-sourced, and objective report that avoids alarmism while clearly explaining the operational risks involved.",
+    "overall": 9.3
+  },
+  "word_count": 581,
+  "decision": "pending"
+}

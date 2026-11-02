@@ -754,5 +754,23 @@
     "title": "FBI Attributes $6 Billion Binance Breach to North Korean Cyber Actors",
     "decision": "publish",
     "score": 7.0
+  },
+  {
+    "file": "2026-11-02-btcpay-server-urges-operators-to-shut-down-systems-following-hot-walle.md",
+    "title": "BTCPay Server Urges Operators to Shut Down Systems Following Hot Wallet Drains",
+    "decision": "pending",
+    "score": 9.3
+  },
+  {
+    "file": "2026-11-02-ripple-etfs-outperform-rivals-in-october-as-on-chain-and-technical-pre.md",
+    "title": "Ripple ETFs Outperform Rivals in October as On-Chain and Technical Pressures Mount",
+    "decision": "pending",
+    "score": 6.8
+  },
+  {
+    "file": "2026-11-02-spot-bitcoin-etfs-suffer-643-million-outflow-after-record-binance-hack.md",
+    "title": "Spot Bitcoin ETFs Suffer $643 Million Outflow After Record Binance Hack and THORChain Freeze",
+    "decision": "pending",
+    "score": 8.8
   }
 ]

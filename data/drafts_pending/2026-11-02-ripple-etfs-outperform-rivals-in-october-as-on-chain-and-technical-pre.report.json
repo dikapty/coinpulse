@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-02-ripple-etfs-outperform-rivals-in-october-as-on-chain-and-technical-pre.md",
+  "title": "Ripple ETFs Outperform Rivals in October as On-Chain and Technical Pressures Mount",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "682 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-29-ripple-projects-record-900-million-revenue-run-rate-as-rlusd-wins-coin.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article provides a competent structural analysis of market bifurcation, though it loses credibility by citing speculative AI price predictions alongside hard on-chain data.",
+    "overall": 6.8
+  },
+  "word_count": 682,
+  "decision": "pending"
+}
