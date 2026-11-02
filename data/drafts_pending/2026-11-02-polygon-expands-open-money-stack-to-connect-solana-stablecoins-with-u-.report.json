@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-02-polygon-expands-open-money-stack-to-connect-solana-stablecoins-with-u-.md",
+  "title": "Polygon Expands Open Money Stack to Connect Solana Stablecoins with U.S. Banking Rails",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "481 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-26-fca-proposes-enhanced-oversight-for-unhosted-crypto-wallets.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece provides strong analytical context and neutral reporting, but is severely undermined by a hallucinated future date (November 2, 2026).",
+    "overall": 7.8
+  },
+  "word_count": 481,
+  "decision": "pending"
+}

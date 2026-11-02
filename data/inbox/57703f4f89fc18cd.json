@@ -1,0 +1,11 @@
+{
+  "id": "57703f4f89fc18cd",
+  "title": "Core Lightning nodes can keep crashing after an upgrade until a stored trigger is removed",
+  "summary": "The flaw was patched in April, but a malicious announcement already saved on an affected node needs separate removal. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/core-lightning-nodes-can-keep-crashing-after-an-upgrade-because-the-trigger-stays-on-disk/",
+  "category": "crypto",
+  "published": "2026-11-02T15:40:25+00:00",
+  "collected_at": "2026-11-02T16:49:17.055524+00:00",
+  "batch": "20261102-164916"
+}

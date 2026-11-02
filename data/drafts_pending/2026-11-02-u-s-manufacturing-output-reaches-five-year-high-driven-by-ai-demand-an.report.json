@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-02-u-s-manufacturing-output-reaches-five-year-high-driven-by-ai-demand-an.md",
+  "title": "U.S. Manufacturing Output Reaches Five-Year High Driven by AI Demand and Economic Growth",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "390 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The article hallucinates a 2026 date and lacks any hard data, concrete figures, or specific quotes, rendering it vague fluff rather than rigorous financial journalism.",
+    "overall": 5.3
+  },
+  "word_count": 390,
+  "decision": "pending"
+}
