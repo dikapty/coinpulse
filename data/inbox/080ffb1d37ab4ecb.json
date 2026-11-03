@@ -1,0 +1,11 @@
+{
+  "id": "080ffb1d37ab4ecb",
+  "title": "Bitcoin Lightning fix blocks a probe linking private channels to onchain funding",
+  "summary": "LDK’s October 25 fix rejects a funding-location lookup used by a probe requiring connections to both endpoints of an unannounced channel. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/bitcoin-lightning-fix-blocks-a-probe-linking-private-channels-to-onchain-funding/",
+  "category": "crypto",
+  "published": "2026-11-03T15:00:18+00:00",
+  "collected_at": "2026-11-03T23:46:13.754974+00:00",
+  "batch": "20261103-234612"
+}
