@@ -1,6 +1,6 @@
 {
-  "day": "2026-11-02",
-  "used": 15,
+  "day": "2026-11-03",
+  "used": 8,
   "exhausted": [
     "gemini-3.5-flash",
     "gemini-3.6-flash"

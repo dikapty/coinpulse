@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-03-brazil-s-mercado-bitcoin-suspends-withdrawals-following-reported-40-mi.md",
+  "title": "Brazil’s Mercado Bitcoin Suspends Withdrawals Following Reported $40 Million Security Hack",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "552 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-31-binance-hackers-deploy-novel-laundering-tactics-as-stolen-crypto-funds.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The article uses sound context and neutral language, but it completely fails journalistic integrity by hallucinating a non-existent $40M hack in November 2026.",
+    "overall": 5.3
+  },
+  "word_count": 552,
+  "decision": "pending"
+}

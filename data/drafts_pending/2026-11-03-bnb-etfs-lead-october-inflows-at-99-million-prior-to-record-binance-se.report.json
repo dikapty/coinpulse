@@ -1,0 +1,32 @@
+{
+  "file": "2026-11-03-bnb-etfs-lead-october-inflows-at-99-million-prior-to-record-binance-se.md",
+  "title": "BNB ETFs Lead October Inflows at $99 Million Prior to Record Binance Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "712 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "overall": 0.0,
+    "verdict": "scoring error: All LLM providers failed: MISSING_KEY: GROQ_API_KEY is empty (set it in .env or GitHub Secrets)"
+  },
+  "word_count": 712,
+  "decision": "pending"
+}

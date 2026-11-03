@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-03-s-p-500-valuation-shift-five-month-stagnation-pulls-multiples-below-hi.md",
+  "title": "S&P 500 Valuation Shift: Five-Month Stagnation Pulls Multiples Below Historical Averages",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "757 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 6,
+    "readability": 6,
+    "neutrality": 8,
+    "verdict": "The article relies on an impossible future source date (CNBC 2026) and suffers from excessive wordiness and repetitive mechanical explanations despite decent structural neutrality.",
+    "overall": 6.0
+  },
+  "word_count": 757,
+  "decision": "pending"
+}

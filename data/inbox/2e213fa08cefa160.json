@@ -1,0 +1,11 @@
+{
+  "id": "2e213fa08cefa160",
+  "title": "Eclair tightens Bitcoin funding rules after unconfirmed inputs put Lightning payments at risk",
+  "summary": "The October 27 release requires confirmed peer inputs for splices by default and improves recovery when a channel must close with funding still pending. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/eclair-tightens-bitcoin-funding-rules-after-unconfirmed-inputs-put-lightning-payments-at-risk/",
+  "category": "crypto",
+  "published": "2026-11-02T17:40:27+00:00",
+  "collected_at": "2026-11-03T01:23:47.276907+00:00",
+  "batch": "20261103-012346"
+}
