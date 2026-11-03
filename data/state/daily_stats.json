@@ -209,8 +209,9 @@
     "approved": 0
   },
   "2026-11-03": {
-    "collected": 44,
-    "written": 3,
-    "approved": 0
+    "collected": 101,
+    "written": 5,
+    "approved": 1,
+    "published": 1
   }
 }

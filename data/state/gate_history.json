@@ -802,5 +802,17 @@
     "title": "S&P 500 Valuation Shift: Five-Month Stagnation Pulls Multiples Below Historical Averages",
     "decision": "pending",
     "score": 6.0
+  },
+  {
+    "file": "2026-11-03-btcpay-server-urges-merchants-to-replace-bitcoin-wallets-following-1-6.md",
+    "title": "BTCPay Server Urges Merchants to Replace Bitcoin Wallets Following $1.6 Million Hot-Wallet Exploits",
+    "decision": "publish",
+    "score": 9.8
+  },
+  {
+    "file": "2026-11-03-macro-research-house-warns-of-potential-stock-market-trap-as-rare-econ.md",
+    "title": "Macro Research House Warns of Potential Stock Market Trap as Rare Economic Indicator Triggers",
+    "decision": "pending",
+    "score": 4.8
   }
 ]

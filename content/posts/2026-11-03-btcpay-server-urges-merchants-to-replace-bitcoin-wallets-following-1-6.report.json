@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-03-btcpay-server-urges-merchants-to-replace-bitcoin-wallets-following-1-6.md",
+  "title": "BTCPay Server Urges Merchants to Replace Bitcoin Wallets Following $1.6 Million Hot-Wallet Exploits",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "845 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 10,
+    "readability": 10,
+    "neutrality": 10,
+    "verdict": "This is a model of high-quality, responsible financial journalism that clearly communicates complex security risks without resorting to sensationalism or advice.",
+    "overall": 9.8
+  },
+  "word_count": 845,
+  "decision": "publish"
+}
