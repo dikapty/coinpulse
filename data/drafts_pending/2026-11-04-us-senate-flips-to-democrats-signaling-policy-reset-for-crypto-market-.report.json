@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-04-us-senate-flips-to-democrats-signaling-policy-reset-for-crypto-market-.md",
+  "title": "US Senate Flips to Democrats, Signaling Policy Reset for Crypto Market Oversight",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "569 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article relies on a premise—a 'US Senate flip' to Democrats—that is factually disconnected from current political reality, undermining its credibility despite its professional tone.",
+    "overall": 7.0
+  },
+  "word_count": 569,
+  "decision": "pending"
+}

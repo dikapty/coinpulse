@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-04-bitcoin-falls-below-77-000-as-democrats-win-house-majority-and-sherrod.md",
+  "title": "Bitcoin Falls Below $77,000 as Democrats Win House Majority and Sherrod Brown Reclaims Senate Seat",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "700 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-27-ripple-secures-final-occ-approval-to-establish-national-trust-bank-for.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "While the article provides clear context on political implications, it relies on secondary reporting for primary data and discusses events set in the future (2026), suggesting a potential disconnect between the copy and real-world verifiability.",
+    "overall": 6.3
+  },
+  "word_count": 700,
+  "decision": "pending"
+}

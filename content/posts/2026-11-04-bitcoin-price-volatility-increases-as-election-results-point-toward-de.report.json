@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-04-bitcoin-price-volatility-increases-as-election-results-point-toward-de.md",
+  "title": "Bitcoin Price Volatility Increases as Election Results Point Toward Democratic Majorities",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "691 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, professional report that effectively contextualizes market volatility against political developments while maintaining a disciplined editorial tone.",
+    "overall": 8.8
+  },
+  "word_count": 691,
+  "decision": "publish"
+}
