@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-04-bybit-ceo-ben-zhou-outlines-future-of-finance-driven-by-ai-and-tokeniz.md",
+  "title": "Bybit CEO Ben Zhou Outlines Future of Finance Driven by AI and Tokenization",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "655 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-26-fca-proposes-enhanced-oversight-for-unhosted-crypto-wallets.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The article provides a competent, professional summary of industry trends but leans heavily on corporate messaging rather than independent analysis.",
+    "overall": 8.0
+  },
+  "word_count": 655,
+  "decision": "publish"
+}

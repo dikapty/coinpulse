@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-04-binance-experiences-5-billion-net-outflow-following-6-billion-security.md",
+  "title": "Binance Experiences $5 Billion Net Outflow Following $6 Billion Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "766 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-30-binance-expands-investigation-into-massive-6-billion-security-breach.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a well-structured, objective analysis of the event, though it relies on secondary reporting sources that may aggregate complex financial data.",
+    "overall": 8.8
+  },
+  "word_count": 766,
+  "decision": "publish"
+}

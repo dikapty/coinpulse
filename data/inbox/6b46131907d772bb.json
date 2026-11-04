@@ -1,0 +1,11 @@
+{
+  "id": "6b46131907d772bb",
+  "title": "Matt Corallo Flags Critical Linux Kernel Flaw; Lightning Labs Ships LND Mitigation",
+  "summary": "Bitcoin Magazine Matt Corallo Flags Critical Linux Kernel Flaw; Lightning Labs Ships LND Mitigation Bitcoin Core and Lightning developer Matt Corallo highlighted CVE-2026-98432 on October 30, a use-after-free in the Linux kernel IPv4 TCP handshake code scored CVSS 9.8. Anthropic’s Frontier Red Team demonstrated a remote root exploit against systems with a Multipath TCP listener. This post Matt Corallo Flags Critical Linux Kernel Flaw; Lightning Labs Ships LND Mitigation first appeared on Bitcoin Magazine and is written by Juan Galt .",
+  "source_name": "Bitcoin Magazine",
+  "source_url": "https://bitcoinmagazine.com/news/matt-corallo-flags-critical-linux-kernel-flaw-lightning-labs-ships-lnd-mitigation",
+  "category": "crypto",
+  "published": "2026-11-04T18:31:56+00:00",
+  "collected_at": "2026-11-04T20:08:41.488847+00:00",
+  "batch": "20261104-200840"
+}

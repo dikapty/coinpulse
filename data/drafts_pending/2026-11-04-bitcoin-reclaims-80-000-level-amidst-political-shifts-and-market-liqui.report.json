@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-04-bitcoin-reclaims-80-000-level-amidst-political-shifts-and-market-liqui.md",
+  "title": "Bitcoin Reclaims $80,000 Level Amidst Political Shifts and Market Liquidations",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "729 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-01-bitcoin-s-october-performance-why-the-market-remains-resilient-above-7.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 7,
+    "neutrality": 6,
+    "verdict": "While the article provides valuable structural context and data, it relies on a single source's speculative narrative and contains significant inaccuracies regarding historical events (e.g., attributing an $80k milestone to a 'Binance hack' timeline that does not exist in 2026).",
+    "overall": 6.8
+  },
+  "word_count": 729,
+  "decision": "pending"
+}
