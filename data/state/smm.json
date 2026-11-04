@@ -60,13 +60,14 @@
     "2026-11-01-fbi-attributes-6-billion-binance-breach-to-north-korean-cyber-actors",
     "2026-11-01-bitcoin-s-october-performance-why-the-market-remains-resilient-above-7",
     "2026-11-01-binance-initiates-phased-withdrawals-following-6-3-billion-security-br",
-    "2026-11-03-btcpay-server-urges-merchants-to-replace-bitcoin-wallets-following-1-6"
+    "2026-11-03-btcpay-server-urges-merchants-to-replace-bitcoin-wallets-following-1-6",
+    "2026-11-04-bitcoin-price-volatility-increases-as-election-results-point-toward-de"
   ],
   "daily": {
     "2026-11-01": 3,
     "2026-11-02": 2,
     "2026-11-03": 2,
-    "2026-11-04": 1
+    "2026-11-04": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -79,12 +80,12 @@
     "2026-11-03": true,
     "2026-11-04": true
   },
-  "last_post_ts": 1793752888.60605,
+  "last_post_ts": 1793784521.727165,
   "articles_today": {
-    "2026-10-31": 2,
     "2026-11-01": 2,
     "2026-11-02": 1,
-    "2026-11-03": 1
+    "2026-11-03": 1,
+    "2026-11-04": 1
   },
   "last_digest_week": "2026-W43"
 }
