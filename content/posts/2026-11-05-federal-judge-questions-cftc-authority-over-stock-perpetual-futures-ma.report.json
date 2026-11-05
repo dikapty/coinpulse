@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-05-federal-judge-questions-cftc-authority-over-stock-perpetual-futures-ma.md",
+  "title": "Federal Judge Questions CFTC Authority Over Stock Perpetual Futures Market",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "850 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-05-el-salvador-maintains-bitcoin-holdings-following-imf-review-amid-globa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "This is a clean, well-structured, and highly professional piece of financial reporting that effectively synthesizes complex regulatory conflicts without resorting to speculation or bias.",
+    "overall": 9.0
+  },
+  "word_count": 850,
+  "decision": "publish"
+}

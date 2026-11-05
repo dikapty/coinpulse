@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-05-pro-crypto-congressional-shift-legislative-outlook-following-2026-elec.md",
+  "title": "Pro-Crypto Congressional Shift: Legislative Outlook Following 2026 Election Results",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "887 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": false,
+      "detail": "guaranteed"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a balanced, well-sourced analysis of legislative shifts, though it relies on third-party tracking metrics that require reader discretion.",
+    "overall": 8.8
+  },
+  "word_count": 887,
+  "decision": "pending"
+}

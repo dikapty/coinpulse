@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-05-bitcoin-holds-near-80-000-following-democratic-congressional-sweep.md",
+  "title": "Bitcoin Holds Near $80,000 Following Democratic Congressional Sweep",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "789 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article uses a fabricated premise—projecting a 2026 U.S. election result and specific market data—which invalidates the factual integrity of the reporting.",
+    "overall": 7.0
+  },
+  "word_count": 789,
+  "decision": "publish"
+}
