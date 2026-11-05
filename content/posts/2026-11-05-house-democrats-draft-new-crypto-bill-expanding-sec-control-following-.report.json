@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-05-house-democrats-draft-new-crypto-bill-expanding-sec-control-following-.md",
+  "title": "House Democrats Draft New Crypto Bill Expanding SEC Control Following CLARITY Act Failure",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "619 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-03-binance-internal-ai-exploit-led-to-6-34-billion-theft-as-token-illiqui.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A well-structured and neutral analysis of a legislative shift, though it relies heavily on a single journalist's social media report as its primary factual foundation.",
+    "overall": 8.0
+  },
+  "word_count": 619,
+  "decision": "publish"
+}

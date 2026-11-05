@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-05-social-security-solvency-debates-resurface-amid-political-shifts-and-f.md",
+  "title": "Social Security Solvency Debates Resurface Amid Political Shifts and Fiscal Pressures",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "676 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 6,
+    "verdict": "The article relies on vague generalities, hallucinates context regarding 'Trump's Iran war' without factual basis, and lacks the concrete data required for rigorous financial reporting.",
+    "overall": 5.3
+  },
+  "word_count": 676,
+  "decision": "pending"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "da5f8b31870353b5",
+  "title": "OpenAI Found 948 Linux Security Flaws—And Figured Out How to Exploit Them",
+  "summary": "An automated OpenAI system produced working exploits and draft fixes at roughly $1,279 per flaw, raising new questions about how cheaply AI can find holes in critical software at scale.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/382632/openai-linux-security-flaws-exploit",
+  "category": "crypto",
+  "published": "2026-11-05T19:16:03+00:00",
+  "collected_at": "2026-11-05T20:22:59.084661+00:00",
+  "batch": "20261105-202258"
+}
