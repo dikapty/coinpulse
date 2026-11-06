@@ -1,0 +1,11 @@
+{
+  "id": "fdb5ffc68c5897ee",
+  "title": "Chainalysis says breach exposed password hashes and live tokens",
+  "summary": "Chainalysis disclosed password hashes and live tokens were exposed after initially reporting only non-sensitive customer data was accessed.",
+  "source_name": "CoinTelegraph",
+  "source_url": "https://cointelegraph.com/news/chainalysis-cyberattack-password-hashes-live-tokens-exposed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "category": "crypto",
+  "published": "2026-11-06T06:54:34+00:00",
+  "collected_at": "2026-11-06T07:29:22.252860+00:00",
+  "batch": "20261106-072921"
+}

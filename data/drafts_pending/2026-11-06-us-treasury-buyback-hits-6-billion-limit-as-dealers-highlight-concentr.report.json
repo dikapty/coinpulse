@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-06-us-treasury-buyback-hits-6-billion-limit-as-dealers-highlight-concentr.md",
+  "title": "US Treasury Buyback Hits $6 Billion Limit as Dealers Highlight Concentration Risks",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "532 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 6,
+    "readability": 5,
+    "neutrality": 9,
+    "verdict": "The article uses an impossible future date (November 4, 2026) and suffers from repetitive wordiness, though it effectively explains the market mechanics of Treasury buyback concentration.",
+    "overall": 6.0
+  },
+  "word_count": 532,
+  "decision": "pending"
+}
