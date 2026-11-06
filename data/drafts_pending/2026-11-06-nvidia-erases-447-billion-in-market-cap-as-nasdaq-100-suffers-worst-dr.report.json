@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-06-nvidia-erases-447-billion-in-market-cap-as-nasdaq-100-suffers-worst-dr.md",
+  "title": "Nvidia Erases $447 Billion in Market Cap as Nasdaq-100 Suffers Worst Drop Since 2020",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "655 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-31-binance-hackers-deploy-novel-laundering-tactics-as-stolen-crypto-funds.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 6,
+    "verdict": "The article relies almost entirely on secondary citations from a single source and uses low-value 'AI-generated' analysis to pad its length, resulting in poor journalistic credibility.",
+    "overall": 5.3
+  },
+  "word_count": 655,
+  "decision": "pending"
+}

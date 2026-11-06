@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-06-draftkings-shares-plunge-over-26-following-costly-prediction-market-ex.md",
+  "title": "DraftKings Shares Plunge Over 26% Following Costly Prediction Market Expansion",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "557 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A model of professional financial reporting that effectively synthesizes market-moving news with necessary macroeconomic context without resorting to sensationalism.",
+    "overall": 9.5
+  },
+  "word_count": 557,
+  "decision": "pending"
+}

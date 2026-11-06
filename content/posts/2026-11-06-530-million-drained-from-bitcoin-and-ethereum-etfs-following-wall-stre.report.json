@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-06-530-million-drained-from-bitcoin-and-ethereum-etfs-following-wall-stre.md",
+  "title": "$530 Million Drained from Bitcoin and Ethereum ETFs Following Wall Street Sell-Off",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "614 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-30-crypto-market-shifts-new-investment-vehicles-debut-alongside-governanc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A disciplined, professional report that effectively contextualizes the correlation between traditional market volatility and digital asset liquidity, though it relies heavily on a single secondary source.",
+    "overall": 8.8
+  },
+  "word_count": 614,
+  "decision": "publish"
+}
