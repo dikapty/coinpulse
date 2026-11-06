@@ -65,13 +65,14 @@
     "2026-11-03-bitcoin-drops-alongside-treasury-yields-as-80-000-recovery-attempt-fai",
     "2026-11-05-federal-judge-questions-cftc-authority-over-stock-perpetual-futures-ma",
     "2026-11-05-bitcoin-holds-near-80-000-following-democratic-congressional-sweep",
-    "2026-11-05-robert-kiyosaki-reaffirms-bullish-bitcoin-stance-as-u-s-national-debt-"
+    "2026-11-05-robert-kiyosaki-reaffirms-bullish-bitcoin-stance-as-u-s-national-debt-",
+    "2026-11-05-house-democrats-draft-new-crypto-bill-expanding-sec-control-following-"
   ],
   "daily": {
     "2026-11-03": 2,
     "2026-11-04": 3,
     "2026-11-05": 3,
-    "2026-11-06": 2
+    "2026-11-06": 3
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -84,12 +85,12 @@
     "2026-11-05": true,
     "2026-11-06": true
   },
-  "last_post_ts": 1793957490.332991,
+  "last_post_ts": 1793988428.008914,
   "articles_today": {
     "2026-11-03": 1,
     "2026-11-04": 2,
     "2026-11-05": 2,
-    "2026-11-06": 1
+    "2026-11-06": 2
   },
   "last_digest_week": "2026-W43"
 }
