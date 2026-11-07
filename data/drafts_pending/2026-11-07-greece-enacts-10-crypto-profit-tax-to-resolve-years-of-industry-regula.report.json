@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-07-greece-enacts-10-crypto-profit-tax-to-resolve-years-of-industry-regula.md",
+  "title": "Greece Enacts 10% Crypto Profit Tax to Resolve Years of Industry Regulatory Uncertainty",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "528 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-17-visa-and-mastercard-expand-usdc-payout-capabilities-to-200-countries.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-written, neutral, and clear, the article leans heavily on generic analysis and lacks crucial details such as implementation dates or direct primary-source attribution.",
+    "overall": 7.5
+  },
+  "word_count": 528,
+  "decision": "pending"
+}

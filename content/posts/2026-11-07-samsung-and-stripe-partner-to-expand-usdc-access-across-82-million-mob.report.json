@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-07-samsung-and-stripe-partner-to-expand-usdc-access-across-82-million-mob.md",
+  "title": "Samsung and Stripe Partner to Expand USDC Access Across 82 Million Mobile Devices",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "618 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and objective, though it relies on a single secondary source for its primary claims regarding scale and partnership scope.",
+    "overall": 8.3
+  },
+  "word_count": 618,
+  "decision": "publish"
+}

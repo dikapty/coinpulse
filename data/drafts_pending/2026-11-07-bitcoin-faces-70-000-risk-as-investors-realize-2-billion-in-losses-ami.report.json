@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-07-bitcoin-faces-70-000-risk-as-investors-realize-2-billion-in-losses-ami.md",
+  "title": "Bitcoin Faces $70,000 Risk as Investors Realize $2 Billion in Losses Amid US Jobs Shock",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "555 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The article is written clearly and neutrally, but it fails fundamentally on facts by citing nonsensical future dates (November 2026) and describing a fictional macroeconomic environment.",
+    "overall": 5.5
+  },
+  "word_count": 555,
+  "decision": "pending"
+}
