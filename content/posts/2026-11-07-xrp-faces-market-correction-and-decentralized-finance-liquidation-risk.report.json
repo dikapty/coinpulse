@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-07-xrp-faces-market-correction-and-decentralized-finance-liquidation-risk.md",
+  "title": "XRP Faces Market Correction and Decentralized Finance Liquidation Risks",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "712 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-01-bitcoin-s-october-performance-why-the-market-remains-resilient-above-7.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A well-sourced, professional summary that successfully contextualizes technical DeFi risks without resorting to sensationalism or predictive speculation.",
+    "overall": 8.5
+  },
+  "word_count": 712,
+  "decision": "publish"
+}
