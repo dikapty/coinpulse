@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-08-evernorth-report-highlights-strategic-intersection-of-xrp-and-rlusd.md",
+  "title": "Evernorth Report Highlights Strategic Intersection of XRP and RLUSD",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "809 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "94% unique (most similar: 2026-11-07-market-volatility-intensifies-analyzing-downside-risks-for-btc-eth-and.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article relies on secondary aggregation of crypto-niche blogs rather than primary documentation, resulting in vague analysis that borders on corporate boilerplate.",
+    "overall": 5.8
+  },
+  "word_count": 809,
+  "decision": "pending"
+}

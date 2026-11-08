@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-08-hyperliquid-policy-center-ceo-predicts-industry-wide-shift-to-public-b.md",
+  "title": "Hyperliquid Policy Center CEO Predicts Industry-Wide Shift to Public Blockchain Infrastructure",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "845 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "92% unique (most similar: 2026-09-28-bitget-resumes-bitcoin-withdrawals-following-388-million-security-brea.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article provides strong context and well-cited sources, though it borders on promotional by framing a specific industry perspective as an inevitability rather than a debated hypothesis.",
+    "overall": 7.8
+  },
+  "word_count": 845,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-08-bitcoin-mining-difficulty-stagnation-a-sign-of-structural-industry-shi.md",
+  "title": "Bitcoin Mining Difficulty Stagnation: A Sign of Structural Industry Shifts",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "826 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-bitcoin-sentiment-plummets-to-extreme-fear-amid-10-000-decline.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a coherent and professional analysis of network fundamentals, though its reliance on citations from retail-focused crypto outlets rather than primary on-chain data reduces its authoritative weight.",
+    "overall": 8.3
+  },
+  "word_count": 826,
+  "decision": "publish"
+}
