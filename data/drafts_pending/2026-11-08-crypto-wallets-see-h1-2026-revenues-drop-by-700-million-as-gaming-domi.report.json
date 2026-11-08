@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-08-crypto-wallets-see-h1-2026-revenues-drop-by-700-million-as-gaming-domi.md",
+  "title": "Crypto Wallets See H1 2026 Revenues Drop by $700 Million as Gaming Dominates Consumer Market",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "442 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "The article is well-written and neutral, but it completely fails on factual integrity by reporting precise financial statistics for 'H1 2026'—a period in the future—citing a non-existent source URL.",
+    "overall": 5.8
+  },
+  "word_count": 442,
+  "decision": "pending"
+}

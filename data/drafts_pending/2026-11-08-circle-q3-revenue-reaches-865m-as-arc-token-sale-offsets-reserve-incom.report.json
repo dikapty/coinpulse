@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-08-circle-q3-revenue-reaches-865m-as-arc-token-sale-offsets-reserve-incom.md",
+  "title": "Circle Q3 Revenue Reaches $865M as ARC Token Sale Offsets Reserve Income Decline",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "481 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 3,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-written and neutral, but it relies on completely hallucinated financial facts, confusing the Layer-1 blockchain project 'Arc blockspace' with 'Circle' (the issuer of USDC).",
+    "overall": 5.5
+  },
+  "word_count": 481,
+  "decision": "pending"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-08-riot-platforms-signs-28-billion-ai-data-center-lease-with-anthropic-fo.md",
+  "title": "Riot Platforms Signs $28 Billion AI Data Center Lease With Anthropic for Texas Site",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "743 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "95% unique (most similar: 2026-11-07-market-volatility-intensifies-analyzing-downside-risks-for-btc-eth-and.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and objective, but it contains hallucinated dates and hyperlinked sources that do not exist, rendering the factual reliability criticaly flawed.",
+    "overall": 7.0
+  },
+  "word_count": 743,
+  "decision": "publish"
+}
