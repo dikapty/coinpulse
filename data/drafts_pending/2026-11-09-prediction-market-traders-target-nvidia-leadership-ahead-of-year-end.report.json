@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-09-prediction-market-traders-target-nvidia-leadership-ahead-of-year-end.md",
+  "title": "Prediction Market Traders Target Nvidia Leadership Ahead of Year-End",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "639 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 3,
+    "readability": 4,
+    "neutrality": 8,
+    "verdict": "A wordy, repetitive piece that fails to report the actual odds or trading volume of the prediction market contract it bases its entire premise on.",
+    "overall": 4.8
+  },
+  "word_count": 639,
+  "decision": "pending"
+}

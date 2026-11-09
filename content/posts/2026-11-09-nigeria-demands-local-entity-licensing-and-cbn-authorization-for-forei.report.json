@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-09-nigeria-demands-local-entity-licensing-and-cbn-authorization-for-forei.md",
+  "title": "Nigeria Demands Local Entity Licensing and CBN Authorization for Foreign Dollar-Stablecoin Issuers",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "716 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "While the story provides useful economic context and maintains a neutral tone, it suffers from repetitive phrasing and relies heavily on a future date anchor (November 9, 2026) that impairs factual precision.",
+    "overall": 7.5
+  },
+  "word_count": 716,
+  "decision": "publish"
+}
