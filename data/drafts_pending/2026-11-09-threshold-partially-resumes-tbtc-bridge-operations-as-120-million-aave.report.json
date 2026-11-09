@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-09-threshold-partially-resumes-tbtc-bridge-operations-as-120-million-aave.md",
+  "title": "Threshold Partially Resumes tBTC Bridge Operations as $120 Million Aave Reserve Remains Frozen",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "568 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "93% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 6,
+    "neutrality": 10,
+    "verdict": "While neutral and informative, the article severely suffers from repetitive text and contains anachronistic future dates (October/November 2026) that undermine factual reliability.",
+    "overall": 7.5
+  },
+  "word_count": 568,
+  "decision": "pending"
+}

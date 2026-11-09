@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-09-crypto-market-plunges-as-1-billion-liquidation-wave-hits-major-tokens.md",
+  "title": "Crypto Market Plunges as $1 Billion Liquidation Wave Hits Major Tokens",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "573 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-08-riot-platforms-signs-28-billion-ai-data-center-lease-with-anthropic-fo.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and neutral explanation of market mechanics, slightly undermined by rely-on-one-source attribution and futuristic dating.",
+    "overall": 8.5
+  },
+  "word_count": 573,
+  "decision": "pending"
+}

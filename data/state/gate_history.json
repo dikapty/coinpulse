@@ -988,5 +988,23 @@
     "title": "Hyperliquid Policy Center CEO Predicts Industry-Wide Shift to Public Blockchain Infrastructure",
     "decision": "publish",
     "score": 7.8
+  },
+  {
+    "file": "2026-11-09-crypto-market-plunges-as-1-billion-liquidation-wave-hits-major-tokens.md",
+    "title": "Crypto Market Plunges as $1 Billion Liquidation Wave Hits Major Tokens",
+    "decision": "pending",
+    "score": 8.5
+  },
+  {
+    "file": "2026-11-09-solana-moves-to-scrap-transaction-feature-exploited-in-270-million-dri.md",
+    "title": "Solana Moves to Scrap Transaction Feature Exploited in $270 Million Drift Attack",
+    "decision": "pending",
+    "score": 5.5
+  },
+  {
+    "file": "2026-11-09-threshold-partially-resumes-tbtc-bridge-operations-as-120-million-aave.md",
+    "title": "Threshold Partially Resumes tBTC Bridge Operations as $120 Million Aave Reserve Remains Frozen",
+    "decision": "pending",
+    "score": 7.5
   }
 ]

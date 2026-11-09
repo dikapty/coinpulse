@@ -1,0 +1,11 @@
+{
+  "id": "630008b7636ae981",
+  "title": "What is Zcash (ZEC)? How shielded transactions work",
+  "summary": "Zcash (ZEC) is a privacy coin and blockchain launched in 2016. It allows users to make both public and private transactions. The latter — called “shielded transactions” on the network — make use of zero-knowledge proofs called zk-SNARKs to verify payments without revealing the sender, recipient or amount. Zcash has emerged as one of the […]",
+  "source_name": "The Block",
+  "source_url": "https://www.theblock.co/learn/ecosystems/what-is-zcash-zec-435779",
+  "category": "crypto",
+  "published": "2026-11-09T02:36:01+00:00",
+  "collected_at": "2026-11-09T07:24:08.229488+00:00",
+  "batch": "20261109-072407"
+}
