@@ -72,13 +72,14 @@
     "2026-11-07-market-volatility-intensifies-analyzing-downside-risks-for-btc-eth-and",
     "2026-11-08-riot-platforms-signs-28-billion-ai-data-center-lease-with-anthropic-fo",
     "2026-11-08-hyperliquid-policy-center-ceo-predicts-industry-wide-shift-to-public-b",
-    "2026-11-08-bitcoin-mining-difficulty-stagnation-a-sign-of-structural-industry-shi"
+    "2026-11-08-bitcoin-mining-difficulty-stagnation-a-sign-of-structural-industry-shi",
+    "2026-11-10-nyse-proposes-avalanche-blockchain-for-stock-clearing-while-restrictin"
   ],
   "daily": {
     "2026-11-07": 4,
     "2026-11-08": 3,
     "2026-11-09": 2,
-    "2026-11-10": 1
+    "2026-11-10": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -91,12 +92,12 @@
     "2026-11-09": true,
     "2026-11-10": true
   },
-  "last_post_ts": 1794304902.234188,
+  "last_post_ts": 1794336189.132408,
   "articles_today": {
-    "2026-11-06": 2,
     "2026-11-07": 3,
     "2026-11-08": 2,
-    "2026-11-09": 1
+    "2026-11-09": 1,
+    "2026-11-10": 1
   },
   "last_digest_week": "2026-W43"
 }
