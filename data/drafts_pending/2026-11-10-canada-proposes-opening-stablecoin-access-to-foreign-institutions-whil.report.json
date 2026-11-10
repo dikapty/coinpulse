@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-10-canada-proposes-opening-stablecoin-access-to-foreign-institutions-whil.md",
+  "title": "Canada Proposes Opening Stablecoin Access to Foreign Institutions while Excluding Deposit Guarantees",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "532 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 7,
+    "neutrality": 8,
+    "verdict": "The article is built on a hallucinatory premise, as 'Budget 2026' does not exist and the cited source appears to be misrepresented or mischaracterized.",
+    "overall": 5.3
+  },
+  "word_count": 532,
+  "decision": "pending"
+}

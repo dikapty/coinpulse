@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-10-nyse-proposes-avalanche-blockchain-for-stock-clearing-while-restrictin.md",
+  "title": "NYSE Proposes Avalanche Blockchain for Stock Clearing While Restricting Direct Wallet Access",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "676 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-31-binance-hackers-deploy-novel-laundering-tactics-as-stolen-crypto-funds.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured, objective summary that clarifies the distinction between blockchain experimentation and the maintenance of traditional regulatory guardrails.",
+    "overall": 9.0
+  },
+  "word_count": 676,
+  "decision": "publish"
+}

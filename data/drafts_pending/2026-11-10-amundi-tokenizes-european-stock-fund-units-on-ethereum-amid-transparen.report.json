@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-10-amundi-tokenizes-european-stock-fund-units-on-ethereum-amid-transparen.md",
+  "title": "Amundi Tokenizes European Stock Fund Units on Ethereum Amid Transparency Questions",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "536 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A technically sound and objective report that highlights critical information gaps in a major financial development without resorting to speculative hype.",
+    "overall": 9.0
+  },
+  "word_count": 536,
+  "decision": "pending"
+}
