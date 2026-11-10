@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-10-xrp-price-faces-downward-pressure-amid-record-etf-outflows.md",
+  "title": "XRP Price Faces Downward Pressure Amid Record ETF Outflows",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "784 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-market-volatility-intensifies-analyzing-downside-risks-for-btc-eth-and.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 7,
+    "verdict": "While the reporting is clean and provides helpful institutional context, the reliance on vague, unverifiable source citations regarding future-dated (2026) data diminishes its credibility.",
+    "overall": 7.0
+  },
+  "word_count": 784,
+  "decision": "pending"
+}

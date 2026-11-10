@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-10-fed-governor-waller-signals-likely-december-rate-hike-weighs-potential.md",
+  "title": "Fed Governor Waller Signals Likely December Rate Hike, Weighs Potential Half-Point Increase",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "851 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article effectively synthesizes monetary policy with broader market context, though it relies on some filler content that loosely bridges unrelated topics like Social Security to central bank actions.",
+    "overall": 8.0
+  },
+  "word_count": 851,
+  "decision": "publish"
+}

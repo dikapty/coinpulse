@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-10-federal-reserve-policy-shift-rising-inflation-expectations-fuel-specul.md",
+  "title": "Federal Reserve Policy Shift: Rising Inflation Expectations Fuel Speculation of Half-Point Rate Hike",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "802 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article is a well-structured, objective summary of current monetary policy shifts that maintains a professional tone while providing necessary economic context.",
+    "overall": 8.8
+  },
+  "word_count": 802,
+  "decision": "publish"
+}
