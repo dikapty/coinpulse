@@ -1,0 +1,11 @@
+{
+  "id": "b7a2ae1390a1a8e1",
+  "title": "A High-Severity Bug Could Have Stalled Bitcoin Mining—Bitcoin Core Has a Fix",
+  "summary": "Three bugs—spanning denial-of-service and privacy issues rather than coin theft—have all been patched, with the most serious capable of halting a miner’s ability to build new blocks.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/383044/bitcoin-core-patches-bug-could-have-stalled-btc-mining",
+  "category": "crypto",
+  "published": "2026-11-11T16:58:57+00:00",
+  "collected_at": "2026-11-11T19:55:08.068282+00:00",
+  "batch": "20261111-195507"
+}

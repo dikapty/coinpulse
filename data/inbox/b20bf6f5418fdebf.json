@@ -1,0 +1,11 @@
+{
+  "id": "b20bf6f5418fdebf",
+  "title": "Bitcoin Covenants Part 5: MATT and OP_CHECKCONTRACTVERIFY — How Bitcoin could carry state across transactions",
+  "summary": "OP_CCV embeds contract state directly into Taproot output keys and enforces valid state transitions onchain. This makes it possible to achieve stateful contracts and compact fraud proofs.",
+  "source_name": "CoinTelegraph",
+  "source_url": "https://cointelegraph.com/research/bitcoin-covenants-part-5-matt-op-ccv?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "category": "crypto",
+  "published": "2026-11-11T13:26:18+00:00",
+  "collected_at": "2026-11-11T19:55:07.690699+00:00",
+  "batch": "20261111-195507"
+}

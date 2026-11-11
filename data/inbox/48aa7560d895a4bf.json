@@ -1,0 +1,11 @@
+{
+  "id": "48aa7560d895a4bf",
+  "title": "This Is Why Some Bitcoin Core Nodes Can Stop Building Blocks",
+  "summary": "A bug could leave a miner's node with transactions spending unavailable outputs, causing its block template to fail the validity check.",
+  "source_name": "CryptoPotato",
+  "source_url": "https://cryptopotato.com/this-is-why-some-bitcoin-core-nodes-can-stop-building-blocks/",
+  "category": "crypto",
+  "published": "2026-11-11T17:01:15+00:00",
+  "collected_at": "2026-11-11T19:55:08.466714+00:00",
+  "batch": "20261111-195507"
+}

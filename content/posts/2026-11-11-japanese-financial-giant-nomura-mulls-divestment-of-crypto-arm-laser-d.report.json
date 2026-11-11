@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-11-japanese-financial-giant-nomura-mulls-divestment-of-crypto-arm-laser-d.md",
+  "title": "Japanese Financial Giant Nomura Mulls Divestment of Crypto Arm Laser Digital",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "806 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-standard-chartered-adds-ripple-s-rlusd-to-custody-services-following-q.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "A well-structured and analytical piece, though its reliance on placeholder/hypothetical data points for 2026 necessitates verification of the underlying report status.",
+    "overall": 8.0
+  },
+  "word_count": 806,
+  "decision": "publish"
+}

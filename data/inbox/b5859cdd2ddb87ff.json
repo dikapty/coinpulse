@@ -1,0 +1,11 @@
+{
+  "id": "b5859cdd2ddb87ff",
+  "title": "Bitcoin Core discloses three patched security flaws, including high-severity mining bug",
+  "summary": "Bitcoin Core disclosed three previously patched security vulnerabilities, including a high-severity bug affecting block template creation.",
+  "source_name": "The Block",
+  "source_url": "https://www.theblock.co/news/ecosystems/2026-11-11-bitcoin-core-discloses-three-patched-security-flaws-including-high-severity-mining-bug-437862",
+  "category": "crypto",
+  "published": "2026-11-11T12:50:08+00:00",
+  "collected_at": "2026-11-11T19:55:08.195574+00:00",
+  "batch": "20261111-195507"
+}

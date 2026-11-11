@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-11-bitcoin-rainbow-chart-projects-wide-valuation-range-for-december-2026.md",
+  "title": "Bitcoin Rainbow Chart Projects Wide Valuation Range for December 2026",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "719 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-03-bitcoin-drops-alongside-treasury-yields-as-80-000-recovery-attempt-fai.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "The article provides a balanced, objective overview of a speculative technical model, though it leans heavily on descriptive repetition.",
+    "overall": 8.5
+  },
+  "word_count": 719,
+  "decision": "publish"
+}

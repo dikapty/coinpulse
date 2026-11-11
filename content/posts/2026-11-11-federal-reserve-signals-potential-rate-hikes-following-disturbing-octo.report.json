@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-11-federal-reserve-signals-potential-rate-hikes-following-disturbing-octo.md",
+  "title": "Federal Reserve Signals Potential Rate Hikes Following 'Disturbing' October Inflation Data",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "846 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-10-fed-governor-waller-signals-likely-december-rate-hike-weighs-potential.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article provides strong analytical context but relies on unverifiable, future-dated events and placeholder links that undermine its factual credibility.",
+    "overall": 7.3
+  },
+  "word_count": 846,
+  "decision": "publish"
+}
