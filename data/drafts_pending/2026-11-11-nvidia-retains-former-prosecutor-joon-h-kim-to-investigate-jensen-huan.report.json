@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-11-nvidia-retains-former-prosecutor-joon-h-kim-to-investigate-jensen-huan.md",
+  "title": "Nvidia Retains Former Prosecutor Joon H. Kim to Investigate Jensen Huang Espionage Allegations",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "585 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 2,
+    "readability": 7,
+    "neutrality": 9,
+    "verdict": "The article relies on a fabricated future date (November 10, 2026) and a fictitious corporate event, completely undermining its factual credibility despite its professional structure and tone.",
+    "overall": 4.8
+  },
+  "word_count": 585,
+  "decision": "pending"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-11-trump-media-reports-410-million-net-profit-driven-by-digital-asset-gai.md",
+  "title": "Trump Media Reports $410 Million Net Profit Driven by Digital Asset Gains",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "499 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 6,
+    "neutrality": 8,
+    "verdict": "The article provides solid financial context regarding paper crypto gains versus operational losses, but it suffers from excessive repetition and lacks specific operating revenue and net-loss figures from the actual earnings report.",
+    "overall": 7.3
+  },
+  "word_count": 499,
+  "decision": "pending"
+}

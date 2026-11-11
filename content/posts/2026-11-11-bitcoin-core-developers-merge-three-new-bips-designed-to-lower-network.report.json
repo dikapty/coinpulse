@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-11-bitcoin-core-developers-merge-three-new-bips-designed-to-lower-network.md",
+  "title": "Bitcoin Core Developers Merge Three New BIPs Designed to Lower Network Transaction Fees",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "658 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective summary of a complex technical proposal, though it docked points on factual precision by failing to name the specific BIP numbers.",
+    "overall": 8.5
+  },
+  "word_count": 658,
+  "decision": "publish"
+}
