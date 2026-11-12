@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-12-bitcoin-slumps-to-71k-following-jensen-huang-s-sudden-departure-from-n.md",
+  "title": "Bitcoin Slumps to $71K Following Jensen Huang’s Sudden Departure from Nvidia",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "723 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-03-bitcoin-drops-alongside-treasury-yields-as-80-000-recovery-attempt-fai.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 7,
+    "verdict": "The article is a hallucination built upon a fabricated major event, rendering the entire report factually void despite a professional journalistic tone.",
+    "overall": 5.0
+  },
+  "word_count": 723,
+  "decision": "pending"
+}
