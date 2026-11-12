@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-12-bitcoin-confronts-70-000-support-amid-broad-liquidity-contraction.md",
+  "title": "Bitcoin Confronts $70,000 Support Amid Broad Liquidity Contraction",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "780 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-bitcoin-sentiment-plummets-to-extreme-fear-amid-10-000-decline.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 7,
+    "verdict": "The article provides a structured and data-backed technical analysis, though it occasionally veers into prescriptive language regarding investor behavior.",
+    "overall": 8.3
+  },
+  "word_count": 780,
+  "decision": "publish"
+}

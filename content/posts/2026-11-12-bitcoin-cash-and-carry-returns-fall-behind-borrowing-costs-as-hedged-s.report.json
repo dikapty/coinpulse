@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-12-bitcoin-cash-and-carry-returns-fall-behind-borrowing-costs-as-hedged-s.md",
+  "title": "Bitcoin Cash-and-Carry Returns Fall Behind Borrowing Costs as Hedged Strategy Squeezes Yields",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "738 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-06-530-million-drained-from-bitcoin-and-ethereum-etfs-following-wall-stre.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A technically precise and objective piece of financial reporting that clearly articulates the mechanics of arbitrage and the current economic constraints facing institutional traders.",
+    "overall": 9.0
+  },
+  "word_count": 738,
+  "decision": "publish"
+}

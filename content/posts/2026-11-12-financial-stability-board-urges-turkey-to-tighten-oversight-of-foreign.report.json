@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-12-financial-stability-board-urges-turkey-to-tighten-oversight-of-foreign.md",
+  "title": "Financial Stability Board Urges Turkey to Tighten Oversight of Foreign Stablecoins",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "778 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-26-fca-proposes-enhanced-oversight-for-unhosted-crypto-wallets.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A well-structured, objective analysis that effectively contextualizes international regulatory pressures within the broader digital asset landscape.",
+    "overall": 9.0
+  },
+  "word_count": 778,
+  "decision": "publish"
+}
