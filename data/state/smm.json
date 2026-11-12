@@ -75,13 +75,14 @@
     "2026-11-08-bitcoin-mining-difficulty-stagnation-a-sign-of-structural-industry-shi",
     "2026-11-10-nyse-proposes-avalanche-blockchain-for-stock-clearing-while-restrictin",
     "2026-11-11-bitcoin-core-developers-merge-three-new-bips-designed-to-lower-network",
-    "2026-11-10-federal-reserve-policy-shift-rising-inflation-expectations-fuel-specul"
+    "2026-11-10-federal-reserve-policy-shift-rising-inflation-expectations-fuel-specul",
+    "2026-11-12-financial-stability-board-urges-turkey-to-tighten-oversight-of-foreign"
   ],
   "daily": {
     "2026-11-09": 2,
     "2026-11-10": 2,
     "2026-11-11": 3,
-    "2026-11-12": 1
+    "2026-11-12": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -94,12 +95,12 @@
     "2026-11-11": true,
     "2026-11-12": true
   },
-  "last_post_ts": 1794448558.340876,
+  "last_post_ts": 1794477426.872699,
   "articles_today": {
-    "2026-11-08": 2,
     "2026-11-09": 1,
     "2026-11-10": 1,
-    "2026-11-11": 2
+    "2026-11-11": 2,
+    "2026-11-12": 1
   },
   "last_digest_week": "2026-W43"
 }
