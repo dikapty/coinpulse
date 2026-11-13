@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-13-across-protocol-front-end-hijack-leads-to-401-900-loss-across-nine-wal.md",
+  "title": "Across Protocol Front-End Hijack Leads to $401,900 Loss Across Nine Wallets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "607 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-11-bitcoin-core-developers-merge-three-new-bips-designed-to-lower-network.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "While well-written, objective, and analytically sound, the article severely fails basic factual standards by falsely placing a real-world 2024 event into the year 2026.",
+    "overall": 7.3
+  },
+  "word_count": 607,
+  "decision": "publish"
+}

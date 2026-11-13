@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-13-bond-yields-surge-in-largest-spike-since-2022-as-fed-rate-hike-expecta.md",
+  "title": "Bond Yields Surge in Largest Spike Since 2022 as Fed Rate Hike Expectations Rise",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "527 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-written and structurally sound, but it loses heavy points on factual integrity due to an impossible future date (November 12, 2026) and a lack of specific data points (e.g., exact basis point moves or specific Treasury yields).",
+    "overall": 6.8
+  },
+  "word_count": 527,
+  "decision": "pending"
+}

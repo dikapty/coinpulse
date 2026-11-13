@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-13-doj-operation-tornado-nets-354-arrests-and-234-million-in-global-darkn.md",
+  "title": "DOJ Operation TorNado Nets 354 Arrests and $234 Million in Global Darknet Sweep",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "494 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-09-nigeria-demands-local-entity-licensing-and-cbn-authorization-for-forei.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 2,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-written and neutral, but it fails fundamentally on facts by reporting fictitious, future-dated events (November 2026) based on a non-existent source URL.",
+    "overall": 5.0
+  },
+  "word_count": 494,
+  "decision": "pending"
+}
