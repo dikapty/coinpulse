@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-13-bitcoin-falls-below-70-000-as-bullish-liquidations-hit-870-million.md",
+  "title": "Bitcoin Falls Below $70,000 as Bullish Liquidations Hit $870 Million",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "810 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-09-bitcoin-drops-toward-80-000-as-liquidations-top-1-billion-following-bu.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The article is severely compromised by hallucinated future dates (November 2026) and heavy, repetitive filler that dilutes a simple derivative liquidation story into an over-explained macro essay.",
+    "overall": 4.8
+  },
+  "word_count": 810,
+  "decision": "pending"
+}

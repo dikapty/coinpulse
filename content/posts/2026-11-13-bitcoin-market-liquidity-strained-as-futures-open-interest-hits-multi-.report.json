@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-13-bitcoin-market-liquidity-strained-as-futures-open-interest-hits-multi-.md",
+  "title": "Bitcoin Market Liquidity Strained as Futures Open Interest Hits Multi-Week High",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "752 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-28-visa-survey-56-of-americans-open-to-stablecoins-with-bank-style-protec.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-structured and objective in tone, the article fails on basic fact-checking by repeatedly referencing impossible future dates (late 2026).",
+    "overall": 7.0
+  },
+  "word_count": 752,
+  "decision": "publish"
+}
