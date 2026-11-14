@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-14-blackrock-spot-crypto-etfs-record-nearly-1-billion-in-outflows-over-on.md",
+  "title": "BlackRock Spot Crypto ETFs Record Nearly $1 Billion in Outflows Over One Week",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "834 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-31-binance-hackers-deploy-novel-laundering-tactics-as-stolen-crypto-funds.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 5,
+    "neutrality": 8,
+    "verdict": "The article severely fails basic fact-checking by hallucinating a post-dated 2026 timeline and presenting speculative macro/tech connections while bloated with repetitive fluff.",
+    "overall": 4.8
+  },
+  "word_count": 834,
+  "decision": "pending"
+}

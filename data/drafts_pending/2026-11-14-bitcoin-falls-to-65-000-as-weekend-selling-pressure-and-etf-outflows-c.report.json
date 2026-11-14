@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-14-bitcoin-falls-to-65-000-as-weekend-selling-pressure-and-etf-outflows-c.md",
+  "title": "Bitcoin Falls to $65,000 as Weekend Selling Pressure and ETF Outflows Challenge Key Support Levels",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "585 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-03-binance-internal-ai-exploit-led-to-6-34-billion-theft-as-token-illiqui.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-structured, clear, and informative about market mechanics, the article severely undermines its factual accuracy by introducing a fictitious future date (November 14, 2026) and conflating unrelated operational news (Binance reserves) with price action.",
+    "overall": 7.0
+  },
+  "word_count": 585,
+  "decision": "pending"
+}

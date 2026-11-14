@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-14-senator-warren-positioned-for-senate-banking-role-threatening-new-pres.md",
+  "title": "Senator Warren Positioned for Senate Banking Role, Threatening New Pressure on Crypto Banking Operations",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "674 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article is premised on a major factual error regarding control of the Senate and relies on clunky meta-disclaimers instead of delivering objective regulatory reporting.",
+    "overall": 6.0
+  },
+  "word_count": 674,
+  "decision": "pending"
+}
