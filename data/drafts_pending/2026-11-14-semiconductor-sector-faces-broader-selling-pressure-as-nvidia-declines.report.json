@@ -1,10 +1,10 @@
 {
-  "file": "2026-11-09-persistent-u-s-inflation-signals-december-fed-rate-increase-as-market-.md",
-  "title": "Persistent U.S. Inflation Signals December Fed Rate Increase as Market Rally Faces CPI Test",
+  "file": "2026-11-14-semiconductor-sector-faces-broader-selling-pressure-as-nvidia-declines.md",
+  "title": "Semiconductor Sector faces Broader Selling Pressure as Nvidia Declines and AI Trade Recalibrates",
   "checks": {
     "length": {
       "ok": true,
-      "detail": "721 words (min 600)"
+      "detail": "685 words (min 600)"
     },
     "sources": {
       "ok": true,
@@ -24,13 +24,13 @@
     }
   },
   "score": {
-    "facts": 4,
+    "facts": 3,
     "usefulness": 5,
-    "readability": 4,
+    "readability": 6,
     "neutrality": 9,
-    "verdict": "The article is completely void of actual data, quotes, or specific numbers, repeating high-level economic generalities across redundant sections.",
-    "overall": 5.5
+    "verdict": "While well-written and analytical, the article relies heavily on hallucinated future dates (November 13, 2026) and questionable cross-asset causal leaps, undermining its overall factual integrity.",
+    "overall": 5.8
   },
-  "word_count": 721,
+  "word_count": 685,
   "decision": "pending"
 }

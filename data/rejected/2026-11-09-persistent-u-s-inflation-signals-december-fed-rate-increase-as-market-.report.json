@@ -1,0 +1,37 @@
+{
+  "file": "2026-11-09-persistent-u-s-inflation-signals-december-fed-rate-increase-as-market-.md",
+  "title": "Persistent U.S. Inflation Signals December Fed Rate Increase as Market Rally Faces CPI Test",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "721 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The article is completely void of actual data, quotes, or specific numbers, repeating high-level economic generalities across redundant sections.",
+    "overall": 5.5
+  },
+  "word_count": 721,
+  "decision": "rejected",
+  "purge_reason": "auto-purged: unreviewed for 5+ days (hands-off mode)"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-14-coinbase-ai-trading-tools-allow-users-to-pause-bots-but-leave-open-ord.md",
+  "title": "Coinbase AI Trading Tools Allow Users to Pause Bots but Leave Open Orders Active",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "609 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-11-bitcoin-core-developers-merge-three-new-bips-designed-to-lower-network.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 7,
+    "neutrality": 10,
+    "verdict": "An accurate and highly neutral risk-analysis piece that suffers from repetitive prose and over-reliance on a single secondary source.",
+    "overall": 8.5
+  },
+  "word_count": 609,
+  "decision": "publish"
+}

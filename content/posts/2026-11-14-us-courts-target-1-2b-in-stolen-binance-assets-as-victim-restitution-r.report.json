@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-14-us-courts-target-1-2b-in-stolen-binance-assets-as-victim-restitution-r.md",
+  "title": "US Courts Target $1.2B in Stolen Binance Assets as Victim Restitution Remains Unresolved",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "658 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article provides sound contextual analysis of crypto legal processes, but it fails on factual integrity by hallucinating a future DOJ press release date (November 12, 2026).",
+    "overall": 7.5
+  },
+  "word_count": 658,
+  "decision": "publish"
+}
