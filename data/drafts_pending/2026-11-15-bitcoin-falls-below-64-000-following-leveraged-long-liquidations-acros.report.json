@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-15-bitcoin-falls-below-64-000-following-leveraged-long-liquidations-acros.md",
+  "title": "Bitcoin Falls Below $64,000 Following Leveraged Long Liquidations Across Derivatives Markets",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "625 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-11-11-bitcoin-core-developers-merge-three-new-bips-designed-to-lower-network.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 7,
+    "neutrality": 10,
+    "verdict": "The article is well-written and completely neutral, but it suffers from a fatal factual flaw by hallucinating a future date (November 2026) and attempting an absurdly forced correlation between oil tanker logistics and a weekend crypto liquidation.",
+    "overall": 5.8
+  },
+  "word_count": 625,
+  "decision": "pending"
+}

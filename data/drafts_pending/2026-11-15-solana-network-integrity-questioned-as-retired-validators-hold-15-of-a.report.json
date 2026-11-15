@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-15-solana-network-integrity-questioned-as-retired-validators-hold-15-of-a.md",
+  "title": "Solana Network Integrity Questioned as Retired Validators Hold 15% of Active Stake",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "533 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-14-us-courts-target-1-2b-in-stolen-binance-assets-as-victim-restitution-r.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While well-structured and neutral, the article fails basic editorial standards by relying on an impossible future date for its core dataset.",
+    "overall": 7.0
+  },
+  "word_count": 533,
+  "decision": "pending"
+}

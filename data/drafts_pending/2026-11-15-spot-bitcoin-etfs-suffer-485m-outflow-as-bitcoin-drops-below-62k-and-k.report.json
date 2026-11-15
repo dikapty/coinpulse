@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-15-spot-bitcoin-etfs-suffer-485m-outflow-as-bitcoin-drops-below-62k-and-k.md",
+  "title": "Spot Bitcoin ETFs Suffer $485M Outflow as Bitcoin Drops Below $62K and Kava Lend Exposes DeFi Risks",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "679 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-10-28-datavault-ai-stock-collapses-50-following-withdrawal-issues-with-150-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 2,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece is structurally sound and strictly neutral, but it severely fails editorial integrity by reporting entirely hallucinated, future-dated facts and market numbers for November 2026.",
+    "overall": 5.0
+  },
+  "word_count": 679,
+  "decision": "pending"
+}
