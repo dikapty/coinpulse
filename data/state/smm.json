@@ -81,13 +81,14 @@
     "2026-11-13-across-protocol-front-end-hijack-leads-to-401-900-loss-across-nine-wal",
     "2026-11-14-us-courts-target-1-2b-in-stolen-binance-assets-as-victim-restitution-r",
     "2026-11-14-coinbase-ai-trading-tools-allow-users-to-pause-bots-but-leave-open-ord",
-    "2026-11-13-bitcoin-market-liquidity-strained-as-futures-open-interest-hits-multi-"
+    "2026-11-13-bitcoin-market-liquidity-strained-as-futures-open-interest-hits-multi-",
+    "2026-11-12-federal-reserve-confronts-persistent-inflation-amid-shifting-bond-mark"
   ],
   "daily": {
     "2026-11-12": 3,
     "2026-11-13": 2,
     "2026-11-14": 4,
-    "2026-11-15": 1
+    "2026-11-15": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -100,12 +101,12 @@
     "2026-11-14": true,
     "2026-11-15": true
   },
-  "last_post_ts": 1794735426.639892,
+  "last_post_ts": 1794765047.288353,
   "articles_today": {
-    "2026-11-11": 2,
     "2026-11-12": 2,
     "2026-11-13": 1,
-    "2026-11-14": 3
+    "2026-11-14": 3,
+    "2026-11-15": 1
   },
   "last_digest_week": "2026-W43"
 }
