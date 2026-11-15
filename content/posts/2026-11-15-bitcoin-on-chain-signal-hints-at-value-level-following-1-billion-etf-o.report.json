@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-15-bitcoin-on-chain-signal-hints-at-value-level-following-1-billion-etf-o.md",
+  "title": "Bitcoin On-Chain Signal Hints at Value Level Following $1 Billion ETF Outflows",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "795 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-07-s-p-500-touches-record-highs-amid-macro-pressures-as-crypto-markets-fa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "While the article effectively contextualizes complex on-chain and macroeconomic data without offering direct financial advice, it is severely degraded by a blatant hallucination in the temporal anchor (citing a date in November 2026).",
+    "overall": 7.3
+  },
+  "word_count": 795,
+  "decision": "publish"
+}

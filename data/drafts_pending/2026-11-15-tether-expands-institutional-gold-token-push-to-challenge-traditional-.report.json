@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-15-tether-expands-institutional-gold-token-push-to-challenge-traditional-.md",
+  "title": "Tether Expands Institutional Gold Token Push to Challenge Traditional ETFs",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "859 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-08-riot-platforms-signs-28-billion-ai-data-center-lease-with-anthropic-fo.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 7,
+    "neutrality": 9,
+    "verdict": "While neutral and well-structured, the article loses credibility by citing nonsensical market claims—such as a non-existent 'one-year mark for Ripple XRP ETFs'—and padding the core Tether story with irrelevant crypto macro noise.",
+    "overall": 6.8
+  },
+  "word_count": 859,
+  "decision": "pending"
+}
