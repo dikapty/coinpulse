@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-16-payward-reports-q3-financial-decline-as-adjusted-ebitda-drops-67.md",
+  "title": "Payward Reports Q3 Financial Decline as Adjusted EBITDA Drops 67%",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "603 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-25-uae-led-global-operation-flags-39-billion-linked-to-crypto-and-online-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The piece lacks raw Q3 revenue/EBITDA dollar figures and padded its length with irrelevant side-stories about the DTCC and Solana instead of providing deep, direct analysis of Payward's performance.",
+    "overall": 6.5
+  },
+  "word_count": 603,
+  "decision": "pending"
+}

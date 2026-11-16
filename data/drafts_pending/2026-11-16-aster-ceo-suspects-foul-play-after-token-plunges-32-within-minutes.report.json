@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-16-aster-ceo-suspects-foul-play-after-token-plunges-32-within-minutes.md",
+  "title": "Aster CEO Suspects Foul Play After Token Plunges 32% Within Minutes",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "779 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-04-south-korea-considers-crypto-market-makers-after-yen-stablecoin-trades.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The article maintains good financial neutrality, but it suffers from excessive filler text, repetitive explanations of basic market mechanics, and a lack of specific names, dates, or detailed data beyond a single aggregated source.",
+    "overall": 6.5
+  },
+  "word_count": 779,
+  "decision": "pending"
+}

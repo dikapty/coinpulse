@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-16-bitcoin-bounces-from-62-000-low-as-cz-denies-binance-sell-off-rumors.md",
+  "title": "Bitcoin Bounces From $62,000 Low as CZ Denies Binance Sell-Off Rumors",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "517 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "92% unique (most similar: 2026-10-26-anchorpoint-delays-retail-stablecoin-timeline-to-prioritize-operationa.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 7,
+    "neutrality": 9,
+    "verdict": "The piece provides decent market context and maintains a neutral tone, but it relies on hallucinated future dates (2026), includes irrelevant tangential filler regarding Nvidia, and vaguely references 'four catalysts' without actually detailing them.",
+    "overall": 6.8
+  },
+  "word_count": 517,
+  "decision": "pending"
+}
