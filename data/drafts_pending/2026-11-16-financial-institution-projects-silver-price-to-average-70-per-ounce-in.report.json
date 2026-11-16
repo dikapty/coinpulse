@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-16-financial-institution-projects-silver-price-to-average-70-per-ounce-in.md",
+  "title": "Financial Institution Projects Silver Price to Average $70 Per Ounce in 2027",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "475 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-13-across-protocol-front-end-hijack-leads-to-401-900-loss-across-nine-wal.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 3,
+    "readability": 5,
+    "neutrality": 8,
+    "verdict": "The piece lacks basic journalistic rigor by failing to name the primary bank source, relying entirely on a secondary aggregator, and repeating generic commodity definitions to mask a total absence of hard data.",
+    "overall": 5.0
+  },
+  "word_count": 475,
+  "decision": "pending"
+}

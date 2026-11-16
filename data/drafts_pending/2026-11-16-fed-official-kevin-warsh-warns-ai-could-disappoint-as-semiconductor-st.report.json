@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-16-fed-official-kevin-warsh-warns-ai-could-disappoint-as-semiconductor-st.md",
+  "title": "Fed Official Kevin Warsh Warns AI Could Disappoint as Semiconductor Stocks Decline",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "671 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "5 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-10-fed-governor-waller-signals-likely-december-rate-hike-weighs-potential.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 1,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-structured and neutral, but it completely fails on factual accuracy by attributing quotes to Kevin Warsh as a 'Federal Reserve official' in November 2026, creating a hallucinated future scenario.",
+    "overall": 5.5
+  },
+  "word_count": 671,
+  "decision": "pending"
+}

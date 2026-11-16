@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-16-trezor-issues-firmware-patch-for-hardware-wallet-spy-chips-but-urges-s.md",
+  "title": "Trezor Issues Firmware Patch for Hardware Wallet Spy Chips but Urges Seed Migration",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "594 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "An exemplary piece of technical crypto-news editing that accurately translates technical security risks into clear, actionable, and neutral reporting.",
+    "overall": 9.3
+  },
+  "word_count": 594,
+  "decision": "pending"
+}
