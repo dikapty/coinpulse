@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-17-escalating-infrastructure-disruptions-highlight-growing-reliance-on-fr.md",
+  "title": "Escalating Infrastructure Disruptions Highlight Growing Reliance on Fragile Digital Networks",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "820 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article effectively contextualizes infrastructure failures within market trends, though it leans toward a thematic narrative that promotes traditional assets over digital ones.",
+    "overall": 7.5
+  },
+  "word_count": 820,
+  "decision": "publish"
+}

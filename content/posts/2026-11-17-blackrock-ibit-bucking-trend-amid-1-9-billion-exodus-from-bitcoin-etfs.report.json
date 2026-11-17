@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-17-blackrock-ibit-bucking-trend-amid-1-9-billion-exodus-from-bitcoin-etfs.md",
+  "title": "BlackRock IBIT Bucking Trend Amid $1.9 Billion Exodus From Bitcoin ETFs",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "785 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-22-bitcoin-etf-inflows-surge-amid-warnings-of-potential-market-volatility.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article provides a coherent analysis of market trends, though it relies on a single secondary source for data that cannot be independently verified due to the future-dated nature of the text.",
+    "overall": 8.0
+  },
+  "word_count": 785,
+  "decision": "publish"
+}
