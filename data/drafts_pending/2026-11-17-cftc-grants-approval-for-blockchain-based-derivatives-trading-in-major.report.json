@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-17-cftc-grants-approval-for-blockchain-based-derivatives-trading-in-major.md",
+  "title": "CFTC Grants Approval for Blockchain-Based Derivatives Trading in Major Regulatory Shift",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "759 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-29-mexc-reports-substantial-growth-in-tokenized-asset-trading-amid-ai-inf.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article is well-structured and provides strong contextual analysis, but its reliance on hypothetical, future-dated events (2026) and speculative market data necessitates a significant deduction in factual accuracy.",
+    "overall": 6.5
+  },
+  "word_count": 759,
+  "decision": "pending"
+}

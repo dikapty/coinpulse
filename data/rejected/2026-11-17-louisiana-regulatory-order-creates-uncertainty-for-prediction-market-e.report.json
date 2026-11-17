@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-17-louisiana-regulatory-order-creates-uncertainty-for-prediction-market-e.md",
+  "title": "Louisiana Regulatory Order Creates Uncertainty for Prediction Market Exchanges",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "779 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-29-whitebit-enhances-institutional-infrastructure-with-bcb-group-partners.md)"
+    },
+    "forbidden": {
+      "ok": false,
+      "detail": "gambling"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "The article is well-structured and objective but lacks external corroboration for the specific $370 million revenue figure and relies on a dead link.",
+    "overall": 7.8
+  },
+  "word_count": 779,
+  "decision": "reject"
+}

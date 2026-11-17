@@ -290,5 +290,11 @@
     "collected": 100,
     "written": 6,
     "approved": 0
+  },
+  "2026-11-17": {
+    "collected": 21,
+    "written": 3,
+    "approved": 1,
+    "published": 1
   }
 }

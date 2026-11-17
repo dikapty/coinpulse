@@ -1270,5 +1270,23 @@
     "title": "Trezor Issues Firmware Patch for Hardware Wallet Spy Chips but Urges Seed Migration",
     "decision": "pending",
     "score": 9.3
+  },
+  {
+    "file": "2026-11-17-cftc-grants-approval-for-blockchain-based-derivatives-trading-in-major.md",
+    "title": "CFTC Grants Approval for Blockchain-Based Derivatives Trading in Major Regulatory Shift",
+    "decision": "pending",
+    "score": 6.5
+  },
+  {
+    "file": "2026-11-17-louisiana-regulatory-order-creates-uncertainty-for-prediction-market-e.md",
+    "title": "Louisiana Regulatory Order Creates Uncertainty for Prediction Market Exchanges",
+    "decision": "reject",
+    "score": 7.8
+  },
+  {
+    "file": "2026-11-17-xrp-volume-spikes-99-amidst-liquidity-concerns-in-rlusd-transitions.md",
+    "title": "XRP Volume Spikes 99% Amidst Liquidity Concerns in RLUSD Transitions",
+    "decision": "publish",
+    "score": 8.3
   }
 ]
