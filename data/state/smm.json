@@ -84,13 +84,14 @@
     "2026-11-13-bitcoin-market-liquidity-strained-as-futures-open-interest-hits-multi-",
     "2026-11-12-federal-reserve-confronts-persistent-inflation-amid-shifting-bond-mark",
     "2026-11-15-bitcoin-on-chain-signal-hints-at-value-level-following-1-billion-etf-o",
-    "2026-11-12-bitcoin-cash-and-carry-returns-fall-behind-borrowing-costs-as-hedged-s"
+    "2026-11-12-bitcoin-cash-and-carry-returns-fall-behind-borrowing-costs-as-hedged-s",
+    "2026-11-17-xrp-volume-spikes-99-amidst-liquidity-concerns-in-rlusd-transitions"
   ],
   "daily": {
     "2026-11-14": 4,
     "2026-11-15": 2,
     "2026-11-16": 3,
-    "2026-11-17": 1
+    "2026-11-17": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -103,12 +104,12 @@
     "2026-11-16": true,
     "2026-11-17": true
   },
-  "last_post_ts": 1794912681.887538,
+  "last_post_ts": 1794945317.381554,
   "articles_today": {
-    "2026-11-13": 1,
     "2026-11-14": 3,
     "2026-11-15": 1,
-    "2026-11-16": 2
+    "2026-11-16": 2,
+    "2026-11-17": 1
   },
   "last_digest_week": "2026-W43"
 }
