@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-18-federal-reserve-expresses-heightened-concern-over-inflation-persistenc.md",
+  "title": "Federal Reserve Expresses Heightened Concern Over Inflation Persistence",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "845 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is a professional, well-contextualized summary that avoids sensationalism, though it relies slightly on repetitive phrasing.",
+    "overall": 8.5
+  },
+  "word_count": 845,
+  "decision": "publish"
+}

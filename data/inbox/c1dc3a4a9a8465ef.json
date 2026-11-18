@@ -1,0 +1,11 @@
+{
+  "id": "c1dc3a4a9a8465ef",
+  "title": "Bitcoin Covenants Part 6: FE Covenants — Enforcing covenants through cryptographically restricted signing keys",
+  "summary": "FE covenants encode spending constraints into the signing key, so only transactions that satisfy a predefined condition can be signed.",
+  "source_name": "CoinTelegraph",
+  "source_url": "https://cointelegraph.com/research/bitcoin-covenants-part-6-fe-covenants-enforcing-covenants-through-cryptographically-restricted-signing-keys?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "category": "crypto",
+  "published": "2026-11-18T14:04:50+00:00",
+  "collected_at": "2026-11-18T20:58:36.143742+00:00",
+  "batch": "20261118-205835"
+}

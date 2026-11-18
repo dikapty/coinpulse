@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-18-xrp-reclaims-1-psychological-threshold-amid-institutional-interest.md",
+  "title": "XRP Reclaims $1 Psychological Threshold Amid Institutional Interest",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "771 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-01-bitcoin-s-october-performance-why-the-market-remains-resilient-above-7.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 5,
+    "verdict": "The article provides helpful institutional context but relies heavily on speculative price predictions from secondary sources, undermining its professional objectivity.",
+    "overall": 6.5
+  },
+  "word_count": 771,
+  "decision": "pending"
+}

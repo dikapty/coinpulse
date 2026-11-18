@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-18-federal-reserve-signals-potential-for-more-aggressive-rate-hikes-as-in.md",
+  "title": "Federal Reserve Signals Potential for More Aggressive Rate Hikes as Inflation Concerns Persist",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "785 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-12-federal-reserve-confronts-persistent-inflation-amid-shifting-bond-mark.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "This is a high-quality, professional brief that effectively contextualizes central bank policy within a modern economic framework without resorting to sensationalism.",
+    "overall": 9.3
+  },
+  "word_count": 785,
+  "decision": "publish"
+}
