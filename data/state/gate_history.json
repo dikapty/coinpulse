@@ -1306,5 +1306,23 @@
     "title": "Vulnerability Found in Crypto Transaction Signing Processes Targets Ledger Users",
     "decision": "publish",
     "score": 8.8
+  },
+  {
+    "file": "2026-11-18-binance-resets-anthropic-futures-prompting-concerns-over-risk-manageme.md",
+    "title": "Binance Resets Anthropic Futures, Prompting Concerns Over Risk Management Tools",
+    "decision": "publish",
+    "score": 8.8
+  },
+  {
+    "file": "2026-11-18-binance-targets-five-asian-markets-following-6-3-billion-security-brea.md",
+    "title": "Binance Targets Five Asian Markets Following $6.3 Billion Security Breach",
+    "decision": "pending",
+    "score": 6.3
+  },
+  {
+    "file": "2026-11-18-ethereum-derivatives-market-sees-significant-decline-in-open-interest.md",
+    "title": "Ethereum Derivatives Market Sees Significant Decline in Open Interest",
+    "decision": "pending",
+    "score": 5.5
   }
 ]

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-18-binance-resets-anthropic-futures-prompting-concerns-over-risk-manageme.md",
+  "title": "Binance Resets Anthropic Futures, Prompting Concerns Over Risk Management Tools",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "781 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-11-bitcoin-price-declines-amid-heightened-geopolitical-tensions-and-oil-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a professional, well-contextualized analysis of a technical exchange failure, though it relies on external reporting for its foundational premise.",
+    "overall": 8.8
+  },
+  "word_count": 781,
+  "decision": "publish"
+}

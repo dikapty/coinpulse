@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-18-ethereum-derivatives-market-sees-significant-decline-in-open-interest.md",
+  "title": "Ethereum Derivatives Market Sees Significant Decline in Open Interest",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "879 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "11 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-bitcoin-sentiment-plummets-to-extreme-fear-amid-10-000-decline.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 5,
+    "usefulness": 7,
+    "readability": 4,
+    "neutrality": 6,
+    "verdict": "The article relies on sensationalized source material and repetitive, clunky anchor-text citations, despite offering a competent structural analysis of market mechanics.",
+    "overall": 5.5
+  },
+  "word_count": 879,
+  "decision": "pending"
+}

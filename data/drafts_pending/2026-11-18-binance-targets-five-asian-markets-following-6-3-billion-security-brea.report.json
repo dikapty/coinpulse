@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-18-binance-targets-five-asian-markets-following-6-3-billion-security-brea.md",
+  "title": "Binance Targets Five Asian Markets Following $6.3 Billion Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "755 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-28-robinhood-expands-ripple-integration-linking-29-million-users-to-xrp-l.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The article relies on speculative, non-existent future events and fictional 'facts' to discuss real-world market dynamics, rendering it a piece of creative writing rather than financial journalism.",
+    "overall": 6.3
+  },
+  "word_count": 755,
+  "decision": "pending"
+}
