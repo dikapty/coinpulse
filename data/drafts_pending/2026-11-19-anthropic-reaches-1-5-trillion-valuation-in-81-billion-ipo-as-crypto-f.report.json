@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-19-anthropic-reaches-1-5-trillion-valuation-in-81-billion-ipo-as-crypto-f.md",
+  "title": "Anthropic Reaches $1.5 Trillion Valuation in $81 Billion IPO as Crypto Futures Signal Strong Demand",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "636 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-11-15-bitcoin-on-chain-signal-hints-at-value-level-following-1-billion-etf-o.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article uses futuristic fake numbers ($1.5T valuation, $81B raise) mixed with real-world crypto derivatives reporting, rendering its core factual premise entirely inaccurate for a news desk.",
+    "overall": 5.8
+  },
+  "word_count": 636,
+  "decision": "pending"
+}

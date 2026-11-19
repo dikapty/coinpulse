@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-19-fed-s-goolsbee-warns-ai-surge-could-strain-us-capacity-and-overheat-ec.md",
+  "title": "Fed's Goolsbee Warns AI Surge Could Strain US Capacity and Overheat Economy",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "725 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-05-global-markets-diverge-on-shifting-interest-rate-expectations-and-regi.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "While neutral and analytically relevant, the article is heavily padded with repetitive macroeconomics fluff and features a suspicious future dateline (November 19, 2026) without citing direct quotes from the central banker.",
+    "overall": 6.5
+  },
+  "word_count": 725,
+  "decision": "pending"
+}

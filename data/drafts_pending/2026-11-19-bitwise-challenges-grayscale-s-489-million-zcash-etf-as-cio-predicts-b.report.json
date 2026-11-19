@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-19-bitwise-challenges-grayscale-s-489-million-zcash-etf-as-cio-predicts-b.md",
+  "title": "Bitwise Challenges Grayscale’s $489 Million Zcash ETF as CIO Predicts Bitcoin-to-ZEC Rotation",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "691 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-03-binance-internal-ai-exploit-led-to-6-34-billion-theft-as-token-illiqui.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The piece clearly explains complex ETF mechanics, but it suffers from severe factual flaws—including an absurd future date (November 18, 2026)—and repeats unverified blog claims without primary source verification.",
+    "overall": 6.8
+  },
+  "word_count": 691,
+  "decision": "pending"
+}
