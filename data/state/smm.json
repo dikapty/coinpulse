@@ -87,13 +87,14 @@
     "2026-11-12-bitcoin-cash-and-carry-returns-fall-behind-borrowing-costs-as-hedged-s",
     "2026-11-17-xrp-volume-spikes-99-amidst-liquidity-concerns-in-rlusd-transitions",
     "2026-11-18-binance-resets-anthropic-futures-prompting-concerns-over-risk-manageme",
-    "2026-11-18-federal-reserve-signals-potential-for-more-aggressive-rate-hikes-as-in"
+    "2026-11-18-federal-reserve-signals-potential-for-more-aggressive-rate-hikes-as-in",
+    "2026-11-19-wall-street-increases-bitcoin-exposure-with-4-2-billion-q3-investment"
   ],
   "daily": {
     "2026-11-16": 3,
     "2026-11-17": 2,
     "2026-11-18": 3,
-    "2026-11-19": 1
+    "2026-11-19": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -106,12 +107,12 @@
     "2026-11-18": true,
     "2026-11-19": true
   },
-  "last_post_ts": 1795084192.89667,
+  "last_post_ts": 1795116651.481439,
   "articles_today": {
-    "2026-11-15": 1,
     "2026-11-16": 2,
     "2026-11-17": 1,
-    "2026-11-18": 2
+    "2026-11-18": 2,
+    "2026-11-19": 1
   },
   "last_digest_week": "2026-W43"
 }
