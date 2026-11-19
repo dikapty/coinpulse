@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-19-wall-street-increases-bitcoin-exposure-with-4-2-billion-q3-investment.md",
+  "title": "Wall Street Increases Bitcoin Exposure With $4.2 Billion Q3 Investment",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "699 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 6,
+    "verdict": "The article provides a competent structural analysis of institutional trends, though it leans on biased sources and inserts tangential commentary that slightly distracts from the core data reporting.",
+    "overall": 7.5
+  },
+  "word_count": 699,
+  "decision": "publish"
+}

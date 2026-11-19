@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-19-bitcoin-testnet5-launches-as-network-developers-seek-fixes-to-protocol.md",
+  "title": "Bitcoin Testnet5 Launches as Network Developers Seek Fixes to Protocol Stability",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "628 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-08-hyperliquid-policy-center-ceo-predicts-industry-wide-shift-to-public-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "A professional, objective, and well-structured report on technical network infrastructure that avoids speculation and maintains a clear, authoritative tone.",
+    "overall": 9.0
+  },
+  "word_count": 628,
+  "decision": "publish"
+}

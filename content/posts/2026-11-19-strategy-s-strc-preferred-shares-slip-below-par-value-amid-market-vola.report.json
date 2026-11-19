@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-19-strategy-s-strc-preferred-shares-slip-below-par-value-amid-market-vola.md",
+  "title": "Strategy’s STRC Preferred Shares Slip Below Par Value Amid Market Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "795 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article provides a competent and objective analysis of market mechanics, though it relies on forward-dated scenarios and generalized market commentary that lacks deep company-specific investigative rigor.",
+    "overall": 8.0
+  },
+  "word_count": 795,
+  "decision": "publish"
+}
