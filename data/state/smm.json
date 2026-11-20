@@ -89,13 +89,14 @@
     "2026-11-18-binance-resets-anthropic-futures-prompting-concerns-over-risk-manageme",
     "2026-11-18-federal-reserve-signals-potential-for-more-aggressive-rate-hikes-as-in",
     "2026-11-19-wall-street-increases-bitcoin-exposure-with-4-2-billion-q3-investment",
-    "2026-11-19-strategy-s-strc-preferred-shares-slip-below-par-value-amid-market-vola"
+    "2026-11-19-strategy-s-strc-preferred-shares-slip-below-par-value-amid-market-vola",
+    "2026-11-19-bitcoin-testnet5-launches-as-network-developers-seek-fixes-to-protocol"
   ],
   "daily": {
     "2026-11-17": 2,
     "2026-11-18": 3,
     "2026-11-19": 2,
-    "2026-11-20": 2
+    "2026-11-20": 3
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -108,12 +109,12 @@
     "2026-11-19": true,
     "2026-11-20": true
   },
-  "last_post_ts": 1795169423.833813,
+  "last_post_ts": 1795201781.584696,
   "articles_today": {
     "2026-11-17": 1,
     "2026-11-18": 2,
     "2026-11-19": 1,
-    "2026-11-20": 1
+    "2026-11-20": 2
   },
   "last_digest_week": "2026-W43"
 }
