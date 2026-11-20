@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-20-federal-reserve-prioritizes-inflation-fight-over-stock-market-selloff-.md",
+  "title": "Federal Reserve Prioritizes Inflation Fight Over Stock Market Selloff as Rate Hikes Continue",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "649 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 3,
+    "usefulness": 6,
+    "readability": 7,
+    "neutrality": 6,
+    "verdict": "The article fabricates a 2026 timeline and includes misleading claims (e.g., framing IBIT outflows as BlackRock 'dumping' Bitcoin), though it provides decent context regarding the Fed's stance on inflation.",
+    "overall": 5.5
+  },
+  "word_count": 649,
+  "decision": "pending"
+}

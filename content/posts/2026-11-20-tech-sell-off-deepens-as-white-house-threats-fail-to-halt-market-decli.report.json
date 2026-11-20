@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-20-tech-sell-off-deepens-as-white-house-threats-fail-to-halt-market-decli.md",
+  "title": "Tech Sell-Off Deepens as White House Threats Fail to Halt Market Decline",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "652 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-02-diverging-monetary-policies-fed-holds-steady-as-bank-of-japan-signals-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "While the article logically connects tech sell-offs to regulatory and environmental headwinds, it relies heavily on unspecified generic assertions and an unverified future date (November 2026), dampening its factual reliability.",
+    "overall": 7.3
+  },
+  "word_count": 652,
+  "decision": "publish"
+}
