@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-20-state-of-california-sues-openai-over-alleged-ai-agent-control-failures.md",
+  "title": "State of California Sues OpenAI Over Alleged AI Agent Control Failures",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "564 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-10-28-bitcoin-applications-face-fee-drain-risks-linked-to-software-library-b.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 5,
+    "readability": 8,
+    "neutrality": 6,
+    "verdict": "The article is a complete fabrication, as there is no record of the State of California suing OpenAI for '80 lost control instances' in late 2026.",
+    "overall": 5.3
+  },
+  "word_count": 564,
+  "decision": "pending"
+}

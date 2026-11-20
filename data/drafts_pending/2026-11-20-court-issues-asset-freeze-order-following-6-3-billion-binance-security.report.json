@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-20-court-issues-asset-freeze-order-following-6-3-billion-binance-security.md",
+  "title": "Court Issues Asset Freeze Order Following $6.3 Billion Binance Security Breach",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "650 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-09-nigeria-demands-local-entity-licensing-and-cbn-authorization-for-forei.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article relies on a single, highly questionable source regarding a non-existent $6.3 billion Binance hack, rendering the factual basis entirely unreliable.",
+    "overall": 6.5
+  },
+  "word_count": 650,
+  "decision": "pending"
+}
