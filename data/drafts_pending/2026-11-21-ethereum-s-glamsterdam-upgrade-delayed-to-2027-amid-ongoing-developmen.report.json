@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-21-ethereum-s-glamsterdam-upgrade-delayed-to-2027-amid-ongoing-developmen.md",
+  "title": "Ethereum’s Glamsterdam Upgrade Delayed to 2027 Amid Ongoing Development Challenges",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "821 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-18-binance-resets-anthropic-futures-prompting-concerns-over-risk-manageme.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 7,
+    "neutrality": 6,
+    "verdict": "The article relies on a fabricated event regarding an 'Ethereum Glamsterdam upgrade,' rendering the entire premise factually null despite the coherent structure and neutral tone.",
+    "overall": 4.8
+  },
+  "word_count": 821,
+  "decision": "pending"
+}

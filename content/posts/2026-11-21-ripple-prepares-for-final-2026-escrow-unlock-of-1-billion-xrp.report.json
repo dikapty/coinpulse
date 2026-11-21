@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-21-ripple-prepares-for-final-2026-escrow-unlock-of-1-billion-xrp.md",
+  "title": "Ripple Prepares for Final 2026 Escrow Unlock of 1 Billion XRP",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "751 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article provides a balanced, well-structured overview of a scheduled market event while successfully avoiding speculative hyperbole.",
+    "overall": 9.0
+  },
+  "word_count": 751,
+  "decision": "publish"
+}

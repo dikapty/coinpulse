@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-21-aave-faces-liquidity-constraints-following-multi-billion-dollar-usdc-b.md",
+  "title": "Aave Faces Liquidity Constraints Following Multi-Billion Dollar USDC Borrow Cap",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "828 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-19-strategy-s-strc-preferred-shares-slip-below-par-value-amid-market-vola.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 8,
+    "verdict": "A well-structured and informative analysis that successfully contextualizes complex DeFi mechanics, though it relies heavily on a single external source for its quantitative data points.",
+    "overall": 8.5
+  },
+  "word_count": 828,
+  "decision": "publish"
+}
