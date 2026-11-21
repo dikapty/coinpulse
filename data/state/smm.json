@@ -91,13 +91,14 @@
     "2026-11-19-wall-street-increases-bitcoin-exposure-with-4-2-billion-q3-investment",
     "2026-11-19-strategy-s-strc-preferred-shares-slip-below-par-value-amid-market-vola",
     "2026-11-19-bitcoin-testnet5-launches-as-network-developers-seek-fixes-to-protocol",
-    "2026-11-21-dbs-partners-with-jpmorgan-and-circle-to-enable-24-7-usdc-settlement"
+    "2026-11-21-dbs-partners-with-jpmorgan-and-circle-to-enable-24-7-usdc-settlement",
+    "2026-11-21-bitcoin-prices-slip-to-2024-lows-amidst-broad-market-volatility"
   ],
   "daily": {
     "2026-11-18": 3,
     "2026-11-19": 2,
     "2026-11-20": 3,
-    "2026-11-21": 2
+    "2026-11-21": 3
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -110,12 +111,12 @@
     "2026-11-20": true,
     "2026-11-21": true
   },
-  "last_post_ts": 1795255055.537181,
+  "last_post_ts": 1795284295.013708,
   "articles_today": {
     "2026-11-18": 2,
     "2026-11-19": 1,
     "2026-11-20": 2,
-    "2026-11-21": 1
+    "2026-11-21": 2
   },
   "last_digest_week": "2026-W43"
 }
