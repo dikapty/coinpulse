@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-21-bitcoin-prices-slip-to-2024-lows-amidst-broad-market-volatility.md",
+  "title": "Bitcoin Prices Slip to 2024 Lows Amidst Broad Market Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "836 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-13-bitcoin-price-volatility-intensifies-amid-major-liquidations-and-tech-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "This is a high-quality, professional financial summary that effectively contextualizes asset price movements within broader macroeconomic trends without resorting to sensationalism.",
+    "overall": 9.0
+  },
+  "word_count": 836,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-21-bitcoin-mining-profitability-under-pressure-as-mining-difficulty-faces.md",
+  "title": "Bitcoin Mining Profitability Under Pressure as Mining Difficulty Faces Significant Hike",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "827 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-market-volatility-intensifies-analyzing-downside-risks-for-btc-eth-and.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides clear, objective analysis of network mechanics, though it relies on generic placeholders for data sources which prevents full verification of the specific 2026 figures cited.",
+    "overall": 8.0
+  },
+  "word_count": 827,
+  "decision": "publish"
+}

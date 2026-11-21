@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-21-dbs-partners-with-jpmorgan-and-circle-to-enable-24-7-usdc-settlement.md",
+  "title": "DBS Partners with JPMorgan and Circle to Enable 24/7 USDC Settlement",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "761 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-25-uae-led-global-operation-flags-39-billion-linked-to-crypto-and-online-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured, professional, and objective analysis that contextualizes institutional blockchain adoption without resorting to industry hype.",
+    "overall": 9.0
+  },
+  "word_count": 761,
+  "decision": "publish"
+}
