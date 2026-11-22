@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-22-u-s-stock-market-enters-rare-oversold-territory-after-weekly-decline.md",
+  "title": "U.S. Stock Market Enters Rare Oversold Territory After Weekly Decline",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "652 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-23-spot-bitcoin-etfs-saw-capital-outflows-in-7-of-8-market-crashes-dwf-la.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 3,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "This article is an unsatisfactory mix of hallucinated future market data, absent hard numbers, and repetitive structural fluff.",
+    "overall": 4.5
+  },
+  "word_count": 652,
+  "decision": "pending"
+}
