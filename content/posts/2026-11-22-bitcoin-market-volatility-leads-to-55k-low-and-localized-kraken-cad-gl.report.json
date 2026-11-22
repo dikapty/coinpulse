@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-22-bitcoin-market-volatility-leads-to-55k-low-and-localized-kraken-cad-gl.md",
+  "title": "Bitcoin Market Volatility Leads to $55K Low and Localized Kraken CAD Glitch",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "608 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-08-riot-platforms-signs-28-billion-ai-data-center-lease-with-anthropic-fo.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "While the article provides sound technical context regarding order book liquidity, it contains a glaring factual error by citing a date in the year 2026.",
+    "overall": 7.0
+  },
+  "word_count": 608,
+  "decision": "publish"
+}

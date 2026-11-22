@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-22-swiss-regulators-approve-first-retail-spot-bitcoin-etf-by-bit-asset-ma.md",
+  "title": "Swiss Regulators Approve First Retail Spot Bitcoin ETF by BIT Asset Management",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "623 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-10-28-datavault-ai-stock-collapses-50-following-withdrawal-issues-with-150-m.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "While neutral and clear, the article suffers from a severe factual anomaly regarding the far-off 2026 launch date and relies heavily on repetitive fluff to explain standard ETF mechanics.",
+    "overall": 7.8
+  },
+  "word_count": 623,
+  "decision": "publish"
+}
