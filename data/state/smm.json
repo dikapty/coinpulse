@@ -95,13 +95,14 @@
     "2026-11-21-bitcoin-prices-slip-to-2024-lows-amidst-broad-market-volatility",
     "2026-11-22-swiss-regulators-approve-first-retail-spot-bitcoin-etf-by-bit-asset-ma",
     "2026-11-22-solana-quantum-resistant-testnet-suffers-90-throughput-drop-iosco-data",
-    "2026-11-23-ai-banking-agent-fails-92-of-97-real-world-simulations-after-scoring-p"
+    "2026-11-23-ai-banking-agent-fails-92-of-97-real-world-simulations-after-scoring-p",
+    "2026-11-22-bitcoin-market-volatility-leads-to-55k-low-and-localized-kraken-cad-gl"
   ],
   "daily": {
     "2026-11-20": 3,
     "2026-11-21": 3,
     "2026-11-22": 3,
-    "2026-11-23": 2
+    "2026-11-23": 3
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -114,12 +115,12 @@
     "2026-11-22": true,
     "2026-11-23": true
   },
-  "last_post_ts": 1795431296.797581,
+  "last_post_ts": 1795473889.677439,
   "articles_today": {
     "2026-11-20": 2,
     "2026-11-21": 2,
     "2026-11-22": 2,
-    "2026-11-23": 1
+    "2026-11-23": 2
   },
   "last_digest_week": "2026-W43"
 }
