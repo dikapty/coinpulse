@@ -1,0 +1,11 @@
+{
+  "id": "ba38869b7ea0bdf0",
+  "title": "Solana’s new memory checks could make some older app transactions fail",
+  "summary": "A replay exposed an Anchor account handoff that can fail under new memory checks, while a separate switch removes validator data copies. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/solanas-new-memory-checks-could-make-some-older-app-transactions-fail/",
+  "category": "crypto",
+  "published": "2026-11-23T03:05:58+00:00",
+  "collected_at": "2026-11-23T08:24:50.661904+00:00",
+  "batch": "20261123-082449"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-23-ai-banking-agent-fails-92-of-97-real-world-simulations-after-scoring-p.md",
+  "title": "AI Banking Agent Fails 92 of 97 Real-World Simulations After Scoring Perfect Benchmark Results",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "718 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-26-canada-proposes-direct-stablecoin-redemptions-for-small-holders-with-1.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "While the article logically explains the risks of AI benchmark inflation in banking, its factual score is degraded by referencing non-existent future dates and introducing loosely related crypto micro-transaction stats.",
+    "overall": 7.8
+  },
+  "word_count": 718,
+  "decision": "publish"
+}

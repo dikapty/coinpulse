@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-23-on-chain-audit-shows-bitquery-discrepancy-in-maple-s-disclosed-bitcoin.md",
+  "title": "On-Chain Audit Shows Bitquery Discrepancy in Maple's Disclosed Bitcoin Wallets",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "576 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 8,
+    "readability": 6,
+    "neutrality": 8,
+    "verdict": "A well-contextualized and neutral analysis of a real-world accounting gap, though heavily penalized for inventing a futuristic publication date (November 18, 2026) and padding the text with repetitive explanations.",
+    "overall": 7.3
+  },
+  "word_count": 576,
+  "decision": "pending"
+}

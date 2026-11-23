@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-23-blackrock-staked-ethereum-etf-framework-permits-redemption-delays-unde.md",
+  "title": "BlackRock Staked Ethereum ETF Framework Permits Redemption Delays Under Unstaking Constraints",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "603 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-13-across-protocol-front-end-hijack-leads-to-401-900-loss-across-nine-wal.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "While neutral and informative regarding structural ETF mechanics, the article is severely undermined by hallucinated future dates (November 2026) and excessively dense academic prose.",
+    "overall": 6.0
+  },
+  "word_count": 603,
+  "decision": "pending"
+}
