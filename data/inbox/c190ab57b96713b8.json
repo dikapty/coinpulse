@@ -1,0 +1,11 @@
+{
+  "id": "c190ab57b96713b8",
+  "title": "Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits",
+  "summary": "Coinkite’s postmortem reveals a software random-number generator shipped in place of the hardware one for over five years, slipping past at least 15 reviews.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/383930/coldcard-bitcoin-exploit-how-hidden-flaw-survived-years-audits",
+  "category": "crypto",
+  "published": "2026-11-24T21:16:02+00:00",
+  "collected_at": "2026-11-24T22:50:00.541265+00:00",
+  "batch": "20261124-225000"
+}
