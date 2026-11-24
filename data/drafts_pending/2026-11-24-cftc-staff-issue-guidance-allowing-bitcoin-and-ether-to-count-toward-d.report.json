@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-24-cftc-staff-issue-guidance-allowing-bitcoin-and-ether-to-count-toward-d.md",
+  "title": "CFTC Staff Issue Guidance Allowing Bitcoin and Ether to Count Toward Derivatives Firms' Operating Expenses",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "569 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-after-387-5-million-hack-as-outflow.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 6,
+    "readability": 5,
+    "neutrality": 9,
+    "verdict": "While neutral and fact-based, the article is heavily repetitive, lacks specific regulatory metrics or direct quotes from the advisory, and relies on generic context.",
+    "overall": 6.8
+  },
+  "word_count": 569,
+  "decision": "pending"
+}

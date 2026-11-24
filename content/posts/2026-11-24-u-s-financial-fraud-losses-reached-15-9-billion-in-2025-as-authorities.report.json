@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-24-u-s-financial-fraud-losses-reached-15-9-billion-in-2025-as-authorities.md",
+  "title": "U.S. Financial Fraud Losses Reached $15.9 Billion in 2025 as Authorities Implement New Combat Measures",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "653 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-14-coinbase-ai-trading-tools-allow-users-to-pause-bots-but-leave-open-ord.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article provides a competent overview of the fraud landscape but relies on a single source for expert analysis and lacks sufficient year-over-year comparative data to provide true context.",
+    "overall": 7.5
+  },
+  "word_count": 653,
+  "decision": "publish"
+}

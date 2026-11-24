@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-24-polymarket-wallets-generate-350-000-payout-following-trump-statements-.md",
+  "title": "Polymarket Wallets Generate $350,000 Payout Following Trump Statements on Nvidia",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "636 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "4 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-31-banking-sector-faces-349b-risk-from-private-credit-s-cashless-loan-int.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 2,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-written and neutral, but it severely fails basic fact-checking by hallucinating a fictional core premise involving a future date (November 2026) and a nonsensical event (Trump asking Nvidia to rehire its current, active CEO, Jensen Huang).",
+    "overall": 5.3
+  },
+  "word_count": 636,
+  "decision": "pending"
+}
