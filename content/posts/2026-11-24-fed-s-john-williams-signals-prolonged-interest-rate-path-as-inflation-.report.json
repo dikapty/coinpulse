@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-24-fed-s-john-williams-signals-prolonged-interest-rate-path-as-inflation-.md",
+  "title": "Fed’s John Williams Signals Prolonged Interest Rate Path as Inflation Target Looms",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "798 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-18-federal-reserve-expresses-heightened-concern-over-inflation-persistenc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article provides a competent, professional summary of central bank policy implications, though it relies heavily on corporate-style jargon that adds length without necessarily increasing information density.",
+    "overall": 8.5
+  },
+  "word_count": 798,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-24-nvidia-leadership-shift-drives-market-rally-and-crypto-volatility.md",
+  "title": "Nvidia Leadership Shift Drives Market Rally and Crypto Volatility",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "864 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-18-federal-reserve-expresses-heightened-concern-over-inflation-persistenc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is a well-structured piece of financial analysis, but its credibility is fatally undermined by the presentation of entirely fictional, non-existent future events as historical fact.",
+    "overall": 6.5
+  },
+  "word_count": 864,
+  "decision": "pending"
+}

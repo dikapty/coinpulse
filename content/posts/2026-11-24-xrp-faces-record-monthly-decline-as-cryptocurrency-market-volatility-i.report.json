@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-24-xrp-faces-record-monthly-decline-as-cryptocurrency-market-volatility-i.md",
+  "title": "XRP Faces Record Monthly Decline as Cryptocurrency Market Volatility Intensifies",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "796 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "6 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-bitcoin-sentiment-plummets-to-extreme-fear-amid-10-000-decline.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 6,
+    "readability": 7,
+    "neutrality": 8,
+    "verdict": "The article is well-structured and cites its sources, but relies too heavily on a single outlet, leading to a narrow and somewhat repetitive perspective.",
+    "overall": 7.3
+  },
+  "word_count": 796,
+  "decision": "publish"
+}
