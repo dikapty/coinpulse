@@ -97,13 +97,14 @@
     "2026-11-22-solana-quantum-resistant-testnet-suffers-90-throughput-drop-iosco-data",
     "2026-11-23-ai-banking-agent-fails-92-of-97-real-world-simulations-after-scoring-p",
     "2026-11-22-bitcoin-market-volatility-leads-to-55k-low-and-localized-kraken-cad-gl",
-    "2026-11-24-xrp-faces-record-monthly-decline-as-cryptocurrency-market-volatility-i"
+    "2026-11-24-xrp-faces-record-monthly-decline-as-cryptocurrency-market-volatility-i",
+    "2026-11-25-vaneck-removes-gemini-as-custodian-for-1-billion-digital-asset-etf-por"
   ],
   "daily": {
     "2026-11-22": 3,
     "2026-11-23": 3,
     "2026-11-24": 2,
-    "2026-11-25": 1
+    "2026-11-25": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -116,12 +117,12 @@
     "2026-11-24": true,
     "2026-11-25": true
   },
-  "last_post_ts": 1795606099.472512,
+  "last_post_ts": 1795648185.284931,
   "articles_today": {
-    "2026-11-21": 2,
     "2026-11-22": 2,
     "2026-11-23": 2,
-    "2026-11-24": 1
+    "2026-11-24": 1,
+    "2026-11-25": 1
   },
   "last_digest_week": "2026-W43"
 }
