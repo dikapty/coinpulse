@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-25-cftc-staff-guidance-outlines-crypto-capital-reserves-framework-for-us-.md",
+  "title": "CFTC Staff Guidance Outlines Crypto Capital Reserves Framework for US Exchanges with 20% Haircut Rule",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "556 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-22-bitcoin-falls-below-60-000-as-macro-pressures-and-liquidity-shift-to-f.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "While well-structured and objective, the article relies heavily on a single second-hand blog source and introduces an impossible future publication date (November 25, 2026), severely undermining its factual integrity.",
+    "overall": 7.3
+  },
+  "word_count": 556,
+  "decision": "pending"
+}

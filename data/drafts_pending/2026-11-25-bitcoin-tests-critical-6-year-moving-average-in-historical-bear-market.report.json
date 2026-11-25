@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-25-bitcoin-tests-critical-6-year-moving-average-in-historical-bear-market.md",
+  "title": "Bitcoin Tests Critical 6-Year Moving Average in Historical Bear Market",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "668 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-11-08-riot-platforms-signs-28-billion-ai-data-center-lease-with-anthropic-fo.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 8,
+    "verdict": "The article relies heavily on low-tier secondary aggregators, lacks specific numerical data to quantify its claims, and repeats high-level technical analysis fluff without providing deep macroeconomic context.",
+    "overall": 6.3
+  },
+  "word_count": 668,
+  "decision": "pending"
+}

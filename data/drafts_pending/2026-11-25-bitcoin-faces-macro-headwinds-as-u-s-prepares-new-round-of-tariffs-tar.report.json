@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-25-bitcoin-faces-macro-headwinds-as-u-s-prepares-new-round-of-tariffs-tar.md",
+  "title": "Bitcoin Faces Macro Headwinds as U.S. Prepares New Round of Tariffs Targeting China and the EU",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "837 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-30-stablecoin-issuers-freeze-over-2-6-billion-following-suspected-record-.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The piece suffers from a severe factual error by hallucinating a 'November 2026' date and relies on repetitive, generic explanations connecting vague macro concepts to crypto price movements.",
+    "overall": 6.0
+  },
+  "word_count": 837,
+  "decision": "pending"
+}
