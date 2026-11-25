@@ -1,0 +1,11 @@
+{
+  "id": "b074d196ba01df06",
+  "title": "The 1Password Breach Didn’t Touch Your Vault. The Phishing Emails Might",
+  "summary": "An attacker compromised an employee’s GitHub account to reach 1Password’s backend and copy customer names and emails, but the company says vault contents, encryption keys and your Secret Key were never exposed.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/384002/1password-breach-vaults-phishing-emails",
+  "category": "crypto",
+  "published": "2026-11-25T21:16:02+00:00",
+  "collected_at": "2026-11-25T22:03:02.892343+00:00",
+  "batch": "20261125-220302"
+}

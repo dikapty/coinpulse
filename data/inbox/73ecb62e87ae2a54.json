@@ -1,0 +1,11 @@
+{
+  "id": "73ecb62e87ae2a54",
+  "title": "Another Bitcoin Mining Firm Flags 'Hashrate Hijacking' Attacks That Reroute Rewards",
+  "summary": "Braiins says an attacker exploited the unencrypted Stratum V1 protocol and internet route hijacking to impersonate mining pools, striking over 1,000 sites in a single second.",
+  "source_name": "Decrypt",
+  "source_url": "https://decrypt.co/383999/another-bitcoin-mining-firm-hashrate-hijacking-attacks",
+  "category": "crypto",
+  "published": "2026-11-25T20:36:03+00:00",
+  "collected_at": "2026-11-25T22:03:02.894783+00:00",
+  "batch": "20261125-220302"
+}

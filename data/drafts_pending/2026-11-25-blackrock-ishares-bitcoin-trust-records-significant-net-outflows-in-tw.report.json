@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-25-blackrock-ishares-bitcoin-trust-records-significant-net-outflows-in-tw.md",
+  "title": "BlackRock iShares Bitcoin Trust Records Significant Net Outflows in Two-Day Window",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "819 words (min 600)"
+    },
+    "sources": {
+      "ok": false,
+      "detail": "0 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-16-ai-equity-selloff-deepens-as-investors-pivot-to-defensive-assets.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 8,
+    "verdict": "The article is well-structured and professionally toned, though it relies on speculative indicators like the 'Rainbow Chart' and lacks verifiable citations for its primary data claims.",
+    "overall": 7.3
+  },
+  "word_count": 819,
+  "decision": "pending"
+}

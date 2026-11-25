@@ -1,0 +1,11 @@
+{
+  "id": "dfee7ca243a53826",
+  "title": "Ethereum Foundation researchers pick one hash ‘to rule them all’ for post-quantum upgrade",
+  "summary": "Keccak-256 was favored for its long cryptanalysis record and existing role across Ethereum, despite slower proving than BLAKE3.",
+  "source_name": "The Block",
+  "source_url": "https://www.theblock.co/news/ecosystems/2026-11-25-ethereum-foundation-researchers-pick-one-hash-to-rule-them-all-for-post-quantum-upgrade-446125",
+  "category": "crypto",
+  "published": "2026-11-25T09:49:45+00:00",
+  "collected_at": "2026-11-25T22:03:03.027857+00:00",
+  "batch": "20261125-220302"
+}

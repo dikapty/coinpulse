@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-25-vaneck-removes-gemini-as-custodian-for-1-billion-digital-asset-etf-por.md",
+  "title": "VanEck Removes Gemini as Custodian for $1 Billion Digital Asset ETF Portfolio",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "805 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-10-15-sberbank-receives-central-bank-authorization-for-cryptocurrency-exchan.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "The article provides a precise, professional assessment of custodial consolidation in institutional crypto products while avoiding speculative bias.",
+    "overall": 9.0
+  },
+  "word_count": 805,
+  "decision": "publish"
+}
