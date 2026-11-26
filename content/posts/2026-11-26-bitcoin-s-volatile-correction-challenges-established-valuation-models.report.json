@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-26-bitcoin-s-volatile-correction-challenges-established-valuation-models.md",
+  "title": "Bitcoin's Volatile Correction Challenges Established Valuation Models",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "710 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-18-federal-reserve-expresses-heightened-concern-over-inflation-persistenc.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and disciplined report that successfully disentangles technical network developments from speculative market volatility while maintaining a professional, analytical tone.",
+    "overall": 8.8
+  },
+  "word_count": 710,
+  "decision": "publish"
+}

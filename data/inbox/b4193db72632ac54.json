@@ -1,0 +1,11 @@
+{
+  "id": "b4193db72632ac54",
+  "title": "Bitcoin Lightning operators could recover stuck payments even after losing channel data",
+  "summary": "The 26.12 release candidate can help recover eligible funds after channel data loss if the operator still has key records and can get help from the peer. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+  "source_name": "CryptoSlate",
+  "source_url": "https://cryptoslate.com/bitcoin-lightning-operators-could-recover-stuck-payments-even-after-losing-channel-data/",
+  "category": "crypto",
+  "published": "2026-11-26T00:20:15+00:00",
+  "collected_at": "2026-11-26T09:00:12.010847+00:00",
+  "batch": "20261126-090011"
+}

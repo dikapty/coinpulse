@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-26-utah-drops-criminal-charges-against-kalshi-amid-ongoing-regulatory-sta.md",
+  "title": "Utah Drops Criminal Charges Against Kalshi Amid Ongoing Regulatory Standoff",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "768 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "1 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-07-xrp-faces-market-correction-and-decentralized-finance-liquidation-risk.md)"
+    },
+    "forbidden": {
+      "ok": false,
+      "detail": "gambling"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 9,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "A well-structured and objective summary that effectively contextualizes a complex regulatory standoff, though it relies on a single source.",
+    "overall": 8.8
+  },
+  "word_count": 768,
+  "decision": "reject"
+}
