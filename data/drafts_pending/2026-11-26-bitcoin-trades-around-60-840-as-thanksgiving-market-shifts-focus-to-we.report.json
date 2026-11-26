@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-26-bitcoin-trades-around-60-840-as-thanksgiving-market-shifts-focus-to-we.md",
+  "title": "Bitcoin Trades Around $60,840 as Thanksgiving Market Shifts Focus to Wealth Metrics",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "715 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "9 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-31-binance-hackers-deploy-novel-laundering-tactics-as-stolen-crypto-funds.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 6,
+    "neutrality": 9,
+    "verdict": "The article uses fabricated future dates (November 2026) and redundant, padded text that fails to provide concrete data on the metrics it claims to analyze.",
+    "overall": 5.3
+  },
+  "word_count": 715,
+  "decision": "pending"
+}

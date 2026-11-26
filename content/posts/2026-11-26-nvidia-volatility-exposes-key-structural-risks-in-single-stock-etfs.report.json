@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-26-nvidia-volatility-exposes-key-structural-risks-in-single-stock-etfs.md",
+  "title": "Nvidia Volatility Exposes Key Structural Risks in Single-Stock ETFs",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "687 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-11-19-strategy-s-strc-preferred-shares-slip-below-par-value-amid-market-vola.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 8,
+    "readability": 9,
+    "neutrality": 9,
+    "verdict": "The article provides a clear and objective explanation of structural ETF risks, but it is severely compromised by referencing a nonexistent, future-dated news source as the primary factual basis for its claims.",
+    "overall": 7.5
+  },
+  "word_count": 687,
+  "decision": "publish"
+}
