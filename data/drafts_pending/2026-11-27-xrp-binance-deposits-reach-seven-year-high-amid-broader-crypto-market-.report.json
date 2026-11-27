@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-27-xrp-binance-deposits-reach-seven-year-high-amid-broader-crypto-market-.md",
+  "title": "XRP Binance Deposits Reach Seven-Year High Amid Broader Crypto Market Weakness",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "661 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "8 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-11-24-xrp-faces-record-monthly-decline-as-cryptocurrency-market-volatility-i.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 5,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The article is overly repetitive and contains hallucinated future dates (November 2026), severely undermining its journalistic integrity despite maintaining a neutral tone.",
+    "overall": 5.5
+  },
+  "word_count": 661,
+  "decision": "pending"
+}

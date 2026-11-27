@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-27-ai-usage-surges-as-revenue-growth-lags-behind-token-consumption.md",
+  "title": "AI Usage Surges as Revenue Growth Lags Behind Token Consumption",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "656 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-11-20-tech-sell-off-deepens-as-white-house-threats-fail-to-halt-market-decli.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 7,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The piece provides a clear, neutral explanation of an important economic shift in the AI sector, but it relies on a single source, fails to provide concrete financial figures or data points, and includes a future date typo (2026).",
+    "overall": 7.0
+  },
+  "word_count": 656,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-27-bit-digital-faces-treasury-strain-after-borrowing-ethereum-assets-for-.md",
+  "title": "Bit Digital Faces Treasury Strain After Borrowing Ethereum Assets for AI Pivot",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "617 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "97% unique (most similar: 2026-11-11-bitcoin-core-developers-merge-three-new-bips-designed-to-lower-network.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 7,
+    "usefulness": 6,
+    "readability": 5,
+    "neutrality": 10,
+    "verdict": "While neutral and fact-based, the article suffers from excessive repetition and generic analysis that dilutes its core reporting.",
+    "overall": 7.0
+  },
+  "word_count": 617,
+  "decision": "publish"
+}
