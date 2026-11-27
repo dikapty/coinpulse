@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-27-eba-report-reveals-usdt-dominates-borrowing-across-major-defi-protocol.md",
+  "title": "EBA Report Reveals USDT Dominates Borrowing Across Major DeFi Protocols",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "704 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "99% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 8,
+    "usefulness": 9,
+    "readability": 8,
+    "neutrality": 10,
+    "verdict": "A well-balanced, objective analysis of the EBA report that clearly explains the regulatory and systemic implications of USDT's dominance in DeFi, though it relies heavily on a single secondary source.",
+    "overall": 8.8
+  },
+  "word_count": 704,
+  "decision": "publish"
+}

@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-27-sec-filings-reveal-valuation-gap-for-ripple-shares-across-investment-f.md",
+  "title": "SEC Filings Reveal Valuation Gap for Ripple Shares Across Investment Funds",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "646 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "2 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 6,
+    "usefulness": 5,
+    "readability": 4,
+    "neutrality": 9,
+    "verdict": "The article fundamentally misunderstands basic finance by confusing historical cost basis with current valuation, resulting in highly repetitive, misleading fluff.",
+    "overall": 6.0
+  },
+  "word_count": 646,
+  "decision": "pending"
+}

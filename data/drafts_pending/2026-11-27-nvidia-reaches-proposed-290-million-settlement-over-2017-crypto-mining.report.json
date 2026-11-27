@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-27-nvidia-reaches-proposed-290-million-settlement-over-2017-crypto-mining.md",
+  "title": "Nvidia Reaches Proposed $290 Million Settlement Over 2017 Crypto Mining Disclosures",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "673 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-10-22-active-stablecoin-issuers-face-compliance-deadline-under-occ-waiver-ru.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": false,
+      "detail": "skyrocket"
+    }
+  },
+  "score": {
+    "facts": 10,
+    "usefulness": 9,
+    "readability": 9,
+    "neutrality": 10,
+    "verdict": "An exceptionally well-edited, balanced financial report that provides accurate claims, thorough context, and zero market hype.",
+    "overall": 9.5
+  },
+  "word_count": 673,
+  "decision": "pending"
+}
