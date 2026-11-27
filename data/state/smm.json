@@ -99,13 +99,14 @@
     "2026-11-22-bitcoin-market-volatility-leads-to-55k-low-and-localized-kraken-cad-gl",
     "2026-11-24-xrp-faces-record-monthly-decline-as-cryptocurrency-market-volatility-i",
     "2026-11-25-vaneck-removes-gemini-as-custodian-for-1-billion-digital-asset-etf-por",
-    "2026-11-26-south-korea-proposes-majority-bank-ownership-requirement-for-stablecoi"
+    "2026-11-26-south-korea-proposes-majority-bank-ownership-requirement-for-stablecoi",
+    "2026-11-27-eba-report-reveals-usdt-dominates-borrowing-across-major-defi-protocol"
   ],
   "daily": {
     "2026-11-24": 2,
     "2026-11-25": 2,
     "2026-11-26": 2,
-    "2026-11-27": 1
+    "2026-11-27": 2
   },
   "polls": [
     "2026-10-21T05:52:21.201480+00:00",
@@ -118,12 +119,12 @@
     "2026-11-26": true,
     "2026-11-27": true
   },
-  "last_post_ts": 1795748291.748539,
+  "last_post_ts": 1795792673.0536,
   "articles_today": {
-    "2026-11-23": 2,
     "2026-11-24": 1,
     "2026-11-25": 1,
-    "2026-11-26": 1
+    "2026-11-26": 1,
+    "2026-11-27": 1
   },
   "last_digest_week": "2026-W43"
 }
