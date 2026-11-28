@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-28-bitcoin-falls-below-60-000-amid-etf-outflows-as-whales-accumulate.md",
+  "title": "Bitcoin Falls Below $60,000 Amid ETF Outflows as Whales Accumulate",
+  "checks": {
+    "length": {
+      "ok": true,
+      "detail": "669 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "7 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "96% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 4,
+    "usefulness": 6,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-written and neutral, but it severely fails on factual integrity by hallucinating a future date (November 28, 2026) and stapling unrelated legacy banking and privacy stories into a market price report.",
+    "overall": 6.8
+  },
+  "word_count": 669,
+  "decision": "pending"
+}

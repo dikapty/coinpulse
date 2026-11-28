@@ -1,0 +1,36 @@
+{
+  "file": "2026-11-28-binance-resumes-customer-withdrawals-following-security-incident-suspe.md",
+  "title": "Binance Resumes Customer Withdrawals Following Security Incident Suspension",
+  "checks": {
+    "length": {
+      "ok": false,
+      "detail": "504 words (min 600)"
+    },
+    "sources": {
+      "ok": true,
+      "detail": "3 links, sources section: True"
+    },
+    "uniqueness": {
+      "ok": true,
+      "detail": "98% unique (most similar: 2026-09-29-bitget-resumes-bitcoin-withdrawals-following-387-million-hack-as-ether.md)"
+    },
+    "forbidden": {
+      "ok": true,
+      "detail": "clean"
+    },
+    "clickbait": {
+      "ok": true,
+      "detail": "clean"
+    }
+  },
+  "score": {
+    "facts": 2,
+    "usefulness": 4,
+    "readability": 8,
+    "neutrality": 9,
+    "verdict": "The article is well-written and neutral, but it severely fails on facts by inventing a futuristic date (November 26, 2026) and reporting on a non-existent recent Binance hack.",
+    "overall": 5.8
+  },
+  "word_count": 504,
+  "decision": "pending"
+}
